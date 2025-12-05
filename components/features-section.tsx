@@ -30,21 +30,21 @@ const features = [
     title: 'Turn raw notes into clear concepts and questions.',
     description:
       'Import your PDFs, books, and notes. Freshman AI handles the heavy lifting, slicing your materials into organized chapters. For every note, it pinpoints the essential Key Concepts and generates challenge Questions, ensuring you stop just reading and start actually learning.',
-    mockup: '/concepts.svg',
+    mockup: '/mockup-h2.png',
     imageFirst: true,
   },
   {
     title: 'Your daily revision, on autopilot.',
     description:
       'Our built-in Spaced Repetition engine tracks your mastery of every uploaded note. Each day, it automatically generates a personalized revision session targeting the exact concepts you are about to forget. It’s a scientifically perfect schedule, ready every morning, ensuring you retain everything with zero planning required.',
-    mockup: '/revision-mockup.svg',
+    mockup: '/mockup-revision.png',
     imageFirst: false,
   },
   {
     title: 'Simulate the real exam experience.',
     description:
       'Don’t wait until finals to test your knowledge. Select up to 3 notes, set a timer for 15 to 60 minutes, and face a realistic exam. Once you finish, you receive a comprehensive evaluation that analyzes your performance and explains every mistake, so you can fix the gaps immediately.',
-    mockup: '/exam-mockup.svg',
+    mockup: '/mockup-exam.png',
     imageFirst: true,
   },
 ];

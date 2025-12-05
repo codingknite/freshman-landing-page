@@ -89,7 +89,7 @@ export default function HeroSection() {
                   preset='fade-in-blur'
                   speedSegment={0.3}
                   as='h1'
-                  className='mx-auto mt-8 max-w-4xl text-balance text-5xl md:font-medium md:text-7xl lg:mt-16 xl:text-[4.5rem]'
+                  className='mx-auto mt-8 max-w-4xl text-balance font-medium text-6xl md:font-medium md:text-7xl lg:mt-16 xl:text-[4.5rem]'
                 >
                   Remember everything you study.
                 </TextEffect>
@@ -120,7 +120,10 @@ export default function HeroSection() {
                   }}
                   className='mt-12 flex flex-col items-center justify-center'
                 >
-                  <Link href='#link' className='inline-block'>
+                  <Link
+                    href='https://apps.apple.com/app/id6755386478'
+                    className='inline-block'
+                  >
                     <Image
                       src='/apple.svg'
                       alt='Download on the App Store'
@@ -151,7 +154,7 @@ export default function HeroSection() {
                   <div className='relative mx-auto max-w-6xl flex items-center justify-start md:justify-center gap-4 px-4 md:px-0 snap-x snap-mandatory'>
                     <div className='flex-shrink-0 w-[200px] sm:w-[220px] md:w-[240px] lg:w-[250px] xl:w-[300px] snap-start'>
                       <Image
-                        src='/mockup-h1.svg'
+                        src='/mockup-h1.png'
                         alt='App mockup 1'
                         width={400}
                         height={800}
@@ -160,7 +163,7 @@ export default function HeroSection() {
                     </div>
                     <div className='flex-shrink-0 w-[200px] sm:w-[220px] md:w-[240px] lg:w-[250px] xl:w-[300px] snap-start'>
                       <Image
-                        src='/mockup-h2.svg'
+                        src='/mockup-h2.png'
                         alt='App mockup 2'
                         width={400}
                         height={800}
@@ -178,7 +181,7 @@ export default function HeroSection() {
                     </div>
                     <div className='flex-shrink-0 w-[200px] sm:w-[220px] md:w-[240px] lg:w-[250px] xl:w-[300px] snap-start'>
                       <Image
-                        src='/mockup-mh4.svg'
+                        src='/mockup-h4.png'
                         alt='App mockup 3'
                         width={400}
                         height={800}

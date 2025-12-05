@@ -25,15 +25,15 @@ const transitionVariants = {
 
 const benefits = [
   {
-    mockup: '/cando1.svg',
+    mockup: '/cando1.png',
     text: 'Practice active recall by recording your voice or typing your answers.',
   },
   {
-    mockup: '/cando2.svg',
+    mockup: '/cando2.png',
     text: 'Instantly generate and take multiple-choice quizzes to check your understanding.',
   },
   {
-    mockup: '/cando3.svg',
+    mockup: '/cando3.png',
     text: 'Simulate real exam pressure with customizable, timed mock exams.',
   },
 ];
@@ -78,7 +78,7 @@ export default function BenefitsSection() {
           }}
         >
           <div className='relative overflow-x-auto overflow-y-hidden scrollbar-hide scroll-smooth md:overflow-hidden'>
-            <div className='flex items-start justify-center gap-6 md:gap-8 lg:gap-10 md:px-0 snap-x snap-mandatory md:snap-none'>
+            <div className='flex items-start justify-start md:justify-center gap-6 md:gap-8 lg:gap-10 px-4 md:px-0 snap-x snap-mandatory md:snap-none'>
               {benefits.map((benefit, index) => (
                 <div
                   key={index}

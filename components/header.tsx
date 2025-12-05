@@ -91,7 +91,10 @@ export const HeroHeader = () => {
                 </ul>
               </div>
               <div className='flex w-full flex-col items-center space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit lg:w-auto'>
-                <Link href='#link' className='inline-block'>
+                <Link
+                  href='https://apps.apple.com/app/id6755386478'
+                  className='inline-block'
+                >
                   <Image
                     src='/apple.svg'
                     alt='Download on the App Store'
