@@ -18,8 +18,7 @@ export default function AndroidWaitlist() {
 
     try {
       const response = await fetch(
-        // 'https://api.joinfreshman.com/api/android-waitlist',
-        'https://7435b925b839.ngrok-free.app/api/android-waitlist',
+        'https://api.joinfreshman.com/api/android-waitlist',
         {
           method: 'POST',
           headers: {
