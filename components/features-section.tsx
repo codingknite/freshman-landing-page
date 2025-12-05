@@ -30,28 +30,28 @@ const features = [
     title: 'Turn raw notes into clear concepts and questions.',
     description:
       'Import your PDFs, books, and notes. Freshman AI handles the heavy lifting, slicing your materials into organized chapters. For every note, it pinpoints the essential Key Concepts and generates challenge Questions, ensuring you stop just reading and start actually learning.',
-    mockup: '/mockup1.png',
+    mockup: '/concepts.svg',
     imageFirst: true,
   },
   {
     title: 'Your daily revision, on autopilot.',
     description:
       'Our built-in Spaced Repetition engine tracks your mastery of every uploaded note. Each day, it automatically generates a personalized revision session targeting the exact concepts you are about to forget. It’s a scientifically perfect schedule, ready every morning, ensuring you retain everything with zero planning required.',
-    mockup: '/mockup2.png',
+    mockup: '/revision-mockup.svg',
     imageFirst: false,
   },
   {
     title: 'Simulate the real exam experience.',
     description:
       'Don’t wait until finals to test your knowledge. Select up to 3 notes, set a timer for 15 to 60 minutes, and face a realistic exam. Once you finish, you receive a comprehensive evaluation that analyzes your performance and explains every mistake, so you can fix the gaps immediately.',
-    mockup: '/mockup3.png',
+    mockup: '/exam-mockup.svg',
     imageFirst: true,
   },
 ];
 
 export default function FeaturesSection() {
   return (
-    <section className='bg-background py-16 md:py-24 lg:py-8'>
+    <section className='bg-background py-16 md:py-24 lg:py-16'>
       <div className='mx-auto max-w-7xl px-6'>
         {/* Section Header */}
         <div className='text-center mb-12 md:mb-12 lg:mb-20'>
@@ -98,13 +98,13 @@ export default function FeaturesSection() {
                   } items-center gap-8 md:gap-12 lg:gap-16`}
                 >
                   {/* Image */}
-                  <div className='flex-shrink-0 w-full max-w-[280px] sm:max-w-[320px] md:max-w-[360px] lg:max-w-[400px]'>
+                  <div className='flex justify-center items-center flex-shrink-0 w-full max-w-[280px] sm:max-w-[320px] md:max-w-[360px] lg:max-w-[400px]'>
                     <Image
                       src={feature.mockup}
                       alt={feature.title}
                       width={400}
                       height={800}
-                      className='w-[85%] h-auto object-contain'
+                      className='w-[90%] md:w-[80%] h-auto object-contain'
                     />
                   </div>
 
@@ -127,13 +127,6 @@ export default function FeaturesSection() {
                     >
                       {feature.description}
                     </TextEffect>
-                    <Button
-                      asChild
-                      size='lg'
-                      className='bg-red-500 hover:bg-red-600 text-white rounded-full px-8 py-6 text-base md:text-lg'
-                    >
-                      <Link href='#link'>Get Started</Link>
-                    </Button>
                   </div>
                 </div>
               </div>

@@ -149,37 +149,37 @@ export default function HeroSection() {
               <div className='relative mt-8 sm:mt-12 md:mt-20'>
                 <div className='overflow-x-auto overflow-y-hidden scrollbar-hide md:overflow-hidden scroll-smooth'>
                   <div className='relative mx-auto max-w-6xl flex items-center justify-start md:justify-center gap-4 px-4 md:px-0 snap-x snap-mandatory'>
-                    <div className='flex-shrink-0 w-[180px] sm:w-[200px] md:w-[220px] lg:w-[240px] xl:w-[280px] snap-start'>
+                    <div className='flex-shrink-0 w-[200px] sm:w-[220px] md:w-[240px] lg:w-[250px] xl:w-[300px] snap-start'>
                       <Image
-                        src='/mockup1.png'
+                        src='/mockup-h1.svg'
                         alt='App mockup 1'
                         width={400}
                         height={800}
                         className='w-full h-auto object-contain'
                       />
                     </div>
-                    <div className='flex-shrink-0 w-[180px] sm:w-[200px] md:w-[220px] lg:w-[240px] xl:w-[280px] snap-start'>
+                    <div className='flex-shrink-0 w-[200px] sm:w-[220px] md:w-[240px] lg:w-[250px] xl:w-[300px] snap-start'>
                       <Image
-                        src='/mockup2.png'
+                        src='/mockup-h2.svg'
                         alt='App mockup 2'
                         width={400}
                         height={800}
                         className='w-full h-auto object-contain'
                       />
                     </div>
-                    <div className='flex-shrink-0 w-[180px] sm:w-[200px] md:w-[220px] lg:w-[240px] xl:w-[280px] snap-start'>
+                    <div className='flex-shrink-0 w-[200px] sm:w-[220px] md:w-[240px] lg:w-[250px] xl:w-[300px] snap-start'>
                       <Image
-                        src='/mockup3.png'
-                        alt='App mockup 3'
+                        src='/mockup-h3.png'
+                        alt='App mockup 4'
                         width={400}
                         height={800}
                         className='w-full h-auto object-contain'
                       />
                     </div>
-                    <div className='flex-shrink-0 w-[180px] sm:w-[200px] md:w-[220px] lg:w-[240px] xl:w-[280px] snap-start'>
+                    <div className='flex-shrink-0 w-[200px] sm:w-[220px] md:w-[240px] lg:w-[250px] xl:w-[300px] snap-start'>
                       <Image
-                        src='/mockup4.png'
-                        alt='App mockup 4'
+                        src='/mockup-mh4.svg'
+                        alt='App mockup 3'
                         width={400}
                         height={800}
                         className='w-full h-auto object-contain'

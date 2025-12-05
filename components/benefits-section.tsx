@@ -25,23 +25,23 @@ const transitionVariants = {
 
 const benefits = [
   {
-    mockup: '/mockup1.png',
-    text: 'Keep your curriculum chaos-free by organizing notes into dedicated subjects.',
+    mockup: '/cando1.svg',
+    text: 'Practice active recall by recording your voice or typing your answers.',
   },
   {
-    mockup: '/mockup2.png',
-    text: 'Automatically break down heavy textbooks into manageable, bite-sized chapters.',
+    mockup: '/cando2.svg',
+    text: 'Instantly generate and take multiple-choice quizzes to check your understanding.',
   },
   {
-    mockup: '/mockup3.png',
-    text: 'Instantly generate active recall tests and quizzes for every note to guarantee retention.',
+    mockup: '/cando3.svg',
+    text: 'Simulate real exam pressure with customizable, timed mock exams.',
   },
 ];
 
 export default function BenefitsSection() {
   return (
-    <section className='bg-background py-16 md:py-24 lg:py-32'>
-      <div className='mx-auto max-w-7xl px-6'>
+    <section className='bg-background pb-4 md:py-20 lg:py-16'>
+      <div className='mx-auto max-w-7xl'>
         {/* Section Header */}
         <div className='text-center mb-12 md:mb-16 lg:mb-20'>
           <TextEffect
@@ -78,7 +78,7 @@ export default function BenefitsSection() {
           }}
         >
           <div className='relative overflow-x-auto overflow-y-hidden scrollbar-hide scroll-smooth md:overflow-hidden'>
-            <div className='flex items-start justify-center gap-6 md:gap-8 lg:gap-10 px-4 md:px-0 snap-x snap-mandatory md:snap-none'>
+            <div className='flex items-start justify-center gap-6 md:gap-8 lg:gap-10 md:px-0 snap-x snap-mandatory md:snap-none'>
               {benefits.map((benefit, index) => (
                 <div
                   key={index}
@@ -94,7 +94,7 @@ export default function BenefitsSection() {
                         className='w-full h-auto object-contain'
                       />
                     </div>
-                    <p className='text-center font-bold text-base md:text-lg lg:text-xl'>
+                    <p className='text-center font-bold text-base px-4 md:text-lg lg:text-xl'>
                       {benefit.text}
                     </p>
                   </div>
