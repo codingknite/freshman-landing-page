@@ -23,7 +23,7 @@ export default function FAQsThree() {
       icon: 'brain',
       question: 'What kind of notes can I upload?',
       answer:
-        'You can upload almost anything! Our A.I. can read handwritten notes (from photos), PDF textbooks, PowerPoint slides, and standard digital text files. As long as the text is legible, we can turn it into a test.',
+        'You can upload almost anything! Freshman can read handwritten notes (from photos), PDF textbooks, PowerPoint slides, and standard digital text files. As long as the text is legible, we can turn it into a test.',
     },
     {
       id: 'item-2',
@@ -37,14 +37,14 @@ export default function FAQsThree() {
       icon: 'calendar',
       question: 'Can I use this for any subject?',
       answer:
-        'Absolutely. Whether you are studying Biology, Law, History, Computer Science, or Literature, the A.I. adapts to the content you provide. It works for any education level, from High School to PhD.',
+        'Absolutely. Whether you are studying Biology, Law, History, Computer Science, or Literature, Freshman adapts to the content you provide. It works for any education level, from High School to PhD.',
     },
     {
       id: 'item-4',
       icon: 'smartphone',
       question: 'When will Freshman be available on Android?',
       answer:
-        "Cal AI is currently available on iOS. We're actively developing the Android version and expect to launch it soon. Join our waitlist to be notified when the Android app becomes available.",
+        "Freshman is currently available on iOS. We're actively developing the Android version and expect to launch it soon. Join our waitlist to be notified when the Android app becomes available.",
     },
     {
       id: 'item-5',
