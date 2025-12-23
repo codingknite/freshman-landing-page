@@ -121,6 +121,7 @@ export default function HeroSection() {
                   className='mt-12 flex flex-col items-center justify-center'
                 >
                   <Link
+                    target='_blank'
                     href='https://apps.apple.com/app/id6755386478'
                     className='inline-block'
                   >

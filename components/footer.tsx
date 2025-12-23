@@ -18,7 +18,7 @@ export default function FooterSection() {
       <div className='mx-auto max-w-5xl px-6'>
         <Link href='/' aria-label='go home' className='mx-auto block size-fit'>
           <Image
-            src='/icon.png'
+            src='/icon.svg'
             alt='Cal AI'
             width={32}
             height={32}

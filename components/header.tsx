@@ -42,11 +42,11 @@ export const HeroHeader = () => {
                 className='flex items-center space-x-2'
               >
                 <Image
-                  src='/icon.png'
-                  alt='Cal AI'
-                  width={32}
-                  height={32}
-                  className='h-10 w-10 rounded-full'
+                  src='/icon.svg'
+                  alt='Freshman'
+                  width={40}
+                  height={40}
+                  className='h-15 w-15 rounded-full'
                 />
               </Link>
 
@@ -92,6 +92,7 @@ export const HeroHeader = () => {
               </div>
               <div className='flex w-full flex-col items-center space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit lg:w-auto'>
                 <Link
+                  target='_blank'
                   href='https://apps.apple.com/app/id6755386478'
                   className='inline-block'
                 >
