@@ -19,10 +19,10 @@ export default function FooterSection() {
         <Link href='/' aria-label='go home' className='mx-auto block size-fit'>
           <Image
             src='/icon.svg'
-            alt='Cal AI'
-            width={32}
-            height={32}
-            className='h-10 w-10'
+            alt='Freshman'
+            width={40}
+            height={40}
+            className='h-15 w-15'
           />
         </Link>
 
