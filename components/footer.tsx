@@ -18,10 +18,10 @@ export default function FooterSection() {
       <div className='mx-auto max-w-5xl px-6'>
         <Link href='/' aria-label='go home' className='mx-auto block size-fit'>
           <Image
-            src='/icon.svg'
+            src='/icon.png'
             alt='Freshman'
-            width={50}
-            height={50}
+            width={62}
+            height={62}
             className='rounded-full'
           />
         </Link>

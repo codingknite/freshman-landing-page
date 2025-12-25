@@ -42,10 +42,10 @@ export const HeroHeader = () => {
                 className='flex items-center space-x-2'
               >
                 <Image
-                  src='/icon.svg'
+                  src='/icon.png'
                   alt='Freshman'
-                  width={50}
-                  height={50}
+                  width={62}
+                  height={62}
                   className='rounded-full'
                 />
               </Link>
