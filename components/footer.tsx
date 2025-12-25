@@ -20,9 +20,9 @@ export default function FooterSection() {
           <Image
             src='/icon.svg'
             alt='Freshman'
-            width={40}
-            height={40}
-            className='h-15 w-15'
+            width={50}
+            height={50}
+            className='rounded-full'
           />
         </Link>
 

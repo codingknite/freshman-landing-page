@@ -30,8 +30,6 @@ export default function AndroidWaitlist() {
 
       const data = await response.json();
 
-      console.log('DATA', data);
-
       if (!response.ok) {
         throw new Error(data.error || 'Failed to register email');
       }
