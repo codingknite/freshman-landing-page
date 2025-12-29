@@ -11,7 +11,8 @@ import FAQsThree from '@/components/faqs-3';
 import FooterSection from '@/components/footer';
 
 export const metadata: Metadata = {
-  title: 'AI-Powered Active Recall Study App | Transform Notes into Practice Tests',
+  title:
+    'Freshman AI - Active Recall Study App | Transform Notes into Practice Tests',
   description:
     'Students waste hours highlighting and rereading, but research shows active recall is 50% more effective. Freshman uses AI to convert your handwritten notes, PDFs, and photos into scientifically-designed active recall questions with spaced repetition for permanent memory retention.',
   keywords: [
