@@ -80,10 +80,10 @@ const TermsOfUse = () => {
               applicable to the Services at any time for any reason in its sole
               discretion and without prior notice. It&apos;s important that you
               provide us with accurate, complete, and current Account
-              information and keep this information up to date. If you don't, we
+              information and keep this information up to date. If you don&apos;t, we
               might have to suspend or terminate your Account. To protect your
               Account, keep the Account details and password confidential, and
-              notify us right away of any unauthorized use. You're solely
+              notify us right away of any unauthorized use. You&apos;re solely
               responsible for all activities that occur under your Account.
             </p>
             <h3 className='mt-6 mb-3 text-xl font-medium text-foreground'>
