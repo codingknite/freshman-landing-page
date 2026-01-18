@@ -1,67 +1,9 @@
-'use client';
-
-import { useEffect, useRef } from 'react';
-import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 
 const APP_STORE_URL = 'https://apps.apple.com/app/6755386478';
-const PLAY_STORE_URL =
-  'https://play.google.com/store/apps/details?id=app.joinfreshman.com';
 
 export default function SharePastPaperPage() {
-  const params = useParams();
-  const code = params?.code as string;
-  const appOpenedRef = useRef(false);
-
-  useEffect(() => {
-    if (!code) return;
-
-    // Use the correct scheme that matches app.config.ts
-    // For Universal Links on iOS, we use the https URL directly
-    // The associated domain will intercept it and open the app
-    const universalLink = `https://joinfreshman.com/share/pastpaper/${code}`;
-    const customSchemeLink = `app.joinfreshman.com://share/pastpaper/${code}`;
-    
-    // Track if the app was opened (page lost visibility)
-    const handleVisibilityChange = () => {
-      if (document.hidden) {
-        appOpenedRef.current = true;
-      }
-    };
-    
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-    
-    // On iOS, try the custom scheme first (works for apps installed via Xcode too)
-    // Universal Links only work with apps from App Store or TestFlight
-    const userAgent = navigator.userAgent.toLowerCase();
-    const isIOS = /iphone|ipad|ipod/.test(userAgent);
-    const isAndroid = /android/.test(userAgent);
-    
-    if (isIOS || isAndroid) {
-      // Try custom scheme - this will show the "Open in App?" dialog if app is installed
-      window.location.href = customSchemeLink;
-    }
-
-    // Set a longer timeout to give user time to interact with the "Open in App?" dialog
-    // Only redirect to store if the page is still visible (app didn't open)
-    const timeout = setTimeout(() => {
-      // If page is still visible and app wasn't opened, redirect to store
-      if (!appOpenedRef.current && !document.hidden) {
-        if (isIOS) {
-          window.location.href = APP_STORE_URL;
-        } else if (isAndroid) {
-          window.location.href = PLAY_STORE_URL;
-        }
-      }
-    }, 3000); // Increased to 3 seconds to give more time for dialog interaction
-
-    return () => {
-      clearTimeout(timeout);
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
-    };
-  }, [code]);
-
   return (
     <div className='min-h-screen bg-background'>
       {/* Header */}
@@ -153,7 +95,7 @@ export default function SharePastPaperPage() {
         <div className='mt-16 relative'>
           <div className='relative mx-auto max-w-sm'>
             <Image
-              src='/ppp-sc.png'
+              src='/ppp-sc.svg'
               alt='Freshman App'
               width={400}
               height={800}

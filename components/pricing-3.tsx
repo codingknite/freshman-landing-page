@@ -103,7 +103,7 @@ export default function PricingThree() {
             as='h2'
             className='text-4xl md:text-5xl lg:text-6xl font-semibold lowercase'
           >
-            choose your plan
+            transparent pricing
           </TextEffect>
         </div>
 

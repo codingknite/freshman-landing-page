@@ -25,7 +25,7 @@ const transitionVariants = {
 
 const benefits = [
   {
-    mockup: '/flashcards-sc.png',
+    mockup: '/flashcards-sc.svg',
     text: 'Create interactive flashcards to reinforce key concepts and improve retention.',
   },
   {

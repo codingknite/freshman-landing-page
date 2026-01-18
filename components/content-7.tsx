@@ -47,7 +47,7 @@ export default function ContentSeven() {
               {/* Image */}
               <div className='flex justify-center items-center flex-shrink-0 w-full max-w-[280px] sm:max-w-[320px] md:max-w-[360px] lg:max-w-[400px] order-2 lg:order-1'>
                 <Image
-                  src='/ppp-sc.png'
+                  src='/ppp-sc.svg'
                   alt='Past Paper Practice'
                   width={400}
                   height={800}
