@@ -19,7 +19,7 @@ const TermsOfUse = () => {
               Terms of Use
             </h1>
             <p className='mb-4 text-muted-foreground'>
-              Effective as of: July 7, 2025
+              Effective as of: December 9, 2025
             </p>
 
             <p className='mb-6 text-foreground'>Welcome to Freshman!</p>
