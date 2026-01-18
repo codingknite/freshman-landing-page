@@ -58,7 +58,7 @@ export default function AndroidWaitlist() {
       <div className='mx-auto max-w-5xl px-6'>
         <div className='text-center'>
           <h2 className='text-balance text-4xl font-bold lg:text-[2.5rem] lg:w-[60%] mx-auto'>
-            Android is coming this December
+            Android is coming in Quarter One 2026
           </h2>
           <p className='mt-4 text-lg md:w-[50%] mx-auto'>
             We are putting the finishing touches on our Android app. Join the

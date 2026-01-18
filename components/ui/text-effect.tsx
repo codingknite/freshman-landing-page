@@ -161,6 +161,10 @@ const AnimationComponent: React.FC<{
 AnimationComponent.displayName = 'AnimationComponent';
 
 const splitText = (text: string, per: PerType) => {
+  if (typeof text !== 'string') {
+    // Handle non-string children gracefully
+    return [String(text)];
+  }
   if (per === 'line') return text.split('\n');
   return text.split(/(\s+)/);
 };
@@ -225,7 +229,9 @@ export function TextEffect({
   segmentTransition,
   style,
 }: TextEffectProps) {
-  const segments = splitText(children, per);
+  // Convert children to string if it's not already
+  const textContent = typeof children === 'string' ? children : String(children ?? '');
+  const segments = splitText(textContent, per);
   const MotionTag = motion[as as keyof typeof motion] as typeof motion.div;
 
   const baseVariants = preset

@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -12,23 +12,54 @@ const PLAY_STORE_URL =
 export default function SharePastPaperPage() {
   const params = useParams();
   const code = params?.code as string;
+  const appOpenedRef = useRef(false);
 
   useEffect(() => {
     if (!code) return;
 
-    const deepLink = `freshman://share/pastpaper/${code}`;
-    window.location.href = deepLink;
-
-    const timeout = setTimeout(() => {
-      const userAgent = navigator.userAgent.toLowerCase();
-      if (/iphone|ipad|ipod/.test(userAgent)) {
-        window.location.href = APP_STORE_URL;
-      } else if (/android/.test(userAgent)) {
-        window.location.href = PLAY_STORE_URL;
+    // Use the correct scheme that matches app.config.ts
+    // For Universal Links on iOS, we use the https URL directly
+    // The associated domain will intercept it and open the app
+    const universalLink = `https://joinfreshman.com/share/pastpaper/${code}`;
+    const customSchemeLink = `app.joinfreshman.com://share/pastpaper/${code}`;
+    
+    // Track if the app was opened (page lost visibility)
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        appOpenedRef.current = true;
       }
-    }, 1500);
+    };
+    
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    
+    // On iOS, try the custom scheme first (works for apps installed via Xcode too)
+    // Universal Links only work with apps from App Store or TestFlight
+    const userAgent = navigator.userAgent.toLowerCase();
+    const isIOS = /iphone|ipad|ipod/.test(userAgent);
+    const isAndroid = /android/.test(userAgent);
+    
+    if (isIOS || isAndroid) {
+      // Try custom scheme - this will show the "Open in App?" dialog if app is installed
+      window.location.href = customSchemeLink;
+    }
 
-    return () => clearTimeout(timeout);
+    // Set a longer timeout to give user time to interact with the "Open in App?" dialog
+    // Only redirect to store if the page is still visible (app didn't open)
+    const timeout = setTimeout(() => {
+      // If page is still visible and app wasn't opened, redirect to store
+      if (!appOpenedRef.current && !document.hidden) {
+        if (isIOS) {
+          window.location.href = APP_STORE_URL;
+        } else if (isAndroid) {
+          window.location.href = PLAY_STORE_URL;
+        }
+      }
+    }, 3000); // Increased to 3 seconds to give more time for dialog interaction
+
+    return () => {
+      clearTimeout(timeout);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
   }, [code]);
 
   return (
@@ -122,7 +153,7 @@ export default function SharePastPaperPage() {
         <div className='mt-16 relative'>
           <div className='relative mx-auto max-w-sm'>
             <Image
-              src='/mockup-h1.png'
+              src='/ppp-sc.png'
               alt='Freshman App'
               width={400}
               height={800}

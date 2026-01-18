@@ -25,16 +25,16 @@ const transitionVariants = {
 
 const benefits = [
   {
+    mockup: '/flashcards-sc.png',
+    text: 'Create interactive flashcards to reinforce key concepts and improve retention.',
+  },
+  {
     mockup: '/cando1.png',
     text: 'Practice active recall by recording your voice or typing your answers.',
   },
   {
     mockup: '/cando2.png',
     text: 'Instantly generate and take multiple-choice quizzes to check your understanding.',
-  },
-  {
-    mockup: '/cando3.png',
-    text: 'Simulate real exam pressure with customizable, timed mock exams.',
   },
 ];
 

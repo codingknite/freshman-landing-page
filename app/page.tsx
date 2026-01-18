@@ -1,7 +1,9 @@
 import { Metadata } from 'next';
 import HeroSection from '@/components/hero-section';
 import FeaturesSection from '@/components/features-section';
+import ContentSeven from '@/components/content-7';
 import BenefitsSection from '@/components/benefits-section';
+import PricingThree from '@/components/pricing-3';
 import AndroidWaitlist from '@/components/android-waitlist';
 import FAQsThree from '@/components/faqs-3';
 import FooterSection from '@/components/footer';
@@ -148,7 +150,9 @@ export default function Home() {
       />
       <HeroSection />
       <FeaturesSection />
+      <ContentSeven />
       <BenefitsSection />
+      <PricingThree />
       {/* <Features /> */}
       {/* <Testimonials /> */}
       <AndroidWaitlist />
