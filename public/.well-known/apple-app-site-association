@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "7P96K7H83L.app.joinfreshman.com",
+        "paths": [
+          "/share/pastpaper/*"
+        ]
+      }
+    ]
+  }
+}
