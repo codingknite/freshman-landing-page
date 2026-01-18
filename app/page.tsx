@@ -1,11 +1,7 @@
-import Image from 'next/image';
 import { Metadata } from 'next';
 import HeroSection from '@/components/hero-section';
 import FeaturesSection from '@/components/features-section';
 import BenefitsSection from '@/components/benefits-section';
-import Features from '@/components/features-4';
-import Testimonials from '@/components/testimonials';
-import CallToAction from '@/components/call-to-action';
 import AndroidWaitlist from '@/components/android-waitlist';
 import FAQsThree from '@/components/faqs-3';
 import FooterSection from '@/components/footer';

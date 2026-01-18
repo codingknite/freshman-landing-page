@@ -24,21 +24,21 @@ const TermsOfUse = () => {
 
             <p className='mb-6 text-foreground'>Welcome to Freshman!</p>
             <p className='mb-6 text-foreground'>
-              Please read these Terms of Use ("Terms") and our Privacy Notice (
+              Please read these Terms of Use (&ldquo;Terms&rdquo;) and our Privacy Notice (
               <a
                 href='/privacy'
                 className='text-primary hover:underline'
               >
                 /privacy
               </a>
-              ) (the "Privacy Notice") carefully before using the services
+              ) (the &ldquo;Privacy Notice&rdquo;) carefully before using the services
               offered by People Who Code LLC, a legal entity incorporated under
-              the laws of the United States ("Freshman", "we", "us"). These
+              the laws of the United States (&ldquo;Freshman&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;). These
               Terms constitute a legally binding agreement between Freshman and
-              you (also "you", "your"), which regulates your use of the services
-              accessible via the Freshman mobile application (the "App") and
-              Freshman website ("Site"). To make these Terms easier to read, our
-              services and App are collectively called the "Services."
+              you (also &ldquo;you&rdquo;, &ldquo;your&rdquo;), which regulates your use of the services
+              accessible via the Freshman mobile application (the &ldquo;App&rdquo;) and
+              Freshman website (&ldquo;Site&rdquo;). To make these Terms easier to read, our
+              services and App are collectively called the &ldquo;Services.&rdquo;
             </p>
             <p className='mb-6 text-foreground'>
               By using our Services, you agree to be bound by these Terms and
@@ -72,13 +72,13 @@ const TermsOfUse = () => {
             <p className='mb-6 text-foreground'>
               To use the Services, you must create a personal account with us by
               using your email or via Apple, Google, or another authorization
-              option available from time to time ("Account"). We will use your
+              option available from time to time (&ldquo;Account&rdquo;). We will use your
               email address to create the Account and send you emails to, among
               others, confirm Account details. Your Account will enable access to
               the Services. Freshman reserves the right to change the
               functionality of the Services and introduce prices and fees
               applicable to the Services at any time for any reason in its sole
-              discretion and without prior notice. It's important that you
+              discretion and without prior notice. It&apos;s important that you
               provide us with accurate, complete, and current Account
               information and keep this information up to date. If you don't, we
               might have to suspend or terminate your Account. To protect your
@@ -93,7 +93,7 @@ const TermsOfUse = () => {
               For security reasons, you may add an additional passcode to protect
               sensitive areas of the app from unauthorized access by third
               parties. Keep your passcode confidential and immediately notify us
-              of any unauthorized access or use. You're solely responsible for
+              of any unauthorized access or use. You&apos;re solely responsible for
               keeping your passcode secret and safe. However, we will assist you
               via email at{' '}
               <a
@@ -108,7 +108,7 @@ const TermsOfUse = () => {
               Your Profile
             </h3>
             <p className='mb-6 text-foreground'>
-              The features available on the App's profile page depend on your
+              The features available on the App&apos;s profile page depend on your
               subscription plan. These may include a comprehensive dashboard
               with real-time insights into your study progress, notes, and tests,
               along with personalized suggestions related to your learning
@@ -168,9 +168,9 @@ const TermsOfUse = () => {
               Freshman Intellectual Property
             </h3>
             <p className='mb-6 text-foreground'>
-              Our Services and Freshman's proprietary text, graphics, images,
+              Our Services and Freshman&apos;s proprietary text, graphics, images,
               illustrations, trademarks, trade names, page headers, button icons,
-              scripts, and other content contained therein ("Freshman Content")
+              scripts, and other content contained therein (&ldquo;Freshman Content&rdquo;)
               are owned by Freshman or its subsidiaries or affiliated companies
               and are protected by copyright, patent, trade secret, and other
               intellectual property laws. Except as explicitly stated in these
@@ -216,7 +216,7 @@ const TermsOfUse = () => {
             <p className='mb-6 text-foreground'>
               Our Services may allow you to store notes, study materials, tests,
               and other media. Any content that you post or otherwise make
-              available through the Services is referred to as "User Content."
+              available through the Services is referred to as &ldquo;User Content.&rdquo;
               Freshman does not claim ownership rights in any User Content, and
               nothing in these Terms will be deemed to restrict any rights that
               you may have to your User Content.
@@ -238,7 +238,7 @@ const TermsOfUse = () => {
               You represent and warrant that neither your User Content, nor your
               use and provision of your User Content to be made available through
               the Services, nor any use of your User Content by Freshman will
-              infringe, misappropriate, or violate a third party's intellectual
+              infringe, misappropriate, or violate a third party&apos;s intellectual
               property rights, or rights of publicity or privacy, or result in
               the violation of any applicable law or regulation.
             </p>
@@ -321,7 +321,7 @@ const TermsOfUse = () => {
             </h2>
             <p className='mb-6 text-foreground'>
               We appreciate feedback, comments, ideas, proposals, and suggestions
-              for improvements to the Services ("Feedback"). If you choose to
+              for improvements to the Services (&ldquo;Feedback&rdquo;). If you choose to
               submit Feedback, you acknowledge that we may use, modify, adapt,
               reproduce, distribute, display, perform, or otherwise exploit the
               Feedback without any obligation to compensate you or obtain your
@@ -337,9 +337,9 @@ const TermsOfUse = () => {
             </h3>
             <p className='mb-6 text-foreground'>
               Freshman requires payment of a fee for the use of certain features
-              or functions of the Services ("PRO Features"). You must purchase a
-              subscription ("Subscription") to use the PRO Features. When you
-              purchase a Subscription ("Transaction"), you authorize us (or our
+              or functions of the Services (&ldquo;PRO Features&rdquo;). You must purchase a
+              subscription (&ldquo;Subscription&rdquo;) to use the PRO Features. When you
+              purchase a Subscription (&ldquo;Transaction&rdquo;), you authorize us (or our
               third-party payment processor) to charge you the respective
               Subscription fee. You represent and warrant that you have the legal
               right to use all payment methods.
@@ -483,7 +483,7 @@ const TermsOfUse = () => {
             </h2>
             <p className='mb-6 text-foreground'>
               Freshman respects copyright law and expects its users to do the
-              same. It is Freshman's policy to terminate Account holders who
+              same. It is Freshman&apos;s policy to terminate Account holders who
               repeatedly infringe or are believed to be repeatedly infringing
               the rights of copyright holders.
             </p>
@@ -528,7 +528,7 @@ const TermsOfUse = () => {
               Disclaimer of Warranties
             </h2>
             <p className='mb-6 text-foreground'>
-              THE SERVICES ARE PROVIDED "AS IS," WITHOUT WARRANTY OF ANY KIND.
+              THE SERVICES ARE PROVIDED &ldquo;AS IS,&rdquo; WITHOUT WARRANTY OF ANY KIND.
               WE EXPLICITLY DISCLAIM ANY IMPLIED WARRANTIES OF MERCHANTABILITY,
               FITNESS FOR A PARTICULAR PURPOSE, QUIET ENJOYMENT, AND
               NON-INFRINGEMENT. We make no warranty that the Services will meet
@@ -582,7 +582,7 @@ const TermsOfUse = () => {
               </li>
               <li>
                 <strong>No Infringement:</strong> Your User Content and its use
-                will not infringe, misappropriate, or violate a third party's
+                will not infringe, misappropriate, or violate a third party&apos;s
                 intellectual property rights, or rights of publicity or privacy.
               </li>
               <li>
@@ -654,7 +654,7 @@ const TermsOfUse = () => {
             </h3>
             <p className='mb-6 text-foreground'>
               Any dispute, claim, or controversy arising out of or relating to
-              these Terms or the use of the Services ("Disputes") will be
+              these Terms or the use of the Services (&ldquo;Disputes&rdquo;) will be
               resolved solely by binding, individual arbitration. You and
               Freshman waive the right to a trial by jury or to participate in a
               class action.
@@ -673,7 +673,7 @@ const TermsOfUse = () => {
             </h3>
             <p className='mb-6 text-foreground'>
               The arbitration will be conducted by the American Arbitration
-              Association ("AAA") under its Consumer Arbitration Rules. Any
+              Association (&ldquo;AAA&rdquo;) under its Consumer Arbitration Rules. Any
               arbitration hearings will take place in the county where you live,
               unless we both agree to a different location.
             </p>
@@ -683,7 +683,7 @@ const TermsOfUse = () => {
             <p className='mb-6 text-foreground'>
               Payment of all filing, administration, and arbitrator fees will be
               governed by the AAA Rules. If you prevail in arbitration, you will
-              be entitled to an award of attorneys' fees and expenses to the
+              be entitled to an award of attorneys&apos; fees and expenses to the
               extent provided under applicable law.
             </p>
             <h3 className='mt-6 mb-3 text-xl font-medium text-foreground'>
@@ -764,7 +764,7 @@ const TermsOfUse = () => {
               Waiver of Rights
             </h3>
             <p className='mb-6 text-foreground'>
-              Freshman's failure to enforce any right or provision of these Terms
+              Freshman&apos;s failure to enforce any right or provision of these Terms
               will not be considered a waiver of such right or provision.
             </p>
 

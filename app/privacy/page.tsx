@@ -24,7 +24,7 @@ const PrivacyPolicy = () => {
 
             <p className='mb-6 text-foreground'>
               This Privacy Notice is designed to help you understand how People
-              Who Code LLC d/b/a Freshman ("Freshman", "we", "us," and "our")
+              Who Code LLC d/b/a Freshman (&ldquo;Freshman&rdquo;, &ldquo;we&rdquo;, &ldquo;us,&rdquo; and &ldquo;our&rdquo;)
               collects, uses, and shares your personal information and to help
               you understand and exercise your privacy rights.
             </p>
@@ -32,9 +32,9 @@ const PrivacyPolicy = () => {
             <p className='mb-6 text-foreground'>
               We are committed to protecting and respecting your privacy and
               will use your personal information in accordance with the General
-              Data Protection Regulation (the "GDPR"), the California Consumer
-              Privacy Act of 2018 (the "CCPA"), California Privacy Rights Act
-              (the "CPRA"), and other applicable laws, regulations, and
+              Data Protection Regulation (the &ldquo;GDPR&rdquo;), the California Consumer
+              Privacy Act of 2018 (the &ldquo;CCPA&rdquo;), California Privacy Rights Act
+              (the &ldquo;CPRA&rdquo;), and other applicable laws, regulations, and
               guidelines.
             </p>
 
@@ -43,9 +43,9 @@ const PrivacyPolicy = () => {
             </h2>
             <p className='mb-6 text-foreground'>
               This Privacy Notice applies to personal information processed by
-              us on the Freshman mobile app ("App") and Freshman website
-              ("Site"). To make this Privacy Notice easier to read, our mobile
-              app and related offerings are collectively called "Services."
+              us on the Freshman mobile app (&ldquo;App&rdquo;) and Freshman website
+              (&ldquo;Site&rdquo;). To make this Privacy Notice easier to read, our mobile
+              app and related offerings are collectively called &ldquo;Services.&rdquo;
             </p>
 
             <h2 className='mt-8 mb-4 text-2xl font-semibold text-foreground'>
@@ -98,7 +98,7 @@ const PrivacyPolicy = () => {
                 make available through our interactive features (e.g., messages
                 or media you share in chats or galleries). Any information you
                 provide on the public sections of these features will be
-                considered "public," unless otherwise required by applicable
+                considered &ldquo;public,&rdquo; unless otherwise required by applicable
                 law, and is not subject to the privacy protections referenced
                 herein.
               </li>
@@ -155,7 +155,7 @@ const PrivacyPolicy = () => {
                 analyze data that is automatically collected. Among our
                 analytics partners is Amplitude. To gain a comprehensive
                 understanding of how your data is managed, please refer to
-                Amplitude's Privacy Notice. The analytics data we handle is
+                Amplitude&apos;s Privacy Notice. The analytics data we handle is
                 general and anonymized, processed in a way that prevents any
                 user from being re-identified.
               </li>
@@ -257,16 +257,16 @@ const PrivacyPolicy = () => {
               content and advertisements. We may provide you with these
               materials as permitted by applicable law. Some of the ways we may
               market to you include email campaigns, custom audiences
-              advertising, and "interest-based" or "personalized advertising,"
+              advertising, and &ldquo;interest-based&rdquo; or &ldquo;personalized advertising,&rdquo;
               including through cross-device tracking.
             </p>
             <p className='mb-6 text-foreground'>
               If you have any questions about our marketing practices or if you
               would like to opt out of the use of your personal information for
               marketing purposes, you may contact us at any time as set forth in
-              Section 16 ("Contact us") below with the subject line "Do Not
+              Section 16 (&ldquo;Contact us&rdquo;) below with the subject line &ldquo;Do Not
               Share My Personal Information for Cross-Context Behavioral
-              Advertising."
+              Advertising.&rdquo;
             </p>
 
             <h3 className='mt-6 mb-3 text-xl font-medium text-foreground'>
@@ -385,7 +385,7 @@ const PrivacyPolicy = () => {
               associated with you to external parties if we, in good faith,
               believe doing so is required or appropriate to: comply with law
               enforcement or national security requests and legal process;
-              protect your, our, or others' rights, property, or safety; enforce
+              protect your, our, or others&apos; rights, property, or safety; enforce
               our policies or contracts; collect amounts owed to us; or assist
               with an investigation or prosecution of suspected or actual
               illegal activity.
@@ -423,7 +423,7 @@ const PrivacyPolicy = () => {
                 changing the settings on your mobile device.
               </li>
               <li>
-                <strong>"Do Not Track":</strong> We do not respond to or honor
+                <strong>&ldquo;Do Not Track&rdquo;:</strong> We do not respond to or honor
                 DNT signals or similar mechanisms transmitted by web browsers.
               </li>
               <li>
@@ -463,7 +463,7 @@ const PrivacyPolicy = () => {
             </ul>
             <p className='mb-6 text-foreground'>
               If you would like to exercise any of these rights, please contact
-              us as set forth in Section 16 ("Contact us") below. We will
+              us as set forth in Section 16 (&ldquo;Contact us&rdquo;) below. We will
               process such requests in accordance with applicable laws.
             </p>
 
@@ -502,8 +502,8 @@ const PrivacyPolicy = () => {
               necessary to fulfill the purpose(s) for which it was collected.
               Personal information will be stored on secure servers during the
               period you have a valid and active account unless you delete such
-              data manually using the App functionality or via a "Remove my
-              data" button. You may also request us to delete your personal data
+              data manually using the App functionality or via a &ldquo;Remove my
+              data&rdquo; button. You may also request us to delete your personal data
               by contacting us at team@joinfreshman.com.
             </p>
 
@@ -596,7 +596,7 @@ const PrivacyPolicy = () => {
               If you are a resident of Nevada, you have the right to opt-out of
               the sale of certain personal information. You can exercise this
               right by contacting us at team@joinfreshman.com with the subject
-              line "Nevada Do Not Sell Request."
+              line &ldquo;Nevada Do Not Sell Request.&rdquo;
             </p>
 
             <h2 className='mt-8 mb-4 text-2xl font-semibold text-foreground'>
@@ -610,7 +610,7 @@ const PrivacyPolicy = () => {
             </p>
 
             <h2 className='mt-8 mb-4 text-2xl font-semibold text-foreground'>
-              13. Children's Information
+              13. Children&apos;s Information
             </h2>
             <p className='mb-6 text-foreground'>
               The Services are not directed to children under 16, and we do not
