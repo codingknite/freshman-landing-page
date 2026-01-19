@@ -65,13 +65,12 @@ export default function SharePastPaperPage() {
         </div> */}
 
         {/* Headline */}
-        <h1 className='text-5xl sm:text-6xl lg:text-7xl font-medium leading-[1.1] tracking-tight mb-6'>
-          Someone Shared a<br />
-          Past Paper With You
+        <h1 className='text-5xl sm:text-6xl lg:text-6xl font-medium leading-[1.1] tracking-tight mb-6'>
+          Someone shared a past paper with you
         </h1>
 
         {/* Subtitle */}
-        <p className='text-lg sm:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed'>
+        <p className='text-md sm:text-md text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed'>
           Open in the Freshman app to start practicing.<br className='hidden sm:block' />
           Study smarter with AI-powered active recall.
         </p>
@@ -99,7 +98,7 @@ export default function SharePastPaperPage() {
               alt='Freshman App'
               width={400}
               height={800}
-              className='w-full h-auto'
+              className='w-[95%] md:w-[90%] h-auto object-contain'
               priority
             />
           </div>
