@@ -3,11 +3,15 @@
     "apps": [],
     "details": [
       {
-        "appID": "7P96K7H83L.app.joinfreshman.com",
-        "paths": [
-          "/share/pastpaper/*"
-        ]
+        "appID": "9PNP4QAGKA.app.joinfreshman.com",
+        "paths": ["/share/pastpaper/*"]
       }
     ]
+  },
+  "activitycontinuation": {
+    "apps": ["9PNP4QAGKA.app.joinfreshman.com"]
+  },
+  "webcredentials": {
+    "apps": ["9PNP4QAGKA.app.joinfreshman.com"]
   }
 }
