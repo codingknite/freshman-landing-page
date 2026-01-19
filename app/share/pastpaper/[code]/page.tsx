@@ -89,20 +89,6 @@ export default function SharePastPaperPage() {
             className='h-13 w-auto'
           />
         </Link>
-
-        {/* Phone Mockup */}
-        <div className='mt-16 relative'>
-          <div className='relative mx-auto max-w-sm'>
-            <Image
-              src='/ppp-sc.svg'
-              alt='Freshman App'
-              width={400}
-              height={800}
-              className='w-[95%] md:w-[90%] h-auto object-contain'
-              priority
-            />
-          </div>
-        </div>
       </main>
     </div>
   );
