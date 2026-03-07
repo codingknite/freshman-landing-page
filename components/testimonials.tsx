@@ -88,7 +88,7 @@ export default function TestimonialsSection() {
             <div className="mx-auto max-w-7xl px-6">
                 
                 {/* Header */}
-                <div className="text-center mb-16 md:mb-20">
+                <div className="text-center mt-6 mb-16 md:mb-20">
                     <p className="text-sm md:text-sm text-[#6366f1] mb-4 uppercase tracking-[0.2em] font-bold">
                         TESTIMONIALS
                     </p>
