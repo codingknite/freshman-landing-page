@@ -151,8 +151,8 @@ export default function Home() {
       <HeroSection />
       <BenefitsSection />
       <FeaturesSection />
-      <TestimonialsSection />
       <ContentSeven />
+      <TestimonialsSection />
       <PricingThree />
       <AndroidWaitlist />
       <FAQsThree />
