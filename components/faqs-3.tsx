@@ -6,12 +6,10 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import { DynamicIcon, type IconName } from 'lucide-react/dynamic';
 import Link from 'next/link';
 
 type FAQItem = {
   id: string;
-  icon: IconName;
   question: string;
   answer: string;
 };
@@ -20,35 +18,30 @@ export default function FAQsThree() {
   const faqItems: FAQItem[] = [
     {
       id: 'item-1',
-      icon: 'brain',
       question: 'What kind of notes can I upload?',
       answer:
         'You can upload almost anything! Freshman can read handwritten notes (from photos), PDF textbooks, PowerPoint slides, and standard digital text files. As long as the text is legible, we can turn it into a test.',
     },
     {
       id: 'item-2',
-      icon: 'shield',
       question: 'How accurate are the generated questions?',
       answer:
         'Freshman is highly accurate at identifying key concepts and creating relevant questions, though we always recommend reviewing the generated content as you study.',
     },
     {
       id: 'item-3',
-      icon: 'calendar',
       question: 'Can I use this for any subject?',
       answer:
         'Absolutely. Whether you are studying Biology, Law, History, Computer Science, or Literature, Freshman adapts to the content you provide. It works for any education level, from High School to PhD.',
     },
     {
       id: 'item-4',
-      icon: 'smartphone',
       question: 'When will Freshman be available on Android?',
       answer:
         "Freshman is currently available on iOS. We're actively developing the Android version and expect to launch it soon. Join our waitlist to be notified when the Android app becomes available.",
     },
     {
       id: 'item-5',
-      icon: 'wifi-off',
       question: 'Can I cancel my subscription anytime?',
       answer:
         'Yes, you can cancel your subscription anytime. There is no long-term commitment, and You can cancel your subscription instantly through your Apple ID settings at any time.',
@@ -56,54 +49,52 @@ export default function FAQsThree() {
   ];
 
   return (
-    <section className='bg-muted dark:bg-background py-20'>
-      <div className='mx-auto max-w-5xl px-4 md:px-6'>
-        <div className='flex flex-col gap-10 md:flex-row md:gap-16'>
-          <div className='md:w-1/3'>
-            <div className='sticky top-20'>
-              <h2 className='mt-4 text-3xl font-bold'>
-                Frequently Asked Questions
-              </h2>
-              <p className='text-muted-foreground mt-4'>
-                Can&apos;t find what you&apos;re looking for? contact our team at{' '}
-                <Link
-                  href='mailto:team@joinfreshman.com'
-                  className='text-primary font-medium hover:underline'
-                >
-                  team@joinfreshman.com
-                </Link>
-              </p>
-            </div>
-          </div>
-          <div className='md:w-2/3'>
-            <Accordion type='single' collapsible className='w-full space-y-2'>
-              {faqItems.map((item) => (
-                <AccordionItem
-                  key={item.id}
-                  value={item.id}
-                  className='bg-background shadow-xs rounded-lg border px-4 last:border-b'
-                >
-                  <AccordionTrigger className='cursor-pointer items-center py-5 hover:no-underline'>
-                    <div className='flex items-center gap-3'>
-                      <div className='flex size-6'>
-                        <DynamicIcon
-                          name={item.icon}
-                          className='m-auto size-4'
-                        />
-                      </div>
-                      <span className='text-base'>{item.question}</span>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className='pb-5'>
-                    <div className='px-9'>
-                      <p className='text-base'>{item.answer}</p>
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
+    <section className="bg-background py-24 px-6 font-sans">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-12 md:gap-24">
+        
+        {/* Left Column: Heading */}
+        <div className="md:w-[40%]">
+          <div className="sticky top-24">
+            <h2 className="text-4xl md:text-5xl font-medium text-zinc-900 dark:text-white mb-6 tracking-tight">
+              FAQs
+            </h2>
+            <p className="text-zinc-500 dark:text-zinc-400 text-lg mb-8">
+              Your questions answered
+            </p>
+            <p className="text-zinc-500 dark:text-zinc-400">
+              Need more help?{' '}
+              <Link
+                href="mailto:team@joinfreshman.com"
+                className="text-[#6366f1] hover:text-[#4f46e5] transition-colors font-medium"
+              >
+                Contact us
+              </Link>
+            </p>
           </div>
         </div>
+
+        {/* Right Column: Accordion */}
+        <div className="md:w-[60%]">
+          <Accordion type="single" collapsible className="w-full">
+            {faqItems.map((item) => (
+              <AccordionItem
+                key={item.id}
+                value={item.id}
+                className="border-b border-zinc-200 dark:border-zinc-800 last:border-0"
+              >
+                <AccordionTrigger className="py-6 hover:no-underline text-left group cursor-pointer">
+                  <span className="text-zinc-900 dark:text-zinc-100 text-base font-medium group-hover:text-[#6366f1] transition-colors">
+                    {item.question}
+                  </span>
+                </AccordionTrigger>
+                <AccordionContent className="pb-6 text-zinc-500 dark:text-zinc-400 text-sm md:text-base leading-relaxed">
+                  {item.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+
       </div>
     </section>
   );

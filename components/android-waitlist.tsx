@@ -1,7 +1,7 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
-import { Mail, SendHorizonal, Loader2 } from 'lucide-react';
+import { Mail, ChevronRight, Loader2 } from 'lucide-react';
 import { useState } from 'react';
 
 export default function AndroidWaitlist() {
@@ -54,69 +54,66 @@ export default function AndroidWaitlist() {
   };
 
   return (
-    <section className='py-12 md:py-16'>
-      <div className='mx-auto max-w-5xl px-6'>
-        <div className='text-center'>
-          <h2 className='text-balance text-4xl font-bold lg:text-[2.5rem] lg:w-[60%] mx-auto'>
-            Android is coming in Quarter One 2026
-          </h2>
-          <p className='mt-4 text-lg md:w-[50%] mx-auto'>
-            We are putting the finishing touches on our Android app. Join the
-            waitlist to get notified the moment it goes live later this month.
-          </p>
+    <section className="bg-background flex justify-center items-center font-sans px-6">
+      <div className="w-full max-w-2xl text-center">
+        
+        <h2 className="text-4xl md:text-5xl font-medium text-zinc-900 dark:text-white mb-4 tracking-tight">
+          Android is coming in Quarter One 2026
+        </h2>
+        
+        <p className="text-zinc-500 dark:text-zinc-400 text-base md:text-lg mb-10 max-w-lg mx-auto leading-relaxed">
+          We are putting the finishing touches on our Android app. Join the
+          waitlist to get notified the moment it goes live later this month.
+        </p>
 
-          <form
-            onSubmit={handleSubmit}
-            className='mx-auto mt-10 max-w-sm lg:mt-12'
-          >
-            <div className='bg-background has-[input:focus]:ring-muted relative grid grid-cols-[1fr_auto] items-center rounded-[calc(var(--radius)+0.75rem)] border pr-3 shadow shadow-zinc-950/5 has-[input:focus]:ring-2'>
-              <Mail className='text-caption pointer-events-none absolute inset-y-0 left-5 my-auto size-5' />
-
-              <input
-                placeholder='Your email address'
-                className='h-14 w-full bg-transparent pl-12 focus:outline-none'
-                type='email'
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                disabled={loading}
-              />
-
-              <div className='md:pr-1.5 lg:pr-0'>
-                <Button
-                  aria-label='submit'
-                  className='rounded-(--radius)'
-                  type='submit'
-                  disabled={loading}
-                >
-                  {loading ? (
-                    <Loader2 className='relative mx-auto size-5 animate-spin' />
-                  ) : (
-                    <>
-                      <span className='hidden md:block'>Join Waitlist</span>
-                      <SendHorizonal
-                        className='relative mx-auto size-5 md:hidden'
-                        strokeWidth={2}
-                      />
-                    </>
-                  )}
-                </Button>
-              </div>
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-row items-center justify-center gap-3 mx-auto"
+        >
+          <div className="relative w-[240px] sm:w-[300px]">
+            <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+              <Mail className="h-5 w-5 text-zinc-400" />
             </div>
-
-            {message && (
-              <p className='mt-4 text-sm font-medium text-green-600 dark:text-green-500'>
-                {message}
-              </p>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              disabled={loading}
+              placeholder="Enter your email"
+              className="h-[46px] w-full bg-white dark:bg-[#111111] border border-zinc-200 dark:border-zinc-800 rounded-lg pl-11 pr-4 focus:outline-none text-zinc-900 dark:text-white placeholder:text-zinc-500 text-sm focus:ring-1 focus:ring-zinc-200 dark:focus:ring-zinc-800 transition-all shadow-sm"
+            />
+          </div>
+          <Button
+            type="submit"
+            disabled={loading}
+            className="bg-[#b4bcff] hover:bg-[#6366f1] text-zinc-900 dark:bg-[#EAE4D9] dark:hover:bg-white dark:text-black h-[46px] rounded-full px-5 sm:px-6 font-medium shadow-sm transition-colors border-none flex-shrink-0 flex items-center justify-center space-x-1 sm:space-x-1.5 cursor-pointer"
+          >
+            {loading ? (
+              <Loader2 className="h-4 w-4 animate-spin" />
+            ) : (
+              <div className="flex items-center text-sm hover:text-white md:text-base">
+                <span>Join Waitlist</span>
+                <ChevronRight className="h-4 w-4 ml-1 stroke-[2.5px] opacity-70" />
+              </div>
             )}
+          </Button>
+        </form>
 
-            {error && (
-              <p className='mt-4 text-sm text-red-600 dark:text-red-400'>
-                {error}
-              </p>
-            )}
-          </form>
+        <div className="h-6 mt-4 flex justify-center items-center">
+          {message && (
+            <p className="text-sm font-medium text-green-600 dark:text-green-500">
+              {message}
+            </p>
+          )}
+
+          {error && (
+            <p className="text-sm text-red-500/90 font-medium">
+              {error}
+            </p>
+          )}
         </div>
+
       </div>
     </section>
   );

@@ -7,7 +7,7 @@ import PricingThree from '@/components/pricing-3';
 import AndroidWaitlist from '@/components/android-waitlist';
 import FAQsThree from '@/components/faqs-3';
 import FooterSection from '@/components/footer';
-
+import TestimonialsSection from '@/components/testimonials';
 export const metadata: Metadata = {
   title:
     'Freshman AI - Active Recall Study App | Transform Notes into Practice Tests',
@@ -149,12 +149,11 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
       />
       <HeroSection />
-      <FeaturesSection />
-      <ContentSeven />
       <BenefitsSection />
+      <FeaturesSection />
+      <TestimonialsSection />
+      <ContentSeven />
       <PricingThree />
-      {/* <Features /> */}
-      {/* <Testimonials /> */}
       <AndroidWaitlist />
       <FAQsThree />
       <FooterSection />

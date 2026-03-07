@@ -27,7 +27,7 @@ const transitionVariants = {
 
 export default function ContentSeven() {
   return (
-    <section className='bg-muted dark:bg-background py-16 md:py-24 lg:py-16'>
+    <section className='bg-[#f4f5fb] py-16 md:py-24 lg:py-16'>
       <div className='mx-auto max-w-7xl px-6'>
         <AnimatedGroup
           variants={{
@@ -47,7 +47,7 @@ export default function ContentSeven() {
               {/* Image */}
               <div className='flex justify-center items-center flex-shrink-0 w-full max-w-[280px] sm:max-w-[320px] md:max-w-[360px] lg:max-w-[400px] order-2 lg:order-1'>
                 <Image
-                  src='/ppp-sc.svg'
+                  src='/ppp.png'
                   alt='Past Paper Practice'
                   width={400}
                   height={800}
@@ -61,7 +61,7 @@ export default function ContentSeven() {
                   preset='fade-in-blur'
                   speedSegment={0.3}
                   as='p'
-                  className='text-sm md:text-base text-red-500/80 mb-2 uppercase tracking-wider font-semibold'
+                  className='text-sm md:text-base text-[#6366f1] mb-2 uppercase tracking-wider font-semibold'
                 >
                   PAST PAPERS
                 </TextEffect>
@@ -70,7 +70,7 @@ export default function ContentSeven() {
                   speedSegment={0.3}
                   delay={0.1}
                   as='h2'
-                  className='text-4xl md:text-5xl lg:text-6xl font-semibold lowercase mb-4 md:mb-6'
+                  className='text-4xl md:text-5xl lg:text-6xl font-semibold lowercase mb-4 md:mb-6 text-zinc-900'
                 >
                   practice with real exam questions
                 </TextEffect>
@@ -79,7 +79,7 @@ export default function ContentSeven() {
                   speedSegment={0.3}
                   delay={0.2}
                   as='p'
-                  className='text-[17px] md:text-[18px] text-muted-foreground mb-6 md:mb-8 leading-relaxed'
+                  className='text-[17px] md:text-[18px] text-zinc-600 mb-6 md:mb-8 leading-relaxed'
                 >
                   Upload past papers and instantly transform them into interactive
                   MCQ tests. Practice with real exam questions, receive immediate
@@ -102,40 +102,40 @@ export default function ContentSeven() {
                     }}
                   >
                     <div className='flex items-start gap-3'>
-                      <div className='mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-red-500/20 flex items-center justify-center'>
-                        <div className='w-2 h-2 rounded-full bg-red-500' />
+                      <div className='mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-[#6366f1]/20 flex items-center justify-center'>
+                        <div className='w-2 h-2 rounded-full bg-[#6366f1]' />
                       </div>
                       <div className='text-left'>
-                        <p className='font-semibold text-sm md:text-base mb-1'>
+                        <p className='font-semibold text-sm md:text-base mb-1 text-zinc-900'>
                           Interactive MCQ Tests
                         </p>
-                        <p className='text-muted-foreground text-xs md:text-sm'>
+                        <p className='text-zinc-600 text-xs md:text-sm'>
                           Auto-generated questions from your past papers
                         </p>
                       </div>
                     </div>
                     <div className='flex items-start gap-3 mt-4'>
-                      <div className='mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-red-500/20 flex items-center justify-center'>
-                        <div className='w-2 h-2 rounded-full bg-red-500' />
+                      <div className='mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-[#6366f1]/20 flex items-center justify-center'>
+                        <div className='w-2 h-2 rounded-full bg-[#6366f1]' />
                       </div>
                       <div className='text-left'>
-                        <p className='font-semibold text-sm md:text-base mb-1'>
+                        <p className='font-semibold text-sm md:text-base mb-1 text-zinc-900'>
                           Immediate Feedback
                         </p>
-                        <p className='text-muted-foreground text-xs md:text-sm'>
+                        <p className='text-zinc-600 text-xs md:text-sm'>
                           Know instantly if your answer is correct or wrong
                         </p>
                       </div>
                     </div>
                     <div className='flex items-start gap-3 mt-4'>
-                      <div className='mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-red-500/20 flex items-center justify-center'>
-                        <div className='w-2 h-2 rounded-full bg-red-500' />
+                      <div className='mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-[#6366f1]/20 flex items-center justify-center'>
+                        <div className='w-2 h-2 rounded-full bg-[#6366f1]' />
                       </div>
                       <div className='text-left'>
-                        <p className='font-semibold text-sm md:text-base mb-1'>
+                        <p className='font-semibold text-sm md:text-base mb-1 text-zinc-900'>
                           Detailed Explanations
                         </p>
-                        <p className='text-muted-foreground text-xs md:text-sm'>
+                        <p className='text-zinc-600 text-xs md:text-sm'>
                           Understand the reasoning behind every answer
                         </p>
                       </div>

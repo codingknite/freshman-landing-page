@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { TextEffect } from '@/components/ui/text-effect';
 import { AnimatedGroup } from '@/components/ui/animated-group';
 import { HeroHeader } from './header';
+import { Atom, Calculator } from 'lucide-react';
 
 const transitionVariants = {
   item: {
@@ -80,7 +81,6 @@ export default function HeroSection() {
               aria-hidden
               className='absolute inset-0 -z-10 size-full [background:radial-gradient(125%_125%_at_50%_100%,transparent_0%,var(--color-background)_75%)]'
             />
-
             <div className='mx-auto max-w-7xl px-6'>
               <div className='text-center sm:mx-auto lg:mr-auto lg:mt-0'>
                 <TextEffect
@@ -97,14 +97,14 @@ export default function HeroSection() {
                   speedSegment={0.3}
                   delay={0.5}
                   as='p'
-                  className='mx-auto mt-8 max-w-2xl text-balance text-lg'
+                  className='mx-auto mt-8 mb-10 max-w-2xl text-balance text-lg'
                 >
                   Built on proven cognitive science, Freshman converts your
                   notes into perfect Active Recall tests, guaranteeing
                   permanent, exam-proof memory and 50% better retention.
                 </TextEffect>
 
-                <AnimatedGroup
+                  <AnimatedGroup
                   variants={{
                     container: {
                       visible: {
@@ -116,7 +116,7 @@ export default function HeroSection() {
                     },
                     ...transitionVariants,
                   }}
-                  className='mt-12 flex flex-col items-center justify-center'
+                  className='flex flex-col items-center justify-center'
                 >
                   <Link
                     target='_blank'
@@ -148,46 +148,19 @@ export default function HeroSection() {
                 ...transitionVariants,
               }}
             >
-              <div className='relative mt-8 sm:mt-12 md:mt-20'>
-                <div className='overflow-x-auto overflow-y-hidden scrollbar-hide md:overflow-hidden scroll-smooth'>
-                  <div className='relative mx-auto max-w-6xl flex items-center justify-start md:justify-center gap-4 px-4 md:px-0 snap-x snap-mandatory'>
-                    <div className='flex-shrink-0 w-[200px] sm:w-[220px] md:w-[240px] lg:w-[250px] xl:w-[300px] snap-start'>
-                      <Image
-                        src='/mockup-h1.png'
-                        alt='App mockup 1'
-                        width={400}
-                        height={800}
-                        className='w-full h-auto object-contain'
-                      />
-                    </div>
-                    <div className='flex-shrink-0 w-[200px] sm:w-[220px] md:w-[240px] lg:w-[250px] xl:w-[300px] snap-start'>
-                      <Image
-                        src='/mockup-h2.png'
-                        alt='App mockup 2'
-                        width={400}
-                        height={800}
-                        className='w-full h-auto object-contain'
-                      />
-                    </div>
-                    <div className='flex-shrink-0 w-[200px] sm:w-[220px] md:w-[240px] lg:w-[250px] xl:w-[300px] snap-start'>
-                      <Image
-                        src='/mockup-h3.png'
-                        alt='App mockup 4'
-                        width={400}
-                        height={800}
-                        className='w-full h-auto object-contain'
-                      />
-                    </div>
-                    <div className='flex-shrink-0 w-[200px] sm:w-[220px] md:w-[240px] lg:w-[250px] xl:w-[300px] snap-start'>
-                      <Image
-                        src='/mockup-h4.png'
-                        alt='App mockup 3'
-                        width={400}
-                        height={800}
-                        className='w-full h-auto object-contain'
-                      />
-                    </div>
-                  </div>
+              <div className='relative w-full flex justify-center'>
+                <div className='relative inline-flex items-center justify-center'>
+                  <Image
+                    src='/lp_mockup.png'
+                    alt='App mockup'
+                    width={4320}
+                    height={3240}
+                    quality={100}
+                    className='h-[450px] sm:h-[550px] md:h-[650px] w-auto object-contain z-10 drop-shadow-[0_0_40px_rgba(0,0,0,0.1)]'
+                    priority
+                  />
+                  {/* Bottom fade shadow */}
+                  <div className='absolute bottom-0 left-0 right-0 h-32 md:h-48 bg-gradient-to-t from-background to-transparent z-20 pointer-events-none' />
                 </div>
               </div>
             </AnimatedGroup>
