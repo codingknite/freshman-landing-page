@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { TextEffect } from '@/components/ui/text-effect';
 import { BookOpen, FileText, Brain, Sparkles } from 'lucide-react';
@@ -38,6 +38,40 @@ const benefits = [
 
 export default function BenefitsSection() {
   const [activeIdx, setActiveIdx] = useState(0);
+  const [isAutoPaused, setIsAutoPaused] = useState(false);
+  const pauseTimeoutRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      if (isAutoPaused) {
+        return;
+      }
+      setActiveIdx((prevIdx) => (prevIdx + 1) % benefits.length);
+    }, 3000);
+
+    return () => window.clearInterval(interval);
+  }, [isAutoPaused]);
+
+  useEffect(() => {
+    return () => {
+      if (pauseTimeoutRef.current) {
+        window.clearTimeout(pauseTimeoutRef.current);
+      }
+    };
+  }, []);
+
+  const handleBenefitClick = (idx: number) => {
+    setActiveIdx(idx);
+    setIsAutoPaused(true);
+
+    if (pauseTimeoutRef.current) {
+      window.clearTimeout(pauseTimeoutRef.current);
+    }
+
+    pauseTimeoutRef.current = window.setTimeout(() => {
+      setIsAutoPaused(false);
+    }, 3000);
+  };
 
   return (
     <section className='bg-background py-16 md:py-24 overflow-hidden relative'>
@@ -74,7 +108,7 @@ export default function BenefitsSection() {
                 key={benefit.id} 
                 benefit={benefit} 
                 isActive={activeIdx === idx} 
-                onClick={() => setActiveIdx(idx)} 
+                onClick={() => handleBenefitClick(idx)} 
               />
             ))}
           </div>
@@ -107,7 +141,7 @@ export default function BenefitsSection() {
                 key={benefit.id} 
                 benefit={benefit} 
                 isActive={activeIdx === idx + 2} 
-                onClick={() => setActiveIdx(idx + 2)} 
+                onClick={() => handleBenefitClick(idx + 2)} 
               />
             ))}
           </div>
@@ -123,7 +157,7 @@ export default function BenefitsSection() {
                 key={benefit.id} 
                 benefit={benefit} 
                 isActive={activeIdx === idx} 
-                onClick={() => setActiveIdx(idx)} 
+                onClick={() => handleBenefitClick(idx)} 
               />
             ))}
           </div>
@@ -156,7 +190,7 @@ export default function BenefitsSection() {
                 key={benefit.id} 
                 benefit={benefit} 
                 isActive={activeIdx === idx + 2} 
-                onClick={() => setActiveIdx(idx + 2)} 
+                onClick={() => handleBenefitClick(idx + 2)} 
               />
             ))}
           </div>

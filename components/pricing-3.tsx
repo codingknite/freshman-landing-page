@@ -61,10 +61,10 @@ export default function PricingThree() {
         {/* Header Section */}
         <div className="text-center max-w-2xl mx-auto mb-16 md:mb-20">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-zinc-900 dark:text-white mb-6">
-            One Plan, Simple Pricing
+            Flexible Pricing
           </h2>
           <p className="text-zinc-500 dark:text-zinc-400 text-lg md:text-xl">
-            Everything you need to build powerful study habits. Choose your billing cycle.
+            Everything you need to build powerful study habits.
           </p>
         </div>
 

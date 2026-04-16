@@ -3,6 +3,7 @@ import HeroSection from '@/components/hero-section';
 import FeaturesSection from '@/components/features-section';
 import ContentSeven from '@/components/content-7';
 import BenefitsSection from '@/components/benefits-section';
+import DailyFeedSection from '@/components/daily-feed-section';
 import PricingThree from '@/components/pricing-3';
 import AndroidWaitlist from '@/components/android-waitlist';
 import FAQsThree from '@/components/faqs-3';
@@ -150,6 +151,7 @@ export default function Home() {
       />
       <HeroSection />
       <BenefitsSection />
+      <DailyFeedSection />
       <FeaturesSection />
       <ContentSeven />
       <TestimonialsSection />

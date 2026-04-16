@@ -27,7 +27,7 @@ const transitionVariants = {
 
 export default function ContentSeven() {
   return (
-    <section className='bg-[#f4f5fb] py-16 md:py-24 lg:py-16'>
+    <section className='bg-[#16192c] py-16 md:py-24 lg:py-16'>
       <div className='mx-auto max-w-7xl px-6'>
         <AnimatedGroup
           variants={{
@@ -61,7 +61,7 @@ export default function ContentSeven() {
                   preset='fade-in-blur'
                   speedSegment={0.3}
                   as='p'
-                  className='text-sm md:text-base text-[#6366f1] mb-2 uppercase tracking-wider font-semibold'
+                  className='text-sm md:text-base text-[#a5b4fc] mb-2 uppercase tracking-wider font-semibold'
                 >
                   PAST PAPERS
                 </TextEffect>
@@ -70,7 +70,7 @@ export default function ContentSeven() {
                   speedSegment={0.3}
                   delay={0.1}
                   as='h2'
-                  className='text-4xl md:text-5xl lg:text-6xl font-semibold lowercase mb-4 md:mb-6 text-zinc-900'
+                  className='text-4xl md:text-5xl lg:text-6xl font-semibold lowercase mb-4 md:mb-6 text-white'
                 >
                   practice with real exam questions
                 </TextEffect>
@@ -79,13 +79,13 @@ export default function ContentSeven() {
                   speedSegment={0.3}
                   delay={0.2}
                   as='p'
-                  className='text-[17px] md:text-[18px] text-zinc-600 mb-6 md:mb-8 leading-relaxed'
+                  className='text-[17px] md:text-[18px] text-zinc-200 mb-6 md:mb-8 leading-relaxed'
                 >
-                  Upload past papers and instantly transform them into interactive
-                  MCQ tests. Practice with real exam questions, receive immediate
-                  feedback on each answer, and read detailed explanations to
-                  understand every concept. Build confidence by mastering actual
-                  exam patterns before test day.
+                  Upload past papers and instantly transform them into
+                  interactive MCQ tests. Practice with real exam questions,
+                  receive immediate feedback on each answer, and read detailed
+                  explanations to understand every concept. Build confidence by
+                  mastering actual exam patterns before test day.
                 </TextEffect>
                 <div className='space-y-4 mt-6'>
                   <AnimatedGroup
@@ -102,40 +102,40 @@ export default function ContentSeven() {
                     }}
                   >
                     <div className='flex items-start gap-3'>
-                      <div className='mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-[#6366f1]/20 flex items-center justify-center'>
-                        <div className='w-2 h-2 rounded-full bg-[#6366f1]' />
+                      <div className='mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-[#818cf8]/25 flex items-center justify-center'>
+                        <div className='w-2 h-2 rounded-full bg-[#a5b4fc]' />
                       </div>
                       <div className='text-left'>
-                        <p className='font-semibold text-sm md:text-base mb-1 text-zinc-900'>
+                        <p className='font-semibold text-sm md:text-base mb-1 text-white'>
                           Interactive MCQ Tests
                         </p>
-                        <p className='text-zinc-600 text-xs md:text-sm'>
+                        <p className='text-zinc-300 text-xs md:text-sm'>
                           Auto-generated questions from your past papers
                         </p>
                       </div>
                     </div>
                     <div className='flex items-start gap-3 mt-4'>
-                      <div className='mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-[#6366f1]/20 flex items-center justify-center'>
-                        <div className='w-2 h-2 rounded-full bg-[#6366f1]' />
+                      <div className='mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-[#818cf8]/25 flex items-center justify-center'>
+                        <div className='w-2 h-2 rounded-full bg-[#a5b4fc]' />
                       </div>
                       <div className='text-left'>
-                        <p className='font-semibold text-sm md:text-base mb-1 text-zinc-900'>
+                        <p className='font-semibold text-sm md:text-base mb-1 text-white'>
                           Immediate Feedback
                         </p>
-                        <p className='text-zinc-600 text-xs md:text-sm'>
+                        <p className='text-zinc-300 text-xs md:text-sm'>
                           Know instantly if your answer is correct or wrong
                         </p>
                       </div>
                     </div>
                     <div className='flex items-start gap-3 mt-4'>
-                      <div className='mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-[#6366f1]/20 flex items-center justify-center'>
-                        <div className='w-2 h-2 rounded-full bg-[#6366f1]' />
+                      <div className='mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-[#818cf8]/25 flex items-center justify-center'>
+                        <div className='w-2 h-2 rounded-full bg-[#a5b4fc]' />
                       </div>
                       <div className='text-left'>
-                        <p className='font-semibold text-sm md:text-base mb-1 text-zinc-900'>
+                        <p className='font-semibold text-sm md:text-base mb-1 text-white'>
                           Detailed Explanations
                         </p>
-                        <p className='text-zinc-600 text-xs md:text-sm'>
+                        <p className='text-zinc-300 text-xs md:text-sm'>
                           Understand the reasoning behind every answer
                         </p>
                       </div>

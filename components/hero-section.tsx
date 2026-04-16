@@ -155,7 +155,6 @@ export default function HeroSection() {
                     alt='App mockup'
                     width={4320}
                     height={3240}
-                    quality={100}
                     className='h-[450px] sm:h-[550px] md:h-[650px] w-auto object-contain z-10 drop-shadow-[0_0_40px_rgba(0,0,0,0.1)]'
                     priority
                   />

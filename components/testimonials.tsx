@@ -1,4 +1,4 @@
-import Image from 'next/image'
+'use client'
 
 type Testimonial = {
     name: string
@@ -83,6 +83,9 @@ const testimonials: Testimonial[] = [
 ]
 
 export default function TestimonialsSection() {
+    const firstRow = testimonials.filter((_, idx) => idx % 2 === 0)
+    const secondRow = testimonials.filter((_, idx) => idx % 2 !== 0)
+
     return (
         <section className="bg-background pb-16 md:pb-24">
             <div className="mx-auto max-w-7xl px-6">
@@ -97,31 +100,75 @@ export default function TestimonialsSection() {
                     </h2>
                 </div>
 
-                {/* Masonry Grid Layout */}
-                <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 md:gap-6 space-y-4 md:space-y-6">
-                    {testimonials.map((testimonial, idx) => (
-                        <div 
-                            key={idx}
-                            className="break-inside-avoid bg-zinc-50 dark:bg-zinc-900/50 rounded-[2rem] p-6 md:p-8 hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors duration-300 border border-zinc-200/50 dark:border-zinc-800/50"
-                        >
-                            <div className="flex items-center gap-4 mb-4 md:mb-5">
-                                <div className="flex flex-col">
-                                    <h3 className="font-semibold text-zinc-900 dark:text-white text-base leading-tight">
-                                        {testimonial.name}
-                                    </h3>
-                                    <span className="text-zinc-500 dark:text-zinc-400 text-xs md:text-sm mt-0.5">
-                                        {testimonial.role}
-                                    </span>
-                                </div>
-                            </div>
-                            <blockquote className="text-sm md:text-[15px] leading-relaxed text-zinc-700 dark:text-zinc-300">
-                                {testimonial.quote}
-                            </blockquote>
+                <div className="relative space-y-4 md:space-y-6">
+                    <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-background to-transparent" />
+                    <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-background to-transparent" />
+
+                    <div className="group overflow-hidden">
+                        <div className="flex w-max animate-marquee-right gap-4 md:gap-6 group-hover:[animation-play-state:paused]">
+                            {[...firstRow, ...firstRow].map((testimonial, idx) => (
+                                <TestimonialCard key={`row-1-${idx}-${testimonial.name}`} testimonial={testimonial} />
+                            ))}
                         </div>
-                    ))}
+                    </div>
+
+                    <div className="group overflow-hidden">
+                        <div className="flex w-max animate-marquee-left gap-4 md:gap-6 group-hover:[animation-play-state:paused]">
+                            {[...secondRow, ...secondRow].map((testimonial, idx) => (
+                                <TestimonialCard key={`row-2-${idx}-${testimonial.name}`} testimonial={testimonial} />
+                            ))}
+                        </div>
+                    </div>
                 </div>
 
             </div>
+            <style jsx>{`
+                @keyframes marqueeLeft {
+                    0% {
+                        transform: translateX(0);
+                    }
+                    100% {
+                        transform: translateX(-50%);
+                    }
+                }
+
+                @keyframes marqueeRight {
+                    0% {
+                        transform: translateX(-50%);
+                    }
+                    100% {
+                        transform: translateX(0);
+                    }
+                }
+
+                .animate-marquee-left {
+                    animation: marqueeLeft 38s linear infinite;
+                }
+
+                .animate-marquee-right {
+                    animation: marqueeRight 38s linear infinite;
+                }
+            `}</style>
         </section>
+    )
+}
+
+function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
+    return (
+        <article className="w-[300px] sm:w-[340px] md:w-[360px] shrink-0 bg-zinc-50 dark:bg-zinc-900/50 rounded-[2rem] p-6 md:p-8 hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors duration-300 border border-zinc-200/50 dark:border-zinc-800/50">
+            <div className="flex items-center gap-4 mb-4 md:mb-5">
+                <div className="flex flex-col">
+                    <h3 className="font-semibold text-zinc-900 dark:text-white text-base leading-tight">
+                        {testimonial.name}
+                    </h3>
+                    <span className="text-zinc-500 dark:text-zinc-400 text-xs md:text-sm mt-0.5">
+                        {testimonial.role}
+                    </span>
+                </div>
+            </div>
+            <blockquote className="text-sm md:text-[15px] leading-relaxed text-zinc-700 dark:text-zinc-300">
+                {testimonial.quote}
+            </blockquote>
+        </article>
     )
 }
