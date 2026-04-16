@@ -1,5 +1,7 @@
 'use client'
 
+import { useI18n } from '@/components/i18n-provider'
+
 type Testimonial = {
     name: string
     role: string
@@ -83,8 +85,13 @@ const testimonials: Testimonial[] = [
 ]
 
 export default function TestimonialsSection() {
-    const firstRow = testimonials.filter((_, idx) => idx % 2 === 0)
-    const secondRow = testimonials.filter((_, idx) => idx % 2 !== 0)
+    const { messages, t } = useI18n()
+    const localizedTestimonials = testimonials.map((testimonial, idx) => ({
+        ...testimonial,
+        ...messages.testimonials.items[idx],
+    }))
+    const firstRow = localizedTestimonials.filter((_, idx) => idx % 2 === 0)
+    const secondRow = localizedTestimonials.filter((_, idx) => idx % 2 !== 0)
 
     return (
         <section className="bg-background pb-16 md:pb-24">
@@ -93,10 +100,10 @@ export default function TestimonialsSection() {
                 {/* Header */}
                 <div className="text-center mt-6 mb-16 md:mb-20">
                     <p className="text-sm md:text-sm text-[#6366f1] mb-4 uppercase tracking-[0.2em] font-bold">
-                        TESTIMONIALS
+                        {t('testimonials.eyebrow')}
                     </p>
                     <h2 className="text-4xl md:text-5xl lg:text-5xl font-bold tracking-tight text-zinc-900 dark:text-white lowercase">
-                        students love freshman
+                        {t('testimonials.title')}
                     </h2>
                 </div>
 

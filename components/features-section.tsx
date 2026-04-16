@@ -1,7 +1,10 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import { TextEffect } from '@/components/ui/text-effect';
 import { AnimatedGroup } from '@/components/ui/animated-group';
+import { useI18n } from '@/components/i18n-provider';
 
 const transitionVariants = {
   item: {
@@ -41,6 +44,9 @@ const features = [
 ];
 
 export default function FeaturesSection() {
+  const { messages, t } = useI18n();
+  const localizedItems = messages.features.items;
+
   return (
     <section className='bg-background py-16 md:py-24 lg:py-32 relative overflow-hidden'>
       {/* Background ambient light */}
@@ -55,7 +61,7 @@ export default function FeaturesSection() {
             as='p'
             className='text-sm md:text-base text-[#6366f1]/80 mb-3 uppercase tracking-wider font-bold'
           >
-            FEATURES
+            {t('features.eyebrow')}
           </TextEffect>
           <TextEffect
             preset='fade-in-blur'
@@ -64,12 +70,20 @@ export default function FeaturesSection() {
             as='h2'
             className='text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-zinc-900 dark:text-white max-w-3xl mx-auto'
           >
-            the smartest way to study.
+            {t('features.title')}
           </TextEffect>
         </div>
 
         <div>
-          {features.map((feature, index) => (
+          {features.map((feature, index) => {
+            const localized = localizedItems[index];
+            const mergedFeature = {
+              ...feature,
+              title: localized?.title ?? feature.title,
+              description: localized?.description ?? feature.description,
+            };
+
+            return (
             <AnimatedGroup
               key={index}
               variants={{
@@ -87,14 +101,16 @@ export default function FeaturesSection() {
               <div className='mx-auto max-w-6xl'>
                 <div
                   className={`flex flex-col ${
-                    feature.imageFirst ? 'lg:flex-row' : 'lg:flex-row-reverse'
+                    mergedFeature.imageFirst ? 'lg:flex-row' : 'lg:flex-row-reverse'
                   } items-center gap-10 md:gap-16 lg:gap-24`}
                 >
                   {/* Image/GIF block */}
                   <div className='flex justify-center items-center flex-shrink-0 w-full max-w-[280px] sm:max-w-[320px] md:max-w-[360px] lg:max-w-[400px]'>
-                    <img
-                      src={feature.mockup}
-                      alt={feature.title}
+                    <Image
+                      src={mergedFeature.mockup}
+                      alt={mergedFeature.title}
+                      width={400}
+                      height={800}
                       className='w-[90%] md:w-[80%] h-auto object-contain mx-auto'
                     />
                   </div>
@@ -107,7 +123,7 @@ export default function FeaturesSection() {
                       as='h3'
                       className='text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 tracking-tight text-zinc-900 dark:text-white leading-[1.15]'
                     >
-                      {feature.title}
+                      {mergedFeature.title}
                     </TextEffect>
                     <TextEffect
                       preset='fade-in-blur'
@@ -116,13 +132,14 @@ export default function FeaturesSection() {
                       as='p'
                       className='text-base md:text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed'
                     >
-                      {feature.description}
+                      {mergedFeature.description}
                     </TextEffect>
                   </div>
                 </div>
               </div>
             </AnimatedGroup>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

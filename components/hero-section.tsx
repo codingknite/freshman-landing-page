@@ -1,10 +1,12 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { TextEffect } from '@/components/ui/text-effect';
 import { AnimatedGroup } from '@/components/ui/animated-group';
 import { HeroHeader } from './header';
-import { Atom, Calculator } from 'lucide-react';
+import { useI18n } from '@/components/i18n-provider';
 
 const transitionVariants = {
   item: {
@@ -27,6 +29,8 @@ const transitionVariants = {
 };
 
 export default function HeroSection() {
+  const { t } = useI18n();
+
   return (
     <>
       <HeroHeader />
@@ -89,7 +93,7 @@ export default function HeroSection() {
                   as='h1'
                   className='mx-auto mt-8 max-w-4xl text-balance font-medium text-6xl md:font-medium md:text-7xl lg:mt-16 xl:text-[4.5rem]'
                 >
-                  Remember everything you study.
+                  {t('hero.title')}
                 </TextEffect>
                 <TextEffect
                   per='line'
@@ -99,9 +103,7 @@ export default function HeroSection() {
                   as='p'
                   className='mx-auto mt-8 mb-10 max-w-2xl text-balance text-lg'
                 >
-                  Built on proven cognitive science, Freshman converts your
-                  notes into perfect Active Recall tests, guaranteeing
-                  permanent, exam-proof memory and 50% better retention.
+                  {t('hero.subtitle')}
                 </TextEffect>
 
                   <AnimatedGroup

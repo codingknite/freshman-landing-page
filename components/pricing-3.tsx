@@ -1,59 +1,15 @@
 'use client';
 
 import { Check } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-
-type PricingPlan = {
-  id: string;
-  name: string;
-  description: string;
-  price: string;
-  period: string;
-  features: string[];
-  highlighted?: boolean;
-};
-
-const PRICING_PLANS: PricingPlan[] = [
-  {
-    id: 'weekly',
-    name: 'Weekly',
-    description: 'Perfect for cramming sessions',
-    price: '$3.99',
-    period: '/week',
-    features: [
-      'All features included',
-      'Cancel anytime',
-      'No long-term commitment',
-    ],
-  },
-  {
-    id: 'monthly',
-    name: 'Monthly',
-    description: 'Flexible month-to-month billing',
-    price: '$10.99',
-    period: '/month',
-    features: [
-      'All features included',
-      'Cancel anytime',
-      'No long-term commitment',
-    ],
-  },
-  {
-    id: 'annual',
-    name: 'Annual',
-    description: 'Save 35% with annual billing',
-    price: '$99.99',
-    period: '/year',
-    features: [
-      'All features included',
-      '3 months free',
-      'Cancel anytime',
-    ],
-    highlighted: true,
-  },
-];
+import { useI18n } from '@/components/i18n-provider';
 
 export default function PricingThree() {
+  const { messages, t } = useI18n();
+  const plans = messages.pricing.plans.map((plan) => ({
+    ...plan,
+    highlighted: plan.id === 'annual',
+  }));
+
   return (
     <section className="bg-background py-24 px-6 font-sans">
       <div className="max-w-7xl mx-auto">
@@ -61,16 +17,16 @@ export default function PricingThree() {
         {/* Header Section */}
         <div className="text-center max-w-2xl mx-auto mb-16 md:mb-20">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-zinc-900 dark:text-white mb-6">
-            Flexible Pricing
+            {t('pricing.title')}
           </h2>
           <p className="text-zinc-500 dark:text-zinc-400 text-lg md:text-xl">
-            Everything you need to build powerful study habits.
+            {t('pricing.subtitle')}
           </p>
         </div>
 
         {/* Pricing Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
-          {PRICING_PLANS.map((plan) => (
+          {plans.map((plan) => (
             <div
               key={plan.id}
               className={`
@@ -113,7 +69,7 @@ export default function PricingThree() {
 
         {/* Footer Text */}
         <p className="text-center text-zinc-500 dark:text-zinc-400 text-sm mt-12 mb-20">
-          Cancel at any time.
+          {t('pricing.footer')}
         </p>
 
       </div>

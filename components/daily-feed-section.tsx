@@ -3,6 +3,7 @@
 import React from 'react';
 import { TextEffect } from '@/components/ui/text-effect';
 import { AnimatedGroup } from '@/components/ui/animated-group';
+import { useI18n } from '@/components/i18n-provider';
 
 const transitionVariants = {
   item: {
@@ -25,6 +26,8 @@ const transitionVariants = {
 };
 
 export default function DailyFeedSection() {
+  const { t } = useI18n();
+
   return (
     <section className='bg-[#16192c] py-16 md:py-24 lg:py-20'>
       <div className='mx-auto max-w-7xl px-6'>
@@ -50,7 +53,7 @@ export default function DailyFeedSection() {
                   as='p'
                   className='text-sm md:text-base text-[#818cf8] mb-2 uppercase tracking-wider font-semibold'
                 >
-                  DAILY FEED
+                  {t('dailyFeed.eyebrow')}
                 </TextEffect>
                 <TextEffect
                   preset='fade-in-blur'
@@ -59,7 +62,7 @@ export default function DailyFeedSection() {
                   as='h2'
                   className='text-4xl md:text-5xl lg:text-6xl font-semibold lowercase mb-4 md:mb-6 text-white'
                 >
-                  revision as simple as swiping
+                  {t('dailyFeed.title')}
                 </TextEffect>
                 <TextEffect
                   preset='fade-in-blur'
@@ -68,10 +71,7 @@ export default function DailyFeedSection() {
                   as='p'
                   className='text-[17px] md:text-[18px] text-zinc-300 mb-6 md:mb-8 leading-relaxed'
                 >
-                  Open Freshman to get a daily stream of bite-sized revision
-                  prompts, quick challenges, and concept refreshers tailored to
-                  your progress. Keep your streak alive and stay exam-ready with
-                  just a few minutes each day.
+                  {t('dailyFeed.description')}
                 </TextEffect>
               </div>
 

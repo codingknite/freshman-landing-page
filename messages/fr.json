@@ -1,0 +1,252 @@
+{
+  "meta": {
+    "homeTitle": "Freshman IA - App d'étude Active Recall | Transformez vos notes en tests",
+    "homeDescription": "Les étudiants perdent des heures à surligner et relire, alors que la recherche montre que l'active recall est 50 % plus efficace. Freshman utilise l'IA pour transformer vos notes manuscrites, PDFs et photos en questions de rappel actif.",
+    "termsTitle": "Conditions d'utilisation Freshman",
+    "termsDescription": "Conditions d'utilisation de Freshman, une application d'étude par People Who Code LLC",
+    "privacyTitle": "Politique de confidentialité Freshman",
+    "privacyDescription": "Politique de confidentialité de Freshman, une application d'étude par People Who Code LLC"
+  },
+  "nav": {
+    "terms": "Conditions",
+    "privacy": "Confidentialité"
+  },
+  "languages": {
+    "label": "Langue",
+    "en": "Anglais",
+    "es": "Espagnol",
+    "fr": "Français",
+    "de": "Allemand"
+  },
+  "hero": {
+    "title": "Retenez tout ce que vous étudiez.",
+    "subtitle": "Basé sur des sciences cognitives éprouvées, Freshman transforme vos notes en tests de rappel actif parfaits, garantissant une mémoire durable et 50 % de rétention en plus."
+  },
+  "benefits": {
+    "eyebrow": "AVANTAGES",
+    "title": "votre compagnon d'étude",
+    "items": [
+      {
+        "id": "revision",
+        "title": "Révision quotidienne",
+        "text": "Freshman génère des notes ciblées et des tests rapides sur n'importe quel sujet pour vous aider à construire une habitude de révision durable."
+      },
+      {
+        "id": "past-papers",
+        "title": "Pratique des annales",
+        "text": "Importez vos anciens examens et entraînez-vous de manière interactive. Transformez des annales statiques en tests QCM dynamiques auto-corrigés."
+      },
+      {
+        "id": "tests",
+        "title": "Évaluation complète",
+        "text": "Générez facilement quiz, flashcards et examens blancs complets pour mieux comprendre vos matières et identifier immédiatement vos lacunes."
+      },
+      {
+        "id": "breakdown",
+        "title": "Décomposition des notes",
+        "text": "Vos notes importées sont automatiquement transformées en concepts clés et questions de révision ciblées, ce qui vous fait gagner des heures."
+      }
+    ]
+  },
+  "features": {
+    "eyebrow": "FONCTIONNALITÉS",
+    "title": "la façon la plus intelligente d'étudier.",
+    "items": [
+      {
+        "title": "Décortiquez les manuels denses",
+        "description": "Importez vos manuels et Freshman les découpe en chapitres digestes. Obtenez des notes de synthèse et des analyses détaillées pour vous concentrer sur l'essentiel de l'examen."
+      },
+      {
+        "title": "Ne mémorisez pas. Maîtrisez.",
+        "description": "Allez au-delà de la mémorisation. Les tests d'active recall vous obligent à reformuler des concepts complexes avec vos propres mots, le moyen le plus rapide de combler vos lacunes."
+      }
+    ]
+  },
+  "dailyFeed": {
+    "eyebrow": "FIL QUOTIDIEN",
+    "title": "apprenez quelque chose de nouveau chaque jour",
+    "description": "Ouvrez Freshman pour recevoir chaque jour des rappels courts, des mini-défis et des révisions de concepts adaptés à votre progression. Gardez votre série et restez prêt pour vos examens en quelques minutes par jour."
+  },
+  "pastPapers": {
+    "eyebrow": "ANNALES",
+    "title": "entraînez-vous avec de vraies questions d'examen",
+    "description": "Importez des annales et transformez-les instantanément en tests QCM interactifs. Pratiquez avec de vraies questions, obtenez un retour immédiat et lisez des explications détaillées pour comprendre chaque notion.",
+    "bullets": [
+      {
+        "title": "Tests QCM interactifs",
+        "text": "Questions générées automatiquement à partir de vos annales"
+      },
+      {
+        "title": "Retour immédiat",
+        "text": "Sachez instantanément si votre réponse est correcte ou non"
+      },
+      {
+        "title": "Explications détaillées",
+        "text": "Comprenez le raisonnement derrière chaque réponse"
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "TÉMOIGNAGES",
+    "title": "les étudiants adorent freshman",
+    "items": [
+      {
+        "name": "Alice",
+        "role": "Étudiante en médecine",
+        "quote": "Freshman a révolutionné ma façon d'étudier l'anatomie. Voir mes notes transformées en questions de rappel actif, c'est comme avoir un tuteur personnel."
+      },
+      {
+        "name": "George",
+        "role": "Étudiant en droit",
+        "quote": "Les insights IA qui découpent des cas complexes en concepts clés m'ont énormément aidé à optimiser mon planning de révision."
+      },
+      {
+        "name": "Natalie",
+        "role": "Lycéenne en terminale",
+        "quote": "La génération de flashcards de Freshman m'a aidée à créer de meilleures routines d'étude et à réussir mes examens."
+      },
+      {
+        "name": "Ulysses",
+        "role": "Étudiant en informatique",
+        "quote": "Le résumé de notes par IA me fait gagner des heures. Je téléverse mes slides et je commence à réviser immédiatement."
+      },
+      {
+        "name": "Bob",
+        "role": "Étudiant en ingénierie",
+        "quote": "Les tests inspirés de la méthode Feynman ont nettement amélioré ma compréhension des concepts complexes."
+      },
+      {
+        "name": "Hannah",
+        "role": "Interne en médecine",
+        "quote": "Le planning de répétition espacée de Freshman, intégré à mes rotations cliniques, a été un vrai sauveur."
+      },
+      {
+        "name": "Oscar",
+        "role": "Étudiant en histoire",
+        "quote": "Pratiquer des annales de façon interactive au lieu de lire des PDFs a considérablement amélioré ma stratégie d'examen."
+      },
+      {
+        "name": "Victoria",
+        "role": "Analyste business",
+        "quote": "Même pour les certifications professionnelles, les insights personnalisés de Freshman sont extrêmement efficaces."
+      },
+      {
+        "name": "Charlie",
+        "role": "Étudiant en soins infirmiers",
+        "quote": "Les examens blancs m'aident à mieux repérer mes points faibles avant le vrai examen."
+      },
+      {
+        "name": "Ian",
+        "role": "Étudiant en économie",
+        "quote": "Les rappels intelligents de révision ont réduit drastiquement mes sessions de bachotage de dernière minute."
+      },
+      {
+        "name": "Patricia",
+        "role": "Étudiante en littérature",
+        "quote": "La capacité de Freshman à analyser des centaines de pages et extraire les thèmes clés a simplifié ma préparation aux dissertations."
+      },
+      {
+        "name": "William",
+        "role": "Candidat MBA",
+        "quote": "Les quiz suggérés par l'IA à partir de mes études de cas ont renforcé ma vitesse d'analyse et de rappel."
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Tarifs flexibles",
+    "subtitle": "Tout ce qu'il vous faut pour construire de solides habitudes d'étude.",
+    "footer": "Annulez à tout moment.",
+    "plans": [
+      {
+        "id": "weekly",
+        "name": "Hebdomadaire",
+        "description": "Parfait pour les sessions intensives",
+        "price": "$3.99",
+        "period": "/semaine",
+        "features": ["Toutes les fonctionnalités incluses", "Annulez à tout moment", "Aucun engagement long terme"]
+      },
+      {
+        "id": "monthly",
+        "name": "Mensuel",
+        "description": "Facturation flexible de mois en mois",
+        "price": "$10.99",
+        "period": "/mois",
+        "features": ["Toutes les fonctionnalités incluses", "Annulez à tout moment", "Aucun engagement long terme"]
+      },
+      {
+        "id": "annual",
+        "name": "Annuel",
+        "description": "Économisez 35 % avec l'abonnement annuel",
+        "price": "$99.99",
+        "period": "/an",
+        "features": ["Toutes les fonctionnalités incluses", "3 mois offerts", "Annulez à tout moment"]
+      }
+    ]
+  },
+  "androidWaitlist": {
+    "title": "Android arrive bientôt",
+    "description": "Nous apportons les dernières retouches à notre application Android. Rejoignez la liste d'attente et soyez averti dès sa mise en ligne.",
+    "placeholder": "Entrez votre e-mail",
+    "cta": "Rejoindre la liste"
+  },
+  "faqs": {
+    "title": "FAQs",
+    "subtitle": "Vos questions, nos réponses",
+    "contactPrefix": "Besoin d'aide supplémentaire ?",
+    "contactLink": "Contactez-nous",
+    "items": [
+      {
+        "id": "item-1",
+        "question": "Quel type de notes puis-je importer ?",
+        "answer": "Vous pouvez importer presque tout. Freshman lit les notes manuscrites (photo), les PDF, les slides et les fichiers texte. Tant que le texte est lisible, nous pouvons le transformer en test."
+      },
+      {
+        "id": "item-2",
+        "question": "Quelle est la précision des questions générées ?",
+        "answer": "Freshman est très précis pour identifier les concepts clés et générer des questions pertinentes, mais nous recommandons toujours de relire le contenu généré."
+      },
+      {
+        "id": "item-3",
+        "question": "Puis-je l'utiliser pour n'importe quelle matière ?",
+        "answer": "Absolument. Biologie, droit, histoire, informatique ou littérature : Freshman s'adapte à votre contenu et fonctionne à tous les niveaux."
+      },
+      {
+        "id": "item-4",
+        "question": "Quand Freshman sera-t-il disponible sur Android ?",
+        "answer": "Freshman est actuellement disponible sur iOS. Nous développons activement la version Android et prévoyons un lancement prochain. Rejoignez la liste d'attente pour être averti."
+      },
+      {
+        "id": "item-5",
+        "question": "Puis-je annuler mon abonnement à tout moment ?",
+        "answer": "Oui, vous pouvez annuler à tout moment. Il n'y a pas d'engagement à long terme et l'annulation se fait via les réglages de votre identifiant Apple."
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "Tous droits réservés"
+  },
+  "share": {
+    "note": {
+      "title": "Quelqu'un a partagé une note avec vous",
+      "subtitle": "Ouvrez-la dans l'application Freshman pour commencer à réviser.",
+      "subtitle2": "Étudiez plus intelligemment avec l'active recall piloté par l'IA."
+    },
+    "flashcard": {
+      "title": "Quelqu'un a partagé des flashcards avec vous",
+      "subtitle": "Ouvrez-les dans l'application Freshman pour commencer à étudier.",
+      "subtitle2": "Maîtrisez les concepts avec des flashcards en répétition espacée."
+    },
+    "pastpaper": {
+      "title": "Quelqu'un a partagé une annale avec vous",
+      "subtitle": "Ouvrez-la dans l'application Freshman pour commencer à pratiquer.",
+      "subtitle2": "Étudiez plus intelligemment avec l'active recall piloté par l'IA."
+    },
+    "book": {
+      "title": "Quelqu'un a partagé un manuel avec vous",
+      "subtitle": "Ouvrez-le dans l'application Freshman pour commencer à lire.",
+      "subtitle2": "Étudiez plus intelligemment avec des résumés de chapitres par IA."
+    },
+    "openButton": "Ouvrir dans Freshman"
+  }
+}
+

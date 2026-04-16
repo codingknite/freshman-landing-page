@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { TextEffect } from '@/components/ui/text-effect';
 import { AnimatedGroup } from '@/components/ui/animated-group';
+import { useI18n } from '@/components/i18n-provider';
 
 const transitionVariants = {
   item: {
@@ -26,6 +27,9 @@ const transitionVariants = {
 };
 
 export default function ContentSeven() {
+  const { messages, t } = useI18n();
+  const bullets = messages.pastPapers.bullets;
+
   return (
     <section className='bg-[#16192c] py-16 md:py-24 lg:py-16'>
       <div className='mx-auto max-w-7xl px-6'>
@@ -63,7 +67,7 @@ export default function ContentSeven() {
                   as='p'
                   className='text-sm md:text-base text-[#a5b4fc] mb-2 uppercase tracking-wider font-semibold'
                 >
-                  PAST PAPERS
+                  {t('pastPapers.eyebrow')}
                 </TextEffect>
                 <TextEffect
                   preset='fade-in-blur'
@@ -72,7 +76,7 @@ export default function ContentSeven() {
                   as='h2'
                   className='text-4xl md:text-5xl lg:text-6xl font-semibold lowercase mb-4 md:mb-6 text-white'
                 >
-                  practice with real exam questions
+                  {t('pastPapers.title')}
                 </TextEffect>
                 <TextEffect
                   preset='fade-in-blur'
@@ -81,11 +85,7 @@ export default function ContentSeven() {
                   as='p'
                   className='text-[17px] md:text-[18px] text-zinc-200 mb-6 md:mb-8 leading-relaxed'
                 >
-                  Upload past papers and instantly transform them into
-                  interactive MCQ tests. Practice with real exam questions,
-                  receive immediate feedback on each answer, and read detailed
-                  explanations to understand every concept. Build confidence by
-                  mastering actual exam patterns before test day.
+                  {t('pastPapers.description')}
                 </TextEffect>
                 <div className='space-y-4 mt-6'>
                   <AnimatedGroup
@@ -107,10 +107,10 @@ export default function ContentSeven() {
                       </div>
                       <div className='text-left'>
                         <p className='font-semibold text-sm md:text-base mb-1 text-white'>
-                          Interactive MCQ Tests
+                          {bullets[0]?.title}
                         </p>
                         <p className='text-zinc-300 text-xs md:text-sm'>
-                          Auto-generated questions from your past papers
+                          {bullets[0]?.text}
                         </p>
                       </div>
                     </div>
@@ -120,10 +120,10 @@ export default function ContentSeven() {
                       </div>
                       <div className='text-left'>
                         <p className='font-semibold text-sm md:text-base mb-1 text-white'>
-                          Immediate Feedback
+                          {bullets[1]?.title}
                         </p>
                         <p className='text-zinc-300 text-xs md:text-sm'>
-                          Know instantly if your answer is correct or wrong
+                          {bullets[1]?.text}
                         </p>
                       </div>
                     </div>
@@ -133,10 +133,10 @@ export default function ContentSeven() {
                       </div>
                       <div className='text-left'>
                         <p className='font-semibold text-sm md:text-base mb-1 text-white'>
-                          Detailed Explanations
+                          {bullets[2]?.title}
                         </p>
                         <p className='text-zinc-300 text-xs md:text-sm'>
-                          Understand the reasoning behind every answer
+                          {bullets[2]?.text}
                         </p>
                       </div>
                     </div>

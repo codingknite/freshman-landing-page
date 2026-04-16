@@ -1,0 +1,252 @@
+{
+  "meta": {
+    "homeTitle": "Freshman AI - Active Recall Study App | Transform Notes into Practice Tests",
+    "homeDescription": "Students waste hours highlighting and rereading, but research shows active recall is 50% more effective. Freshman uses AI to convert your handwritten notes, PDFs, and photos into scientifically-designed active recall questions with spaced repetition for permanent memory retention.",
+    "termsTitle": "Freshman Terms of Use",
+    "termsDescription": "Terms of Use for Freshman, a study app by People Who Code LLC",
+    "privacyTitle": "Freshman Privacy Policy",
+    "privacyDescription": "Privacy Policy for Freshman, a study app by People Who Code LLC"
+  },
+  "languages": {
+    "label": "Language",
+    "en": "English",
+    "es": "Spanish",
+    "fr": "French",
+    "de": "German"
+  },
+  "nav": {
+    "terms": "Terms",
+    "privacy": "Privacy"
+  },
+  "hero": {
+    "title": "Remember everything you study.",
+    "subtitle": "Built on proven cognitive science, Freshman converts your notes into perfect Active Recall tests, guaranteeing permanent, exam-proof memory and 50% better retention."
+  },
+  "benefits": {
+    "eyebrow": "BENEFITS",
+    "title": "your study companion",
+    "items": [
+      {
+        "id": "revision",
+        "title": "Daily Revision",
+        "text": "Freshman generates targeted notes and quick tests for any topic, empowering you to build a daily revision habit that sticks."
+      },
+      {
+        "id": "past-papers",
+        "title": "Past Paper Practice",
+        "text": "Upload your old exams and practice them interactively. Turn static past papers into dynamic, auto-graded MCQ tests."
+      },
+      {
+        "id": "tests",
+        "title": "Comprehensive Testing",
+        "text": "Easily generate quizzes, flashcards, and full mock exams to deeply understand your subjects and instantly identify knowledge gaps."
+      },
+      {
+        "id": "breakdown",
+        "title": "Note Breakdown",
+        "text": "Watch your uploaded notes automatically transform into core concepts and targeted revision questions, saving hours of manual synthesis."
+      }
+    ]
+  },
+  "dailyFeed": {
+    "eyebrow": "DAILY FEED",
+    "title": "learn something new every day",
+    "description": "Open Freshman to get a daily stream of bite-sized revision prompts, quick challenges, and concept refreshers tailored to your progress. Keep your streak alive and stay exam-ready with just a few minutes each day."
+  },
+  "features": {
+    "eyebrow": "FEATURES",
+    "title": "the smartest way to study.",
+    "items": [
+      {
+        "title": "Break Down Dense Textbooks",
+        "description": "Upload your textbooks and Freshman will break them down into digestible chapters. Get high-level notes and deep-dive breakdowns for every section so you can skip the fluff and focus on what’s actually on the exam."
+      },
+      {
+        "title": "Don’t Just Memorize. Master.",
+        "description": "Move beyond basic memorization. Active recall tests force you to articulate complex concepts in your own words. It’s the fastest way to find and fix your knowledge gaps."
+      }
+    ]
+  },
+  "pastPapers": {
+    "eyebrow": "PAST PAPERS",
+    "title": "practice with real exam questions",
+    "description": "Upload past papers and instantly transform them into interactive MCQ tests. Practice with real exam questions, receive immediate feedback on each answer, and read detailed explanations to understand every concept. Build confidence by mastering actual exam patterns before test day.",
+    "bullets": [
+      {
+        "title": "Interactive MCQ Tests",
+        "text": "Auto-generated questions from your past papers"
+      },
+      {
+        "title": "Immediate Feedback",
+        "text": "Know instantly if your answer is correct or wrong"
+      },
+      {
+        "title": "Detailed Explanations",
+        "text": "Understand the reasoning behind every answer"
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "TESTIMONIALS",
+    "title": "students love freshman",
+    "items": [
+      {
+        "name": "Alice",
+        "role": "Pre-Med Student",
+        "quote": "Freshman has revolutionized how I study for anatomy. Having my notes automatically turned into active recall questions is like having a personal tutor."
+      },
+      {
+        "name": "George",
+        "role": "Law Student",
+        "quote": "The AI-driven insights breaking down complex cases into Key Concepts have helped me optimize my daily study schedule significantly."
+      },
+      {
+        "name": "Natalie",
+        "role": "High School Senior",
+        "quote": "Freshman's flashcard generation feature has helped me build better study routines and finally ace my AP exams."
+      },
+      {
+        "name": "Ulysses",
+        "role": "Computer Science Major",
+        "quote": "The AI-powered note summerizer has saved me hours of manual note-taking. I just upload my lecture slides and start revising immediately."
+      },
+      {
+        "name": "Bob",
+        "role": "Engineering Student",
+        "quote": "The Feynman Technique-inspired recall tests have significantly improved my deep understanding of complex thermodynamics concepts."
+      },
+      {
+        "name": "Hannah",
+        "role": "Medical Resident",
+        "quote": "Freshman's spaced repetition schedule integrated with my clinical rotations has created a lifesaver of a seamless workflow."
+      },
+      {
+        "name": "Oscar",
+        "role": "History Major",
+        "quote": "Practicing past papers interactively instead of just reading old PDFs has massively improved my exam strategy and essay structure."
+      },
+      {
+        "name": "Victoria",
+        "role": "Business Analyst",
+        "quote": "Even for professional certifications, Freshman's personalized active recall insights have been eye-opening and deeply effective."
+      },
+      {
+        "name": "Charlie",
+        "role": "Nursing Student",
+        "quote": "The mock exams feature has helped me maintain a better track of my weak points before I step into the real testing center."
+      },
+      {
+        "name": "Ian",
+        "role": "Economics Major",
+        "quote": "The smart revision reminders have drastically reduced my cramming sessions before midterms. Highly recommended."
+      },
+      {
+        "name": "Patricia",
+        "role": "Literature Student",
+        "quote": "Freshman's ability to parse through hundreds of pages of text and extract the themes has streamlined my essay preparations."
+      },
+      {
+        "name": "William",
+        "role": "MBA Candidate",
+        "quote": "The AI-suggested quizzes based on my uploaded case studies have expanded my analytical thinking and recall speed."
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Flexible Pricing",
+    "subtitle": "Everything you need to build powerful study habits.",
+    "footer": "Cancel at any time.",
+    "plans": [
+      {
+        "id": "weekly",
+        "name": "Weekly",
+        "description": "Perfect for cramming sessions",
+        "price": "$3.99",
+        "period": "/week",
+        "features": ["All features included", "Cancel anytime", "No long-term commitment"]
+      },
+      {
+        "id": "monthly",
+        "name": "Monthly",
+        "description": "Flexible month-to-month billing",
+        "price": "$10.99",
+        "period": "/month",
+        "features": ["All features included", "Cancel anytime", "No long-term commitment"]
+      },
+      {
+        "id": "annual",
+        "name": "Annual",
+        "description": "Save 35% with annual billing",
+        "price": "$99.99",
+        "period": "/year",
+        "features": ["All features included", "3 months free", "Cancel anytime"]
+      }
+    ]
+  },
+  "androidWaitlist": {
+    "title": "Android is coming soon",
+    "description": "We are putting the finishing touches on our Android app. Join the waitlist to get notified the moment it goes live later this month.",
+    "placeholder": "Enter your email",
+    "cta": "Join Waitlist"
+  },
+  "faqs": {
+    "title": "FAQs",
+    "subtitle": "Your questions answered",
+    "contactPrefix": "Need more help?",
+    "contactLink": "Contact us",
+    "items": [
+      {
+        "id": "item-1",
+        "question": "What kind of notes can I upload?",
+        "answer": "You can upload almost anything! Freshman can read handwritten notes (from photos), PDF textbooks, PowerPoint slides, and standard digital text files. As long as the text is legible, we can turn it into a test."
+      },
+      {
+        "id": "item-2",
+        "question": "How accurate are the generated questions?",
+        "answer": "Freshman is highly accurate at identifying key concepts and creating relevant questions, though we always recommend reviewing the generated content as you study."
+      },
+      {
+        "id": "item-3",
+        "question": "Can I use this for any subject?",
+        "answer": "Absolutely. Whether you are studying Biology, Law, History, Computer Science, or Literature, Freshman adapts to the content you provide. It works for any education level, from High School to PhD."
+      },
+      {
+        "id": "item-4",
+        "question": "When will Freshman be available on Android?",
+        "answer": "Freshman is currently available on iOS. We're actively developing the Android version and expect to launch it soon. Join our waitlist to be notified when the Android app becomes available."
+      },
+      {
+        "id": "item-5",
+        "question": "Can I cancel my subscription anytime?",
+        "answer": "Yes, you can cancel your subscription anytime. There is no long-term commitment, and You can cancel your subscription instantly through your Apple ID settings at any time."
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "All rights reserved"
+  },
+  "share": {
+    "note": {
+      "title": "Someone shared a note with you",
+      "subtitle": "Open in the Freshman app to start reviewing.",
+      "subtitle2": "Study smarter with AI-powered active recall."
+    },
+    "flashcard": {
+      "title": "Someone shared flashcards with you",
+      "subtitle": "Open in the Freshman app to start studying.",
+      "subtitle2": "Master concepts with spaced repetition flashcards."
+    },
+    "pastpaper": {
+      "title": "Someone shared a past paper with you",
+      "subtitle": "Open in the Freshman app to start practicing.",
+      "subtitle2": "Study smarter with AI-powered active recall."
+    },
+    "book": {
+      "title": "Someone shared a textbook with you",
+      "subtitle": "Open in the Freshman app to start reading.",
+      "subtitle2": "Study smarter with AI-powered chapter summaries."
+    },
+    "openButton": "Open in Freshman"
+  }
+}
+

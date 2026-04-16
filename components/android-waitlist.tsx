@@ -3,8 +3,10 @@
 import { Button } from '@/components/ui/button';
 import { Mail, ChevronRight, Loader2 } from 'lucide-react';
 import { useState } from 'react';
+import { useI18n } from '@/components/i18n-provider';
 
 export default function AndroidWaitlist() {
+  const { t } = useI18n();
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
@@ -57,12 +59,11 @@ export default function AndroidWaitlist() {
     <section className='bg-background flex justify-center items-center font-sans px-6'>
       <div className='w-full max-w-2xl text-center'>
         <h2 className='text-4xl md:text-5xl font-medium text-zinc-900 dark:text-white mb-4 tracking-tight'>
-          Android is coming soon
+          {t('androidWaitlist.title')}
         </h2>
 
         <p className='text-zinc-500 dark:text-zinc-400 text-base md:text-lg mb-10 max-w-lg mx-auto leading-relaxed'>
-          We are putting the finishing touches on our Android app. Join the
-          waitlist to get notified the moment it goes live later this month.
+          {t('androidWaitlist.description')}
         </p>
 
         <form
@@ -79,7 +80,7 @@ export default function AndroidWaitlist() {
               onChange={(e) => setEmail(e.target.value)}
               required
               disabled={loading}
-              placeholder='Enter your email'
+              placeholder={t('androidWaitlist.placeholder')}
               className='h-[46px] w-full bg-white dark:bg-[#111111] border border-zinc-200 dark:border-zinc-800 rounded-lg pl-11 pr-4 focus:outline-none text-zinc-900 dark:text-white placeholder:text-zinc-500 text-sm focus:ring-1 focus:ring-zinc-200 dark:focus:ring-zinc-800 transition-all shadow-sm'
             />
           </div>
@@ -92,7 +93,7 @@ export default function AndroidWaitlist() {
               <Loader2 className='h-4 w-4 animate-spin' />
             ) : (
               <div className='flex items-center text-sm md:text-base'>
-                <span>Join Waitlist</span>
+                <span>{t('androidWaitlist.cta')}</span>
                 <ChevronRight className='h-4 w-4 ml-1 stroke-[2.5px] opacity-70' />
               </div>
             )}
