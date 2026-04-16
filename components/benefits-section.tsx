@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { TextEffect } from '@/components/ui/text-effect';
 import { BookOpen, FileText, Brain, Sparkles } from 'lucide-react';
+import { useI18n } from '@/components/i18n-provider';
 
 const benefits = [
   {
@@ -37,7 +38,43 @@ const benefits = [
 ];
 
 export default function BenefitsSection() {
+  const { messages, t } = useI18n();
+  const localizedItems = messages.benefits.items;
   const [activeIdx, setActiveIdx] = useState(0);
+  const [isAutoPaused, setIsAutoPaused] = useState(false);
+  const pauseTimeoutRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      if (isAutoPaused) {
+        return;
+      }
+      setActiveIdx((prevIdx) => (prevIdx + 1) % benefits.length);
+    }, 3000);
+
+    return () => window.clearInterval(interval);
+  }, [isAutoPaused]);
+
+  useEffect(() => {
+    return () => {
+      if (pauseTimeoutRef.current) {
+        window.clearTimeout(pauseTimeoutRef.current);
+      }
+    };
+  }, []);
+
+  const handleBenefitClick = (idx: number) => {
+    setActiveIdx(idx);
+    setIsAutoPaused(true);
+
+    if (pauseTimeoutRef.current) {
+      window.clearTimeout(pauseTimeoutRef.current);
+    }
+
+    pauseTimeoutRef.current = window.setTimeout(() => {
+      setIsAutoPaused(false);
+    }, 3000);
+  };
 
   return (
     <section className='bg-background py-16 md:py-24 overflow-hidden relative'>
@@ -52,7 +89,7 @@ export default function BenefitsSection() {
             as='p'
             className='text-sm md:text-base text-[#6366f1]/80 mb-2 uppercase tracking-wider font-semibold'
           >
-            BENEFITS
+            {t('benefits.eyebrow')}
           </TextEffect>
           <TextEffect
             preset='fade-in-blur'
@@ -61,7 +98,7 @@ export default function BenefitsSection() {
             as='h2'
             className='text-4xl md:text-5xl lg:text-6xl font-semibold lowercase tracking-tight text-zinc-900 dark:text-white'
           >
-            your study companion
+            {t('benefits.title')}
           </TextEffect>
         </div>
 
@@ -72,9 +109,9 @@ export default function BenefitsSection() {
             {benefits.slice(0, 2).map((benefit, idx) => (
               <BenefitCard 
                 key={benefit.id} 
-                benefit={benefit} 
+                benefit={{ ...benefit, ...localizedItems[idx] }} 
                 isActive={activeIdx === idx} 
-                onClick={() => setActiveIdx(idx)} 
+                onClick={() => handleBenefitClick(idx)} 
               />
             ))}
           </div>
@@ -105,9 +142,9 @@ export default function BenefitsSection() {
             {benefits.slice(2, 4).map((benefit, idx) => (
               <BenefitCard 
                 key={benefit.id} 
-                benefit={benefit} 
+                benefit={{ ...benefit, ...localizedItems[idx + 2] }} 
                 isActive={activeIdx === idx + 2} 
-                onClick={() => setActiveIdx(idx + 2)} 
+                onClick={() => handleBenefitClick(idx + 2)} 
               />
             ))}
           </div>
@@ -121,9 +158,9 @@ export default function BenefitsSection() {
             {benefits.slice(0, 2).map((benefit, idx) => (
               <BenefitCard 
                 key={benefit.id} 
-                benefit={benefit} 
+                benefit={{ ...benefit, ...localizedItems[idx] }} 
                 isActive={activeIdx === idx} 
-                onClick={() => setActiveIdx(idx)} 
+                onClick={() => handleBenefitClick(idx)} 
               />
             ))}
           </div>
@@ -154,9 +191,9 @@ export default function BenefitsSection() {
             {benefits.slice(2, 4).map((benefit, idx) => (
               <BenefitCard 
                 key={benefit.id} 
-                benefit={benefit} 
+                benefit={{ ...benefit, ...localizedItems[idx + 2] }} 
                 isActive={activeIdx === idx + 2} 
-                onClick={() => setActiveIdx(idx + 2)} 
+                onClick={() => handleBenefitClick(idx + 2)} 
               />
             ))}
           </div>

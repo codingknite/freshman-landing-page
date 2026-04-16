@@ -3,16 +3,30 @@ import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react';
+import { usePathname, useRouter } from 'next/navigation';
 import { cn } from '@/lib/utils';
-
-const menuItems = [
-  { name: 'Terms', href: '/terms' },
-  { name: 'Privacy', href: '/privacy' },
-];
+import { supportedLocales, type Locale } from '@/lib/i18n';
+import { useI18n } from '@/components/i18n-provider';
 
 export const HeroHeader = () => {
   const [menuState, setMenuState] = React.useState(false);
   const [isScrolled, setIsScrolled] = React.useState(false);
+  const { t, locale } = useI18n();
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const menuItems = [
+    { name: t('nav.terms'), href: `/${locale}/terms` },
+    { name: t('nav.privacy'), href: `/${locale}/privacy` },
+  ];
+
+  const changeLocale = (nextLocale: Locale) => {
+    const segments = pathname.split('/').filter(Boolean);
+    const currentHasLocale = supportedLocales.includes(segments[0] as Locale);
+    const remaining = currentHasLocale ? segments.slice(1) : segments;
+    const nextPath = `/${nextLocale}${remaining.length ? `/${remaining.join('/')}` : ''}`;
+    router.push(nextPath);
+  };
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -37,7 +51,7 @@ export const HeroHeader = () => {
           <div className='relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4'>
             <div className='flex w-full justify-between lg:w-auto'>
               <Link
-                href='/'
+                href={`/${locale}`}
                 aria-label='home'
                 className='flex items-center space-x-2'
               >
@@ -89,6 +103,23 @@ export const HeroHeader = () => {
                     </li>
                   ))}
                 </ul>
+              </div>
+              <div className='flex items-center gap-2'>
+                <label htmlFor='mobile-language' className='text-sm text-muted-foreground lg:hidden'>
+                  {t('languages.label')}
+                </label>
+                <select
+                  id='mobile-language'
+                  value={locale}
+                  onChange={(event) => changeLocale(event.target.value as Locale)}
+                  className='h-9 rounded-md border border-zinc-200 bg-background px-2 text-sm text-foreground dark:border-zinc-800'
+                >
+                  {supportedLocales.map((lang) => (
+                    <option key={lang} value={lang}>
+                      {t(`languages.${lang}`)}
+                    </option>
+                  ))}
+                </select>
               </div>
               <div className='flex w-full flex-col items-center space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit lg:w-auto'>
                 <Link

@@ -1,22 +1,20 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
-
-const links = [
-  {
-    title: 'Terms',
-    href: '/terms',
-  },
-  {
-    title: 'Privacy',
-    href: '/privacy',
-  },
-];
+import { useI18n } from '@/components/i18n-provider';
 
 export default function FooterSection() {
+  const { t, locale } = useI18n();
+  const links = [
+    { title: t('nav.terms'), href: `/${locale}/terms` },
+    { title: t('nav.privacy'), href: `/${locale}/privacy` },
+  ];
+
   return (
     <footer className='py-16 md:py-18'>
       <div className='mx-auto max-w-5xl px-6'>
-        <Link href='/' aria-label='go home' className='mx-auto block size-fit'>
+        <Link href={`/${locale}`} aria-label='go home' className='mx-auto block size-fit'>
           <Image
             src='/icon.png'
             alt='Freshman'
@@ -121,7 +119,7 @@ export default function FooterSection() {
         </div>
         <span className='text-muted-foreground block text-center text-sm'>
           {' '}
-          © {new Date().getFullYear()} Freshman AI, All rights reserved
+          © {new Date().getFullYear()} Freshman AI, {t('footer.copyright')}
         </span>
       </div>
     </footer>

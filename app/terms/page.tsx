@@ -1,6 +1,7 @@
 import React from 'react';
 import { HeroHeader } from '@/components/header';
 import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Freshman Terms of Use',
@@ -25,12 +26,9 @@ const TermsOfUse = () => {
             <p className='mb-6 text-foreground'>Welcome to Freshman!</p>
             <p className='mb-6 text-foreground'>
               Please read these Terms of Use (&ldquo;Terms&rdquo;) and our Privacy Notice (
-              <a
-                href='/privacy'
-                className='text-primary hover:underline'
-              >
+              <Link href='/privacy' className='text-primary hover:underline'>
                 /privacy
-              </a>
+              </Link>
               ) (the &ldquo;Privacy Notice&rdquo;) carefully before using the services
               offered by People Who Code LLC, a legal entity incorporated under
               the laws of the United States (&ldquo;Freshman&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;). These
@@ -506,9 +504,9 @@ const TermsOfUse = () => {
               Freshman respects your privacy and has established policies and
               procedures relating to the collection and use of your personal
               information. Please check our Privacy Notice at{' '}
-              <a href='/privacy' className='text-primary hover:underline'>
+              <Link href='/privacy' className='text-primary hover:underline'>
                 /privacy
-              </a>{' '}
+              </Link>{' '}
               to understand how we collect, use, and share your personal
               information.
             </p>

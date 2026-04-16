@@ -1,0 +1,252 @@
+{
+  "meta": {
+    "homeTitle": "Freshman KI - Active-Recall-Lernapp | Notizen in Übungstests verwandeln",
+    "homeDescription": "Studierende verschwenden Stunden mit Markieren und Wiederlesen, dabei ist Active Recall laut Forschung 50 % effektiver. Freshman nutzt KI, um handschriftliche Notizen, PDFs und Fotos in wissenschaftlich entwickelte Active-Recall-Fragen mit Spaced Repetition zu verwandeln.",
+    "termsTitle": "Freshman Nutzungsbedingungen",
+    "termsDescription": "Nutzungsbedingungen für Freshman, eine Lern-App von People Who Code LLC",
+    "privacyTitle": "Freshman Datenschutzrichtlinie",
+    "privacyDescription": "Datenschutzrichtlinie für Freshman, eine Lern-App von People Who Code LLC"
+  },
+  "nav": {
+    "terms": "Nutzungsbedingungen",
+    "privacy": "Datenschutz"
+  },
+  "languages": {
+    "label": "Sprache",
+    "en": "Englisch",
+    "es": "Spanisch",
+    "fr": "Französisch",
+    "de": "Deutsch"
+  },
+  "hero": {
+    "title": "Merke dir alles, was du lernst.",
+    "subtitle": "Auf Basis bewährter Kognitionswissenschaft verwandelt Freshman deine Notizen in perfekte Active-Recall-Tests und sorgt so für dauerhaftes Wissen und 50 % bessere Erinnerung."
+  },
+  "benefits": {
+    "eyebrow": "VORTEILE",
+    "title": "dein Lernbegleiter",
+    "items": [
+      {
+        "id": "revision",
+        "title": "Tägliche Wiederholung",
+        "text": "Freshman erstellt gezielte Notizen und kurze Tests zu jedem Thema, damit du eine tägliche Lernroutine aufbaust, die wirklich bleibt."
+      },
+      {
+        "id": "past-papers",
+        "title": "Altklausuren üben",
+        "text": "Lade alte Prüfungen hoch und übe interaktiv. Verwandle statische Altklausuren in dynamische, automatisch bewertete MCQ-Tests."
+      },
+      {
+        "id": "tests",
+        "title": "Umfassende Tests",
+        "text": "Erstelle ganz einfach Quizze, Karteikarten und vollständige Probeklausuren, um deine Fächer tief zu verstehen und Wissenslücken sofort zu erkennen."
+      },
+      {
+        "id": "breakdown",
+        "title": "Notizen aufbereiten",
+        "text": "Deine hochgeladenen Notizen werden automatisch in Kernkonzepte und gezielte Wiederholungsfragen umgewandelt und sparen dir Stunden manueller Arbeit."
+      }
+    ]
+  },
+  "features": {
+    "eyebrow": "FUNKTIONEN",
+    "title": "die intelligenteste Art zu lernen.",
+    "items": [
+      {
+        "title": "Dichte Lehrbücher aufbrechen",
+        "description": "Lade deine Lehrbücher hoch und Freshman zerlegt sie in gut verdauliche Kapitel. Erhalte Überblicksnotizen und tiefgehende Erklärungen für jeden Abschnitt, damit du Unwichtiges überspringst und dich auf Prüfungsrelevantes konzentrierst."
+      },
+      {
+        "title": "Nicht nur auswendig lernen. Beherrschen.",
+        "description": "Gehe über reines Auswendiglernen hinaus. Active-Recall-Tests zwingen dich, komplexe Konzepte in eigenen Worten zu erklären. So findest und schließt du Wissenslücken am schnellsten."
+      }
+    ]
+  },
+  "dailyFeed": {
+    "eyebrow": "TÄGLICHER FEED",
+    "title": "lerne jeden Tag etwas Neues",
+    "description": "Öffne Freshman und erhalte täglich kurze Wiederholungsimpulse, kleine Herausforderungen und Konzept-Refreshs passend zu deinem Fortschritt. Halte deinen Streak aufrecht und bleibe mit nur wenigen Minuten pro Tag prüfungsbereit."
+  },
+  "pastPapers": {
+    "eyebrow": "ALTKLAUSUREN",
+    "title": "übe mit echten Prüfungsfragen",
+    "description": "Lade Altklausuren hoch und verwandle sie sofort in interaktive MCQ-Tests. Übe mit echten Prüfungsfragen, erhalte direktes Feedback zu jeder Antwort und lies detaillierte Erklärungen, um jedes Konzept zu verstehen. Gewinne Sicherheit, indem du reale Prüfungsmuster vor dem Testtag meisterst.",
+    "bullets": [
+      {
+        "title": "Interaktive MCQ-Tests",
+        "text": "Automatisch generierte Fragen aus deinen Altklausuren"
+      },
+      {
+        "title": "Sofortiges Feedback",
+        "text": "Erfahre sofort, ob deine Antwort richtig oder falsch ist"
+      },
+      {
+        "title": "Detaillierte Erklärungen",
+        "text": "Verstehe die Begründung hinter jeder Antwort"
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "BEWERTUNGEN",
+    "title": "studierende lieben freshman",
+    "items": [
+      {
+        "name": "Alice",
+        "role": "Medizinstudentin",
+        "quote": "Freshman hat meine Anatomie-Vorbereitung komplett verändert. Dass meine Notizen automatisch in Active-Recall-Fragen umgewandelt werden, ist wie ein persönlicher Tutor."
+      },
+      {
+        "name": "George",
+        "role": "Jurastudent",
+        "quote": "Die KI-gestützten Analysen, die komplexe Fälle in Kernkonzepte aufschlüsseln, haben meinen täglichen Lernplan deutlich verbessert."
+      },
+      {
+        "name": "Natalie",
+        "role": "Abiturientin",
+        "quote": "Die Karteikarten-Generierung von Freshman hat mir geholfen, bessere Lernroutinen aufzubauen und endlich in meinen Prüfungen zu glänzen."
+      },
+      {
+        "name": "Ulysses",
+        "role": "Informatikstudent",
+        "quote": "Die KI-Zusammenfassung von Notizen spart mir Stunden. Ich lade einfach meine Vorlesungsfolien hoch und kann direkt mit dem Wiederholen starten."
+      },
+      {
+        "name": "Bob",
+        "role": "Ingenieurstudent",
+        "quote": "Die an der Feynman-Methode orientierten Wiederholungstests haben mein tiefes Verständnis komplexer Thermodynamik-Konzepte deutlich verbessert."
+      },
+      {
+        "name": "Hannah",
+        "role": "Assistenzärztin",
+        "quote": "Der Spaced-Repetition-Plan von Freshman, kombiniert mit meinen Klinikschichten, war ein echter Lebensretter für meinen Lernalltag."
+      },
+      {
+        "name": "Oscar",
+        "role": "Geschichtsstudent",
+        "quote": "Altklausuren interaktiv zu üben statt nur PDFs zu lesen, hat meine Prüfungsstrategie und meine Argumentationsstruktur massiv verbessert."
+      },
+      {
+        "name": "Victoria",
+        "role": "Business Analyst",
+        "quote": "Selbst für berufliche Zertifizierungen sind die personalisierten Active-Recall-Insights von Freshman extrem hilfreich und effektiv."
+      },
+      {
+        "name": "Charlie",
+        "role": "Pflegestudent",
+        "quote": "Die Probeklausuren haben mir geholfen, meine Schwachstellen besser im Blick zu behalten, bevor ich ins echte Testzentrum gehe."
+      },
+      {
+        "name": "Ian",
+        "role": "Wirtschaftsstudent",
+        "quote": "Die intelligenten Wiederholungserinnerungen haben meine Last-Minute-Lernphasen vor Prüfungen drastisch reduziert. Sehr empfehlenswert."
+      },
+      {
+        "name": "Patricia",
+        "role": "Literaturstudentin",
+        "quote": "Freshmans Fähigkeit, hunderte Seiten zu analysieren und zentrale Themen herauszuarbeiten, hat meine Essay-Vorbereitung deutlich beschleunigt."
+      },
+      {
+        "name": "William",
+        "role": "MBA-Kandidat",
+        "quote": "Die KI-Quizvorschläge auf Basis meiner Fallstudien haben mein analytisches Denken und meine Abrufgeschwindigkeit klar verbessert."
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Flexible Preise",
+    "subtitle": "Alles, was du brauchst, um starke Lerngewohnheiten aufzubauen.",
+    "footer": "Jederzeit kündbar.",
+    "plans": [
+      {
+        "id": "weekly",
+        "name": "Wöchentlich",
+        "description": "Perfekt für intensive Lernphasen",
+        "price": "$3.99",
+        "period": "/Woche",
+        "features": ["Alle Funktionen enthalten", "Jederzeit kündbar", "Keine lange Bindung"]
+      },
+      {
+        "id": "monthly",
+        "name": "Monatlich",
+        "description": "Flexible monatliche Abrechnung",
+        "price": "$10.99",
+        "period": "/Monat",
+        "features": ["Alle Funktionen enthalten", "Jederzeit kündbar", "Keine lange Bindung"]
+      },
+      {
+        "id": "annual",
+        "name": "Jährlich",
+        "description": "Spare 35 % mit Jahresabo",
+        "price": "$99.99",
+        "period": "/Jahr",
+        "features": ["Alle Funktionen enthalten", "3 Monate gratis", "Jederzeit kündbar"]
+      }
+    ]
+  },
+  "androidWaitlist": {
+    "title": "Android kommt bald",
+    "description": "Wir geben unserer Android-App gerade den letzten Schliff. Trag dich in die Warteliste ein und erhalte sofort Bescheid, sobald sie live geht.",
+    "placeholder": "Deine E-Mail eingeben",
+    "cta": "Zur Warteliste"
+  },
+  "faqs": {
+    "title": "FAQs",
+    "subtitle": "Antworten auf deine Fragen",
+    "contactPrefix": "Brauchst du mehr Hilfe?",
+    "contactLink": "Kontaktiere uns",
+    "items": [
+      {
+        "id": "item-1",
+        "question": "Welche Art von Notizen kann ich hochladen?",
+        "answer": "Du kannst fast alles hochladen. Freshman liest handschriftliche Notizen (aus Fotos), PDF-Lehrbücher, PowerPoint-Folien und normale Textdateien. Solange der Text lesbar ist, können wir ihn in einen Test umwandeln."
+      },
+      {
+        "id": "item-2",
+        "question": "Wie genau sind die generierten Fragen?",
+        "answer": "Freshman ist sehr genau darin, Kernkonzepte zu erkennen und passende Fragen zu erstellen. Wir empfehlen trotzdem, die Inhalte beim Lernen kurz zu überprüfen."
+      },
+      {
+        "id": "item-3",
+        "question": "Kann ich das für jedes Fach nutzen?",
+        "answer": "Auf jeden Fall. Egal ob Biologie, Jura, Geschichte, Informatik oder Literatur: Freshman passt sich deinen Inhalten an. Es funktioniert für alle Bildungsstufen von Schule bis Promotion."
+      },
+      {
+        "id": "item-4",
+        "question": "Wann wird Freshman für Android verfügbar sein?",
+        "answer": "Freshman ist aktuell auf iOS verfügbar. Wir entwickeln die Android-Version aktiv und rechnen mit einem baldigen Start. Trag dich in die Warteliste ein, um benachrichtigt zu werden."
+      },
+      {
+        "id": "item-5",
+        "question": "Kann ich mein Abo jederzeit kündigen?",
+        "answer": "Ja, du kannst jederzeit kündigen. Es gibt keine langfristige Verpflichtung, und die Kündigung geht direkt über deine Apple-ID-Einstellungen."
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "Alle Rechte vorbehalten"
+  },
+  "share": {
+    "note": {
+      "title": "Jemand hat eine Notiz mit dir geteilt",
+      "subtitle": "Öffne sie in der Freshman-App, um mit dem Wiederholen zu starten.",
+      "subtitle2": "Lerne smarter mit KI-gestütztem Active Recall."
+    },
+    "flashcard": {
+      "title": "Jemand hat Karteikarten mit dir geteilt",
+      "subtitle": "Öffne sie in der Freshman-App, um mit dem Lernen zu starten.",
+      "subtitle2": "Beherrsche Konzepte mit Spaced-Repetition-Karteikarten."
+    },
+    "pastpaper": {
+      "title": "Jemand hat eine Altklausur mit dir geteilt",
+      "subtitle": "Öffne sie in der Freshman-App, um mit dem Üben zu starten.",
+      "subtitle2": "Lerne smarter mit KI-gestütztem Active Recall."
+    },
+    "book": {
+      "title": "Jemand hat ein Lehrbuch mit dir geteilt",
+      "subtitle": "Öffne es in der Freshman-App, um mit dem Lesen zu starten.",
+      "subtitle2": "Lerne smarter mit KI-gestützten Kapitelzusammenfassungen."
+    },
+    "openButton": "In Freshman öffnen"
+  }
+}
+
