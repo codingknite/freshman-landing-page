@@ -12,7 +12,7 @@ export default function FooterSection() {
   ];
 
   return (
-    <footer className='py-16 md:py-18'>
+    <footer className='py-16 md:py-18 bg-[oklch(0.992_0.004_260)]'>
       <div className='mx-auto max-w-5xl px-6'>
         <Link href={`/${locale}`} aria-label='go home' className='mx-auto block size-fit'>
           <Image

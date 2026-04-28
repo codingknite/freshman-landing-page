@@ -15,12 +15,18 @@
     "de": "German"
   },
   "nav": {
+    "pricing": "Pricing",
     "terms": "Terms",
-    "privacy": "Privacy"
+    "privacy": "Privacy",
+    "login": "Login",
+    "startStudying": "Start Studying"
   },
   "hero": {
-    "title": "Remember everything you study.",
-    "subtitle": "Built on proven cognitive science, Freshman converts your notes into perfect Active Recall tests, guaranteeing permanent, exam-proof memory and 50% better retention."
+    "eyebrow": "Built on proven cognitive science",
+    "title": "Your Notes Are Useless If You Forget Them By Exam Day.",
+    "subtitle": "Freshman turns everything you study — notes, textbooks, PDFs, past papers — into AI-powered Active Recall tests that make forgetting nearly impossible. Study less. Retain more. Show up to every exam actually prepared.",
+    "cta": "Start Sudying - it's free",
+    "supportingLine": "No credit card required · Join thousands of students already studying smarter"
   },
   "benefits": {
     "eyebrow": "BENEFITS",
@@ -55,15 +61,31 @@
   },
   "features": {
     "eyebrow": "FEATURES",
-    "title": "the smartest way to study.",
+    "title": "Everything You Need. Nothing You Don't.",
     "items": [
       {
-        "title": "Break Down Dense Textbooks",
-        "description": "Upload your textbooks and Freshman will break them down into digestible chapters. Get high-level notes and deep-dive breakdowns for every section so you can skip the fluff and focus on what’s actually on the exam."
+        "title": "Upload Notes, Textbooks & Past Papers",
+        "description": "Your materials become your personalized test bank automatically. No manual card creation. Upload it and Freshman takes it from there."
       },
       {
-        "title": "Don’t Just Memorize. Master.",
-        "description": "Move beyond basic memorization. Active recall tests force you to articulate complex concepts in your own words. It’s the fastest way to find and fix your knowledge gaps."
+        "title": "Four Distinct Test Modes",
+        "description": "Quizzes. Active Recall. Mock Exams. Past Papers. Each mode serves a different study purpose. Use all four and arrive at exam day having experienced every type of question imaginable."
+      },
+      {
+        "title": "Organized Study Library",
+        "description": "All your notes, books, flashcard decks, and subjects — organized and searchable. Browse by subject, search by term, study on demand."
+      },
+      {
+        "title": "Share with Your Study Group",
+        "description": "Share notes, flashcard decks, past papers, and textbooks with classmates via a single link. Studying alone is a choice, not a requirement."
+      },
+      {
+        "title": "Personalized From Day One",
+        "description": "Dark mode, language preferences, study goals, revision methods — Freshman learns how you study and adapts. Your experience is never one-size-fits-all."
+      },
+      {
+        "title": "Track Your Progress",
+        "description": "Session scores, completion streaks, and performance summaries tell you exactly where you're improving and where to focus next. No guessing."
       }
     ]
   },
@@ -163,7 +185,11 @@
         "description": "Perfect for cramming sessions",
         "price": "$3.99",
         "period": "/week",
-        "features": ["All features included", "Cancel anytime", "No long-term commitment"]
+        "features": [
+          "All features included",
+          "Cancel anytime",
+          "No long-term commitment"
+        ]
       },
       {
         "id": "monthly",
@@ -171,7 +197,11 @@
         "description": "Flexible month-to-month billing",
         "price": "$10.99",
         "period": "/month",
-        "features": ["All features included", "Cancel anytime", "No long-term commitment"]
+        "features": [
+          "All features included",
+          "Cancel anytime",
+          "No long-term commitment"
+        ]
       },
       {
         "id": "annual",
@@ -179,7 +209,11 @@
         "description": "Save 35% with annual billing",
         "price": "$99.99",
         "period": "/year",
-        "features": ["All features included", "3 months free", "Cancel anytime"]
+        "features": [
+          "All features included",
+          "3 months free",
+          "Cancel anytime"
+        ]
       }
     ]
   },
@@ -197,28 +231,48 @@
     "items": [
       {
         "id": "item-1",
-        "question": "What kind of notes can I upload?",
-        "answer": "You can upload almost anything! Freshman can read handwritten notes (from photos), PDF textbooks, PowerPoint slides, and standard digital text files. As long as the text is legible, we can turn it into a test."
+        "question": "What makes Freshman different from Anki or Quizlet?",
+        "answer": "Anki and Quizlet require you to build your cards manually. Freshman generates tests automatically from your own uploaded materials, notes, PDFs, textbooks, past papers. You also get a full AI tutor, four test modes, a smart reading workspace, and a daily spaced repetition feed. It's a complete study system, not just a flashcard tool."
       },
       {
         "id": "item-2",
-        "question": "How accurate are the generated questions?",
-        "answer": "Freshman is highly accurate at identifying key concepts and creating relevant questions, though we always recommend reviewing the generated content as you study."
+        "question": "Do I have to create flashcards myself?",
+        "answer": "No, and that's the point. Upload your materials and Freshman builds your tests for you. You focus on studying; we handle the setup."
       },
       {
         "id": "item-3",
-        "question": "Can I use this for any subject?",
-        "answer": "Absolutely. Whether you are studying Biology, Law, History, Computer Science, or Literature, Freshman adapts to the content you provide. It works for any education level, from High School to PhD."
+        "question": "What subjects and file types does Freshman support?",
+        "answer": "Freshman works across any subject and supports PDFs, text documents, web URLs, and personal notes. Law, medicine, engineering, humanities, languages if you can upload it, Freshman can test you on it."
       },
       {
         "id": "item-4",
-        "question": "When will Freshman be available on Android?",
-        "answer": "Freshman is currently available on iOS. We're actively developing the Android version and expect to launch it soon. Join our waitlist to be notified when the Android app becomes available."
+        "question": "Is there a free plan?",
+        "answer": "Yes. You can start using Freshman for free with access to basic features. Paid plans unlock unlimited usage, the full AI tutor, and all advanced test and exam modes."
       },
       {
         "id": "item-5",
-        "question": "Can I cancel my subscription anytime?",
-        "answer": "Yes, you can cancel your subscription anytime. There is no long-term commitment, and You can cancel your subscription instantly through your Apple ID settings at any time."
+        "question": "Does it work for postgrads and PhD students, not just undergrads?",
+        "answer": "Absolutely. The web workspace with its source reader, highlight pipeline, and AI tutor is purpose-built for high-volume, reading-heavy study. Postgrads and researchers find it particularly powerful for processing and retaining dense academic material at scale."
+      },
+      {
+        "id": "item-6",
+        "question": "Can I share materials with my study group?",
+        "answer": "Yes. You can share notes, flashcard decks and past papers with classmates via a shareable link. They can open your shared resources directly in their own Freshman app."
+      },
+      {
+        "id": "item-7",
+        "question": "Is my data safe?",
+        "answer": "Your uploaded notes, documents, and study data are stored securely. We don't share your materials or use them to train third-party AI models."
+      },
+      {
+        "id": "item-8",
+        "question": "Is Freshman available on Android?",
+        "answer": "The mobile app is currently available on iOS. The web app runs in any browser on an desktop device. Android app support is planned."
+      },
+      {
+        "id": "item-9",
+        "question": "Can I cancel any time?",
+        "answer": "Always. No cancellation fees, no friction. Cancel directly from your account settings whenever you want."
       }
     ]
   },
@@ -247,6 +301,106 @@
       "subtitle2": "Study smarter with AI-powered chapter summaries."
     },
     "openButton": "Open in Freshman"
+  },
+  "howItWorks": {
+    "eyebrow": "The Process",
+    "cta": "Get Started",
+    "title": "Three Steps Between You and a Better Memory",
+    "subtitle": "No complicated setup. No starting from scratch. Just upload what you already have and let Freshman do the heavy lifting.",
+    "steps": [
+      {
+        "label": "STEP 1",
+        "title": "Upload What You Already Have",
+        "description": "Notes from lectures. Textbook chapters. PDFs. Past papers. URLs. Drop them into Freshman and your materials are instantly ready to study from."
+      },
+      {
+        "label": "STEP 2",
+        "title": "Freshman Builds Your Tests Automatically",
+        "description": "Freshman AI reads your materials and generates perfectly calibrated Active Recall questions — the exact learning method that cognitive scientists have identified as the most effective way to encode information into long-term memory."
+      },
+      {
+        "label": "STEP 3",
+        "title": "Review Daily. Remember for Good.",
+        "description": "Your personalized daily feed delivers the right questions at the right time. Swipe through and rate your confidence. Freshman learns how you perform and adjusts so you spend more time on what you do not know and less time on what you have already mastered."
+      }
+    ],
+    "calloutPrefix": "Students using spaced Active Recall retain up to",
+    "calloutEmphasis": "50% more",
+    "calloutSuffix": "than those using passive re-reading."
+  },
+  "coreFeatures": {
+    "eyebrow": "The Web Workspace",
+    "title": "Your Deep Study Command Centre",
+    "subtitle": "Stop bouncing between browser tabs, PDF readers, highlighters, and note apps. Freshman brings your reading, annotating, tutoring, and testing into one focused workspace — so nothing falls through the cracks.",
+    "cta": "Get Started - it's free",
+    "features": [
+      {
+        "label": "Smart Reader + Highlights",
+        "title": "Read Everything. Highlight What Matters.",
+        "description": "Upload PDFs, paste a URL, or open your own notes directly in the Freshman reader. Highlight key passages as you read — every highlight is saved, searchable, and automatically connected to your study pipeline. Your annotations don't disappear into a folder you'll never open again."
+      },
+      {
+        "label": "AI Tutor",
+        "title": "An AI Tutor Who's Actually Read Your Material",
+        "description": "Ask your AI tutor anything — and get answers anchored to your actual source, not generic internet results. Need a concept explained differently? Want to challenge your own understanding? Your tutor knows exactly what you've been reading and meets you where you are."
+      },
+      {
+        "label": "Source Library",
+        "title": "All Your Sources. One Searchable Workspace.",
+        "description": "PDFs, textbooks, web articles, personal notes — all organized, retrievable, and ready to study from. Global source search means you're never hunting for that reading you saved three weeks ago."
+      },
+      {
+        "label": "Highlight-to-Test Pipeline",
+        "title": "Highlights That Actually Do Something",
+        "description": "Every passage you mark in the reader feeds directly into your tests and revision sessions. This is the pipeline that makes the difference — reading and remembering are no longer two separate activities."
+      }
+    ]
+  },
+  "mobileHero": {
+    "eyebrow": "The Mobile App",
+    "title": "The Revision Session That Fits in Your Pocket.",
+    "subtitle": "While others are cramming the night before, you've been reviewing for weeks — five minutes at a time. Freshman's mobile app turns commutes, lunch breaks, and waiting rooms into daily revision sessions that actually compound. Small habits. Massive results.",
+    "cta": "Download Free on iOS",
+    "platformNote": "Available on iOS"
+  },
+  "dailyFeedHighlight": {
+    "eyebrow": "THE FEATURE STUDENTS COME BACK TO EVERY SINGLE DAY",
+    "title": "Meet Your Daily Revision Feed",
+    "paragraphs": [
+      "Swipe through personalized recall cards.",
+      "Mark each one easy, medium, or hard.",
+      "Freshman adjusts daily — more of what you struggle with, less of what you've already locked in.",
+      "Spaced repetition and Active Recall, working together, every single day."
+    ],
+    "stats": [
+      "50% better retention",
+      "Adjusts to your performance",
+      "No two feeds are the same"
+    ]
+  },
+  "additionalFeatures": {
+    "title": "Built for the Way Students Actually Live",
+    "items": [
+      {
+        "id": "active-recall",
+        "title": "Active Recall, Not Passive Re-reading",
+        "text": "Re-reading your notes feels productive. It isn't. Passive review creates the illusion of knowing until the exam paper lands in front of you. Freshman replaces re-reading with Active Recall: the method that forces retrieval, builds real memory, and makes forgetting structurally harder."
+      },
+      {
+        "id": "daily-habits",
+        "title": "Consistent Daily Habits Without the Guilt",
+        "text": "You don't need a four-hour study session. You need fifteen focused minutes, every day. Freshman is designed around that reality. Short, satisfying sessions that build into a retention advantage your classmates won't have."
+      },
+      {
+        "id": "exam-prepared",
+        "title": "Arrive at Exam Week Already Prepared",
+        "text": "Because you've been actively recalling your material every day, exam week feels different. Not frantic. Not scrambling. Just a final review of things you already know. That feeling is what Freshman is designed to give you."
+      },
+      {
+        "id": "language",
+        "title": "Study in the Language You Think In",
+        "text": "English, Spanish, French, German. Freshman adapts to how you naturally process information. Learning in your strongest language means retaining more, faster."
+      }
+    ]
   }
 }
-

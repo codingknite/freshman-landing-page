@@ -1,5 +1,8 @@
 import { Metadata } from 'next';
 import HeroSection from '@/components/hero-section';
+import HowItWorksSection from '@/components/how-it-works-section';
+import CoreFeaturesSection from '@/components/core-features-section';
+import MobileHeroSection from '@/components/mobile-hero-section';
 import FeaturesSection from '@/components/features-section';
 import ContentSeven from '@/components/content-7';
 import BenefitsSection from '@/components/benefits-section';
@@ -143,13 +146,13 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
       />
       <HeroSection />
+      <HowItWorksSection />
+      <CoreFeaturesSection />
+      <MobileHeroSection />
       <BenefitsSection />
       <DailyFeedSection />
       <FeaturesSection />
-      <ContentSeven />
       <TestimonialsSection />
-      <PricingThree />
-      <AndroidWaitlist />
       <FAQsThree />
       <FooterSection />
     </>

@@ -3,30 +3,9 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { TextEffect } from '@/components/ui/text-effect';
-import { AnimatedGroup } from '@/components/ui/animated-group';
 import { HeroHeader } from './header';
 import { useI18n } from '@/components/i18n-provider';
-
-const transitionVariants = {
-  item: {
-    hidden: {
-      opacity: 0,
-      filter: 'blur(12px)',
-      y: 12,
-    },
-    visible: {
-      opacity: 1,
-      filter: 'blur(0px)',
-      y: 0,
-      transition: {
-        type: 'spring' as const,
-        bounce: 0.3,
-        duration: 1.5,
-      },
-    },
-  },
-};
+import { ShimmerButton } from '@/components/ui/shimmer-button';
 
 export default function HeroSection() {
   const { t } = useI18n();
@@ -34,137 +13,41 @@ export default function HeroSection() {
   return (
     <>
       <HeroHeader />
-      <main className='overflow-hidden'>
-        <div
-          aria-hidden
-          className='absolute inset-0 isolate hidden opacity-65 contain-strict lg:block'
-        >
-          <div className='w-140 h-320 -translate-y-87.5 absolute left-0 top-0 -rotate-45 rounded-full bg-[radial-gradient(68.54%_68.72%_at_55.02%_31.46%,hsla(0,0%,85%,.08)_0,hsla(0,0%,55%,.02)_50%,hsla(0,0%,45%,0)_80%)]' />
-          <div className='h-320 absolute left-0 top-0 w-60 -rotate-45 rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.06)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)] [translate:5%_-50%]' />
-          <div className='h-320 -translate-y-87.5 absolute left-0 top-0 w-60 -rotate-45 bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.04)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)]' />
-        </div>
-        <section>
-          <div className='relative pt-24 md:pt-36'>
-            <AnimatedGroup
-              variants={{
-                container: {
-                  visible: {
-                    transition: {
-                      delayChildren: 1,
-                    },
-                  },
-                },
-                item: {
-                  hidden: {
-                    opacity: 0,
-                    y: 20,
-                  },
-                  visible: {
-                    opacity: 1,
-                    y: 0,
-                    transition: {
-                      type: 'spring',
-                      bounce: 0.3,
-                      duration: 2,
-                    },
-                  },
-                },
-              }}
-              className='mask-b-from-35% mask-b-to-90% absolute inset-0 top-56 -z-20 lg:top-32'
-            >
-              <Image
-                src='/mail2.webp'
-                alt='background'
-                className='hidden size-full dark:block'
-                width='3276'
-                height='4095'
-              />
-            </AnimatedGroup>
-
-            <div
-              aria-hidden
-              className='absolute inset-0 -z-10 size-full [background:radial-gradient(125%_125%_at_50%_100%,transparent_0%,var(--color-background)_75%)]'
-            />
-            <div className='mx-auto max-w-7xl px-6'>
-              <div className='text-center sm:mx-auto lg:mr-auto lg:mt-0'>
-                <TextEffect
-                  preset='fade-in-blur'
-                  speedSegment={0.3}
-                  as='h1'
-                  className='mx-auto mt-8 max-w-4xl text-balance font-medium text-6xl md:font-medium md:text-7xl lg:mt-16 xl:text-[4.5rem]'
-                >
-                  {t('hero.title')}
-                </TextEffect>
-                <TextEffect
-                  per='line'
-                  preset='fade-in-blur'
-                  speedSegment={0.3}
-                  delay={0.5}
-                  as='p'
-                  className='mx-auto mt-8 mb-10 max-w-2xl text-balance text-lg'
-                >
-                  {t('hero.subtitle')}
-                </TextEffect>
-
-                  <AnimatedGroup
-                  variants={{
-                    container: {
-                      visible: {
-                        transition: {
-                          staggerChildren: 0.05,
-                          delayChildren: 0.75,
-                        },
-                      },
-                    },
-                    ...transitionVariants,
-                  }}
-                  className='flex flex-col items-center justify-center'
-                >
-                  <Link
-                    target='_blank'
-                    href='https://apps.apple.com/app/id6755386478'
-                    className='inline-block'
-                  >
-                    <Image
-                      src='/apple.svg'
-                      alt='Download on the App Store'
-                      width={240}
-                      height={80}
-                      className='h-13 w-auto'
-                    />
+      <main className='overflow-hidden bg-[oklch(0.992_0.004_260)] pt-24 md:pt-28'>
+        <section className='relative'>
+          <div className='mx-auto max-w-7xl px-4 pb-12 pt-8 sm:px-6 md:pt-12 lg:px-8'>
+            <div className='mx-auto max-w-4xl text-center'>
+              <h1 className='mt-5 text-balance text-[clamp(2rem,4.8vw,4rem)] font-medium leading-[1.06] tracking-[-0.02em] text-[oklch(0.19_0.03_260)]'>
+                {t('hero.title')}
+              </h1>
+              <p className='mx-auto mt-6 max-w-[68ch] text-pretty text-15 leading-relaxed text-[oklch(0.39_0.02_255)] sm:text-lg'>
+                {t('hero.subtitle')}
+              </p>
+              <div className='mt-8 flex flex-col items-center gap-4'>
+                <ShimmerButton asChild>
+                  <Link href='https://app.joinfreshman.com/signup'>
+                    {t('hero.cta')}
                   </Link>
-                </AnimatedGroup>
+                </ShimmerButton>
+                <p className='!text-[13px] font-medium text-[oklch(0.47_0.02_260)] sm:text-sm'>
+                  {t('hero.supportingLine')}
+                </p>
               </div>
             </div>
 
-            <AnimatedGroup
-              variants={{
-                container: {
-                  visible: {
-                    transition: {
-                      staggerChildren: 0.1,
-                      delayChildren: 0.75,
-                    },
-                  },
-                },
-                ...transitionVariants,
-              }}
-            >
-              <div className='relative w-full flex justify-center'>
-                <div className='relative inline-flex items-center justify-center'>
-                  <Image
-                    src='/lp_mockup.png'
-                    alt='App mockup'
-                    width={4320}
-                    height={3240}
-                    className='h-[450px] sm:h-[550px] md:h-[650px] w-auto object-contain z-10 drop-shadow-[0_0_40px_rgba(0,0,0,0.1)]'
-                    priority
-                  />
-                  {/* Bottom fade shadow */}
-                  <div className='absolute bottom-0 left-0 right-0 h-32 md:h-48 bg-gradient-to-t from-background to-transparent z-20 pointer-events-none' />
-                </div>
+            <div className='relative mx-auto mt-10 w-full max-w-5xl'>
+              <div className='relative overflow-hidden rounded-[1.4rem] border border-[oklch(0.91_0.008_260)] bg-[oklch(0.97_0.005_260)] shadow-[0_30px_60px_-44px_rgba(22,28,55,0.34)]'>
+                <Image
+                  src='/hero.png'
+                  alt='Freshman app preview'
+                  width={1024}
+                  height={643}
+                  className='h-auto w-full object-cover'
+                  priority
+                />
+                <div className='pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-[oklch(0.992_0.004_260)] via-[oklch(0.992_0.004_260/0.92)] to-transparent sm:h-28 md:h-36' />
               </div>
-            </AnimatedGroup>
+            </div>
           </div>
         </section>
       </main>

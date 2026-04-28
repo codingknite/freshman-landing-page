@@ -94,15 +94,15 @@ export default function TestimonialsSection() {
     const secondRow = localizedTestimonials.filter((_, idx) => idx % 2 !== 0)
 
     return (
-        <section className="bg-background pb-16 md:pb-24">
+        <section className="bg-[oklch(0.992_0.004_260)] pb-16 md:pb-24">
             <div className="mx-auto max-w-7xl px-6">
                 
                 {/* Header */}
-                <div className="text-center mt-6 mb-16 md:mb-20">
-                    <p className="text-sm md:text-sm text-[#6366f1] mb-4 uppercase tracking-[0.2em] font-bold">
+                <div className="mx-auto mb-16 max-w-3xl text-center md:mb-24 lg:mb-32">
+                    <h3 className="mb-4 text-15 font-semibold text-[#6366F1] uppercase tracking-wider">
                         {t('testimonials.eyebrow')}
-                    </p>
-                    <h2 className="text-4xl md:text-5xl lg:text-5xl font-bold tracking-tight text-zinc-900 dark:text-white lowercase">
+                    </h3>
+                    <h2 className="text-balance text-3xl font-medium tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
                         {t('testimonials.title')}
                     </h2>
                 </div>
@@ -162,7 +162,7 @@ export default function TestimonialsSection() {
 
 function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
     return (
-        <article className="w-[300px] sm:w-[340px] md:w-[360px] shrink-0 bg-zinc-50 dark:bg-zinc-900/50 rounded-[2rem] p-6 md:p-8 hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors duration-300 border border-zinc-200/50 dark:border-zinc-800/50">
+        <article className="w-[300px] sm:w-[340px] md:w-[360px] shrink-0 bg-[#f4f5fb] dark:bg-zinc-900/50 rounded-[2rem] p-6 md:p-8 hover:bg-[#e9eaf5] hover:cursor-pointer transition-colors duration-300">
             <div className="flex items-center gap-4 mb-4 md:mb-5">
                 <div className="flex flex-col">
                     <h3 className="font-semibold text-zinc-900 dark:text-white text-base leading-tight">

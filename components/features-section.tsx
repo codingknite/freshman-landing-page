@@ -3,145 +3,60 @@
 import React from 'react';
 import Image from 'next/image';
 import { TextEffect } from '@/components/ui/text-effect';
-import { AnimatedGroup } from '@/components/ui/animated-group';
 import { useI18n } from '@/components/i18n-provider';
 
-const transitionVariants = {
-  item: {
-    hidden: {
-      opacity: 0,
-      filter: 'blur(12px)',
-      y: 12,
-    },
-    visible: {
-      opacity: 1,
-      filter: 'blur(0px)',
-      y: 0,
-      transition: {
-        type: 'spring' as const,
-        bounce: 0.3,
-        duration: 1.5,
-      },
-    },
-  },
-};
-
-const features = [
-  {
-    title: 'Break Down Dense Textbooks',
-    description:
-      "Upload your textbooks and Freshman will break them down into digestible chapters. Get high-level notes and deep-dive breakdowns for every section so you can skip the fluff and focus on what’s actually on the exam.",
-    mockup: '/textbooks.png',
-    imageFirst: true,
-  },
-  {
-    title: 'Don’t Just Memorize. Master.',
-    description:
-      "Move beyond basic memorization. Active recall tests force you to articulate complex concepts in your own words. It’s the fastest way to find and fix your knowledge gaps.",
-    mockup: '/fnmn.png',
-    imageFirst: false,
-  },
+const featuresImages = [
+  '/f1.png',
+  '/f2.png',
+  '/f3.png',
+  '/f4.png',
+  '/f5.png',
+  '/f6.png'
 ];
 
 export default function FeaturesSection() {
   const { messages, t } = useI18n();
-  const localizedItems = messages.features.items;
+  const localizedItems = messages.features?.items || [];
 
   return (
-    <section className='bg-background py-16 md:py-24 lg:py-32 relative overflow-hidden'>
-      {/* Background ambient light */}
-      <div className='absolute top-0 inset-x-0 h-px w-full bg-gradient-to-r from-transparent via-[#6366f1]/20 to-transparent' />
-      
-      <div className='mx-auto max-w-7xl px-6 relative z-10'>
-        {/* Section Header */}
-        <div className='text-center mb-16 md:mb-24 lg:mb-32'>
-          <TextEffect
-            preset='fade-in-blur'
-            speedSegment={0.3}
-            as='p'
-            className='text-sm md:text-base text-[#6366f1]/80 mb-3 uppercase tracking-wider font-bold'
-          >
+    <section className='bg-[oklch(0.992_0.004_260)] py-16 md:py-24 lg:py-32 relative overflow-hidden'>
+      <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10'>
+        <div className='mx-auto mb-16 max-w-3xl text-center md:mb-24 lg:mb-32'>
+          <h3 className='mb-4 text-15 font-semibold text-[#6366F1] uppercase tracking-wider'>
             {t('features.eyebrow')}
-          </TextEffect>
-          <TextEffect
-            preset='fade-in-blur'
-            speedSegment={0.3}
-            delay={0.2}
-            as='h2'
-            className='text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-zinc-900 dark:text-white max-w-3xl mx-auto'
-          >
+          </h3>
+          <h2 className='text-balance text-3xl font-medium tracking-tight text-slate-900 sm:text-5xl lg:text-6xl'>
             {t('features.title')}
-          </TextEffect>
+          </h2>
         </div>
 
-        <div>
-          {features.map((feature, index) => {
-            const localized = localizedItems[index];
-            const mergedFeature = {
-              ...feature,
-              title: localized?.title ?? feature.title,
-              description: localized?.description ?? feature.description,
-            };
-
-            return (
-            <AnimatedGroup
-              key={index}
-              variants={{
-                container: {
-                  visible: {
-                    transition: {
-                      staggerChildren: 0.1,
-                      delayChildren: 0.2,
-                    },
-                  },
-                },
-                ...transitionVariants,
-              }}
-            >
-              <div className='mx-auto max-w-6xl'>
-                <div
-                  className={`flex flex-col ${
-                    mergedFeature.imageFirst ? 'lg:flex-row' : 'lg:flex-row-reverse'
-                  } items-center gap-10 md:gap-16 lg:gap-24`}
-                >
-                  {/* Image/GIF block */}
-                  <div className='flex justify-center items-center flex-shrink-0 w-full max-w-[280px] sm:max-w-[320px] md:max-w-[360px] lg:max-w-[400px]'>
-                    <Image
-                      src={mergedFeature.mockup}
-                      alt={mergedFeature.title}
-                      width={400}
-                      height={800}
-                      className='w-[90%] md:w-[80%] h-auto object-contain mx-auto'
-                    />
-                  </div>
-
-                  {/* Text Content */}
-                  <div className='flex-1 text-center lg:text-left max-w-xl mx-auto lg:mx-0'>
-                    <TextEffect
-                      preset='fade-in-blur'
-                      speedSegment={0.3}
-                      as='h3'
-                      className='text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 tracking-tight text-zinc-900 dark:text-white leading-[1.15]'
-                    >
-                      {mergedFeature.title}
-                    </TextEffect>
-                    <TextEffect
-                      preset='fade-in-blur'
-                      speedSegment={0.3}
-                      delay={0.2}
-                      as='p'
-                      className='text-base md:text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed'
-                    >
-                      {mergedFeature.description}
-                    </TextEffect>
-                  </div>
-                </div>
+        <div className='mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 lg:gap-20'>
+          {localizedItems.map((item: any, index: number) => (
+            <article key={index} className='flex flex-col items-center text-center max-w-[320px] mx-auto'>
+              <div className='mb-8 flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-sm font-semibold text-slate-600 shadow-sm'>
+                {index + 1}
               </div>
-            </AnimatedGroup>
-            );
-          })}
+              
+              <div className='relative mb-8 flex w-full h-48 sm:h-56 items-center justify-center'>
+                <Image
+                  src={featuresImages[index]}
+                  alt={item.title}
+                  fill
+                  className='object-contain'
+                />
+              </div>
+
+              <h3 className='mb-3 text-lg font-semibold text-slate-900 sm:text-xl'>
+                {item.title}
+              </h3>
+              <p className='text-sm leading-relaxed text-slate-500 sm:text-base'>
+                {item.description}
+              </p>
+            </article>
+          ))}
         </div>
       </div>
     </section>
   );
 }
+

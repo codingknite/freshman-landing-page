@@ -9,7 +9,10 @@
   },
   "nav": {
     "terms": "Nutzungsbedingungen",
-    "privacy": "Datenschutz"
+    "privacy": "Datenschutz",
+    "pricing": "Preise",
+    "login": "Einloggen",
+    "startStudying": "Jetzt lernen"
   },
   "languages": {
     "label": "Sprache",
@@ -19,8 +22,11 @@
     "de": "Deutsch"
   },
   "hero": {
-    "title": "Merke dir alles, was du lernst.",
-    "subtitle": "Auf Basis bewährter Kognitionswissenschaft verwandelt Freshman deine Notizen in perfekte Active-Recall-Tests und sorgt so für dauerhaftes Wissen und 50 % bessere Erinnerung."
+    "title": "Deine Notizen sind nutzlos, wenn du sie bis zum Prüfungstag vergisst.",
+    "subtitle": "Freshman verwandelt alles, was du lernst — Notizen, Lehrbücher, PDFs, Altklausuren — in KI-gestützte Active-Recall-Tests, die Vergessen fast unmöglich machen. Lerne weniger. Behalte mehr. Geh in jede Prüfung wirklich vorbereitet.",
+    "eyebrow": "Basierend auf bewährter Kognitionswissenschaft",
+    "cta": "→ Jetzt lernen - kostenlos",
+    "supportingLine": "Keine Kreditkarte erforderlich · Schließe dich Tausenden Studierenden an, die bereits smarter lernen"
   },
   "benefits": {
     "eyebrow": "VORTEILE",
@@ -50,15 +56,31 @@
   },
   "features": {
     "eyebrow": "FUNKTIONEN",
-    "title": "die intelligenteste Art zu lernen.",
+    "title": "Alles, was du brauchst. Nichts, was du nicht brauchst.",
     "items": [
       {
-        "title": "Dichte Lehrbücher aufbrechen",
-        "description": "Lade deine Lehrbücher hoch und Freshman zerlegt sie in gut verdauliche Kapitel. Erhalte Überblicksnotizen und tiefgehende Erklärungen für jeden Abschnitt, damit du Unwichtiges überspringst und dich auf Prüfungsrelevantes konzentrierst."
+        "title": "Notizen, Lehrbücher & Altklausuren hochladen",
+        "description": "Deine Materialien werden automatisch zu deiner personalisierten Testdatenbank. Keine manuelle Kartenerstellung. Lade sie hoch und Freshman kümmert sich um den Rest."
       },
       {
-        "title": "Nicht nur auswendig lernen. Beherrschen.",
-        "description": "Gehe über reines Auswendiglernen hinaus. Active-Recall-Tests zwingen dich, komplexe Konzepte in eigenen Worten zu erklären. So findest und schließt du Wissenslücken am schnellsten."
+        "title": "Vier verschiedene Testmodi",
+        "description": "Quizze. Active Recall. Probeprüfungen. Altklausuren. Jeder Modus hat einen anderen Studienzweck. Nutze alle vier und komme am Prüfungstag an, nachdem du jede erdenkliche Art von Frage erlebt hast."
+      },
+      {
+        "title": "Organisierte Studienbibliothek",
+        "description": "All deine Notizen, Bücher, Karteikarten und Fächer — organisiert und durchsuchbar. Stöbere nach Fach, suche nach Begriffen, lerne auf Abruf."
+      },
+      {
+        "title": "Teile mit deiner Lerngruppe",
+        "description": "Teile Notizen, Karteikarten, Altklausuren und Lehrbücher mit Klassenkameraden über einen einzigen Link. Allein zu lernen ist eine Wahl, keine Pflicht."
+      },
+      {
+        "title": "Personalisiert vom ersten Tag an",
+        "description": "Dunkelmodus, Sprachpräferenzen, Studienziele, Wiederholungsmethoden — Freshman lernt, wie du studierst, und passt sich an. Deine Erfahrung ist niemals von der Stange."
+      },
+      {
+        "title": "Verfolge deinen Fortschritt",
+        "description": "Sitzungsergebnisse, Abschlusssträhnen und Leistungszusammenfassungen sagen dir genau, wo du dich verbesserst und worauf du dich als nächstes konzentrieren solltest. Kein Raten mehr."
       }
     ]
   },
@@ -163,7 +185,11 @@
         "description": "Perfekt für intensive Lernphasen",
         "price": "$3.99",
         "period": "/Woche",
-        "features": ["Alle Funktionen enthalten", "Jederzeit kündbar", "Keine lange Bindung"]
+        "features": [
+          "Alle Funktionen enthalten",
+          "Jederzeit kündbar",
+          "Keine lange Bindung"
+        ]
       },
       {
         "id": "monthly",
@@ -171,7 +197,11 @@
         "description": "Flexible monatliche Abrechnung",
         "price": "$10.99",
         "period": "/Monat",
-        "features": ["Alle Funktionen enthalten", "Jederzeit kündbar", "Keine lange Bindung"]
+        "features": [
+          "Alle Funktionen enthalten",
+          "Jederzeit kündbar",
+          "Keine lange Bindung"
+        ]
       },
       {
         "id": "annual",
@@ -179,7 +209,11 @@
         "description": "Spare 35 % mit Jahresabo",
         "price": "$99.99",
         "period": "/Jahr",
-        "features": ["Alle Funktionen enthalten", "3 Monate gratis", "Jederzeit kündbar"]
+        "features": [
+          "Alle Funktionen enthalten",
+          "3 Monate gratis",
+          "Jederzeit kündbar"
+        ]
       }
     ]
   },
@@ -190,35 +224,55 @@
     "cta": "Zur Warteliste"
   },
   "faqs": {
-    "title": "FAQs",
-    "subtitle": "Antworten auf deine Fragen",
-    "contactPrefix": "Brauchst du mehr Hilfe?",
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Deine Fragen beantwortet",
+    "contactPrefix": "Brauchst du weitere Hilfe?",
     "contactLink": "Kontaktiere uns",
     "items": [
       {
         "id": "item-1",
-        "question": "Welche Art von Notizen kann ich hochladen?",
-        "answer": "Du kannst fast alles hochladen. Freshman liest handschriftliche Notizen (aus Fotos), PDF-Lehrbücher, PowerPoint-Folien und normale Textdateien. Solange der Text lesbar ist, können wir ihn in einen Test umwandeln."
+        "question": "Was unterscheidet Freshman von Anki oder Quizlet?",
+        "answer": "Anki und Quizlet verlangen, dass du deine Karten manuell erstellst. Freshman generiert Tests automatisch aus deinen hochgeladenen Materialien, Notizen, PDFs, Lehrbüchern und Altklausuren. Du erhältst auch einen vollständigen KI-Tutor, vier Testmodi, einen intelligenten Lese-Arbeitsbereich und einen täglichen Spaced-Repetition-Feed. Es ist ein komplettes Studiensystem, nicht nur ein Karteikarten-Tool."
       },
       {
         "id": "item-2",
-        "question": "Wie genau sind die generierten Fragen?",
-        "answer": "Freshman ist sehr genau darin, Kernkonzepte zu erkennen und passende Fragen zu erstellen. Wir empfehlen trotzdem, die Inhalte beim Lernen kurz zu überprüfen."
+        "question": "Muss ich Karteikarten selbst erstellen?",
+        "answer": "Nein, und das ist der Punkt. Lade deine Materialien hoch und Freshman baut deine Tests für dich. Du konzentrierst dich aufs Lernen; wir erledigen die Einrichtung."
       },
       {
         "id": "item-3",
-        "question": "Kann ich das für jedes Fach nutzen?",
-        "answer": "Auf jeden Fall. Egal ob Biologie, Jura, Geschichte, Informatik oder Literatur: Freshman passt sich deinen Inhalten an. Es funktioniert für alle Bildungsstufen von Schule bis Promotion."
+        "question": "Welche Fächer und Dateitypen unterstützt Freshman?",
+        "answer": "Freshman funktioniert für jedes Fach und unterstützt PDFs, Textdokumente, Web-URLs und persönliche Notizen. Jura, Medizin, Ingenieurwesen, Geisteswissenschaften, Sprachen — wenn du es hochladen kannst, kann Freshman dich darin testen."
       },
       {
         "id": "item-4",
-        "question": "Wann wird Freshman für Android verfügbar sein?",
-        "answer": "Freshman ist aktuell auf iOS verfügbar. Wir entwickeln die Android-Version aktiv und rechnen mit einem baldigen Start. Trag dich in die Warteliste ein, um benachrichtigt zu werden."
+        "question": "Gibt es einen kostenlosen Plan?",
+        "answer": "Ja. Du kannst Freshman kostenlos mit Zugang zu grundlegenden Funktionen nutzen. Kostenpflichtige Pläne schalten unbegrenzte Nutzung, den vollen KI-Tutor und alle erweiterten Test- und Prüfungsmodi frei."
       },
       {
         "id": "item-5",
-        "question": "Kann ich mein Abo jederzeit kündigen?",
-        "answer": "Ja, du kannst jederzeit kündigen. Es gibt keine langfristige Verpflichtung, und die Kündigung geht direkt über deine Apple-ID-Einstellungen."
+        "question": "Funktioniert es für Postgraduierte und Doktoranden, nicht nur für Bachelorstudenten?",
+        "answer": "Absolut. Der Web-Arbeitsbereich mit seinem Quellenleser, der Hervorhebungs-Pipeline und dem KI-Tutor ist speziell für umfangreiches, leselastiges Studium konzipiert. Postgraduierte und Forscher finden ihn besonders leistungsfähig, um dichtes akademisches Material im großen Maßstab zu verarbeiten und zu behalten."
+      },
+      {
+        "id": "item-6",
+        "question": "Kann ich Materialien mit meiner Lerngruppe teilen?",
+        "answer": "Ja. Du kannst Notizen, Karteikarten und Altklausuren über einen teilbaren Link mit Klassenkameraden teilen. Sie können deine freigegebenen Ressourcen direkt in ihrer eigenen Freshman-App öffnen."
+      },
+      {
+        "id": "item-7",
+        "question": "Sind meine Daten sicher?",
+        "answer": "Deine hochgeladenen Notizen, Dokumente und Studiendaten werden sicher gespeichert. Wir teilen deine Materialien nicht und verwenden sie nicht, um KI-Modelle von Drittanbietern zu trainieren."
+      },
+      {
+        "id": "item-8",
+        "question": "Ist Freshman auf Android verfügbar?",
+        "answer": "Die mobile App ist derzeit auf iOS verfügbar. Die Web-App läuft in jedem Browser auf einem Desktop-Gerät. Die Unterstützung der Android-App ist in Planung."
+      },
+      {
+        "id": "item-9",
+        "question": "Kann ich jederzeit kündigen?",
+        "answer": "Immer. Keine Kündigungsgebühren, keine Reibung. Kündige direkt in deinen Kontoeinstellungen, wann immer du willst."
       }
     ]
   },
@@ -247,6 +301,106 @@
       "subtitle2": "Lerne smarter mit KI-gestützten Kapitelzusammenfassungen."
     },
     "openButton": "In Freshman öffnen"
+  },
+  "howItWorks": {
+    "eyebrow": "Unser Prozess",
+    "cta": "Loslegen",
+    "title": "Drei Schritte zwischen dir und besserem Erinnern",
+    "subtitle": "Kein kompliziertes Setup. Kein Neuanfang von null. Lade einfach hoch, was du schon hast, und lass Freshman den Großteil der Arbeit übernehmen.",
+    "steps": [
+      {
+        "label": "SCHRITT 1",
+        "title": "Lade hoch, was du schon hast",
+        "description": "Vorlesungsnotizen. Lehrbuchkapitel. PDFs. Altklausuren. URLs. Zieh alles in Freshman und deine Materialien sind sofort lernbereit — ohne Umformatieren, ohne manuelles Tagging."
+      },
+      {
+        "label": "SCHRITT 2",
+        "title": "Freshman erstellt deine Tests automatisch",
+        "description": "Unsere KI liest deine Materialien und erstellt präzise kalibrierte Active-Recall-Fragen — die Lernmethode, die Kognitionswissenschaftler als besonders wirksam für das Speichern von Wissen im Langzeitgedächtnis identifiziert haben. Keine manuelle Kartenerstellung. Keine verschwendete Zeit."
+      },
+      {
+        "label": "SCHRITT 3",
+        "title": "Täglich wiederholen. Dauerhaft behalten.",
+        "description": "Dein personalisierter Daily Feed liefert die richtigen Fragen zur richtigen Zeit. Durchswipen. Selbstvertrauen bewerten. Freshman lernt aus deiner Leistung und passt sich an — damit du mehr Zeit auf das verwendest, was du noch nicht kannst, und weniger auf das, was du bereits beherrschst."
+      }
+    ],
+    "calloutPrefix": "Studierende mit verteiltem Active Recall behalten bis zu",
+    "calloutEmphasis": "50 % mehr",
+    "calloutSuffix": "als mit passivem Wiederlesen."
+  },
+  "coreFeatures": {
+    "eyebrow": "Der Web-Arbeitsbereich",
+    "title": "Dein Deep-Study-Kommandozentrum",
+    "subtitle": "Hör auf, zwischen Browser-Tabs, PDF-Readern, Textmarkern und Notiz-Apps hin und her zu wechseln. Freshman vereint Lesen, Kommentieren, Nachhilfe und Testen in einem fokussierten Arbeitsbereich — damit nichts untergeht.",
+    "cta": "Loslegen - es ist kostenlos",
+    "features": [
+      {
+        "label": "Smart Reader + Markierungen",
+        "title": "Lies alles. Markiere, was wichtig ist.",
+        "description": "Lade PDFs hoch, füge eine URL ein oder öffne deine eigenen Notizen direkt im Freshman-Reader. Markiere wichtige Passagen während des Lesens — jede Markierung wird gespeichert, ist durchsuchbar und automatisch mit deiner Lernpipeline verbunden. Deine Anmerkungen verschwinden nicht in einem Ordner, den du nie wieder öffnest."
+      },
+      {
+        "label": "KI-Tutor",
+        "title": "Ein KI-Tutor, der dein Material wirklich gelesen hat",
+        "description": "Frag deinen KI-Tutor alles — und erhalte Antworten, die in deiner tatsächlichen Quelle verankert sind, keine generischen Internetergebnisse. Brauchst du ein Konzept anders erklärt? Möchtest du dein eigenes Verständnis herausfordern? Dein Tutor weiß genau, was du gelesen hast, und holt dich dort ab, wo du stehst."
+      },
+      {
+        "label": "Quellenbibliothek",
+        "title": "All deine Quellen. Ein durchsuchbarer Arbeitsbereich.",
+        "description": "PDFs, Lehrbücher, Webartikel, persönliche Notizen — alles organisiert, abrufbar und bereit zum Lernen. Die globale Quellensuche bedeutet, dass du nie wieder nach dem Text suchen musst, den du vor drei Wochen gespeichert hast."
+      },
+      {
+        "label": "Markierung-zu-Test-Pipeline",
+        "title": "Markierungen, die wirklich etwas bewirken",
+        "description": "Jede Passage, die du im Reader markierst, fließt direkt in deine Tests und Wiederholungssitzungen ein. Das ist die Pipeline, die den Unterschied macht — Lesen und Erinnern sind keine zwei getrennten Aktivitäten mehr."
+      }
+    ]
+  },
+  "mobileHero": {
+    "eyebrow": "Die Mobile App",
+    "title": "Die Wiederholungseinheit für die Hosentasche.",
+    "subtitle": "Während andere in der Nacht vorher pauken, hast du schon wochenlang wiederholt — immer fünf Minuten auf einmal. Die Freshman Mobile-App verwandelt Pendelstrecken, Mittagspausen und Wartezimmer in tägliche Wiederholungseinheiten, die sich wirklich summieren. Kleine Gewohnheiten. Massive Ergebnisse.",
+    "cta": "Kostenlos für iOS herunterladen",
+    "platformNote": "Verfügbar für iOS"
+  },
+  "dailyFeedHighlight": {
+    "eyebrow": "DAS FEATURE, ZU DEM STUDENTEN JEDEN TAG ZURÜCKKEHREN",
+    "title": "Lerne deinen täglichen Wiederholungs-Feed kennen",
+    "paragraphs": [
+      "Wische durch personalisierte Erinnerungskarten.",
+      "Markiere jede als leicht, mittel oder schwer.",
+      "Freshman passt sich täglich an – mehr von dem, womit du kämpfst, weniger von dem, was du bereits beherrschst.",
+      "Spaced Repetition und Active Recall arbeiten jeden Tag zusammen."
+    ],
+    "stats": [
+      "50% besseres Behalten",
+      "Passt sich deiner Leistung an",
+      "Keine zwei Feeds sind gleich"
+    ]
+  },
+  "additionalFeatures": {
+    "title": "Gebaut für das wahre Studentenleben",
+    "items": [
+      {
+        "id": "active-recall",
+        "title": "Active Recall, kein passives Wiederlesen",
+        "text": "Deine Notizen noch mal zu lesen, fühlt sich produktiv an. Ist es aber nicht. Passives Wiederholen erzeugt die Illusion von Wissen – bis die Klausur vor dir liegt. Freshman ersetzt Wiederlesen durch Active Recall: die Methode, die den Abruf erzwingt, echtes Gedächtnis aufbaut und das Vergessen strukturell erschwert."
+      },
+      {
+        "id": "daily-habits",
+        "title": "Konstante tägliche Gewohnheiten ohne Schuldgefühle",
+        "text": "Du brauchst keine vierstündige Lerneinheit. Du brauchst fünfzehn fokussierte Minuten, jeden Tag. Freshman ist genau für diese Realität konzipiert – kurze, befriedigende Einheiten, die dir einen Erinnerungsvorteil verschaffen, den deine Kommilitonen nicht haben."
+      },
+      {
+        "id": "exam-prepared",
+        "title": "Starte in die Klausurenphase schon bestens vorbereitet",
+        "text": "Weil du dein Material jeden Tag aktiv abgerufen hast, fühlt sich die Klausurenwoche anders an. Keine Panik. Kein Stress. Nur eine letzte Wiederholung von Dingen, die du bereits weißt. Genau dieses Gefühl soll dir Freshman geben."
+      },
+      {
+        "id": "language",
+        "title": "Lerne in der Sprache, in der du denkst",
+        "text": "Englisch, Spanisch, Französisch, Deutsch — Freshman passt sich an, wie du Informationen natürlich verarbeitest. In deiner stärksten Sprache zu lernen bedeutet, mehr und schneller zu behalten."
+      }
+    ]
   }
 }
-
