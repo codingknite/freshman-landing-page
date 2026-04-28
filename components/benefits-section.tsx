@@ -94,7 +94,7 @@ export default function BenefitsSection() {
   };
 
   return (
-    <section className='bg-[oklch(0.992_0.004_260)] py-16 md:py-24 overflow-hidden relative'>
+    <section className='bg-[oklch(0.992_0.004_260)] py-16 md:py-22 overflow-hidden relative'>
         <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='mx-auto mb-16 max-w-3xl text-center md:mb-24 lg:mb-32'>
             <h3 className='mb-4 text-15 font-semibold text-[#6366F1] uppercase tracking-wider'>
@@ -119,7 +119,6 @@ export default function BenefitsSection() {
               ))}
             </div>
 
-            {/* Center Column (Device Mockup) */}
             <div className='flex justify-center relative w-full h-[600px] xl:h-[700px]'>
                {benefits.map((benefit, idx) => (
                  <div 
@@ -138,7 +137,6 @@ export default function BenefitsSection() {
                ))}
             </div>
 
-            {/* Right Column */}
             <div className='flex flex-col gap-6'>
               {benefits.slice(2, 4).map((benefit, idx) => (
                 <BenefitCard 
@@ -151,10 +149,8 @@ export default function BenefitsSection() {
             </div>
           </div>
 
-          {/* Benefits Layout - Mobile & Tablet */}
           <div className='lg:hidden flex flex-col gap-10 items-center'>
             
-            {/* Top Cards (1 & 2) */}
             <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 w-full'>
               {benefits.slice(0, 2).map((benefit, idx) => (
                 <BenefitCard 
@@ -166,7 +162,6 @@ export default function BenefitsSection() {
               ))}
             </div>
 
-            {/* Center Device Mockup */}
             <div className='flex justify-center relative w-full h-[450px] sm:h-[550px]'>
                {benefits.map((benefit, idx) => (
                  <div 
@@ -185,7 +180,6 @@ export default function BenefitsSection() {
                ))}
             </div>
 
-            {/* Bottom Cards (3 & 4) */}
             <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 w-full'>
               {benefits.slice(2, 4).map((benefit, idx) => (
                 <BenefitCard 
@@ -198,7 +192,6 @@ export default function BenefitsSection() {
             </div>
           </div>
 
-          {/* Additional Features Grid (Continuation) */}
           <div className='pt-16 md:pt-24'>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12 lg:gap-x-16 max-w-5xl mx-auto'>
               {additionalItems.map((item: { id: string; title: string; text: string }, idx: number) => {

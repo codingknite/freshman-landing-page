@@ -12,7 +12,7 @@ export default function HowItWorksSection() {
   const steps = messages.howItWorks.steps;
 
   return (
-    <section className='bg-[oklch(0.982_0.004_260)] py-20 md:py-32'>
+    <section className='bg-[oklch(0.982_0.004_260)] py-12 md:py-22'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         <div className='mx-auto mb-16 max-w-3xl text-center md:mb-24 lg:mb-32'>
           <h3 className='mb-4 text-[15px] font-semibold text-[#6366F1] uppercase tracking-wider'>
@@ -21,9 +21,6 @@ export default function HowItWorksSection() {
           <h2 className='text-balance text-3xl font-medium tracking-tight text-slate-900 sm:text-5xl lg:text-6xl'>
             {t('howItWorks.title')}
           </h2>
-          <p className='mx-auto mt-6 max-w-[68ch] text-pretty text-base leading-relaxed text-slate-500 sm:text-lg md:text-xl'>
-            {t('howItWorks.subtitle')}
-          </p>
         </div>
 
         <div className='mt-24 flex flex-col items-center justify-center gap-12 md:flex-row md:items-start md:gap-6 lg:gap-12'>

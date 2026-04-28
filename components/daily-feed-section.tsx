@@ -31,7 +31,7 @@ export default function DailyFeedSection() {
   };
 
   return (
-    <section className='bg-[#F8F9FC] py-16 md:py-32'>
+    <section className='bg-[#F8F9FC] py-16 md:py-22'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         <div className='flex flex-col items-center gap-16 lg:flex-row lg:gap-24'>
           {/* Left Text */}
@@ -66,7 +66,6 @@ export default function DailyFeedSection() {
             </div>
           </div>
 
-          {/* Right Video */}
           <div className='relative flex w-full flex-1 justify-center lg:justify-end'>
             <div className='relative w-full max-w-[400px] lg:max-w-[400px]'>
               <div className='relative overflow-hidden'>
@@ -84,7 +83,6 @@ export default function DailyFeedSection() {
                   Your browser does not support the onboarding video.
                 </video>
 
-                {/* Fallback Play Button */}
                 {showPlayBtn && (
                   <div className='absolute inset-0 z-10 flex items-center justify-center'>
                     <button

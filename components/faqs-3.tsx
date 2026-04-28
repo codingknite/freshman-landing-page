@@ -20,10 +20,9 @@ export default function FAQsThree() {
   const faqItems: FAQItem[] = messages.faqs.items;
 
   return (
-    <section className="bg-[oklch(0.992_0.004_260)] py-24 px-6 font-sans">
+    <section className="bg-[oklch(0.992_0.004_260)] py-20 px-6 font-sans">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-12 md:gap-24">
         
-        {/* Left Column: Heading */}
         <div className="md:w-[40%]">
           <div className="sticky top-24">
             <h2 className="text-4xl md:text-5xl font-medium text-slate-900 mb-6 tracking-tight">
@@ -44,7 +43,6 @@ export default function FAQsThree() {
           </div>
         </div>
 
-        {/* Right Column: Accordion */}
         <div className="md:w-[60%]">
           <Accordion type="single" collapsible className="w-full">
             {faqItems.map((item) => (

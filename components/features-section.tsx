@@ -18,7 +18,7 @@ export default function FeaturesSection() {
   const localizedItems = messages.features?.items || [];
 
   return (
-    <section className='bg-[oklch(0.992_0.004_260)] py-16 md:py-24 lg:py-32 relative overflow-hidden'>
+    <section className='bg-[oklch(0.992_0.004_260)] py-16 md:py-22 lg:py-24 relative overflow-hidden'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10'>
         <div className='mx-auto mb-16 max-w-3xl text-center md:mb-24 lg:mb-32'>
           <h3 className='mb-4 text-15 font-semibold text-[#6366F1] uppercase tracking-wider'>
