@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { TextEffect } from '@/components/ui/text-effect';
 import { useI18n } from '@/components/i18n-provider';
 
 const featuresImages = [
@@ -31,7 +30,7 @@ export default function FeaturesSection() {
         </div>
 
         <div className='mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 lg:gap-20'>
-          {localizedItems.map((item: any, index: number) => (
+          {localizedItems.map((item: { title: string; description: string }, index: number) => (
             <article key={index} className='flex flex-col items-center text-center max-w-[320px] mx-auto'>
               <div className='mb-8 flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-sm font-semibold text-slate-600 shadow-sm'>
                 {index + 1}

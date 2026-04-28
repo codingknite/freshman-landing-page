@@ -72,9 +72,9 @@ const plans: Plan[] = [
 ];
 
 // Reusing the same web app UI structure, replacing CSS vars with Tailwind classes
-function PricingContent({ searchParams }: { searchParams: { billing?: string } }) {
+function PricingContent({ billingParam }: { billingParam?: string }) {
   // Use simple query params to toggle billing state for the server component
-  const billing = searchParams?.billing === 'monthly' ? 'monthly' : 'annual';
+  const billing = billingParam === 'monthly' ? 'monthly' : 'annual';
 
   return (
     <div className='min-h-screen bg-slate-50'>
@@ -235,10 +235,17 @@ function PricingContent({ searchParams }: { searchParams: { billing?: string } }
   );
 }
 
-export default function PricingPage({ searchParams }: { searchParams: { billing?: string } }) {
+type Props = {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+};
+
+export default async function PricingPage(props: Props) {
+  const searchParams = await props.searchParams;
+  const billingParam = typeof searchParams?.billing === 'string' ? searchParams.billing : undefined;
+
   return (
     <Suspense>
-      <PricingContent searchParams={searchParams} />
+      <PricingContent billingParam={billingParam} />
     </Suspense>
   );
 }

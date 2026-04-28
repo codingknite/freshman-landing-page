@@ -2,7 +2,6 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import { TextEffect } from '@/components/ui/text-effect';
 import { 
   BookOpen, 
   FileText, 
@@ -202,7 +201,7 @@ export default function BenefitsSection() {
           {/* Additional Features Grid (Continuation) */}
           <div className='pt-16 md:pt-24'>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12 lg:gap-x-16 max-w-5xl mx-auto'>
-              {additionalItems.map((item: any, idx: number) => {
+              {additionalItems.map((item: { id: string; title: string; text: string }, idx: number) => {
                 const Icon = additionalFeatureIcons[item.id] || Sparkles;
                 return (
                   <div key={idx} className='flex flex-col items-center text-center'>
