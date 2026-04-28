@@ -20,10 +20,10 @@ export default function HeroSection() {
               <h1 className='mt-5 text-balance text-[clamp(2rem,4.8vw,4rem)] font-medium leading-[1.06] tracking-[-0.02em] text-[oklch(0.19_0.03_260)]'>
                 {t('hero.title')}
               </h1>
-              <p className='mx-auto mt-6 max-w-[68ch] text-pretty text-15 leading-relaxed text-[oklch(0.39_0.02_255)] sm:text-lg'>
+              <p className='mx-auto mt-12 max-w-[68ch] text-pretty text-[15px] leading-relaxed text-[oklch(0.39_0.02_255)] sm:text-lg'>
                 {t('hero.subtitle')}
               </p>
-              <div className='mt-8 flex flex-col items-center gap-4'>
+              <div className='mt-14 flex flex-col items-center gap-4'>
                 <ShimmerButton asChild>
                   <Link href='https://app.joinfreshman.com/signup'>
                     {t('hero.cta')}
@@ -36,16 +36,16 @@ export default function HeroSection() {
             </div>
 
             <div className='relative mx-auto mt-10 w-full max-w-5xl'>
-              <div className='relative overflow-hidden rounded-[1.4rem] border border-[oklch(0.91_0.008_260)] bg-[oklch(0.97_0.005_260)] shadow-[0_30px_60px_-44px_rgba(22,28,55,0.34)]'>
+              <div className='relative overflow-hidden'>
                 <Image
-                  src='/hero.png'
+                  src='/hero-main.png'
                   alt='Freshman app preview'
                   width={1024}
                   height={643}
                   className='h-auto w-full object-cover'
                   priority
                 />
-                <div className='pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-[oklch(0.992_0.004_260)] via-[oklch(0.992_0.004_260/0.92)] to-transparent sm:h-28 md:h-36' />
+                <div className='pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[oklch(0.992_0.004_260)] via-[oklch(0.992_0.004_260/0.92)] to-transparent sm:h-20 md:h-26' />
               </div>
             </div>
           </div>

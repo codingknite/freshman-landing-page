@@ -43,7 +43,7 @@ export default function DailyFeedSection() {
               {t('dailyFeedHighlight.title')}
             </h2>
 
-            <div className='flex flex-col gap-5 text-lg leading-relaxed text-[oklch(0.39_0.02_255)]'>
+            <div className='flex flex-col gap-5 text-base leading-relaxed text-[oklch(0.39_0.02_255)]'>
               {paragraphs.map((para, idx) => {
                 const htmlPara = para
                   .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')

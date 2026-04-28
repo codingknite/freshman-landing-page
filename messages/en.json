@@ -24,7 +24,7 @@
   "hero": {
     "eyebrow": "Built on proven cognitive science",
     "title": "Your Notes Are Useless If You Forget Them By Exam Day.",
-    "subtitle": "Freshman turns everything you study — notes, textbooks, PDFs, past papers — into AI-powered Active Recall tests that make forgetting nearly impossible. Study less. Retain more. Show up to every exam actually prepared.",
+    "subtitle": "Freshman turns everything you study into AI-powered Active Recall tests that make forgetting nearly impossible. Study less. Retain more. Show up to every exam actually prepared.",
     "cta": "Start Sudying - it's free",
     "supportingLine": "No credit card required · Join thousands of students already studying smarter"
   },
@@ -209,11 +209,7 @@
         "description": "Save 35% with annual billing",
         "price": "$99.99",
         "period": "/year",
-        "features": [
-          "All features included",
-          "3 months free",
-          "Cancel anytime"
-        ]
+        "features": ["All features included", "3 months free", "Cancel anytime"]
       }
     ]
   },
@@ -316,12 +312,12 @@
       {
         "label": "STEP 2",
         "title": "Freshman Builds Your Tests Automatically",
-        "description": "Freshman AI reads your materials and generates perfectly calibrated Active Recall questions — the exact learning method that cognitive scientists have identified as the most effective way to encode information into long-term memory."
+        "description": "Freshman reads your materials and generates perfectly calibrated Active Recall questions. The most effective way to encode information into long-term memory."
       },
       {
         "label": "STEP 3",
         "title": "Review Daily. Remember for Good.",
-        "description": "Your personalized daily feed delivers the right questions at the right time. Swipe through and rate your confidence. Freshman learns how you perform and adjusts so you spend more time on what you do not know and less time on what you have already mastered."
+        "description": "Get a personalized daily feed of questions tailored to your learning needs. Freshman tracks your performance and adapts in real time, helping you focus on what you don't know and skip what you've already mastered."
       }
     ],
     "calloutPrefix": "Students using spaced Active Recall retain up to",

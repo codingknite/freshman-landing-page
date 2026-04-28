@@ -15,7 +15,7 @@ export default function HowItWorksSection() {
     <section className='bg-[oklch(0.982_0.004_260)] py-12 md:py-22'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         <div className='mx-auto mb-16 max-w-3xl text-center md:mb-24 lg:mb-32'>
-          <h3 className='mb-4 text-[15px] font-semibold text-[#6366F1] uppercase tracking-wider'>
+          <h3 className='mb-4 !text-[13px] !leading-[1.2] !font-semibold text-[#6366F1] uppercase tracking-wider'>
             {t('howItWorks.eyebrow')}
           </h3>
           <h2 className='text-balance text-3xl font-medium tracking-tight text-slate-900 sm:text-5xl lg:text-6xl'>
@@ -30,7 +30,7 @@ export default function HowItWorksSection() {
                 <div className='mb-8 flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 text-sm font-semibold text-gray-600 shadow-sm'>
                   {idx + 1}
                 </div>
-                
+
                 <div className='relative mb-8 flex w-full h-48 items-center justify-center'>
                   <Image
                     src={stepImages[idx]}
@@ -40,14 +40,14 @@ export default function HowItWorksSection() {
                   />
                 </div>
 
-                <h3 className='mb-3 text-lg font-semibold text-gray-900 sm:text-xl'>
+                <h3 className='mb-3 text-base font-semibold text-gray-900 sm:text-xl'>
                   {step.title}
                 </h3>
-                <p className='text-sm leading-relaxed text-gray-500 sm:text-base'>
+                <p className='text-[15px] leading-relaxed text-gray-500 sm:text-base'>
                   {step.description}
                 </p>
               </article>
-              
+
               {idx < steps.length - 1 && (
                 <div className='hidden mt-36 text-gray-200 md:block'>
                   <ArrowRight className='h-8 w-8' strokeWidth={2.5} />

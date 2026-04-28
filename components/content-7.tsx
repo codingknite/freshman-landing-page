@@ -65,7 +65,7 @@ export default function ContentSeven() {
                   preset='fade-in-blur'
                   speedSegment={0.3}
                   as='p'
-                  className='text-sm md:text-base text-[#a5b4fc] mb-2 uppercase tracking-wider font-semibold'
+                  className='text-[14px] md:text-base text-[#a5b4fc] mb-2 uppercase tracking-wider font-semibold'
                 >
                   {t('pastPapers.eyebrow')}
                 </TextEffect>

@@ -99,7 +99,7 @@ export default function TestimonialsSection() {
                 
                 {/* Header */}
                 <div className="mx-auto mb-16 max-w-3xl text-center md:mb-24 lg:mb-32">
-                    <h3 className="mb-4 text-15 font-semibold text-[#6366F1] uppercase tracking-wider">
+                    <h3 className="mb-4 text-[14px] font-semibold text-[#6366F1] uppercase tracking-wider">
                         {t('testimonials.eyebrow')}
                     </h3>
                     <h2 className="text-balance text-3xl font-medium tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">

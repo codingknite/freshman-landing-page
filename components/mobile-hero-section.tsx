@@ -11,25 +11,23 @@ export default function MobileHeroSection() {
 
   return (
     <section className='relative overflow-hidden bg-[oklch(0.982_0.004_260)] pt-8 pb-16 md:pb-24'>
-      {/* Ambient Glow */}
       <div className='absolute left-1/2 top-[20%] -z-10 h-[600px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-tr from-indigo-500/10 to-blue-500/5 blur-[120px] lg:left-1/4 lg:top-1/2' />
 
       <div className='relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         <div className='flex flex-col items-center gap-16 lg:flex-row lg:gap-24'>
-          {/* Text Content */}
           <div className='flex flex-1 flex-col items-center text-center lg:items-start lg:text-left'>
             <TextEffect
               preset='fade-in-blur'
               speedSegment={0.3}
               as='p'
-              className='mb-4 text-15 font-bold uppercase tracking-widest text-[#6366F1] md:text-sm'
+              className='mb-4 text-[14px] font-bold uppercase tracking-widest text-[#6366F1] md:text-sm'
             >
               {t('mobileHero.eyebrow')}
             </TextEffect>
-            <h2 className='mb-6 max-w-4xl text-balance text-4xl font-medium tracking-tight text-[oklch(0.19_0.03_260)] sm:text-5xl lg:text-6xl'>
+            <h2 className='mb-6 max-w-4xl text-balance font-medium tracking-tight text-[oklch(0.19_0.03_260)] sm:text-4xl md:text-5xl lg:text-6xl'>
               {t('mobileHero.title')}
             </h2>
-            <p className='mb-10 max-w-2xl text-pretty text-lg leading-relaxed text-[oklch(0.39_0.02_255)] sm:text-xl'>
+            <p className='mb-10 max-w-2xl text-pretty !text-base leading-relaxed text-[oklch(0.39_0.02_255)] sm:text-xl'>
               {t('mobileHero.subtitle')}
             </p>
 
@@ -54,7 +52,6 @@ export default function MobileHeroSection() {
             </div>
           </div>
 
-          {/* Huge Phone Image (Right on Desktop, Bottom on Mobile) */}
           <div className='relative flex w-full flex-1 justify-center lg:justify-end'>
             <div className='relative w-full max-w-[500px] lg:max-w-[600px]'>
               <Image

@@ -14,7 +14,7 @@ export default function CoreFeaturesSection() {
     <section className='bg-[oklch(0.992_0.004_260)] py-16 md:py-22'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-6'>
         <div className='mx-auto mb-20 max-w-3xl text-center md:mb-32'>
-          <h3 className='mb-4 text-15 font-semibold text-[#6366F1] uppercase'>
+          <h3 className='mb-4 text-[14px] font-semibold text-[#6366F1] uppercase'>
             {t('coreFeatures.eyebrow')}
           </h3>
           <h2 className='text-balance text-3xl font-medium tracking-tight text-[oklch(0.19_0.03_260)] sm:text-5xl lg:text-6xl'>
@@ -40,7 +40,7 @@ export default function CoreFeaturesSection() {
                 <h3 className='mb-6 text-3xl font-medium tracking-tight text-[oklch(0.19_0.03_260)] sm:text-4xl'>
                   {feature.title}
                 </h3>
-                <p className='text-lg leading-relaxed text-[oklch(0.39_0.02_255)]'>
+                <p className='text-base leading-relaxed text-[oklch(0.39_0.02_255)]'>
                   {feature.description}
                 </p>
               </div>
