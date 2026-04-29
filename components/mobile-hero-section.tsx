@@ -24,7 +24,7 @@ export default function MobileHeroSection() {
             >
               {t('mobileHero.eyebrow')}
             </TextEffect>
-            <h2 className='mb-6 max-w-4xl text-balance font-medium tracking-tight text-[oklch(0.19_0.03_260)] sm:text-4xl md:text-5xl lg:text-6xl'>
+            <h2 className='mb-8 text-balance text-4xl font-medium tracking-tight text-[oklch(0.19_0.03_260)] sm:text-5xl lg:text-5xl'>
               {t('mobileHero.title')}
             </h2>
             <p className='mb-10 max-w-2xl text-pretty !text-base leading-relaxed text-[oklch(0.39_0.02_255)] sm:text-xl'>
@@ -53,7 +53,7 @@ export default function MobileHeroSection() {
           </div>
 
           <div className='relative flex w-full flex-1 justify-center lg:justify-end'>
-            <div className='relative w-full max-w-[500px] lg:max-w-[600px]'>
+            <div className='relative w-full max-w-[600px] lg:max-w-[600px]'>
               <Image
                 src='/lp_mockup.png'
                 alt='Freshman Mobile App'

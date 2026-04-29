@@ -8,16 +8,17 @@ import { ShimmerButton } from '@/components/ui/shimmer-button';
 
 export default function CoreFeaturesSection() {
   const { messages, t } = useI18n();
-  const features = messages.coreFeatures.features;
+  const features = messages.coreFeatures.features.slice(0, 3);
+  const featureImages = ['/highlight.png', '/hero-main.png', '/ask.png'];
 
   return (
-    <section className='bg-[oklch(0.992_0.004_260)] py-16 md:py-22'>
+    <section className='bg-[oklch(0.992_0.004_260/0.96)] py-16 md:py-22'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-6'>
         <div className='mx-auto mb-20 max-w-3xl text-center md:mb-32'>
           <h3 className='mb-4 text-[14px] font-semibold text-[#6366F1] uppercase'>
             {t('coreFeatures.eyebrow')}
           </h3>
-          <h2 className='text-balance text-3xl font-medium tracking-tight text-[oklch(0.19_0.03_260)] sm:text-5xl lg:text-6xl'>
+          <h2 className='mb-6 text-3xl font-medium tracking-tight text-[oklch(0.19_0.03_260)] sm:text-4xl'>
             {t('coreFeatures.title')}
           </h2>
           <p className='mx-auto mt-6 max-w-[68ch] text-pretty text-base leading-relaxed text-[oklch(0.39_0.02_255)] sm:text-lg md:text-xl'>
@@ -46,9 +47,9 @@ export default function CoreFeaturesSection() {
               </div>
 
               <div className='flex-1 w-full'>
-                <div className='relative overflow-hidden rounded-[1.4rem] border border-[oklch(0.91_0.008_260)] bg-[oklch(0.97_0.005_260)] shadow-[0_30px_60px_-44px_rgba(22,28,55,0.34)]'>
+                <div className='relative overflow-hidden rounded-[1.4rem]'>
                   <Image
-                    src='/hero.png'
+                    src={featureImages[idx] ?? '/hero-main.png'}
                     alt={feature.title}
                     width={1024}
                     height={643}

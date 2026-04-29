@@ -13,11 +13,18 @@ export default function HeroSection() {
   return (
     <>
       <HeroHeader />
-      <main className='overflow-hidden bg-[oklch(0.992_0.004_260)] pt-24 md:pt-28'>
+      <main
+        className='overflow-hidden pt-24 md:pt-28'
+        style={{
+          backgroundImage: "url('/bkg.svg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
         <section className='relative'>
           <div className='mx-auto max-w-7xl px-4 pb-12 pt-8 sm:px-6 md:pt-12 lg:px-8'>
             <div className='mx-auto max-w-4xl text-center'>
-              <h1 className='mt-5 text-balance text-[clamp(2rem,4.8vw,4rem)] font-medium leading-[1.06] tracking-[-0.02em] text-[oklch(0.19_0.03_260)]'>
+              <h1 className='mt-5 text-balance lg:text-[clamp(2rem,4.8vw,4rem)] sm:text-[clamp(2rem,4.8vw,5rem)] text-[2.5rem] font-medium leading-[1.06] tracking-[-0.02em] text-[oklch(0.19_0.03_260)]'>
                 {t('hero.title')}
               </h1>
               <p className='mx-auto mt-12 max-w-[68ch] text-pretty text-[15px] leading-relaxed text-[oklch(0.39_0.02_255)] sm:text-lg'>
@@ -45,7 +52,7 @@ export default function HeroSection() {
                   className='h-auto w-full object-cover'
                   priority
                 />
-                <div className='pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[oklch(0.992_0.004_260)] via-[oklch(0.992_0.004_260/0.92)] to-transparent sm:h-20 md:h-26' />
+                <div className='pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#f4f5fb] via-[#f4f5fbea] to-transparent sm:h-20 md:h-26' />
               </div>
             </div>
           </div>

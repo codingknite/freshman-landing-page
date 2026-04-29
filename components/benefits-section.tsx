@@ -2,54 +2,44 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import {
-  BookOpen,
-  FileText,
-  Brain,
-  Sparkles,
-  Repeat,
-  CalendarCheck,
-  Trophy,
-  Globe,
-} from 'lucide-react';
 import { useI18n } from '@/components/i18n-provider';
 
 const benefits = [
   {
     id: 'revision',
-    icon: BookOpen,
     title: 'Daily Revision',
     text: 'Freshman generates targeted notes and quick tests for any topic, empowering you to build a daily revision habit that sticks.',
     mockup: '/revision.png',
+    icon: '/dr-icon.png',
   },
   {
     id: 'past-papers',
-    icon: FileText,
     title: 'Past Paper Practice',
     text: 'Upload your old exams and practice them interactively. Turn static past papers into dynamic, auto-graded MCQ tests.',
     mockup: '/ppp.png',
+    icon: '/ppp-icon.png',
   },
   {
     id: 'tests',
-    icon: Brain,
     title: 'Comprehensive Testing',
     text: 'Easily generate quizzes, flashcards, and full mock exams to deeply understand your subjects and instantly identify knowledge gaps.',
     mockup: '/tests.png',
+    icon: '/testing-icon.png',
   },
   {
     id: 'breakdown',
-    icon: Sparkles,
     title: 'Note Breakdown',
     text: 'Watch your uploaded notes automatically transform into core concepts and targeted revision questions, saving hours of manual synthesis.',
     mockup: '/notes.png',
+    icon: '/note-icon.png',
   },
 ];
 
-const additionalFeatureIcons: Record<string, React.ElementType> = {
-  'active-recall': Repeat,
-  'daily-habits': CalendarCheck,
-  'exam-prepared': Trophy,
-  language: Globe,
+const additionalFeatureIcons: Record<string, string> = {
+  'active-recall': '/ar-icon.png',
+  'daily-habits': '/habits-icon.png',
+  'exam-prepared': '/exam-icon.png',
+  language: '/language.png',
 };
 
 export default function BenefitsSection() {
@@ -94,7 +84,7 @@ export default function BenefitsSection() {
   };
 
   return (
-    <section className='bg-[oklch(0.992_0.004_260)] py-16 md:py-22 overflow-hidden relative'>
+    <section className='bg-[oklch(0.992_0.004_260/0.96)] py-16 md:py-22 overflow-hidden relative'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10'>
         <div className='mx-auto mb-16 max-w-3xl text-center md:mb-24 lg:mb-32'>
           <h3 className='mb-4 text-[14px] font-semibold text-[#6366F1] uppercase tracking-wider'>
@@ -198,14 +188,21 @@ export default function BenefitsSection() {
                 item: { id: string; title: string; text: string },
                 idx: number,
               ) => {
-                const Icon = additionalFeatureIcons[item.id] || Sparkles;
+                const iconSrc =
+                  additionalFeatureIcons[item.id] || '/dr-icon.png';
                 return (
                   <div
                     key={idx}
                     className='flex flex-col items-center text-center'
                   >
-                    <div className='w-10 h-10 rounded-full bg-indigo-500 flex items-center justify-center mb-4 shadow-sm'>
-                      <Icon className='w-5 h-5 text-white' strokeWidth={2} />
+                    <div className='mb-4 flex'>
+                      <Image
+                        src={iconSrc}
+                        alt=''
+                        width={40}
+                        height={40}
+                        className='h-10 w-10 object-contain'
+                      />
                     </div>
                     <h3 className='text-base md:text-base font-bold text-slate-900 mb-2'>
                       {item.title}
@@ -226,7 +223,7 @@ export default function BenefitsSection() {
 
 type BenefitFeature = {
   id: string;
-  icon: React.ElementType;
+  icon: string;
   title: string;
   text: string;
   mockup: string;
@@ -241,7 +238,6 @@ function BenefitCard({
   isActive: boolean;
   onClick: () => void;
 }) {
-  const Icon = benefit.icon;
   return (
     <button
       onClick={onClick}
@@ -251,14 +247,14 @@ function BenefitCard({
           : 'bg-transparent border-transparent hover:bg-slate-200/40 opacity-100 hover:opacity-100 z-0'
       }`}
     >
-      <div
-        className={`w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center mb-5 md:mb-6 transition-all duration-300 ${
-          isActive
-            ? 'bg-indigo-600 text-white shadow-md'
-            : 'bg-slate-200/50 text-slate-500 group-hover:bg-slate-200'
-        }`}
-      >
-        <Icon className='w-5 h-5 md:w-6 md:h-6' strokeWidth={1.85} />
+      <div className='mb-5 flex md:mb-6'>
+        <Image
+          src={benefit.icon}
+          alt=''
+          width={48}
+          height={48}
+          className='h-10 w-10 object-contain md:h-12 md:w-12'
+        />
       </div>
       <h3
         className={`text-base md:text-lg font-bold mb-2 md:mb-3 transition-colors duration-300 ${

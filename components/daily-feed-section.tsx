@@ -39,7 +39,7 @@ export default function DailyFeedSection() {
             <h3 className='mb-4 text-xs font-bold uppercase tracking-widest text-[#6366F1] md:text-sm'>
               {t('dailyFeedHighlight.eyebrow')}
             </h3>
-            <h2 className='mb-8 text-balance text-4xl font-medium tracking-tight text-[oklch(0.19_0.03_260)] sm:text-5xl lg:text-6xl'>
+            <h2 className='mb-8 text-balance text-4xl font-medium tracking-tight text-[oklch(0.19_0.03_260)] sm:text-5xl lg:text-5xl'>
               {t('dailyFeedHighlight.title')}
             </h2>
 

@@ -7,17 +7,34 @@ import { useI18n } from '@/components/i18n-provider';
 
 export const HeroHeader = () => {
   const [menuState, setMenuState] = React.useState(false);
+  const [hasScrolled, setHasScrolled] = React.useState(false);
   const { t, locale } = useI18n();
 
+  React.useEffect(() => {
+    const onScroll = () => {
+      setHasScrolled(window.scrollY > 8);
+    };
+
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   const menuItems = [
-    { name: t('nav.pricing'), href: `/${locale}#pricing` },
+    { name: t('nav.pricing'), href: `/${locale}/pricing` },
     { name: t('nav.terms'), href: `/${locale}/terms` },
     { name: t('nav.privacy'), href: `/${locale}/privacy` },
   ];
 
   return (
     <header className='fixed inset-x-0 top-0 z-50'>
-      <nav className='bg-[oklch(0.992_0.004_260/0.96)] backdrop-blur supports-[backdrop-filter]:bg-[oklch(0.992_0.004_260/0.9)]'>
+      <nav
+        className={`transition-colors duration-300 ${
+          hasScrolled
+            ? 'bg-[oklch(0.992_0.004_260/0.96)] backdrop-blur supports-[backdrop-filter]:bg-[oklch(0.992_0.004_260/0.9)]'
+            : 'bg-transparent'
+        }`}
+      >
         <div className='mx-auto flex h-18 w-full max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8'>
           <Link
             href={`/${locale}`}

@@ -5,20 +5,20 @@ import { useI18n } from '@/components/i18n-provider';
 import { ArrowRight } from 'lucide-react';
 import { Fragment } from 'react';
 
-const stepImages = ['/upload.png', '/build.png', '/review.png'] as const;
+const stepImages = ['/step1.png', '/step2.png', '/step3.png'] as const;
 
 export default function HowItWorksSection() {
   const { messages, t } = useI18n();
   const steps = messages.howItWorks.steps;
 
   return (
-    <section className='bg-[oklch(0.982_0.004_260)] py-12 md:py-22'>
+    <section className='bg-[oklch(0.992_0.004_260/0.96)] py-12 md:py-22'>
       <div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
         <div className='mx-auto mb-16 max-w-3xl text-center md:mb-24 lg:mb-32'>
           <h3 className='mb-4 !text-[13px] !leading-[1.2] !font-semibold text-[#6366F1] uppercase tracking-wider'>
             {t('howItWorks.eyebrow')}
           </h3>
-          <h2 className='text-balance text-3xl font-medium tracking-tight text-slate-900 sm:text-5xl lg:text-6xl'>
+          <h2 className='mb-6 text-3xl font-medium tracking-tight text-[oklch(0.19_0.03_260)] sm:text-4xl'>
             {t('howItWorks.title')}
           </h2>
         </div>
