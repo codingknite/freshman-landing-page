@@ -5,12 +5,12 @@ import Image from 'next/image';
 import { useI18n } from '@/components/i18n-provider';
 
 const featuresImages = [
-  '/F1.png',
-  '/F2.png',
-  '/F3.png',
-  '/F4.png',
-  '/F5.png',
-  '/F6.png',
+  '/feat1.png',
+  '/feat2.png',
+  '/feat3.png',
+  '/feat4.png',
+  '/feat5.png',
+  '/feat6.png',
 ];
 
 export default function FeaturesSection() {
