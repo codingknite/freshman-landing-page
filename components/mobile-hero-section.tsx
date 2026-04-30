@@ -33,7 +33,7 @@ export default function MobileHeroSection() {
 
             <div className='mb-20 flex flex-col items-center gap-4 sm:flex-row lg:mb-0'>
               <Link
-                href='https://apps.apple.com/app/freshman/id123456789'
+                href='https://apps.apple.com/us/app/freshman-ai-study-companion/id6755386478'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='inline-block transition-transform hover:scale-105 active:scale-95'

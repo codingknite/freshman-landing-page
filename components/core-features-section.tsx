@@ -62,8 +62,17 @@ export default function CoreFeaturesSection() {
         </div>
 
         <div className='mt-24 flex justify-center md:mt-32'>
-          <ShimmerButton asChild>
+          <ShimmerButton asChild className='hidden sm:inline-flex'>
             <Link href='https://app.joinfreshman.com/signup'>
+              {t('coreFeatures.cta')}
+            </Link>
+          </ShimmerButton>
+          <ShimmerButton asChild className='inline-flex sm:hidden'>
+            <Link
+              href='https://apps.apple.com/us/app/freshman-ai-study-companion/id6755386478'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               {t('coreFeatures.cta')}
             </Link>
           </ShimmerButton>

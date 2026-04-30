@@ -31,8 +31,17 @@ export default function HeroSection() {
                 {t('hero.subtitle')}
               </p>
               <div className='mt-14 flex flex-col items-center gap-4'>
-                <ShimmerButton asChild>
+                <ShimmerButton asChild className='hidden sm:inline-flex'>
                   <Link href='https://app.joinfreshman.com/signup'>
+                    {t('hero.cta')}
+                  </Link>
+                </ShimmerButton>
+                <ShimmerButton asChild className='inline-flex sm:hidden'>
+                  <Link
+                    href='https://apps.apple.com/us/app/freshman-ai-study-companion/id6755386478'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
                     {t('hero.cta')}
                   </Link>
                 </ShimmerButton>

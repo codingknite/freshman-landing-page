@@ -115,7 +115,9 @@ export const HeroHeader = () => {
                 {t('nav.login')}
               </Link>
               <Link
-                href='https://app.joinfreshman.com/signup'
+                href='https://apps.apple.com/us/app/freshman-ai-study-companion/id6755386478'
+                target='_blank'
+                rel='noopener noreferrer'
                 className='w-full rounded-full bg-[#0a0b14] px-5 py-2.5 text-center text-sm font-semibold text-white transition-colors hover:bg-[#16192c]'
               >
                 {t('nav.startStudying')}
