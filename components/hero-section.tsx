@@ -24,7 +24,7 @@ export default function HeroSection() {
         <section className='relative'>
           <div className='mx-auto max-w-7xl px-4 pb-12 pt-8 sm:px-6 md:pt-12 lg:px-8'>
             <div className='mx-auto max-w-4xl text-center'>
-              <h1 className='mt-5 text-balance lg:text-[clamp(2rem,4.8vw,4rem)] sm:text-[clamp(2rem,4.8vw,5rem)] text-[2.5rem] font-medium leading-[1.06] tracking-[-0.02em] text-[oklch(0.19_0.03_260)]'>
+              <h1 className='mt-5 text-balance lg:text-[clamp(2rem,4.8vw,5rem)] sm:text-[clamp(2rem,4.8vw,6rem)] text-[3.75rem] max-w-[80%] mx-auto font-medium leading-[1.06] tracking-[-0.02em] text-[oklch(0.19_0.03_260)]'>
                 {t('hero.title')}
               </h1>
               <p className='mx-auto mt-12 max-w-[68ch] text-pretty text-[15px] leading-relaxed text-[oklch(0.39_0.02_255)] sm:text-lg'>
