@@ -38,7 +38,7 @@ export default function HeroSection() {
                 </ShimmerButton>
                 <ShimmerButton asChild className='inline-flex sm:hidden'>
                   <Link
-                    href='https://apps.apple.com/us/app/freshman-ai-study-companion/id6755386478'
+                    href='https://app.joinfreshman.com/signup'
                     target='_blank'
                     rel='noopener noreferrer'
                   >
