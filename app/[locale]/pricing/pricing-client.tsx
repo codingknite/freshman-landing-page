@@ -70,11 +70,7 @@ const plans: Plan[] = [
   },
 ];
 
-type PricingClientProps = {
-  billingParam?: string;
-};
-
-export default function PricingClient({ billingParam }: PricingClientProps) {
+export default function PricingClient() {
   const [selectedPlan, setSelectedPlan] = useState<PlanTier>('monthly');
 
   return (

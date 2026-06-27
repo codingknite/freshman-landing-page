@@ -3,11 +3,20 @@
 import { Check } from 'lucide-react';
 import { useI18n } from '@/components/i18n-provider';
 
+type PricingPlan = {
+  id: string;
+  name: string;
+  description: string;
+  price: string;
+  period: string;
+  features: string[];
+};
+
 export default function PricingThree() {
   const { messages, t } = useI18n();
-  const plans = messages.pricing.plans
-    .filter((plan: any) => plan.id === 'weekly' || plan.id === 'monthly')
-    .map((plan: any) => ({
+  const plans = (messages.pricing.plans as PricingPlan[])
+    .filter((plan) => plan.id === 'weekly' || plan.id === 'monthly' || plan.id === 'annual')
+    .map((plan) => ({
       ...plan,
       highlighted: plan.id === 'monthly',
     }));
@@ -26,7 +35,7 @@ export default function PricingThree() {
         </div>
 
         {/* Pricing Cards Grid */}
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto mb-12'>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12'>
           {plans.map((plan) => (
             <div
               key={plan.id}
@@ -58,7 +67,7 @@ export default function PricingThree() {
               </div>
 
               <ul className='space-y-4 mb-10 flex-grow'>
-                {plan.features.map((feature, idx) => (
+                {plan.features.map((feature: string, idx: number) => (
                   <li
                     key={idx}
                     className='flex items-center text-zinc-600 dark:text-zinc-300 text-sm'
