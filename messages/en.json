@@ -45,7 +45,7 @@
       {
         "id": "tests",
         "title": "Comprehensive Testing",
-        "text": "Easily generate quizzes, flashcards, and full mock exams to deeply understand your subjects and instantly identify knowledge gaps."
+        "text": "Easily generate quizzes and flashcards to deeply understand your subjects and instantly identify knowledge gaps."
       },
       {
         "id": "breakdown",
@@ -69,7 +69,7 @@
       },
       {
         "title": "Four Distinct Test Modes",
-        "description": "Quizzes. Active Recall. Mock Exams. Past Papers. Each mode serves a different study purpose. Use all four and arrive at exam day having experienced every type of question imaginable."
+        "description": "Quizzes. Active Recall. Past Papers. Each mode serves a different study purpose. Use all three and arrive at exam day having experienced every type of question imaginable."
       },
       {
         "title": "Organized Study Library",
@@ -155,7 +155,7 @@
       {
         "name": "Charlie",
         "role": "Nursing Student",
-        "quote": "The mock exams feature has helped me maintain a better track of my weak points before I step into the real testing center."
+        "quote": "The past paper practice feature has helped me maintain a better track of my weak points before I step into the real testing center."
       },
       {
         "name": "Ian",

@@ -22,7 +22,7 @@ const benefits = [
   {
     id: 'tests',
     title: 'Comprehensive Testing',
-    text: 'Easily generate quizzes, flashcards, and full mock exams to deeply understand your subjects and instantly identify knowledge gaps.',
+    text: 'Easily generate quizzes and flashcards to deeply understand your subjects and instantly identify knowledge gaps.',
     mockup: '/tests.png',
     icon: '/testing-icon.png',
   },

@@ -4,8 +4,7 @@ import { useState } from 'react';
 import { Check } from 'lucide-react';
 import { HeroHeader } from '@/components/header';
 
-type BillingCycle = 'monthly' | 'annual';
-type PlanTier = 'free' | 'premium' | 'plus';
+type PlanTier = 'weekly' | 'monthly' | 'yearly';
 
 type PlanFeature = { label: string; included: boolean };
 
@@ -13,61 +12,60 @@ type Plan = {
   id: PlanTier;
   name: string;
   tagline: string;
-  monthlyPrice: number | null;
-  annualMonthlyPrice: number | null;
-  annualBilledAs: string | null;
+  price: number;
+  period: string;
   features: PlanFeature[];
   isFeatured?: boolean;
+  badge?: string;
 };
 
 const plans: Plan[] = [
   {
-    id: 'free',
-    name: 'Free',
-    tagline: 'Start exploring, no commitment',
-    monthlyPrice: null,
-    annualMonthlyPrice: null,
-    annualBilledAs: null,
+    id: 'weekly',
+    name: 'Weekly',
+    tagline: 'Perfect for exam season cramming',
+    price: 3.99,
+    period: 'week',
     features: [
-      { label: '3 document uploads / month', included: true },
-      { label: '3 URL notes / month', included: true },
-      { label: '2 voice sessions / month', included: true },
-      { label: '15 highlights / month', included: true },
-      { label: 'Community support', included: true },
-      { label: 'Early feature access', included: false },
+      { label: 'Unlimited practice tests', included: true },
+      { label: 'Upload past papers', included: true },
+      { label: 'Daily revision feed', included: true },
+      { label: 'Custom flashcards', included: true },
+      { label: 'Unlimited note conversions', included: true },
+      { label: 'Cancel anytime', included: true },
     ],
   },
   {
-    id: 'premium',
-    name: 'Premium',
-    tagline: 'Everything you need to excel',
-    monthlyPrice: 10.99,
-    annualMonthlyPrice: 8.33,
-    annualBilledAs: '$99.99 / year',
+    id: 'monthly',
+    name: 'Monthly',
+    tagline: 'Ideal for full semester prep',
+    price: 10.99,
+    period: 'month',
     isFeatured: true,
+    badge: 'Most Popular',
     features: [
-      { label: '50 document uploads / month', included: true },
-      { label: '50 URL notes / month', included: true },
-      { label: '80 voice sessions / month', included: true },
-      { label: '1,000 highlights / month', included: true },
-      { label: 'Email support', included: true },
-      { label: 'Early feature access', included: false },
+      { label: 'Unlimited practice tests', included: true },
+      { label: 'Upload past papers', included: true },
+      { label: 'Daily revision feed', included: true },
+      { label: 'Custom flashcards', included: true },
+      { label: 'Unlimited note conversions', included: true },
+      { label: 'Cancel anytime', included: true },
     ],
   },
   {
-    id: 'plus',
-    name: 'Plus',
-    tagline: 'For the most ambitious learners',
-    monthlyPrice: 19.99,
-    annualMonthlyPrice: 15.99,
-    annualBilledAs: '$191.88 / year',
+    id: 'yearly',
+    name: 'Yearly',
+    tagline: 'Best value for long-term learners',
+    price: 99.99,
+    period: 'year',
+    badge: '2 Months Free',
     features: [
-      { label: 'Unlimited document uploads', included: true },
-      { label: 'Unlimited URL notes', included: true },
-      { label: 'Unlimited voice sessions', included: true },
-      { label: 'Unlimited highlights', included: true },
-      { label: 'Priority support', included: true },
-      { label: 'Early feature access', included: true },
+      { label: 'Unlimited practice tests', included: true },
+      { label: 'Upload past papers', included: true },
+      { label: 'Daily revision feed', included: true },
+      { label: 'Custom flashcards', included: true },
+      { label: 'Unlimited note conversions', included: true },
+      { label: 'Cancel anytime', included: true },
     ],
   },
 ];
@@ -77,10 +75,7 @@ type PricingClientProps = {
 };
 
 export default function PricingClient({ billingParam }: PricingClientProps) {
-  const [billing, setBilling] = useState<BillingCycle>(
-    billingParam === 'monthly' ? 'monthly' : 'annual',
-  );
-  const [selectedPlan, setSelectedPlan] = useState<PlanTier>('premium');
+  const [selectedPlan, setSelectedPlan] = useState<PlanTier>('monthly');
 
   return (
     <div
@@ -104,50 +99,9 @@ export default function PricingClient({ billingParam }: PricingClientProps) {
           </p>
         </div>
 
-        <div className='mt-7 flex justify-center'>
-          <div className='inline-flex items-center rounded-full bg-white/70 p-1'>
-            <button
-              type='button'
-              onClick={() => setBilling('monthly')}
-              className={`rounded-full px-5 py-2 text-sm font-medium transition ${
-                billing === 'monthly'
-                  ? 'bg-[#0a0b14] text-white shadow-sm'
-                  : 'text-[var(--color-text-dim)] hover:text-[var(--color-text)]'
-              }`}
-            >
-              <p className='text-14 font-medium'>Monthly</p>
-            </button>
-            <button
-              type='button'
-              onClick={() => setBilling('annual')}
-              className={`flex items-center gap-2 rounded-full px-5 py-2 text-sm font-medium transition ${
-                billing === 'annual'
-                  ? 'bg-[#0a0b14] text-white shadow-sm'
-                  : 'text-[var(--color-text-dim)] hover:text-[var(--color-text)]'
-              }`}
-            >
-              <p className='text-14 font-medium'>Annual</p>
-              <span
-                className={`rounded-full px-1.5 py-0.5 text-[10px] font-semibold ${
-                  billing === 'annual'
-                    ? 'bg-white/20 text-white'
-                    : 'bg-[#eef0fb] text-[#313b73]'
-                }`}
-              >
-                Save 24%
-              </span>
-            </button>
-          </div>
-        </div>
-
         <div className='mt-14 grid grid-cols-1 items-center gap-5 md:grid-cols-3'>
           {plans.map((plan) => {
-            const isFree = plan.id === 'free';
             const isSelected = selectedPlan === plan.id;
-            const price =
-              billing === 'annual' && plan.annualMonthlyPrice
-                ? plan.annualMonthlyPrice
-                : plan.monthlyPrice;
 
             return (
               <div
@@ -164,9 +118,9 @@ export default function PricingClient({ billingParam }: PricingClientProps) {
                       : 'border border-[var(--color-border)] bg-white/50 hover:bg-white/60'
                   }`}
               >
-                {plan.isFeatured && (
+                {plan.badge && (
                   <span className='absolute -top-3.5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-[#0a0b14] px-3 py-1 text-[11px] font-semibold text-white'>
-                    Most Popular
+                    {plan.badge}
                   </span>
                 )}
 
@@ -182,17 +136,12 @@ export default function PricingClient({ billingParam }: PricingClientProps) {
                 <div className='mt-6'>
                   <div className='flex items-baseline gap-1'>
                     <span className='text-[36px] font-bold leading-none tracking-tight text-[var(--color-text)]'>
-                      {isFree ? '$0' : `$${price}`}
+                      ${plan.price}
                     </span>
                     <span className='text-sm text-[var(--color-text-dim)]'>
-                      / month
+                      / {plan.period}
                     </span>
                   </div>
-                  <p className='mt-1 h-4 text-xs text-[var(--color-text-dim)]'>
-                    {!isFree && billing === 'annual' && plan.annualBilledAs
-                      ? `Billed ${plan.annualBilledAs}`
-                      : ''}
-                  </p>
                 </div>
 
                 <div className='my-5 border-t border-[var(--color-border)]' />
@@ -226,9 +175,7 @@ export default function PricingClient({ billingParam }: PricingClientProps) {
 
         <div className='mt-10 flex flex-col items-center gap-2.5'>
           <p className='text-xs font-medium text-[var(--color-text-dim)]'>
-            {selectedPlan === 'free'
-              ? 'No credit card required · Upgrade anytime'
-              : 'Cancel anytime · No hidden fees'}
+            Cancel anytime · No hidden fees
           </p>
         </div>
       </main>

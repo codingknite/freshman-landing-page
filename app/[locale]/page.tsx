@@ -97,7 +97,7 @@ export default function Home() {
         name: 'What kind of notes can I upload?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'You can upload almost anything! Our A.I. can read handwritten notes (from photos), PDF textbooks, PowerPoint slides, and standard digital text files. As long as the text is legible, we can turn it into a test.',
+          text: 'You can upload almost anything! Our A.I. can read handwritten notes (from photos), PDF textbooks, and standard digital text files. As long as the text is legible, we can turn it into a test.',
         },
       },
       {
@@ -147,7 +147,7 @@ export default function Home() {
       />
       <HeroSection />
       <HowItWorksSection />
-      <CoreFeaturesSection />
+      {/* <CoreFeaturesSection /> */}
       <MobileHeroSection />
       <BenefitsSection />
       <DailyFeedSection />

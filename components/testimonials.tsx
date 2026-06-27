@@ -70,7 +70,7 @@ const testimonials: Testimonial[] = [
     name: 'Charlie',
     role: 'Nursing Student',
     quote:
-      'The mock exams feature has helped me maintain a better track of my weak points before I step into the real testing center.',
+      'The past paper practice feature has helped me maintain a better track of my weak points before I step into the real testing center.',
     avatar: 'https://i.pravatar.cc/150?u=a04258114e29026709d',
   },
   {

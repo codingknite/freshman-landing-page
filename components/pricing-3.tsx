@@ -5,10 +5,12 @@ import { useI18n } from '@/components/i18n-provider';
 
 export default function PricingThree() {
   const { messages, t } = useI18n();
-  const plans = messages.pricing.plans.map((plan) => ({
-    ...plan,
-    highlighted: plan.id === 'annual',
-  }));
+  const plans = messages.pricing.plans
+    .filter((plan: any) => plan.id === 'weekly' || plan.id === 'monthly')
+    .map((plan: any) => ({
+      ...plan,
+      highlighted: plan.id === 'monthly',
+    }));
 
   return (
     <section id='pricing' className='bg-background py-24 px-6 font-sans'>
@@ -24,7 +26,7 @@ export default function PricingThree() {
         </div>
 
         {/* Pricing Cards Grid */}
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto mb-12'>
           {plans.map((plan) => (
             <div
               key={plan.id}

@@ -64,17 +64,8 @@ export const HeroHeader = () => {
           </div>
 
           <div className='hidden items-center gap-3 lg:flex'>
-            <Link
-              href='https://app.joinfreshman.com/login'
-              className='rounded-full border border-[oklch(0.84_0.01_260)] px-5 py-2 text-sm font-medium text-[oklch(0.3_0.03_260)] transition-colors hover:border-[oklch(0.32_0.03_260)] hover:text-[oklch(0.2_0.03_260)]'
-            >
-              {t('nav.login')}
-            </Link>
-            <Link
-              href='https://app.joinfreshman.com/signup'
-              className='rounded-full bg-[#0a0b14] px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-[#05060a]'
-            >
-              {t('nav.startStudying')}
+            <Link target='_blank' href='https://apps.apple.com/app/id6755386478' className='inline-block'>
+              <Image src='/apple.svg' alt='Download on the App Store' width={150} height={50} className='h-10 w-auto' />
             </Link>
           </div>
 
@@ -107,20 +98,9 @@ export const HeroHeader = () => {
                 </Link>
               ))}
             </div>
-            <div className='mt-5 flex flex-col gap-3'>
-              <Link
-                href='https://app.joinfreshman.com/login'
-                className='rounded-full border border-[oklch(0.84_0.01_260)] px-5 py-2.5 text-center text-sm font-medium text-[oklch(0.3_0.03_260)]'
-              >
-                {t('nav.login')}
-              </Link>
-              <Link
-                href='https://apps.apple.com/us/app/freshman-ai-study-companion/id6755386478'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='w-full rounded-full bg-[#0a0b14] px-5 py-2.5 text-center text-sm font-semibold text-white transition-colors hover:bg-[#16192c]'
-              >
-                {t('nav.startStudying')}
+            <div className='mt-5 flex flex-col gap-3 items-center'>
+              <Link target='_blank' href='https://apps.apple.com/app/id6755386478' className='inline-block'>
+                <Image src='/apple.svg' alt='Download on the App Store' width={180} height={60} className='h-12 w-auto' />
               </Link>
             </div>
           </div>

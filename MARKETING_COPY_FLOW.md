@@ -38,10 +38,11 @@ Freshman currently operates as a two-surface learning product:
 - Test hub with separate buckets for:
   - Quizzes
   - Active Recall tests
-  - Mock Exams
   - Past Papers
 - Flows for creating, taking, reviewing, and summarizing tests.
-- Exam setup flows (selection, duration, chapters/notes, answer/review/results screens).
+- Exam setup flows for past papers (selection, answer/review/results screens).
+
+> Mock exams were removed from mobile (June 2026). Archived architecture: [mockexams.md](../app/docs/app/architecture/mockexams.md).
 
 ## 5) Library and Study Materials
 - Browsable collections for notes, books, subjects, and flashcards.
