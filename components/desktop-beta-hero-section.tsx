@@ -43,14 +43,17 @@ export default function DesktopBetaHeroSection() {
     setError('');
     setMessage('');
 
+    const trimmedName = name.trim();
+    const trimmedEmail = email.trim().toLowerCase();
+
     try {
       const response = await fetch(
         'https://api.joinfreshman.com/api/android-waitlist',
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ name, email }),
-        }
+          body: JSON.stringify({ name: trimmedName, email: trimmedEmail }),
+        },
       );
 
       const data = await response.json();
@@ -67,9 +70,7 @@ export default function DesktopBetaHeroSection() {
         setEmail('');
       }
     } catch (err) {
-      setError(
-        err instanceof Error ? err.message : t('desktopBetaHero.error')
-      );
+      setError(err instanceof Error ? err.message : t('desktopBetaHero.error'));
     } finally {
       setLoading(false);
     }
@@ -163,15 +164,16 @@ export default function DesktopBetaHeroSection() {
                     <Button
                       type='submit'
                       disabled={loading}
-                      className='flex h-[46px] flex-shrink-0 cursor-pointer items-center justify-center space-x-1 rounded-full border-none bg-[#000] px-5 font-medium text-white shadow-sm transition-transform hover:scale-[1.03] hover:bg-[#000] active:scale-[0.98] sm:px-6 dark:bg-[#EAE4D9] dark:text-black dark:hover:bg-[#EAE4D9]'
+                      className='relative flex h-[46px] min-w-[220px] flex-shrink-0 cursor-pointer items-center justify-center rounded-full border-none bg-[#000] px-5 font-medium text-white shadow-sm transition-transform hover:scale-[1.03] hover:bg-[#000] active:scale-[0.98] sm:min-w-[240px] sm:px-6 dark:bg-[#EAE4D9] dark:text-black dark:hover:bg-[#EAE4D9]'
                     >
-                      {loading ? (
-                        <Loader2 className='h-4 w-4 animate-spin' />
-                      ) : (
-                        <div className='flex items-center text-sm md:text-base'>
-                          <span>{t('desktopBetaHero.cta')}</span>
-                          <ChevronRight className='ml-1 h-4 w-4 stroke-[2.5px] opacity-70' />
-                        </div>
+                      <span
+                        className={`flex items-center text-sm md:text-base ${loading ? 'invisible' : ''}`}
+                      >
+                        <span>{t('desktopBetaHero.cta')}</span>
+                        <ChevronRight className='ml-1 h-4 w-4 stroke-[2.5px] opacity-70' />
+                      </span>
+                      {loading && (
+                        <Loader2 className='absolute h-4 w-4 animate-spin' />
                       )}
                     </Button>
                   </form>
