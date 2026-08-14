@@ -5,7 +5,9 @@
     "termsTitle": "Freshman Terms of Use",
     "termsDescription": "Terms of Use for Freshman, a study app by People Who Code LLC",
     "privacyTitle": "Freshman Privacy Policy",
-    "privacyDescription": "Privacy Policy for Freshman, a study app by People Who Code LLC"
+    "privacyDescription": "Privacy Policy for Freshman, a study app by People Who Code LLC",
+    "desktopBetaTitle": "Freshman Desktop Beta — Join the Waitlist",
+    "desktopBetaDescription": "Sign up to beta test the Freshman desktop app and get up to one month of Freshman free when you start your trial."
   },
   "languages": {
     "label": "Language",
@@ -218,6 +220,17 @@
     "description": "We are putting the finishing touches on our Android app. Join the waitlist to get notified the moment it goes live later this month.",
     "placeholder": "Enter your email",
     "cta": "Join Waitlist"
+  },
+  "desktopBetaHero": {
+    "title": "Beta Test Freshman for desktop.",
+    "subtitle": "Join the waitlist to get early access to our new desktop app and receive up to one month of Freshman free when you start your trial.",
+    "supportingLine": "Limited beta spots · No credit card to join the waitlist.",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "Enter your email",
+    "cta": "Join the Beta Waitlist",
+    "success": "You're on the list! We'll email you when the desktop beta opens.",
+    "alreadyRegistered": "You're already on the waitlist! We'll notify you when the desktop beta is ready.",
+    "error": "Something went wrong. Please try again."
   },
   "faqs": {
     "title": "FAQs",

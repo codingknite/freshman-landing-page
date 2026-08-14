@@ -5,7 +5,9 @@
     "termsTitle": "Freshman Nutzungsbedingungen",
     "termsDescription": "Nutzungsbedingungen für Freshman, eine Lern-App von People Who Code LLC",
     "privacyTitle": "Freshman Datenschutzrichtlinie",
-    "privacyDescription": "Datenschutzrichtlinie für Freshman, eine Lern-App von People Who Code LLC"
+    "privacyDescription": "Datenschutzrichtlinie für Freshman, eine Lern-App von People Who Code LLC",
+    "desktopBetaTitle": "Freshman Desktop-Beta — Warteliste beitreten",
+    "desktopBetaDescription": "Melde dich an, um die Freshman-Desktop-App zu testen, und erhalte bis zu einen Monat Freshman gratis, wenn du deine Testphase startest."
   },
   "nav": {
     "terms": "Nutzungsbedingungen",
@@ -222,6 +224,17 @@
     "description": "Wir geben unserer Android-App gerade den letzten Schliff. Trag dich in die Warteliste ein und erhalte sofort Bescheid, sobald sie live geht.",
     "placeholder": "Deine E-Mail eingeben",
     "cta": "Zur Warteliste"
+  },
+  "desktopBetaHero": {
+    "title": "Teste die Freshman-Desktop-Beta.",
+    "subtitle": "Trag dich in die Warteliste ein, um frühzeitig Zugang zu unserer neuen Desktop-App zu erhalten und bis zu einen Monat Freshman gratis zu bekommen, wenn du deine Testphase startest.",
+    "supportingLine": "Begrenzte Beta-Plätze · Keine Kreditkarte erforderlich.",
+    "namePlaceholder": "Dein Name",
+    "emailPlaceholder": "Deine E-Mail eingeben",
+    "cta": "Zur Beta-Warteliste",
+    "success": "Du bist auf der Liste! Wir mailen dir, sobald die Desktop-Beta startet.",
+    "alreadyRegistered": "Du stehst bereits auf der Warteliste! Wir benachrichtigen dich, wenn die Desktop-Beta bereit ist.",
+    "error": "Etwas ist schiefgelaufen. Bitte versuche es erneut."
   },
   "faqs": {
     "title": "Häufig gestellte Fragen",

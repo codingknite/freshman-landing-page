@@ -5,7 +5,9 @@
     "termsTitle": "Conditions d'utilisation Freshman",
     "termsDescription": "Conditions d'utilisation de Freshman, une application d'étude par People Who Code LLC",
     "privacyTitle": "Politique de confidentialité Freshman",
-    "privacyDescription": "Politique de confidentialité de Freshman, une application d'étude par People Who Code LLC"
+    "privacyDescription": "Politique de confidentialité de Freshman, une application d'étude par People Who Code LLC",
+    "desktopBetaTitle": "Bêta Freshman pour bureau — Rejoindre la liste d'attente",
+    "desktopBetaDescription": "Inscrivez-vous pour tester l'application bureau Freshman et recevez jusqu'à un mois gratuit au début de votre essai."
   },
   "nav": {
     "terms": "Conditions",
@@ -222,6 +224,17 @@
     "description": "Nous apportons les dernières retouches à notre application Android. Rejoignez la liste d'attente et soyez averti dès sa mise en ligne.",
     "placeholder": "Entrez votre e-mail",
     "cta": "Rejoindre la liste"
+  },
+  "desktopBetaHero": {
+    "title": "Testez la bêta Freshman pour bureau.",
+    "subtitle": "Rejoignez la liste d'attente pour un accès anticipé à notre nouvelle application bureau et recevez jusqu'à un mois de Freshman gratuit au début de votre essai.",
+    "supportingLine": "Places limitées · Aucune carte bancaire requise.",
+    "namePlaceholder": "Votre nom",
+    "emailPlaceholder": "Entrez votre e-mail",
+    "cta": "Rejoindre la bêta",
+    "success": "Vous êtes inscrit ! Nous vous enverrons un e-mail lors de l'ouverture de la bêta bureau.",
+    "alreadyRegistered": "Vous êtes déjà sur la liste d'attente ! Nous vous préviendrons quand la bêta bureau sera prête.",
+    "error": "Une erreur s'est produite. Veuillez réessayer."
   },
   "faqs": {
     "title": "Questions Fréquentes",

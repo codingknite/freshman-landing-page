@@ -5,7 +5,9 @@
     "termsTitle": "Términos de uso de Freshman",
     "termsDescription": "Términos de uso de Freshman, una app de estudio de People Who Code LLC",
     "privacyTitle": "Política de privacidad de Freshman",
-    "privacyDescription": "Política de privacidad de Freshman, una app de estudio de People Who Code LLC"
+    "privacyDescription": "Política de privacidad de Freshman, una app de estudio de People Who Code LLC",
+    "desktopBetaTitle": "Beta de Freshman para escritorio — Únete a la lista de espera",
+    "desktopBetaDescription": "Regístrate para probar la app de escritorio de Freshman y recibe hasta un mes gratis al iniciar tu prueba."
   },
   "nav": {
     "terms": "Términos",
@@ -222,6 +224,17 @@
     "description": "Estamos dando los últimos retoques a nuestra app de Android. Únete a la lista de espera y te avisaremos en cuanto esté disponible.",
     "placeholder": "Ingresa tu correo",
     "cta": "Unirme a la lista"
+  },
+  "desktopBetaHero": {
+    "title": "Prueba la beta de Freshman para escritorio.",
+    "subtitle": "Únete a la lista de espera para acceder antes que nadie a nuestra nueva app de escritorio y recibe hasta un mes de Freshman gratis al iniciar tu prueba.",
+    "supportingLine": "Plazas limitadas · No se requiere tarjeta de crédito.",
+    "namePlaceholder": "Tu nombre",
+    "emailPlaceholder": "Ingresa tu correo",
+    "cta": "Unirme a la beta",
+    "success": "¡Estás en la lista! Te avisaremos por correo cuando abra la beta de escritorio.",
+    "alreadyRegistered": "¡Ya estás en la lista de espera! Te avisaremos cuando la beta de escritorio esté lista.",
+    "error": "Algo salió mal. Inténtalo de nuevo."
   },
   "faqs": {
     "title": "Preguntas Frecuentes",
