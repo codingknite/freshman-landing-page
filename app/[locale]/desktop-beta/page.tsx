@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import DesktopBetaHeroSection from '@/components/desktop-beta-hero-section';
+import { getLatestDesktopRelease } from '@/lib/desktop-release';
 import { getDictionary, type Locale } from '@/lib/i18n';
 
 export async function generateMetadata({
@@ -20,9 +21,9 @@ export async function generateMetadata({
       siteName: 'Freshman',
       images: [
         {
-          url: '/hero-main.png',
-          width: 1024,
-          height: 643,
+          url: '/hero-desktop.png',
+          width: 3014,
+          height: 1890,
           alt: 'Freshman Desktop Beta',
         },
       ],
@@ -33,7 +34,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: dict.meta.desktopBetaTitle,
       description: dict.meta.desktopBetaDescription,
-      images: ['/hero-main.png'],
+      images: ['/hero-desktop.png'],
     },
     alternates: {
       canonical: `https://joinfreshman.com/${locale}/desktop-beta`,
@@ -41,6 +42,7 @@ export async function generateMetadata({
   };
 }
 
-export default function DesktopBetaPage() {
-  return <DesktopBetaHeroSection />;
+export default async function DesktopBetaPage() {
+  const release = await getLatestDesktopRelease();
+  return <DesktopBetaHeroSection release={release} />;
 }

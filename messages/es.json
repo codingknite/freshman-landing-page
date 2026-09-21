@@ -6,8 +6,8 @@
     "termsDescription": "Términos de uso de Freshman, una app de estudio de People Who Code LLC",
     "privacyTitle": "Política de privacidad de Freshman",
     "privacyDescription": "Política de privacidad de Freshman, una app de estudio de People Who Code LLC",
-    "desktopBetaTitle": "Beta de Freshman para escritorio — Únete a la lista de espera",
-    "desktopBetaDescription": "Regístrate para probar la app de escritorio de Freshman y recibe hasta un mes gratis al iniciar tu prueba."
+    "desktopBetaTitle": "Beta de Freshman para escritorio — Descargar para Mac",
+    "desktopBetaDescription": "Descarga la beta de escritorio de Freshman para macOS. Disponible para Apple Silicon e Intel."
   },
   "nav": {
     "terms": "Términos",
@@ -227,14 +227,10 @@
   },
   "desktopBetaHero": {
     "title": "Prueba la beta de Freshman para escritorio.",
-    "subtitle": "Únete a la lista de espera para acceder antes que nadie a nuestra nueva app de escritorio y recibe hasta un mes de Freshman gratis al iniciar tu prueba.",
-    "supportingLine": "Plazas limitadas · No se requiere tarjeta de crédito.",
-    "namePlaceholder": "Tu nombre",
-    "emailPlaceholder": "Ingresa tu correo",
-    "cta": "Unirme a la beta",
-    "success": "¡Estás en la lista! Te avisaremos por correo cuando abra la beta de escritorio.",
-    "alreadyRegistered": "¡Ya estás en la lista de espera! Te avisaremos cuando la beta de escritorio esté lista.",
-    "error": "Algo salió mal. Inténtalo de nuevo."
+    "subtitle": "Descarga la app para Mac y estudia con Freshman en tu escritorio. Disponible para Apple Silicon e Intel.",
+    "supportingLine": "macOS 13+ · Apple Silicon e Intel.",
+    "appleSiliconCta": "Descargar para Mac (Apple Silicon)",
+    "intelCta": "Descargar para Mac (Intel)"
   },
   "faqs": {
     "title": "Preguntas Frecuentes",

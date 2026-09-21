@@ -6,8 +6,8 @@
     "termsDescription": "Terms of Use for Freshman, a study app by People Who Code LLC",
     "privacyTitle": "Freshman Privacy Policy",
     "privacyDescription": "Privacy Policy for Freshman, a study app by People Who Code LLC",
-    "desktopBetaTitle": "Freshman Desktop Beta — Join the Waitlist",
-    "desktopBetaDescription": "Sign up to beta test the Freshman desktop app and get up to one month of Freshman free when you start your trial."
+    "desktopBetaTitle": "Freshman Desktop Beta — Download for Mac",
+    "desktopBetaDescription": "Download the Freshman desktop beta for macOS. Available for Apple Silicon and Intel Macs."
   },
   "languages": {
     "label": "Language",
@@ -223,14 +223,10 @@
   },
   "desktopBetaHero": {
     "title": "Beta Test Freshman for desktop.",
-    "subtitle": "Join the waitlist to get early access to our new desktop app and receive up to one month of Freshman free when you start your trial.",
-    "supportingLine": "Limited beta spots · No credit card to join the waitlist.",
-    "namePlaceholder": "Your name",
-    "emailPlaceholder": "Enter your email",
-    "cta": "Join the Beta Waitlist",
-    "success": "You're on the list! We'll email you when the desktop beta opens.",
-    "alreadyRegistered": "You're already on the waitlist! We'll notify you when the desktop beta is ready.",
-    "error": "Something went wrong. Please try again."
+    "subtitle": "Download the Mac app and start studying with Freshman on your desktop. Available for Apple Silicon and Intel.",
+    "supportingLine": "macOS 13+ · Apple Silicon and Intel.",
+    "appleSiliconCta": "Download for Mac (Apple Silicon)",
+    "intelCta": "Download for Mac (Intel)"
   },
   "faqs": {
     "title": "FAQs",
