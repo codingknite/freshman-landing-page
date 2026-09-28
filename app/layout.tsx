@@ -1,13 +1,34 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Geist_Mono } from 'next/font/google';
+import localFont from 'next/font/local';
 import './globals.css';
 import Script from 'next/script';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
+// Recoleta: display headings. Satoshi: everything else.
+const recoleta = localFont({
+  variable: '--font-recoleta',
+  display: 'swap',
+  fallback: ['Georgia', 'serif'],
+  src: [
+    { path: '../public/recoleta/WOFF2/Recoleta Regular.woff2', weight: '400' },
+    { path: '../public/recoleta/WOFF2/Recoleta Medium.woff2', weight: '500' },
+    { path: '../public/recoleta/WOFF2/Recoleta SemiBold.woff2', weight: '600' },
+    { path: '../public/recoleta/WOFF2/Recoleta Bold.woff2', weight: '700' },
+  ],
+});
+
+const satoshi = localFont({
+  variable: '--font-satoshi',
   display: 'swap',
   fallback: ['system-ui', 'arial'],
+  src: [
+    { path: '../public/satoshi/Satoshi-Light.otf', weight: '300' },
+    { path: '../public/satoshi/Satoshi-Regular.otf', weight: '400' },
+    { path: '../public/satoshi/Satoshi-Italic.otf', weight: '400', style: 'italic' },
+    { path: '../public/satoshi/Satoshi-Medium.otf', weight: '500' },
+    { path: '../public/satoshi/Satoshi-Bold.otf', weight: '700' },
+    { path: '../public/satoshi/Satoshi-Black.otf', weight: '900' },
+  ],
 });
 
 const geistMono = Geist_Mono({
@@ -20,11 +41,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://joinfreshman.com'),
   title: {
-    default: 'Freshman - AI-Powered Active Recall Study App',
+    default: 'Freshman: Walk into every exam ready',
     template: '%s | Freshman',
   },
   description:
-    'Transform your study materials into active recall questions with AI. Freshman converts handwritten notes, PDFs, and photos into scientifically-designed practice tests for 50% better retention.',
+    'Freshman plans your revision, explains anything you are stuck on, and tests you until it sticks. Free on Mac and iPhone.',
   keywords: [
     'active recall',
     'study app',
@@ -52,23 +73,23 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://joinfreshman.com',
     siteName: 'Freshman',
-    title: 'Freshman - AI-Powered Active Recall Study App',
+    title: 'Freshman: Walk into every exam ready',
     description:
-      'Transform your study materials into active recall questions with AI. Get 50% better retention with scientifically-designed practice tests.',
+      'Freshman plans your revision, explains anything you are stuck on, and tests you until it sticks.',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Freshman - AI-Powered Active Recall Study App',
+        alt: 'Freshman: Walk into every exam ready',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Freshman - AI-Powered Active Recall Study App',
+    title: 'Freshman: Walk into every exam ready',
     description:
-      'Transform your study materials into active recall questions with AI. Get 50% better retention.',
+      'Freshman plans your revision, explains anything you are stuck on, and tests you until it sticks.',
     images: ['/og-image.png'],
   },
   robots: {
@@ -97,7 +118,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${satoshi.variable} ${recoleta.variable} ${geistMono.variable} font-sans antialiased`}
       >
         {children}
       </body>
