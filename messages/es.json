@@ -1,292 +1,294 @@
 {
   "meta": {
-    "homeTitle": "Freshman IA - App de estudio con Active Recall | Convierte notas en tests de práctica",
-    "homeDescription": "Los estudiantes pierden horas subrayando y releyendo, pero la investigación muestra que el recuerdo activo es un 50 % más efectivo. Freshman usa IA para convertir tus notas manuscritas, PDFs y fotos en preguntas de active recall con repetición espaciada.",
     "termsTitle": "Términos de uso de Freshman",
     "termsDescription": "Términos de uso de Freshman, una app de estudio de People Who Code LLC",
     "privacyTitle": "Política de privacidad de Freshman",
-    "privacyDescription": "Política de privacidad de Freshman, una app de estudio de People Who Code LLC",
-    "desktopBetaTitle": "Beta de Freshman para escritorio — Descargar para Mac",
-    "desktopBetaDescription": "Descarga la beta de escritorio de Freshman para macOS. Disponible para Apple Silicon e Intel."
+    "privacyDescription": "Política de privacidad de Freshman, una app de estudio de People Who Code LLC"
   },
-  "nav": {
-    "terms": "Términos",
-    "privacy": "Privacidad",
-    "pricing": "Precios",
-    "login": "Iniciar sesión",
-    "startStudying": "Empezar a estudiar"
-  },
-  "languages": {
-    "label": "Idioma",
-    "en": "Inglés",
-    "es": "Español",
-    "fr": "Francés",
-    "de": "Alemán"
-  },
-  "hero": {
-    "title": "Recuerda todo lo que estudias.",
-    "subtitle": "Freshman convierte todo lo que estudias — apuntes, libros, PDFs y exámenes anteriores — en pruebas de recuerdo activo impulsadas por IA que hacen que olvidar sea casi imposible. Estudia menos. Retén más. Llega a cada examen realmente preparado.",
-    "eyebrow": "Basado en ciencia cognitiva comprobada",
-    "cta": "→ Empezar a estudiar - es gratis",
-    "supportingLine": "No se requiere tarjeta de crédito · Únete a miles de estudiantes que ya estudian de forma más inteligente"
-  },
-  "benefits": {
-    "eyebrow": "BENEFICIOS",
-    "title": "tu compañero de estudio",
-    "items": [
-      {
-        "id": "revision",
-        "title": "Repaso diario",
-        "text": "Freshman genera notas enfocadas y tests rápidos para cualquier tema, ayudándote a crear un hábito de repaso diario que sí se mantiene."
-      },
-      {
-        "id": "past-papers",
-        "title": "Práctica con exámenes anteriores",
-        "text": "Sube tus exámenes antiguos y practícalos de forma interactiva. Convierte exámenes estáticos en pruebas dinámicas de opción múltiple con autoevaluación."
-      },
-      {
-        "id": "tests",
-        "title": "Evaluación integral",
-        "text": "Genera fácilmente cuestionarios, tarjetas y exámenes simulados completos para comprender mejor tus materias e identificar al instante tus vacíos de conocimiento."
-      },
-      {
-        "id": "breakdown",
-        "title": "Desglose de notas",
-        "text": "Mira cómo tus notas subidas se transforman automáticamente en conceptos clave y preguntas de repaso, ahorrándote horas de trabajo manual."
+  "site": {
+    "meta": {
+      "homeTitle": "Freshman: Llega a cada examen preparado",
+      "homeDescription": "Freshman construye tu plan de estudio, te explica lo que no entiendes y te pone a prueba hasta que se te queda. Gratis en Mac e iPhone.",
+      "downloadTitle": "Descargar",
+      "downloadDescription": "Descarga Freshman para Mac, Windows e iPhone. Tu plan de estudio, tus apuntes y tu progreso se sincronizan en todos tus dispositivos.",
+      "downloadOgAlt": "Freshman en Mac, Windows e iPhone",
+      "blogTitle": "Blog",
+      "blogDescription": "Consejos de estudio, estrategias de examen y guías de repaso del equipo de Freshman. Aprende más rápido, recuerda más, estrésate menos."
+    },
+    "nav": {
+      "blog": "Blog",
+      "pricing": "Precios",
+      "download": "Descargar",
+      "downloadCta": "Descargar",
+      "downloadMobileCta": "Descargar Freshman",
+      "homeAria": "Inicio de Freshman",
+      "closeMenu": "Cerrar menú",
+      "openMenu": "Abrir menú",
+      "logoAlt": "Freshman",
+      "language": "Idioma",
+      "starsAria": "5 de 5 estrellas"
+    },
+    "hero": {
+      "rating": "{score}/5 de {count} estudiantes",
+      "title": "Llega a cada examen preparado.",
+      "subtitle": "Freshman construye tu plan de estudio, te explica lo que no entiendes y te pone a prueba hasta que se te queda. Así, el día del examen, ya te lo sabes.",
+      "cta": "Descarga Freshman, es gratis",
+      "subCta": "Mac Windows e iPhone · Sin tarjeta",
+      "imageAlt": "Un estudiante con mochila subiendo escalones de piedra hacia la cima de una montaña al amanecer",
+      "overlayLoved": "Lo quieren los estudiantes",
+      "overlayRating": "{score} ★ de {count} estudiantes",
+      "overlayAvailable": "Disponible en",
+      "overlayPlatforms": "Mac · Windows · iPhone"
+    },
+    "highlight": {
+      "title": "Toda tu vida de estudio, en un solo sitio.",
+      "subtitle": "Añade tus asignaturas y las fechas de examen. Freshman te dice qué estudiar cada día, te ayuda cuando te atascas y te muestra exactamente lo preparado que estás.",
+      "imageAlt": "La app de escritorio de Freshman con el repaso de hoy, los puntos débiles, un calendario de estudio y una racha",
+      "bullets": [
+        "Sabe qué estudiar hoy, cada día",
+        "Mira lo preparado que estás para cada examen",
+        "Encuentra tus puntos débiles antes de que lo haga el examen"
+      ]
+    },
+    "features": {
+      "title": "Todo lo que necesitas para llegar preparado.",
+      "subtitle": "Desde la primera clase hasta la noche antes del examen, Freshman te muestra qué hacer después y te ayuda a recordarlo.",
+      "cta": "Descarga Freshman, es gratis",
+      "items": [
+        {
+          "title": "Un tutor que nunca pierde la paciencia",
+          "body": "¿Atascado a medianoche? Pregunta por texto o por voz y te lo explica hasta que lo pilles, con palabras que de verdad entiendes.",
+          "alt": "El tutor de Freshman armando un plan de clase de 28 minutos con una agenda de temas"
+        },
+        {
+          "title": "Un plan de estudio que piensa por ti",
+          "body": "Dile a Freshman tus fechas de examen. Divide cada asignatura en sesiones diarias, para que termines a tiempo sin empollar a última hora.",
+          "alt": "Un plan de estudio de 9 semanas dividido en temas numerados"
+        },
+        {
+          "title": "Simulacros antes del examen de verdad",
+          "body": "Haz exámenes de práctica en el formato real, con cada respuesta corregida, y mira exactamente dónde perderías puntos.",
+          "alt": "Una pregunta de opción múltiple dentro de un simulacro de Freshman"
+        },
+        {
+          "title": "Repaso diario para que se te quede",
+          "body": "Unos minutos al día en lo que estás a punto de olvidar, más un quiz rápido cada noche. Recuerdas más y estudias menos.",
+          "alt": "La lista Repasar hoy con bloques de conocimiento para revisar"
+        },
+        {
+          "title": "Mapas mentales y guías de estudio en segundos",
+          "body": "Convierte un capítulo largo o tus propios apuntes en un mapa o una guía de la que de verdad puedas repasar.",
+          "alt": "Un mapa mental que conecta temas de informática"
+        },
+        {
+          "title": "Todas tus asignaturas, un solo sitio",
+          "body": "Añade cada asignatura y sube tus apuntes, diapositivas y exámenes anteriores. Freshman enseña con tu material, no con cosas random de internet.",
+          "alt": "El selector de asignaturas con un botón Añadir asignatura"
+        }
+      ]
+    },
+    "mobileApp": {
+      "eyebrow": "La app móvil",
+      "title": "Tu compañero de estudio, ahora en el bolsillo.",
+      "body": "Empieza un tema en el portátil, termínalo en el autobús. Freshman sincroniza escritorio y teléfono, así que tu plan, apuntes, racha y progreso te siguen a todas partes. Cinco minutos en una cola se convierten en semanas de repaso para el día del examen.",
+      "bullets": [
+        "Planes, apuntes y progreso se sincronizan en cada dispositivo",
+        "Repaso diario y quiz nocturno, desde el teléfono",
+        "Recordatorios para que no rompas tu racha"
+      ],
+      "appStoreAlt": "Descargar en el App Store",
+      "availableOn": "Disponible en iPhone",
+      "imageAlt": "La app de Freshman para iPhone con conceptos de colores para repasar"
+    },
+    "comparison": {
+      "title": "Una app en vez de cinco.",
+      "subtitle": "Un chatbot responde preguntas. Freshman te deja listo para el examen.",
+      "freshman": "Freshman",
+      "chatgpt": "ChatGPT",
+      "notebooklm": "NotebookLM",
+      "rows": [
+        "Gratis para empezar",
+        "Arma un plan día a día según tus fechas de examen",
+        "Repaso diario de lo que estás a punto de olvidar",
+        "Simulacros con tiempo y cada respuesta corregida",
+        "Enseña con tus propios apuntes y exámenes anteriores",
+        "Habla del tema con un tutor de voz",
+        "Mapas mentales y guías de estudio",
+        "Te muestra lo preparado que estás, asignatura por asignatura",
+        "Rachas y recordatorios que te mantienen en marcha",
+        "Hecha solo para estudiar"
+      ],
+      "yes": "Sí",
+      "no": "No",
+      "cta": "Descargar gratis"
+    },
+    "testimonials": {
+      "title": "Estudiantes que dejaron de empollar y empezaron a aprobar.",
+      "subtitle": "Únete a más de 1.000 estudiantes que repasan mejor con Freshman.",
+      "items": [
+        {
+          "name": "Amara O.",
+          "context": "Estudiante de IB",
+          "quote": "Empollaba la noche antes de cada examen. Ahora hago 10 minutos al día y de verdad me acuerdo.",
+          "date": "12 sept 2026",
+          "country": "UK"
+        },
+        {
+          "name": "Daniel K.",
+          "context": "Estudiante de A-Level",
+          "quote": "Los simulacros eran más duros que el examen de verdad, así que el día del examen se me hizo fácil. Salí sabiendo que lo había hecho bien.",
+          "date": "9 sept 2026",
+          "country": "UK"
+        },
+        {
+          "name": "Grace M.",
+          "context": "Madre",
+          "quote": "Mi hijo por fin tiene un plan. Se acabó el pánico la semana antes de los exámenes, y se nota en las notas.",
+          "date": "4 sept 2026",
+          "country": "US"
+        },
+        {
+          "name": "Leo P.",
+          "context": "Último año de instituto",
+          "quote": "Pregunté lo mismo cinco veces y nunca me hizo sentir tonto. Solo me lo explicó de otra forma hasta que lo pillé.",
+          "date": "28 ago 2026",
+          "country": "US"
+        },
+        {
+          "name": "Sofia R.",
+          "context": "Primer año de universidad",
+          "quote": "Estudio en el autobús con la app del teléfono. Es la única razón por la que mantuve la racha todo el cuatrimestre.",
+          "date": "18 ago 2026",
+          "country": "CA"
+        },
+        {
+          "name": "Tariq H.",
+          "context": "Estudiante de AP",
+          "quote": "Subí las diapositivas de mi profesor y tenía un plan de estudio en minutos. Por fin sabía qué hacer cada día en vez de adivinar.",
+          "date": "2 ago 2026",
+          "country": "US"
+        },
+        {
+          "name": "Nina W.",
+          "context": "Estudiante de enfermería",
+          "quote": "La lista de puntos débiles acierta de miedo. Me muestra exactamente lo que sigo fallando, así que dejo de perder tiempo en lo que ya sé.",
+          "date": "21 jul 2026",
+          "country": "AU"
+        },
+        {
+          "name": "Chris A.",
+          "context": "Estudiante de informática",
+          "quote": "ChatGPT me daba respuestas. Freshman de verdad me enseñó.",
+          "date": "10 jul 2026",
+          "country": "US"
+        },
+        {
+          "name": "Esther N.",
+          "context": "Madre",
+          "quote": "Más barato que una hora con un profesor particular, y está ahí a las 11 de la noche cuando ella se atasca. Vale cada centavo.",
+          "date": "30 jun 2026",
+          "country": "KE"
+        }
+      ]
+    },
+    "faq": {
+      "title": "Preguntas, respondidas.",
+      "subtitle": "Lo importante que debes saber antes de empezar.",
+      "items": [
+        {
+          "question": "¿Qué hace Freshman de verdad?",
+          "answer": "Freshman es tu compañero de estudio. Añade tus asignaturas y las fechas de examen, y planifica qué estudiar cada día, te explica lo que no entiendes, te pone a prueba con quizzes y simulacros, y te muestra lo preparado que estás."
+        },
+        {
+          "question": "¿En qué se diferencia Freshman de ChatGPT?",
+          "answer": "ChatGPT responde la pregunta que le haces. Freshman sabe qué entra en tu examen, qué ya has cubierto y qué estás olvidando, así que te dice qué estudiar después y comprueba que lo hayas aprendido."
+        },
+        {
+          "question": "¿Usar Freshman es hacer trampa?",
+          "answer": "No. Freshman te ayuda a entender y recordar tu material. No hace tus exámenes ni te escribe los trabajos. Tú sigues aprendiendo; Freshman solo lo hace más rápido."
+        },
+        {
+          "question": "¿Puede usar mis propios apuntes y libros?",
+          "answer": "Sí. Sube tus apuntes, diapositivas, PDFs o exámenes anteriores, y Freshman te enseña y te evalúa con ellos, para que estudies lo que tu profesor realmente cubre."
+        },
+        {
+          "question": "¿Para qué asignaturas sirve?",
+          "answer": "Cualquier asignatura que añadas, de Biología a Historia o Mates. Los estudiantes lo usan para exámenes de instituto, IB, A-Levels, AP y asignaturas de universidad."
+        },
+        {
+          "question": "Voy atrasado. ¿Es demasiado tarde para empezar?",
+          "answer": "No. Dile a Freshman tu fecha de examen y arma un plan que cabe en el tiempo que te queda, empezando por lo que más puntos te va a dar."
+        },
+        {
+          "question": "¿Funciona en el teléfono?",
+          "answer": "Sí. Freshman funciona en Mac e iPhone, y todo se sincroniza, así que puedes planificar en el portátil y repasar en el teléfono."
+        },
+        {
+          "question": "¿Cuánto cuesta Freshman?",
+          "answer": "Puedes empezar gratis, para siempre. Pro empieza en 9 $ al mes y Max en 20 $ al mes cuando quieras más asignaturas, tests y tiempo de tutoría."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Tu próximo examen se acerca. Llega preparado.",
+      "subtitle": "Empieza gratis hoy. Tardas dos minutos en configurar tu primer plan de estudio.",
+      "button": "Descargar Freshman"
+    },
+    "footer": {
+      "tagline": "Planifícalo, apréndelo, recuérdalo. Todo en un solo sitio.",
+      "explore": "Explorar",
+      "legal": "Legal",
+      "terms": "Términos y condiciones",
+      "privacy": "Política de privacidad",
+      "copyright": "© {year} Freshman. Todos los derechos reservados."
+    },
+    "download": {
+      "heroTitle": "Descarga Freshman donde estudies.",
+      "heroSubtitle": "Planifica en el portátil, repasa en el teléfono. Tus asignaturas, apuntes y progreso se sincronizan en todos tus dispositivos.",
+      "appStoreCta": "Descargar en el App Store",
+      "macCta": "Descargar para Mac (Apple Silicon)",
+      "windowsCta": "Descargar para Windows",
+      "windowsSmartScreen": "Si Windows dice que protegió tu PC, haz clic en Más información y luego en Ejecutar de todas formas.",
+      "androidSoon": "Freshman para Android llega pronto.",
+      "freeSetup": "Gratis · Configúralo en 2 minutos",
+      "intelMac": "Mac Intel",
+      "heroImageAlt": "Freshman en un Mac y un iPhone, mostrando el mismo plan de estudio",
+      "desktopEyebrow": "Escritorio",
+      "desktopTitle": "Tu centro de estudio en el escritorio.",
+      "desktopBody": "La pantalla grande es donde se hace el trabajo de verdad. Sube tus apuntes, arma tu plan, haz simulacros completos y habla las dudas con tu tutor, todo sin una docena de pestañas abiertas.",
+      "macos": "macOS",
+      "windows": "Windows",
+      "appleSiliconDefault": "Apple Silicon por defecto",
+      "intelDownload": "Descargar para Mac Intel",
+      "desktopImageAlt": "La app de escritorio de Freshman mostrando un plan de estudio de 9 semanas",
+      "mobileEyebrow": "Móvil",
+      "mobileTitle": "Cinco minutos al día, en el bolsillo.",
+      "mobileBody": "Tu repaso diario, el quiz de la noche y tu racha van contigo. Convierte el trayecto en bus o la cola del almuerzo en tiempo de estudio, y sigue justo donde lo dejaste en el portátil.",
+      "appStore": "App Store",
+      "playComingSoon": "Google Play · próximamente",
+      "mobileImageAlt": "La app de Freshman para iPhone mostrando conceptos para repasar"
+    },
+    "blog": {
+      "title": "El blog de Freshman",
+      "subtitle": "Estudia mejor, recuerda más y llega a cada examen preparado.",
+      "empty": "Hay artículos nuevos en camino.",
+      "readArticle": "Leer artículo →",
+      "recentPosts": "Artículos recientes",
+      "minRead": "{minutes} min de lectura",
+      "keyTakeaways": "Ideas clave",
+      "writtenBy": "Escrito por",
+      "readNext": "Sigue leyendo",
+      "authors": {
+        "freshman": {
+          "name": "El equipo de Freshman",
+          "bio": "Hacemos Freshman, el compañero de estudio que planifica tu repaso, te explica lo que no entiendes y te pone a prueba hasta que se te queda."
+        },
+        "edwina": {
+          "name": "Edwina Fay",
+          "bio": "Edwina es la COO de Freshman, el compañero de estudio que planifica tu repaso, te explica lo que no entiendes y te pone a prueba hasta que lo dominas."
+        }
       }
-    ]
-  },
-  "features": {
-    "eyebrow": "CARACTERÍSTICAS",
-    "title": "Todo lo que necesitas. Nada que no necesites.",
-    "items": [
-      {
-        "title": "Sube Apuntes, Libros y Exámenes Pasados",
-        "description": "Tus materiales se convierten automáticamente en tu banco de pruebas personalizado. Sin creación manual de tarjetas. Súbelo y Freshman se encarga del resto."
-      },
-      {
-        "title": "Cuatro Modos de Prueba Distintos",
-        "description": "Cuestionarios. Active Recall. Simulacros de Examen. Exámenes Pasados. Cada modo tiene un propósito de estudio diferente. Usa los cuatro y llega al día del examen habiendo experimentado cada tipo de pregunta imaginable."
-      },
-      {
-        "title": "Biblioteca de Estudio Organizada",
-        "description": "Todos tus apuntes, libros, mazos de tarjetas y materias, organizados y con capacidad de búsqueda. Navega por materia, busca por término, estudia cuando quieras."
-      },
-      {
-        "title": "Comparte con tu Grupo de Estudio",
-        "description": "Comparte apuntes, mazos de tarjetas, exámenes pasados y libros con tus compañeros mediante un solo enlace. Estudiar solo es una opción, no un requisito."
-      },
-      {
-        "title": "Personalizado Desde el Primer Día",
-        "description": "Modo oscuro, preferencias de idioma, objetivos de estudio, métodos de revisión — Freshman aprende cómo estudias y se adapta. Tu experiencia nunca es igual a la de los demás."
-      },
-      {
-        "title": "Haz un Seguimiento de tu Progreso",
-        "description": "Las puntuaciones de las sesiones, las rachas y los resúmenes de rendimiento te indican exactamente dónde estás mejorando y en qué debes enfocarte a continuación. Sin adivinanzas."
-      }
-    ]
-  },
-  "dailyFeed": {
-    "eyebrow": "FEED DIARIO",
-    "title": "repaso así de simple como deslizar",
-    "description": "Abre Freshman y recibe un flujo diario de repasos breves, mini retos y recordatorios de conceptos según tu progreso. Mantén tu racha y llega preparado a tus exámenes con solo unos minutos al día."
-  },
-  "pastPapers": {
-    "eyebrow": "EXÁMENES ANTERIORES",
-    "title": "practica con preguntas reales de examen",
-    "description": "Sube exámenes anteriores y conviértelos al instante en tests interactivos de opción múltiple. Practica con preguntas reales, recibe feedback inmediato en cada respuesta y revisa explicaciones detalladas para entender cada concepto.",
-    "bullets": [
-      {
-        "title": "Tests interactivos de opción múltiple",
-        "text": "Preguntas generadas automáticamente a partir de tus exámenes anteriores"
-      },
-      {
-        "title": "Feedback inmediato",
-        "text": "Sabe al instante si tu respuesta es correcta o incorrecta"
-      },
-      {
-        "title": "Explicaciones detalladas",
-        "text": "Entiende el razonamiento detrás de cada respuesta"
-      }
-    ]
-  },
-  "testimonials": {
-    "eyebrow": "TESTIMONIOS",
-    "title": "a los estudiantes les encanta freshman",
-    "items": [
-      {
-        "name": "Alice",
-        "role": "Estudiante de medicina",
-        "quote": "Freshman revolucionó cómo estudio anatomía. Que mis notas se conviertan en preguntas de active recall es como tener un tutor personal."
-      },
-      {
-        "name": "George",
-        "role": "Estudiante de derecho",
-        "quote": "Los insights de IA que desglosan casos complejos en conceptos clave me ayudaron a optimizar muchísimo mi rutina diaria."
-      },
-      {
-        "name": "Natalie",
-        "role": "Estudiante de último año de secundaria",
-        "quote": "La generación de tarjetas de Freshman me ayudó a crear mejores hábitos de estudio y a sacar excelentes resultados en mis exámenes."
-      },
-      {
-        "name": "Ulysses",
-        "role": "Estudiante de informática",
-        "quote": "El resumidor de notas con IA me ahorró horas. Solo subo las diapositivas y empiezo a repasar de inmediato."
-      },
-      {
-        "name": "Bob",
-        "role": "Estudiante de ingeniería",
-        "quote": "Las pruebas inspiradas en la técnica Feynman mejoraron mucho mi comprensión profunda de conceptos complejos."
-      },
-      {
-        "name": "Hannah",
-        "role": "Residente de medicina",
-        "quote": "El calendario de repetición espaciada de Freshman junto con mis rotaciones clínicas fue un salvavidas en mi flujo de estudio."
-      },
-      {
-        "name": "Oscar",
-        "role": "Estudiante de historia",
-        "quote": "Practicar exámenes anteriores de forma interactiva, en lugar de leer PDFs, mejoró enormemente mi estrategia de examen."
-      },
-      {
-        "name": "Victoria",
-        "role": "Analista de negocios",
-        "quote": "Incluso para certificaciones profesionales, los insights personalizados de active recall de Freshman son súper efectivos."
-      },
-      {
-        "name": "Charlie",
-        "role": "Estudiante de enfermería",
-        "quote": "Los exámenes simulados me ayudan a detectar mis puntos débiles antes de enfrentar el examen real."
-      },
-      {
-        "name": "Ian",
-        "role": "Estudiante de economía",
-        "quote": "Los recordatorios inteligentes de repaso redujeron muchísimo mis sesiones de estudio de última hora. Muy recomendable."
-      },
-      {
-        "name": "Patricia",
-        "role": "Estudiante de literatura",
-        "quote": "La capacidad de Freshman para analizar cientos de páginas y extraer temas centrales agilizó mi preparación de ensayos."
-      },
-      {
-        "name": "William",
-        "role": "Candidato a MBA",
-        "quote": "Los cuestionarios sugeridos por IA en base a mis casos ampliaron mi pensamiento analítico y velocidad de recuerdo."
-      }
-    ]
-  },
-  "pricing": {
-    "title": "Precios flexibles",
-    "subtitle": "Todo lo que necesitas para crear hábitos de estudio sólidos.",
-    "footer": "Cancela cuando quieras.",
-    "plans": [
-      {
-        "id": "weekly",
-        "name": "Semanal",
-        "description": "Perfecto para semanas intensas",
-        "price": "$3.99",
-        "period": "/semana",
-        "features": [
-          "Todas las funciones incluidas",
-          "Cancela cuando quieras",
-          "Sin compromiso a largo plazo"
-        ]
-      },
-      {
-        "id": "monthly",
-        "name": "Mensual",
-        "description": "Facturación flexible mes a mes",
-        "price": "$10.99",
-        "period": "/mes",
-        "features": [
-          "Todas las funciones incluidas",
-          "Cancela cuando quieras",
-          "Sin compromiso a largo plazo"
-        ]
-      },
-      {
-        "id": "annual",
-        "name": "Anual",
-        "description": "Ahorra 35 % con facturación anual",
-        "price": "$99.99",
-        "period": "/año",
-        "features": [
-          "Todas las funciones incluidas",
-          "3 meses gratis",
-          "Cancela cuando quieras"
-        ]
-      }
-    ]
-  },
-  "androidWaitlist": {
-    "title": "Android llega muy pronto",
-    "description": "Estamos dando los últimos retoques a nuestra app de Android. Únete a la lista de espera y te avisaremos en cuanto esté disponible.",
-    "placeholder": "Ingresa tu correo",
-    "cta": "Unirme a la lista"
-  },
-  "desktopBetaHero": {
-    "title": "Prueba la beta de Freshman para escritorio.",
-    "subtitle": "Descarga la app para Mac y estudia con Freshman en tu escritorio. Disponible para Apple Silicon e Intel.",
-    "supportingLine": "macOS 13+ · Apple Silicon e Intel.",
-    "appleSiliconCta": "Descargar para Mac (Apple Silicon)",
-    "intelCta": "Descargar para Mac (Intel)"
-  },
-  "faqs": {
-    "title": "Preguntas Frecuentes",
-    "subtitle": "Tus dudas resueltas",
-    "contactPrefix": "¿Necesitas más ayuda?",
-    "contactLink": "Contáctanos",
-    "items": [
-      {
-        "id": "item-1",
-        "question": "¿Qué diferencia a Freshman de Anki o Quizlet?",
-        "answer": "Anki y Quizlet requieren que crees tus tarjetas manualmente. Freshman genera pruebas automáticamente a partir de tus propios materiales subidos, notas, PDFs, libros de texto, exámenes pasados. También obtienes un tutor de IA completo, cuatro modos de prueba, un espacio de trabajo de lectura inteligente y un feed diario de repetición espaciada. Es un sistema de estudio completo, no solo una herramienta de tarjetas didácticas."
-      },
-      {
-        "id": "item-2",
-        "question": "¿Tengo que crear tarjetas yo mismo?",
-        "answer": "No, y ese es el punto. Sube tus materiales y Freshman construye tus pruebas por ti. Tú te enfocas en estudiar; nosotros manejamos la configuración."
-      },
-      {
-        "id": "item-3",
-        "question": "¿Qué materias y tipos de archivos soporta Freshman?",
-        "answer": "Freshman funciona en cualquier materia y admite PDFs, documentos de texto, URLs web y notas personales. Derecho, medicina, ingeniería, humanidades, idiomas... si puedes subirlo, Freshman puede ponerte a prueba en ello."
-      },
-      {
-        "id": "item-4",
-        "question": "¿Existe un plan gratuito?",
-        "answer": "Sí. Puedes empezar a usar Freshman de forma gratuita con acceso a funciones básicas. Los planes de pago desbloquean uso ilimitado, el tutor de IA completo y todos los modos de prueba y examen avanzados."
-      },
-      {
-        "id": "item-5",
-        "question": "¿Funciona para estudiantes de posgrado y doctorado, no solo universitarios?",
-        "answer": "Absolutamente. El espacio de trabajo web con su lector de fuentes, el canal de resaltado y el tutor de IA está diseñado específicamente para estudios de alto volumen y mucha lectura. Los posgrados e investigadores lo encuentran particularmente poderoso para procesar y retener material académico denso a escala."
-      },
-      {
-        "id": "item-6",
-        "question": "¿Puedo compartir materiales con mi grupo de estudio?",
-        "answer": "Sí. Puedes compartir notas, mazos de tarjetas y exámenes pasados con tus compañeros de clase a través de un enlace compartible. Ellos pueden abrir tus recursos compartidos directamente en su propia aplicación Freshman."
-      },
-      {
-        "id": "item-7",
-        "question": "¿Están seguros mis datos?",
-        "answer": "Tus notas, documentos y datos de estudio subidos se almacenan de forma segura. No compartimos tus materiales ni los utilizamos para entrenar modelos de IA de terceros."
-      },
-      {
-        "id": "item-8",
-        "question": "¿Está disponible Freshman en Android?",
-        "answer": "La aplicación móvil está actualmente disponible en iOS. La aplicación web se ejecuta en cualquier navegador en un dispositivo de escritorio. El soporte para la aplicación Android está planeado."
-      },
-      {
-        "id": "item-9",
-        "question": "¿Puedo cancelar en cualquier momento?",
-        "answer": "Siempre. Sin tarifas de cancelación, sin fricción. Cancela directamente desde la configuración de tu cuenta cuando quieras."
-      }
-    ]
-  },
-  "footer": {
-    "copyright": "Todos los derechos reservados"
+    }
   },
   "share": {
     "note": {
@@ -310,106 +312,5 @@
       "subtitle2": "Estudia mejor con resúmenes de capítulos impulsados por IA."
     },
     "openButton": "Abrir en Freshman"
-  },
-  "howItWorks": {
-    "eyebrow": "Nuestro Proceso",
-    "cta": "Empezar",
-    "title": "Tres pasos entre tú y una mejor memoria",
-    "subtitle": "Sin configuraciones complicadas. Sin empezar desde cero. Solo sube lo que ya tienes y deja que Freshman haga el trabajo pesado.",
-    "steps": [
-      {
-        "label": "PASO 1",
-        "title": "Sube lo que ya tienes",
-        "description": "Apuntes de clase. Capítulos de libros. PDFs. Exámenes anteriores. URLs. Súbelos a Freshman y tus materiales quedan listos al instante para estudiar — sin reformatear ni etiquetar manualmente."
-      },
-      {
-        "label": "PASO 2",
-        "title": "Freshman crea tus pruebas automáticamente",
-        "description": "Nuestra IA lee tus materiales y genera preguntas de Active Recall perfectamente calibradas — el método de aprendizaje que la ciencia cognitiva identifica como el más efectivo para codificar información en la memoria a largo plazo. Sin crear tarjetas manualmente. Sin perder tiempo."
-      },
-      {
-        "label": "PASO 3",
-        "title": "Repasa cada día. Recuerda para siempre.",
-        "description": "Tu feed diario personalizado te muestra las preguntas correctas en el momento correcto. Desliza. Valora tu confianza. Freshman aprende de tu desempeño y se ajusta — para que dediques más tiempo a lo que no sabes y menos a lo que ya dominas."
-      }
-    ],
-    "calloutPrefix": "Los estudiantes que usan Active Recall espaciado retienen hasta un",
-    "calloutEmphasis": "50% más",
-    "calloutSuffix": "que quienes usan relectura pasiva."
-  },
-  "coreFeatures": {
-    "eyebrow": "El Espacio de Trabajo Web",
-    "title": "Tu Centro de Mando para el Estudio Profundo",
-    "subtitle": "Deja de saltar entre pestañas del navegador, lectores de PDF, marcadores y aplicaciones de notas. Freshman reúne tu lectura, anotación, tutoría y evaluación en un solo espacio de trabajo enfocado — para que nada se te escape.",
-    "cta": "Empezar - es gratis",
-    "features": [
-      {
-        "label": "Lector Inteligente + Subrayados",
-        "title": "Lee Todo. Subraya lo que Importa.",
-        "description": "Sube PDFs, pega una URL o abre tus propias notas directamente en el lector de Freshman. Subraya pasajes clave mientras lees — cada subrayado se guarda, es buscable y se conecta automáticamente a tu flujo de estudio. Tus anotaciones no desaparecen en una carpeta que nunca volverás a abrir."
-      },
-      {
-        "label": "Tutor de IA",
-        "title": "Un Tutor de IA que Realmente ha Leído tu Material",
-        "description": "Pregúntale a tu tutor de IA cualquier cosa — y obtén respuestas basadas en tu fuente real, no resultados genéricos de internet. ¿Necesitas que un concepto se explique de manera diferente? ¿Quieres desafiar tu propia comprensión? Tu tutor sabe exactamente lo que has estado leyendo y se adapta a tu nivel."
-      },
-      {
-        "label": "Biblioteca de Fuentes",
-        "title": "Todas tus Fuentes. Un Espacio de Trabajo Buscable.",
-        "description": "PDFs, libros de texto, artículos web, notas personales — todo organizado, recuperable y listo para estudiar. La búsqueda global de fuentes significa que nunca estarás buscando esa lectura que guardaste hace tres semanas."
-      },
-      {
-        "label": "Flujo de Subrayado a Prueba",
-        "title": "Subrayados que Realmente Hacen Algo",
-        "description": "Cada pasaje que marcas en el lector se integra directamente en tus pruebas y sesiones de repaso. Este es el flujo que marca la diferencia — leer y recordar ya no son dos actividades separadas."
-      }
-    ]
-  },
-  "mobileHero": {
-    "eyebrow": "La Aplicación Móvil",
-    "title": "La Sesión de Repaso que Cabe en tu Bolsillo.",
-    "subtitle": "Mientras otros estudian la noche anterior, tú has estado repasando durante semanas — cinco minutos a la vez. La app móvil de Freshman convierte los trayectos, descansos para comer y salas de espera en sesiones diarias de repaso que se acumulan. Hábitos pequeños. Resultados masivos.",
-    "cta": "Descargar Gratis en iOS",
-    "platformNote": "Disponible en iOS"
-  },
-  "dailyFeedHighlight": {
-    "eyebrow": "LA FUNCIÓN A LA QUE LOS ESTUDIANTES VUELVEN CADA DÍA",
-    "title": "Conoce Tu Feed Diario de Repaso",
-    "paragraphs": [
-      "Desliza a través de tarjetas de recuerdo personalizadas.",
-      "Marca cada una como fácil, media o difícil.",
-      "Freshman se ajusta a diario: más de lo que te cuesta, menos de lo que ya dominas.",
-      "Repetición espaciada y Active Recall, trabajando juntos, todos los días."
-    ],
-    "stats": [
-      "50% mejor retención",
-      "Se ajusta a tu rendimiento",
-      "No hay dos feeds iguales"
-    ]
-  },
-  "additionalFeatures": {
-    "title": "Construido para Como Realmente Viven los Estudiantes",
-    "items": [
-      {
-        "id": "active-recall",
-        "title": "Active Recall, No Relectura Pasiva",
-        "text": "Releer tus apuntes se siente productivo. No lo es. El repaso pasivo crea la ilusión de saber... hasta que el examen está frente a ti. Freshman reemplaza la relectura con Active Recall: el método que fuerza la recuperación, construye memoria real y hace que olvidar sea estructuralmente más difícil."
-      },
-      {
-        "id": "daily-habits",
-        "title": "Hábitos Diarios Consistentes Sin Culpa",
-        "text": "No necesitas una sesión de estudio de cuatro horas. Necesitas quince minutos enfocados, todos los días. Freshman está diseñado en torno a esa realidad: sesiones cortas y satisfactorias que se convierten en una ventaja de retención que tus compañeros no tendrán."
-      },
-      {
-        "id": "exam-prepared",
-        "title": "Llega a la Semana de Exámenes Ya Preparado",
-        "text": "Debido a que has estado recordando activamente tu material todos los días, la semana de exámenes se siente diferente. Sin frenesí. Sin prisas. Solo un repaso final de cosas que ya sabes. Ese sentimiento es lo que Freshman está diseñado para darte."
-      },
-      {
-        "id": "language",
-        "title": "Estudia en el Idioma en el que Piensas",
-        "text": "Inglés, español, francés, alemán: Freshman se adapta a cómo procesas la información de forma natural. Aprender en tu idioma más fuerte significa retener más, más rápido."
-      }
-    ]
   }
 }

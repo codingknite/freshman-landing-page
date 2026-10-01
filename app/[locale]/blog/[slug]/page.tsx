@@ -5,8 +5,16 @@ import { SiteHeader } from '@/components/site/site-header';
 import { SiteFooter } from '@/components/site/site-footer';
 import { PostCard, PostCover } from '@/components/site/blog';
 import { FinalCta } from '@/components/site/landing-sections';
-import { formatPostDate, getAllPosts, getPost } from '@/lib/blog';
-import { supportedLocales, type Locale } from '@/lib/i18n';
+import { formatPostDate, getAllPosts, getPost, localizeAuthor } from '@/lib/blog';
+import {
+  getDictionary,
+  localeLanguageAlternates,
+  localePath,
+  ogLocales,
+  supportedLocales,
+  translate,
+  type Locale,
+} from '@/lib/i18n';
 import { SITE_URL } from '@/lib/site';
 
 type Params = Promise<{ locale: Locale; slug: string }>;
@@ -18,10 +26,10 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const { locale, slug } = await params;
-  const post = await getPost(slug);
+  const post = await getPost(slug, locale);
   if (!post) return {};
 
-  const url = `${SITE_URL}/${locale}/blog/${slug}`;
+  const url = `${SITE_URL}${localePath(locale, `blog/${slug}`)}`;
   return {
     title: post.title,
     description: post.description,
@@ -30,21 +38,26 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
       title: post.title,
       description: post.description,
       url,
+      locale: ogLocales[locale],
       publishedTime: post.date,
       images: post.cover ? [{ url: post.cover, alt: post.coverAlt }] : undefined,
     },
     twitter: { card: 'summary_large_image', title: post.title, description: post.description },
-    // Posts are English-only, so every locale points search engines at /en.
-    alternates: { canonical: `${SITE_URL}/en/blog/${slug}` },
+    alternates: {
+      canonical: url,
+      languages: localeLanguageAlternates(`blog/${slug}`),
+    },
   };
 }
 
 export default async function BlogPostPage({ params }: { params: Params }) {
   const { locale, slug } = await params;
-  const post = await getPost(slug);
+  const post = await getPost(slug, locale);
   if (!post) notFound();
 
-  const readNext = getAllPosts()
+  const messages = getDictionary(locale);
+  const author = localizeAuthor(post.author, messages);
+  const readNext = getAllPosts(locale)
     .filter((other) => other.slug !== slug)
     .slice(0, 3);
 
@@ -54,7 +67,8 @@ export default async function BlogPostPage({ params }: { params: Params }) {
     headline: post.title,
     description: post.description,
     datePublished: post.date,
-    author: { '@type': 'Organization', name: post.author.name },
+    author: { '@type': author.person ? 'Person' : 'Organization', name: author.name },
+    inLanguage: locale,
     image: post.cover ? `${SITE_URL}${post.cover}` : undefined,
   };
 
@@ -72,7 +86,8 @@ export default async function BlogPostPage({ params }: { params: Params }) {
               {post.title}
             </h1>
             <p className='mt-4 text-sm text-swirl-700'>
-              {formatPostDate(post.date)} · {post.readingMinutes} min read
+              {formatPostDate(post.date, locale)} ·{' '}
+              {translate(messages, 'site.blog.minRead', { minutes: post.readingMinutes })}
             </p>
           </header>
 
@@ -80,7 +95,9 @@ export default async function BlogPostPage({ params }: { params: Params }) {
 
           {post.takeaways.length > 0 && (
             <aside className='mt-10 rounded-2xl border border-swirl-200 bg-white p-6'>
-              <p className='text-sm font-semibold text-swirl-950'>Key takeaways</p>
+              <p className='text-sm font-semibold text-swirl-950'>
+                {messages.site.blog.keyTakeaways}
+              </p>
               <ul className='mt-3 list-disc space-y-2 pl-5 text-[15px] leading-relaxed text-swirl-900 marker:text-swirl-400'>
                 {post.takeaways.map((item) => (
                   <li key={item}>{item}</li>
@@ -95,21 +112,21 @@ export default async function BlogPostPage({ params }: { params: Params }) {
           />
 
           <footer className='mt-20 border-t border-swirl-200 pt-10'>
-            <p className='text-sm text-swirl-700'>Written by</p>
+            <p className='text-sm text-swirl-700'>{messages.site.blog.writtenBy}</p>
             <div className='mt-3 flex items-center justify-between gap-6'>
               <div>
-                <p className='font-display text-3xl text-swirl-950'>{post.author.name}</p>
+                <p className='font-display text-3xl text-swirl-950'>{author.name}</p>
                 <p className='mt-3 max-w-lg text-[15px] leading-relaxed text-swirl-900'>
-                  {post.author.bio}
+                  {author.bio}
                 </p>
               </div>
-              {post.author.avatar && (
+              {author.avatar && (
                 <Image
-                  src={post.author.avatar}
+                  src={author.avatar}
                   alt=''
                   width={96}
                   height={96}
-                  className='size-20 shrink-0 rounded-full object-cover'
+                  className={`size-20 shrink-0 rounded-full object-cover ${author.person ? 'object-top grayscale' : ''}`}
                 />
               )}
             </div>
@@ -118,16 +135,26 @@ export default async function BlogPostPage({ params }: { params: Params }) {
 
         {readNext.length > 0 && (
           <section className='mx-auto mt-24 max-w-6xl'>
-            <h2 className='font-display text-3xl font-medium text-swirl-950'>Read next</h2>
+            <h2 className='font-display text-3xl font-medium text-swirl-950'>
+              {messages.site.blog.readNext}
+            </h2>
             <div className='mt-8 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3'>
               {readNext.map((other) => (
-                <PostCard key={other.slug} post={other} locale={locale} />
+                <PostCard
+                  key={other.slug}
+                  post={other}
+                  locale={locale}
+                  date={formatPostDate(other.date, locale)}
+                  readLabel={translate(messages, 'site.blog.minRead', {
+                    minutes: other.readingMinutes,
+                  })}
+                />
               ))}
             </div>
           </section>
         )}
       </main>
-      <FinalCta locale={locale} />
+      <FinalCta locale={locale} copy={messages.site.cta} />
       <SiteFooter />
     </div>
   );

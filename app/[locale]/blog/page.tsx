@@ -5,11 +5,14 @@ import { SiteFooter } from '@/components/site/site-footer';
 import { PostCard, PostCover } from '@/components/site/blog';
 import { formatPostDate, getAllPosts } from '@/lib/blog';
 import { SITE_URL } from '@/lib/site';
-import type { Locale } from '@/lib/i18n';
-
-const title = 'Blog';
-const description =
-  'Study tips, exam strategies and revision guides from the Freshman team. Learn faster, remember more, stress less.';
+import {
+  getDictionary,
+  localeLanguageAlternates,
+  localePath,
+  ogLocales,
+  translate,
+  type Locale,
+} from '@/lib/i18n';
 
 export async function generateMetadata({
   params,
@@ -17,15 +20,23 @@ export async function generateMetadata({
   params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  const messages = getDictionary(locale);
+  const title = messages.site.meta.blogTitle;
+  const description = messages.site.meta.blogDescription;
+
   return {
     title,
     description,
     openGraph: {
       title: `${title} | Freshman`,
       description,
-      url: `${SITE_URL}/${locale}/blog`,
+      url: `${SITE_URL}${localePath(locale, 'blog')}`,
+      locale: ogLocales[locale],
     },
-    alternates: { canonical: `${SITE_URL}/${locale}/blog` },
+    alternates: {
+      canonical: `${SITE_URL}${localePath(locale, 'blog')}`,
+      languages: localeLanguageAlternates('blog'),
+    },
   };
 }
 
@@ -35,7 +46,8 @@ export default async function BlogPage({
   params: Promise<{ locale: Locale }>;
 }) {
   const { locale } = await params;
-  const posts = getAllPosts();
+  const messages = getDictionary(locale);
+  const posts = getAllPosts(locale);
   const featured = posts.find((post) => post.featured) ?? posts[0];
   const recent = posts.filter((post) => post !== featured);
 
@@ -44,16 +56,14 @@ export default async function BlogPage({
       <SiteHeader />
       <main className='mx-auto max-w-6xl px-4 pb-28 pt-32 sm:px-6 md:pt-40'>
         <h1 className='font-display text-5xl font-medium tracking-tight text-swirl-950 sm:text-6xl'>
-          The Freshman Blog
+          {messages.site.blog.title}
         </h1>
         <p className='mt-4 max-w-xl font-medium text-lg text-swirl-900'>
-          Study smarter, remember more and walk into every exam ready.
+          {messages.site.blog.subtitle}
         </p>
 
         {!featured && (
-          <p className='mt-16 font-medium text-swirl-800'>
-            New posts are on the way.
-          </p>
+          <p className='mt-16 font-medium text-swirl-800'>{messages.site.blog.empty}</p>
         )}
 
         {featured && (
@@ -67,9 +77,7 @@ export default async function BlogPage({
               sizes='(min-width: 768px) 600px, 100vw'
             />
             <div>
-              <p className='text-sm text-swirl-700'>
-                {formatPostDate(featured.date)}
-              </p>
+              <p className='text-sm text-swirl-700'>{formatPostDate(featured.date, locale)}</p>
               <h2 className='mt-3 font-display text-3xl leading-tight text-swirl-950 group-hover:text-swirl-700 sm:text-4xl'>
                 {featured.title}
               </h2>
@@ -77,7 +85,7 @@ export default async function BlogPage({
                 {featured.description}
               </p>
               <p className='mt-5 text-sm font-medium text-swirl-950'>
-                Read article →
+                {messages.site.blog.readArticle}
               </p>
             </div>
           </Link>
@@ -86,11 +94,19 @@ export default async function BlogPage({
         {recent.length > 0 && (
           <>
             <h2 className='mt-24 font-display text-3xl font-medium text-swirl-950 sm:text-4xl'>
-              Recent posts
+              {messages.site.blog.recentPosts}
             </h2>
             <div className='mt-10 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3'>
               {recent.map((post) => (
-                <PostCard key={post.slug} post={post} locale={locale} />
+                <PostCard
+                  key={post.slug}
+                  post={post}
+                  locale={locale}
+                  date={formatPostDate(post.date, locale)}
+                  readLabel={translate(messages, 'site.blog.minRead', {
+                    minutes: post.readingMinutes,
+                  })}
+                />
               ))}
             </div>
           </>

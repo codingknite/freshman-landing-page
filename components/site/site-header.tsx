@@ -5,9 +5,10 @@ import Image from 'next/image';
 import React from 'react';
 import { Menu, X } from 'lucide-react';
 import { useI18n } from '@/components/i18n-provider';
+import { LocaleSwitcher } from './locale-switcher';
 
 export function SiteHeader() {
-  const { locale } = useI18n();
+  const { locale, t } = useI18n();
   const [open, setOpen] = React.useState(false);
   const [scrolled, setScrolled] = React.useState(false);
 
@@ -19,9 +20,9 @@ export function SiteHeader() {
   }, []);
 
   const links = [
-    { name: 'Blog', href: `/${locale}/blog` },
-    { name: 'Pricing', href: `/${locale}/pricing` },
-    { name: 'Download', href: `/${locale}/download` },
+    { name: t('site.nav.blog'), href: `/${locale}/blog` },
+    { name: t('site.nav.pricing'), href: `/${locale}/pricing` },
+    { name: t('site.nav.download'), href: `/${locale}/download` },
   ];
 
   return (
@@ -36,15 +37,15 @@ export function SiteHeader() {
         <div className='mx-auto grid h-18 w-full max-w-6xl grid-cols-[1fr_auto] items-center gap-4 px-4 sm:px-6 lg:grid-cols-[1fr_auto_1fr]'>
           <Link
             href={`/${locale}`}
-            aria-label='Freshman home'
+            aria-label={t('site.nav.homeAria')}
             className='w-fit'
           >
             <Image
               src='/freshman-text.png'
-              alt='Freshman'
+              alt={t('site.nav.logoAlt')}
               width={1226}
               height={123}
-              className='h-3.5 w-auto'
+              className='h-[12px] w-auto'
               priority
             />
           </Link>
@@ -61,16 +62,21 @@ export function SiteHeader() {
             ))}
           </div>
 
-          <div className='flex items-center justify-end gap-2'>
+          <div className='flex items-center justify-end gap-3'>
+            <div className='hidden sm:block'>
+              <LocaleSwitcher />
+            </div>
             <Link
               href={`/${locale}/download`}
               className='hidden rounded-full bg-cinder-950 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-cinder-940 sm:inline-flex'
             >
-              Download
+              {t('site.nav.downloadCta')}
             </Link>
             <button
               onClick={() => setOpen(!open)}
-              aria-label={open ? 'Close menu' : 'Open menu'}
+              aria-label={
+                open ? t('site.nav.closeMenu') : t('site.nav.openMenu')
+              }
               aria-expanded={open}
               className='inline-flex size-10 items-center justify-center rounded-full text-swirl-950 lg:hidden'
             >
@@ -93,12 +99,15 @@ export function SiteHeader() {
                 </Link>
               ))}
             </div>
+            <div className='mt-5 sm:hidden'>
+              <LocaleSwitcher onNavigate={() => setOpen(false)} />
+            </div>
             <Link
               href={`/${locale}/download`}
               onClick={() => setOpen(false)}
               className='mt-5 flex justify-center rounded-xl bg-cinder-950 px-4 py-3 text-sm font-medium text-white'
             >
-              Download Freshman
+              {t('site.nav.downloadMobileCta')}
             </Link>
           </div>
         )}

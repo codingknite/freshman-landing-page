@@ -11,12 +11,14 @@ import {
 } from '@/components/site/landing-sections';
 import { Testimonials } from '@/components/site/testimonials';
 import { Faq } from '@/components/site/faq';
-import { landingFaqs, SITE_URL } from '@/lib/site';
-import type { Locale } from '@/lib/i18n';
-
-const title = 'Freshman: Walk into every exam ready';
-const description =
-  'Freshman builds your study plan, explains anything you are stuck on, and tests you until it sticks. Free on Mac and iPhone.';
+import { SITE_URL } from '@/lib/site';
+import {
+  getDictionary,
+  localeLanguageAlternates,
+  localePath,
+  ogLocales,
+  type Locale,
+} from '@/lib/i18n';
 
 export async function generateMetadata({
   params,
@@ -24,24 +26,34 @@ export async function generateMetadata({
   params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  const messages = getDictionary(locale);
+  const title = messages.site.meta.homeTitle;
+  const description = messages.site.meta.homeDescription;
+
   return {
     title: { absolute: title },
     description,
     openGraph: {
       title,
       description,
-      url: `${SITE_URL}/${locale}`,
+      url: `${SITE_URL}${localePath(locale)}`,
       siteName: 'Freshman',
+      locale: ogLocales[locale],
       images: [{ url: '/v2/hero.png', width: 1536, height: 1024, alt: title }],
       type: 'website',
     },
     twitter: { card: 'summary_large_image', title, description, images: ['/v2/hero.png'] },
-    alternates: { canonical: `${SITE_URL}/${locale}` },
+    alternates: {
+      canonical: `${SITE_URL}${localePath(locale)}`,
+      languages: localeLanguageAlternates(),
+    },
   };
 }
 
 export default async function Home({ params }: { params: Promise<{ locale: Locale }> }) {
   const { locale } = await params;
+  const messages = getDictionary(locale);
+  const { site } = messages;
 
   const structuredData = {
     '@context': 'https://schema.org',
@@ -50,13 +62,13 @@ export default async function Home({ params }: { params: Promise<{ locale: Local
     applicationCategory: 'EducationalApplication',
     operatingSystem: 'macOS, iOS',
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-    description,
+    description: site.meta.homeDescription,
   };
 
   const faqStructuredData = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: landingFaqs.map((faq) => ({
+    mainEntity: site.faq.items.map((faq) => ({
       '@type': 'Question',
       name: faq.question,
       acceptedAnswer: { '@type': 'Answer', text: faq.answer },
@@ -76,13 +88,18 @@ export default async function Home({ params }: { params: Promise<{ locale: Local
       <SiteHeader />
       <main>
         <Hero />
-        <Highlight />
-        <Features locale={locale} />
-        <MobileApp />
-        <Comparison locale={locale} />
-        <Testimonials />
-        <Faq items={landingFaqs} />
-        <FinalCta locale={locale} />
+        <Highlight copy={site.highlight} />
+        <Features locale={locale} copy={site.features} />
+        <MobileApp copy={site.mobileApp} />
+        <Comparison locale={locale} copy={site.comparison} />
+        <Testimonials
+          title={site.testimonials.title}
+          subtitle={site.testimonials.subtitle}
+          items={site.testimonials.items}
+          starsAria={site.nav.starsAria}
+        />
+        <Faq title={site.faq.title} subtitle={site.faq.subtitle} items={site.faq.items} />
+        <FinalCta locale={locale} copy={site.cta} />
       </main>
       <SiteFooter />
     </div>

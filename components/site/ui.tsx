@@ -58,12 +58,15 @@ export function CtaLink({
   );
 }
 
-export function Stars({ className }: { className?: string }) {
+export function Stars({
+  className,
+  ariaLabel = '5 out of 5 stars',
+}: {
+  className?: string;
+  ariaLabel?: string;
+}) {
   return (
-    <div
-      className={cn('flex gap-0.5', className)}
-      aria-label='5 out of 5 stars'
-    >
+    <div className={cn('flex gap-0.5', className)} aria-label={ariaLabel}>
       {Array.from({ length: 5 }).map((_, i) => (
         <Star key={i} className='size-3.5 fill-amber-400 text-amber-400' />
       ))}

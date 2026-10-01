@@ -1,678 +1,422 @@
-import React from 'react';
-import { HeroHeader } from '@/components/header';
 import { Metadata } from 'next';
+import { LegalPage, LocaleLink } from '@/components/site/legal-page';
 
 export const metadata: Metadata = {
   title: 'Freshman Privacy Policy',
-  description:
-    'Privacy Policy for Freshman, a study app by People Who Code LLC',
+  description: 'Privacy Policy for Freshman, a study app by People Who Code LLC',
 };
+
+const serviceProviders = [
+  ['Supabase', 'Sign-in, database and file storage'],
+  ['Fly.io', 'Hosting for our servers'],
+  ['Trigger.dev', 'Background jobs, such as processing uploads and sending reminders'],
+  ['Upstash', 'Rate limiting to protect the Services from abuse'],
+  ['OpenAI', 'AI tutoring, study material generation and live voice sessions'],
+  ['Deepgram', 'Speech-to-text for voice answers and dictation'],
+  ['Resend', 'Sign-in codes, account emails and study reminders'],
+  ['Mixpanel', 'Product analytics in the apps'],
+  ['OneSignal', 'Push notifications'],
+  ['RevenueCat', 'Managing App Store and Google Play subscriptions'],
+  ['Stripe', 'Payments made on desktop or the web'],
+  ['Simple Analytics', 'Cookie-free, privacy-friendly analytics for joinfreshman.com'],
+];
+
+const californiaCategories = [
+  [
+    'Identifiers',
+    'Name, email address, account ID, IP address, push notification ID',
+    'Hosting, sign-in, email, analytics and push providers',
+  ],
+  [
+    'Commercial information',
+    'Plan, billing period, subscription status and purchase history',
+    'Payment and subscription providers',
+  ],
+  [
+    'Internet or other electronic network activity',
+    'How you use the apps and website, device and app information',
+    'Hosting and analytics providers',
+  ],
+  [
+    'Audio information',
+    'Voice audio streamed live during voice sessions and dictation (not recorded)',
+    'AI and speech-to-text providers',
+  ],
+  [
+    'Education-related information',
+    'Education level, exam system, subjects, exam dates, materials, test results and progress',
+    'Hosting and AI providers',
+  ],
+  [
+    'Inferences',
+    'Study preferences, strengths and weak spots drawn from your activity',
+    'Hosting and AI providers',
+  ],
+];
 
 const PrivacyPolicy = () => {
   return (
-    <>
-      <HeroHeader />
-      <div className='min-h-screen bg-background pt-24'>
-        <div className='mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8'>
-          <div className='prose prose-slate dark:prose-invert max-w-none'>
-            <h1 className='mb-6 text-4xl font-bold text-foreground'>
-              Privacy Policy
-            </h1>
-            <p className='mb-4 text-muted-foreground'>
-              Effective as of: August 9, 2025
-            </p>
+    <LegalPage title='Privacy Policy' effectiveDate='October 1, 2026'>
+      <p>
+        This Privacy Policy explains how People Who Code LLC d/b/a Freshman (“Freshman”, “we”,
+        “us” and “our”) collects, uses, shares and protects your personal information when you
+        use Freshman, and the choices and rights you have.
+      </p>
 
-            <p className='mb-6 text-foreground'>
-              This Privacy Notice is designed to help you understand how People
-              Who Code LLC d/b/a Freshman (&ldquo;Freshman&rdquo;, &ldquo;we&rdquo;, &ldquo;us,&rdquo; and &ldquo;our&rdquo;)
-              collects, uses, and shares your personal information and to help
-              you understand and exercise your privacy rights.
-            </p>
+      <h2>The short version</h2>
+      <ul>
+        <li>
+          We collect what we need to run your tutor: your account details, study profile, the
+          materials you upload and your study activity.
+        </li>
+        <li>We do not sell your personal information or use it for targeted advertising.</li>
+        <li>We do not use your content to train AI models.</li>
+        <li>Voice sessions are streamed live and are not recorded.</li>
+        <li>You can delete your account and your data from the app at any time.</li>
+      </ul>
 
-            <p className='mb-6 text-foreground'>
-              We are committed to protecting and respecting your privacy and
-              will use your personal information in accordance with the General
-              Data Protection Regulation (the &ldquo;GDPR&rdquo;), the California Consumer
-              Privacy Act of 2018 (the &ldquo;CCPA&rdquo;), California Privacy Rights Act
-              (the &ldquo;CPRA&rdquo;), and other applicable laws, regulations, and
-              guidelines.
-            </p>
+      <h2>1. Scope</h2>
+      <p>
+        This Privacy Policy applies to the Freshman apps for iPhone and Android, the Freshman
+        desktop app for macOS, Windows and Linux, and our website at joinfreshman.com (together,
+        the “Services”). Your use of the Services is also governed by our{' '}
+        <LocaleLink href='/terms'>Terms of Use</LocaleLink>.
+      </p>
 
-            <h2 className='mt-8 mb-4 text-2xl font-semibold text-foreground'>
-              1. Scope
-            </h2>
-            <p className='mb-6 text-foreground'>
-              This Privacy Notice applies to personal information processed by
-              us on the Freshman mobile app (&ldquo;App&rdquo;) and Freshman website
-              (&ldquo;Site&rdquo;). To make this Privacy Notice easier to read, our mobile
-              app and related offerings are collectively called &ldquo;Services.&rdquo;
-            </p>
+      <h2>2. Information we collect</h2>
+      <h3>2.1 Information you give us</h3>
+      <ul>
+        <li>
+          <strong>Account details:</strong> your email address, first name and, if you add one, a
+          profile photo. If you sign in with Google or Apple, we receive your name and email
+          address from them. Apple may give us a private relay email instead.
+        </li>
+        <li>
+          <strong>Study profile:</strong> your education level, country, exam system, subjects,
+          courses and topics, exam and deadline dates, language, timezone, learning preferences,
+          tutor settings (such as name, voice and instructions) and how you heard about us.
+        </li>
+        <li>
+          <strong>Study materials:</strong> files you upload, such as PDF, Word, PowerPoint and
+          Markdown documents, and images on desktop, plus the text we extract from them.
+        </li>
+        <li>
+          <strong>Tutor conversations and study activity:</strong> your messages to the tutor,
+          your answers to tests and mock exams, and the study plans, guides, mind maps and session
+          summaries created for you.
+        </li>
+        <li>
+          <strong>Voice:</strong> when you use voice tutoring or dictation, audio from your
+          microphone is sent in real time so it can be transcribed and answered. We do not keep
+          recordings of your voice. We keep text transcripts and summaries of your sessions so
+          the tutor can pick up where you left off.
+        </li>
+        <li>
+          <strong>Purchases:</strong> your plan, billing period, subscription status and
+          transaction identifiers from Apple, Google or Stripe. Payments are handled by those
+          providers, and we never receive or store your full payment card details.
+        </li>
+        <li>
+          <strong>Support and feedback:</strong> what you send us by email or in-app feedback,
+          and the reason you give if you delete your account.
+        </li>
+        <li>
+          <strong>License keys:</strong> if your school or organisation gives you a license key,
+          we record that you redeemed it.
+        </li>
+      </ul>
 
-            <h2 className='mt-8 mb-4 text-2xl font-semibold text-foreground'>
-              2. Changes to our Privacy Notice
-            </h2>
-            <p className='mb-6 text-foreground'>
-              We may revise this Privacy Notice from time to time in our sole
-              discretion. If there are any material changes to this Privacy
-              Notice, we will notify you as required by applicable law. You
-              understand and agree that you will be deemed to have accepted the
-              updated Privacy Notice if you continue to use our Services after
-              the new Privacy Notice takes effect. We encourage you to regularly
-              review this Privacy Notice to check for any changes.
-            </p>
+      <h3>2.2 Information collected automatically</h3>
+      <ul>
+        <li>
+          <strong>Usage data:</strong> which features you use, sessions, streaks and progress. In
+          the apps we use Mixpanel for product analytics. During onboarding only, Mixpanel may
+          record a session replay of the screens, with text and images masked.
+        </li>
+        <li>
+          <strong>Device and technical data:</strong> device type, operating system, app version,
+          language, timezone and IP address. We use your IP address for security and rate
+          limiting.
+        </li>
+        <li>
+          <strong>Push notifications:</strong> if you allow notifications, OneSignal gives your
+          device a push identifier so we can send them.
+        </li>
+        <li>
+          <strong>Website:</strong> joinfreshman.com uses Simple Analytics, which does not use
+          cookies, collect personal data or track you across websites.
+        </li>
+        <li>
+          <strong>Cookies and local storage:</strong> we only store what is needed to keep you
+          signed in and remember your preferences. We do not use advertising cookies.
+        </li>
+      </ul>
+      <p>
+        We do not collect your precise location, your contacts or access to your camera.
+      </p>
 
-            <h2 className='mt-8 mb-4 text-2xl font-semibold text-foreground'>
-              3. Personal Information We Collect
-            </h2>
-            <p className='mb-6 text-foreground'>
-              The categories of personal information we collect depend on how
-              you interact with us, our Services, and the requirements of
-              applicable law. We collect information that you provide to us,
-              information we obtain automatically when you use our Services, and
-              information from other sources such as third-party services and
-              organizations, as described below.
-            </p>
+      <h2>3. How we use your information</h2>
+      <ul>
+        <li>
+          <strong>To provide the Services:</strong> building your study plan, tutoring you,
+          generating tests and study materials, tracking your progress and syncing it across your
+          devices.
+        </li>
+        <li>
+          <strong>To communicate with you:</strong> sign-in codes, welcome and billing emails, and
+          study reminders by email or push notification, which you can turn off.
+        </li>
+        <li>
+          <strong>To process payments</strong> and manage your subscription.
+        </li>
+        <li>
+          <strong>To keep the Services safe:</strong> preventing abuse and fraud, rate limiting
+          and enforcing our Terms.
+        </li>
+        <li>
+          <strong>To improve the Services:</strong> understanding how features are used, fixing
+          bugs and measuring the quality and cost of AI responses.
+        </li>
+        <li>
+          <strong>To meet legal obligations</strong> and respond to lawful requests.
+        </li>
+      </ul>
 
-            <h3 className='mt-6 mb-3 text-xl font-medium text-foreground'>
-              3.1 Information You Provide to Us Directly
-            </h3>
-            <p className='mb-6 text-foreground'>
-              We may collect the following personal information that you provide
-              to us:
-            </p>
-            <ul className='mb-6 list-disc pl-6 text-foreground'>
-              <li>
-                <strong>Account Creation:</strong> We may collect information
-                when you create an account, such as your profile name, email
-                address, and Google or Apple profile information.
-              </li>
-              <li>
-                <strong>Messages and Media:</strong> We may collect messages
-                (including voice notes), photos, and videos you share within
-                chats or galleries.
-              </li>
+      <h3>3.1 AI and your content</h3>
+      <p>
+        To answer your questions and create study materials, we send the relevant parts of your
+        materials, messages and voice audio to our AI providers: OpenAI for language and voice,
+        and Deepgram for speech-to-text. They process this data on our behalf under API terms
+        that do not allow them to use it to train their models. We do not use your content to
+        train AI models, whether our own or anyone else’s.
+      </p>
+      <p>
+        AI-generated content is created automatically from your materials and questions. It is
+        not reviewed by a person before you see it.
+      </p>
 
-              <li>
-                <strong>Interactive Features:</strong> We and others who use our
-                Services may collect personal information that you submit or
-                make available through our interactive features (e.g., messages
-                or media you share in chats or galleries). Any information you
-                provide on the public sections of these features will be
-                considered &ldquo;public,&rdquo; unless otherwise required by applicable
-                law, and is not subject to the privacy protections referenced
-                herein.
-              </li>
-              <li>
-                <strong>Purchases:</strong> We may collect personal information
-                and details associated with your purchases, including payment
-                information. Any payments made via our Services are processed by
-                third-party payment processors. We do not directly collect or
-                store any payment card information entered through our Services,
-                but we may receive information associated with your payment card
-                information (e.g., your billing details).
-              </li>
-              <li>
-                <strong>Your Communications with Us:</strong> We may collect
-                personal information, such as name, surname, email address, and
-                other personal data you provide when you register on Freshman
-                (including registration via Google OAuth), request information
-                about our Services, subscribe to receive our newsletter or
-                marketing, request customer or technical support, or otherwise
-                communicate with us.
-              </li>
-              <li>
-                <strong>Surveys:</strong> We may contact you to participate in
-                surveys. If you decide to participate, you may be asked to
-                provide certain information which may include personal
-                information.
-              </li>
-            </ul>
+      <h2>4. How we share your information</h2>
+      <p>
+        We do not sell your personal information, and we do not share it for cross-context
+        behavioural advertising.
+      </p>
+      <h3>4.1 Service providers</h3>
+      <p>
+        We share personal information with service providers that help us run the Services. They
+        may only use it to provide services to us.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Provider</th>
+            <th>What they do for us</th>
+          </tr>
+        </thead>
+        <tbody>
+          {serviceProviders.map(([name, purpose]) => (
+            <tr key={name}>
+              <td>{name}</td>
+              <td>{purpose}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <h3>4.2 Other disclosures</h3>
+      <ul>
+        <li>
+          <strong>Apple and Google:</strong> when you sign in with them or buy a subscription
+          through the App Store or Google Play, they process that information under their own
+          privacy policies:{' '}
+          <a href='https://www.apple.com/legal/privacy/'>Apple Privacy Policy</a> and{' '}
+          <a href='https://policies.google.com/privacy'>Google Privacy Policy</a>.
+        </li>
+        <li>
+          <strong>At your direction:</strong> if you share a study guide or other file using your
+          device’s share sheet, you choose who receives it.
+        </li>
+        <li>
+          <strong>Legal and safety reasons:</strong> when we believe in good faith that it is
+          required by law or legal process, or needed to protect the rights, property or safety
+          of you, us or others.
+        </li>
+        <li>
+          <strong>Business transfers:</strong> if we are involved in a merger, acquisition,
+          financing, reorganisation or sale of assets, your information may be transferred as
+          part of that transaction, subject to this Privacy Policy.
+        </li>
+      </ul>
 
-            <h3 className='mt-6 mb-3 text-xl font-medium text-foreground'>
-              3.2 Information Collected Automatically
-            </h3>
-            <p className='mb-6 text-foreground'>
-              We may collect personal information automatically when you use our
-              Services:
-            </p>
-            <ul className='mb-6 list-disc pl-6 text-foreground'>
-              <li>
-                <strong>Automatic Data Collection:</strong> We may collect
-                certain information automatically when you use our Services,
-                such as your Internet protocol (IP) address, user settings,
-                cookie identifiers, mobile carrier, mobile advertising and other
-                unique identifiers, browser or device information, location
-                information (including approximate location derived from IP
-                address), and metadata about the content you provide (e.g.,
-                location of where a photo or video was taken). We may also
-                automatically collect information regarding your use of our
-                Services, such as pages visited, links clicked, content
-                interacted with, frequency and duration of activities, app usage
-                history, and other information about how you use our Services.
-              </li>
-              <li>
-                <strong>Analytics:</strong> We utilize third-party tools to
-                analyze data that is automatically collected. Among our
-                analytics partners is Amplitude. To gain a comprehensive
-                understanding of how your data is managed, please refer to
-                Amplitude&apos;s Privacy Notice. The analytics data we handle is
-                general and anonymized, processed in a way that prevents any
-                user from being re-identified.
-              </li>
-            </ul>
+      <h2>5. Your choices</h2>
+      <ul>
+        <li>
+          <strong>Notifications and reminders:</strong> turn off push notifications and study
+          reminder emails in the app settings or your device settings. We will still send
+          essential emails, such as sign-in codes and billing notices.
+        </li>
+        <li>
+          <strong>Microphone:</strong> you can deny or remove microphone access in your device
+          settings. Text tutoring still works without it.
+        </li>
+        <li>
+          <strong>Your materials:</strong> you can delete individual materials and subjects in the
+          app.
+        </li>
+        <li>
+          <strong>Delete your account:</strong> use Delete Account in your account settings on
+          mobile or desktop. Deleting your account does not cancel an App Store or Google Play subscription, so
+          please cancel it there first.
+        </li>
+      </ul>
 
-            <h3 className='mt-6 mb-3 text-xl font-medium text-foreground'>
-              3.3 Information Collected from Other Sources
-            </h3>
-            <p className='mb-6 text-foreground'>
-              We may obtain information about you from other sources, including
-              through third-party services and organizations. For example, if
-              you access our Services through a third-party application, such as
-              an app store, a third-party login service, or a social networking
-              site, we may collect information about you from that third-party
-              application that you have made available via your privacy
-              settings.
-            </p>
+      <h2>6. Your rights</h2>
+      <p>Depending on where you live, you may have the right to:</p>
+      <ul>
+        <li>access the personal information we hold about you;</li>
+        <li>correct information that is inaccurate or incomplete;</li>
+        <li>delete your personal information;</li>
+        <li>receive a copy of your information in a portable format;</li>
+        <li>restrict or object to certain processing;</li>
+        <li>withdraw consent where we rely on it; and</li>
+        <li>not be discriminated against for exercising these rights.</li>
+      </ul>
+      <p>
+        To make a request, email us at{' '}
+        <a href='mailto:team@joinfreshman.com'>team@joinfreshman.com</a> from the email address on
+        your account. We may need to verify your identity, and we will respond within the time
+        required by applicable law. You may also use an authorised agent where the law allows.
+      </p>
 
-            <h2 className='mt-8 mb-4 text-2xl font-semibold text-foreground'>
-              4. How We Use Your Information
-            </h2>
-            <p className='mb-6 text-foreground'>
-              We use your information for a variety of business purposes,
-              including to provide our Services, for administrative purposes,
-              and to market our products and Services, as described below.
-            </p>
+      <h2>7. How long we keep your information</h2>
+      <p>
+        We keep your information for as long as your account is active. When you delete your
+        account, we delete your account and profile, uploaded files, conversations and study
+        data, and we ask RevenueCat to erase your subscriber record. We keep:
+      </p>
+      <ul>
+        <li>
+          the feedback you give when deleting your account (including your email, first name,
+          country, plan and reason), so we can improve Freshman;
+        </li>
+        <li>usage and cost records for AI requests, with your account removed from them;</li>
+        <li>billing and tax records we are required by law to keep; and</li>
+        <li>
+          copies in backups for a limited period until they are overwritten in the normal course.
+        </li>
+      </ul>
 
-            <h3 className='mt-6 mb-3 text-xl font-medium text-foreground'>
-              4.1 Provide Our Services
-            </h3>
-            <p className='mb-6 text-foreground'>
-              We use your information to fulfill our contract with you and
-              provide you with our Services, such as:
-            </p>
-            <ul className='mb-6 list-disc pl-6 text-foreground'>
-              <li>
-                Providing our study planning features, notes, tests, and
-                personalized suggestions;
-              </li>
-              <li>Managing your information and account;</li>
-              <li>
-                Providing access to certain areas, functionalities, and features
-                of our Services, such as study materials, notes, and tests;
-              </li>
-              <li>Answering requests for customer or technical support;</li>
-              <li>
-                Communicating with you about your account, activities on our
-                Services, terms of use, privacy notice, and other policy
-                changes;
-              </li>
-              <li>
-                Processing your financial information and other payment methods
-                for Services purchased.
-              </li>
-            </ul>
+      <h2>8. Security</h2>
+      <p>
+        We protect your information with measures such as encryption in transit, access controls
+        and, on desktop, encrypting your sign-in session on your device where your operating
+        system supports it. Your materials are private to your account. No system is completely
+        secure, so we cannot guarantee the security of your information.
+      </p>
 
-            <h3 className='mt-6 mb-3 text-xl font-medium text-foreground'>
-              4.2 Administrative Purposes
-            </h3>
-            <p className='mb-6 text-foreground'>
-              We use your information for various administrative purposes, such
-              as:
-            </p>
-            <ul className='mb-6 list-disc pl-6 text-foreground'>
-              <li>
-                Pursuing our legitimate interests such as direct marketing,
-                research and development, network and information security, and
-                fraud prevention;
-              </li>
-              <li>
-                Detecting security incidents, data breaches, and leakages,
-                protecting against malicious, deceptive, fraudulent, or illegal
-                activity;
-              </li>
-              <li>Measuring interest and engagement in our Services;</li>
-              <li>
-                Improving, upgrading, or enhancing our Services (including
-                safety checks and media optimization);
-              </li>
-              <li>Developing new products and Services;</li>
-              <li>Ensuring internal quality control and safety;</li>
-              <li>Authenticating and verifying individual identities;</li>
-              <li>
-                Debugging to identify and repair errors with our Services;
-              </li>
-              <li>
-                Auditing relating to interactions, transactions, and other
-                compliance activities;
-              </li>
-              <li>Enforcing our agreements and policies;</li>
-              <li>Complying with our legal obligations.</li>
-            </ul>
+      <h2>9. International transfers</h2>
+      <p>
+        We are based in the United States, and our service providers may process your information
+        in the United States and other countries whose data protection laws differ from yours.
+        Where required, we rely on safeguards such as the European Commission’s Standard
+        Contractual Clauses.
+      </p>
 
-            <h3 className='mt-6 mb-3 text-xl font-medium text-foreground'>
-              4.3 Marketing and Advertising our Products and Services
-            </h3>
-            <p className='mb-6 text-foreground'>
-              We may use personal information to tailor and provide you with
-              content and advertisements. We may provide you with these
-              materials as permitted by applicable law. Some of the ways we may
-              market to you include email campaigns, custom audiences
-              advertising, and &ldquo;interest-based&rdquo; or &ldquo;personalized advertising,&rdquo;
-              including through cross-device tracking.
-            </p>
-            <p className='mb-6 text-foreground'>
-              If you have any questions about our marketing practices or if you
-              would like to opt out of the use of your personal information for
-              marketing purposes, you may contact us at any time as set forth in
-              Section 16 (&ldquo;Contact us&rdquo;) below with the subject line &ldquo;Do Not
-              Share My Personal Information for Cross-Context Behavioral
-              Advertising.&rdquo;
-            </p>
+      <h2>10. Children and teens</h2>
+      <p>
+        Freshman is not for children under 13, and we do not knowingly collect personal
+        information from them. If we learn that a child under 13 has created an account, we will
+        delete it.
+      </p>
+      <p>
+        If you are between 13 and 17, you need permission from a parent or guardian to use
+        Freshman. In some countries the age of digital consent is higher (up to 16 in parts of
+        the European Union). Where that applies, a parent or guardian must give consent on your
+        behalf.
+      </p>
+      <p>
+        Parents and guardians can contact us at{' '}
+        <a href='mailto:team@joinfreshman.com'>team@joinfreshman.com</a> to review or delete their
+        child’s information.
+      </p>
 
-            <h3 className='mt-6 mb-3 text-xl font-medium text-foreground'>
-              4.4 Other Purposes
-            </h3>
-            <p className='mb-6 text-foreground'>
-              We also use your information for other purposes as requested by
-              you or as permitted by applicable law:
-            </p>
-            <ul className='mb-6 list-disc pl-6 text-foreground'>
-              <li>
-                <strong>Consent:</strong> We may use personal information for
-                other purposes that are clearly disclosed to you at the time you
-                provide personal information or with your consent.
-              </li>
-              <li>
-                <strong>De-identified and Aggregated Information:</strong> We
-                may use personal information and other information about you to
-                create de-identified and/or aggregated information, such as
-                de-identified demographic information, de-identified location
-                information, or other analyses we create.
-              </li>
-              <li>
-                <strong>Share Content with Friends or Colleagues:</strong> Our
-                Services may offer various tools and functionalities, such as
-                sharing study materials or progress summaries with others.
-              </li>
-            </ul>
+      <h2>11. Notice for California residents</h2>
+      <p>
+        This section applies to California residents under the California Consumer Privacy Act,
+        as amended by the California Privacy Rights Act. In the past 12 months we have collected
+        the categories of personal information below for the purposes described in Section 3, and
+        disclosed them for business purposes to the categories of recipients shown.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Examples</th>
+            <th>Disclosed to</th>
+          </tr>
+        </thead>
+        <tbody>
+          {californiaCategories.map(([category, examples, recipients]) => (
+            <tr key={category}>
+              <td>{category}</td>
+              <td>{examples}</td>
+              <td>{recipients}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <p>
+        We do not sell or share personal information, including that of consumers under 16, and
+        we do not use or disclose sensitive personal information for purposes that would require
+        offering a right to limit. You can exercise your rights as described in Section 6.
+      </p>
 
-            <h2 className='mt-8 mb-4 text-2xl font-semibold text-foreground'>
-              5. How We Disclose Your Information
-            </h2>
-            <p className='mb-6 text-foreground'>
-              We disclose your information to third parties for a variety of
-              business and legal purposes, including to provide our Services, to
-              protect us or others, or in the event of a major business
-              transaction such as a merger, sale, or asset transfer, as
-              described below.
-            </p>
+      <h2>12. Notice for residents of other US states</h2>
+      <p>
+        If you live in a state with a consumer privacy law, such as Virginia, Colorado,
+        Connecticut, Utah or Texas, you may have rights similar to those in Section 6. We do not
+        sell personal information, use it for targeted advertising, or use it for profiling that
+        has legal or similarly significant effects. If we decline your request, you can appeal by
+        replying to our response or emailing{' '}
+        <a href='mailto:team@joinfreshman.com'>team@joinfreshman.com</a> with the subject
+        “Privacy appeal”.
+      </p>
 
-            <h3 className='mt-6 mb-3 text-xl font-medium text-foreground'>
-              5.1 Disclosures to Provide our Services
-            </h3>
-            <p className='mb-6 text-foreground'>
-              The categories of third parties with whom we may share your
-              information are described below:
-            </p>
-            <ul className='mb-6 list-disc pl-6 text-foreground'>
-              <li>
-                <strong>Other Third Parties:</strong> When you use the Services,
-                you may choose to share personal information or content with
-                other third parties via the functionalities of the App, such as
-                study materials and notes.
-              </li>
-              <li>
-                <strong>Service Providers:</strong> We may share your personal
-                information with our third-party service providers who use that
-                information to help us provide our Services, including IT
-                support, hosting, payment processing, customer service, and
-                related services.
-              </li>
-              <li>
-                <strong>Database and Backend Services:</strong> We use Supabase
-                for secure data storage, real-time synchronization, and backend
-                services to power our study features, notes, and media features.
-              </li>
-              <li>
-                <strong>Subscription Management:</strong> We use RevenueCat to
-                manage in-app purchases, subscription billing, and payment
-                processing across iOS and Android platforms.
-              </li>
-              <li>
-                <strong>Authentication Services:</strong> We use Google OAuth
-                and Apple Sign-In for secure account creation and
-                authentication. Please review their respective privacy policies:{' '}
-                <a
-                  href='https://policies.google.com/privacy'
-                  className='text-primary hover:underline'
-                >
-                  Google Privacy Policy
-                </a>{' '}
-                and{' '}
-                <a
-                  href='https://www.apple.com/privacy/'
-                  className='text-primary hover:underline'
-                >
-                  Apple Privacy Policy
-                </a>
-                .
-              </li>
-              <li>
-                <strong>Business Partners:</strong> We may share your personal
-                information with business partners to provide you with a product
-                or service you have requested.
-              </li>
-              <li>
-                <strong>Subsidiaries and Affiliates:</strong> We may share your
-                personal information with members of our corporate family.
-              </li>
-              <li>
-                <strong>Advertising Partners:</strong> We may share your
-                personal information with third-party advertising partners for
-                purposes of delivering personalized advertisements.
-              </li>
-              <li>
-                <strong>APIs/SDKs:</strong> We may use third-party APIs and SDKs
-                as part of the functionality of our Services.
-              </li>
-            </ul>
+      <h2>13. Notice for the EEA, UK and Switzerland</h2>
+      <p>
+        People Who Code LLC is the controller of your personal information. We process it on the
+        following legal bases: to perform our contract with you (providing the Services); our
+        legitimate interests (keeping the Services secure and improving them); your consent (for
+        example, push notifications and microphone access); and to comply with legal obligations.
+      </p>
+      <p>
+        You have the right to lodge a complaint with your local supervisory authority. You can
+        find yours in the{' '}
+        <a href='https://www.edpb.europa.eu/about-edpb/about-edpb/members_en'>
+          list of EU data protection authorities
+        </a>
+        , or contact the{' '}
+        <a href='https://ico.org.uk/make-a-complaint/'>Information Commissioner’s Office</a> in
+        the UK.
+      </p>
 
-            <h3 className='mt-6 mb-3 text-xl font-medium text-foreground'>
-              5.2 Disclosures to Protect Us or Others
-            </h3>
-            <p className='mb-6 text-foreground'>
-              We may access, preserve, and disclose any information we store
-              associated with you to external parties if we, in good faith,
-              believe doing so is required or appropriate to: comply with law
-              enforcement or national security requests and legal process;
-              protect your, our, or others&apos; rights, property, or safety; enforce
-              our policies or contracts; collect amounts owed to us; or assist
-              with an investigation or prosecution of suspected or actual
-              illegal activity.
-            </p>
+      <h2>14. Changes to this Privacy Policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time. We will change the effective date
+        above and, if the changes are material, let you know in the app or by email before they
+        take effect.
+      </p>
 
-            <h3 className='mt-6 mb-3 text-xl font-medium text-foreground'>
-              5.3 Disclosure in the Event of Merger, Sale, or Other Asset
-              Transfers
-            </h3>
-            <p className='mb-6 text-foreground'>
-              If we are involved in a merger, acquisition, financing due
-              diligence, reorganization, bankruptcy, receivership, purchase or
-              sale of assets, or transition of service to another provider, your
-              information may be transferred as part of such a transaction, as
-              permitted by law and/or contract.
-            </p>
-
-            <h2 className='mt-8 mb-4 text-2xl font-semibold text-foreground'>
-              6. Your Privacy Choices and Rights
-            </h2>
-            <h3 className='mt-6 mb-3 text-xl font-medium text-foreground'>
-              6.1 Your Privacy Choices
-            </h3>
-            <p className='mb-6 text-foreground'>
-              The privacy choices you may have about your personal information
-              are determined by applicable law and are described below:
-            </p>
-            <ul className='mb-6 list-disc pl-6 text-foreground'>
-              <li>
-                <strong>Devices:</strong> We may send you push notifications
-                through our App. You may opt out from receiving these push
-                notifications by changing the settings on your mobile device.
-                With your consent, we may also collect precise location-based
-                information via our App. You may opt out of this collection by
-                changing the settings on your mobile device.
-              </li>
-              <li>
-                <strong>&ldquo;Do Not Track&rdquo;:</strong> We do not respond to or honor
-                DNT signals or similar mechanisms transmitted by web browsers.
-              </li>
-              <li>
-                <strong>Cookies and Interest-Based Advertising:</strong> You may
-                stop or restrict the placement of tracking tools on your device
-                or remove them by adjusting your preferences as your browser or
-                device permits. Note that cookie-based opt-outs are not
-                effective on mobile applications.
-              </li>
-            </ul>
-
-            <h3 className='mt-6 mb-3 text-xl font-medium text-foreground'>
-              6.2 Your Privacy Rights
-            </h3>
-            <p className='mb-6 text-foreground'>
-              In accordance with applicable law, you may have the right to:
-            </p>
-            <ul className='mb-6 list-disc pl-6 text-foreground'>
-              <li>Access Personal Information about you;</li>
-              <li>
-                Request Correction of your personal information where it is
-                inaccurate or incomplete;
-              </li>
-              <li>Request Deletion of your personal information;</li>
-              <li>
-                Request the Transfer of your personal data to you or to a third
-                party;
-              </li>
-              <li>
-                Request Restriction of or Object to our processing of your
-                personal information;
-              </li>
-              <li>
-                Withdraw Your Consent to our processing of your personal
-                information.
-              </li>
-            </ul>
-            <p className='mb-6 text-foreground'>
-              If you would like to exercise any of these rights, please contact
-              us as set forth in Section 16 (&ldquo;Contact us&rdquo;) below. We will
-              process such requests in accordance with applicable laws.
-            </p>
-
-            <h2 className='mt-8 mb-4 text-2xl font-semibold text-foreground'>
-              7. Security of Your Information
-            </h2>
-            <p className='mb-6 text-foreground'>
-              We take steps to ensure that your information is treated securely
-              and in accordance with this Privacy Notice. Unfortunately, no
-              system is 100% secure, and we cannot ensure or warrant the
-              security of any information you provide to us. To the fullest
-              extent permitted by applicable law, we do not accept liability for
-              unauthorized disclosure.
-            </p>
-
-            <h2 className='mt-8 mb-4 text-2xl font-semibold text-foreground'>
-              8. International Data Transfers
-            </h2>
-            <p className='mb-6 text-foreground'>
-              Your data may be transferred outside the European Economic Area
-              (EEA) to our group companies or third-party service providers
-              which Freshman engages in other regions (including without
-              limitation the USA), which may have data protection laws that are
-              different from the laws where you live. We ensure that your
-              information is protected by using certified services, signing
-              agreements on protection of personal data, and taking technical
-              measures to secure data.
-            </p>
-
-            <h2 className='mt-8 mb-4 text-2xl font-semibold text-foreground'>
-              9. Retention of Personal Information
-            </h2>
-            <p className='mb-6 text-foreground'>
-              We may store the personal information we collect as described in
-              this Privacy Notice for as long as you use our Services or as
-              necessary to fulfill the purpose(s) for which it was collected.
-              Personal information will be stored on secure servers during the
-              period you have a valid and active account unless you delete such
-              data manually using the App functionality or via a &ldquo;Remove my
-              data&rdquo; button. You may also request us to delete your personal data
-              by contacting us at team@joinfreshman.com.
-            </p>
-
-            <h2 className='mt-8 mb-4 text-2xl font-semibold text-foreground'>
-              10. Supplemental Notice for California Residents
-            </h2>
-            <p className='mb-6 text-foreground'>
-              This Supplemental Notice for California Residents applies to our
-              processing of personal information subject to the CCPA and CPRA.
-              California residents have the right to know what categories of
-              personal information we have collected about them and whether such
-              information was disclosed for a business purpose in the preceding
-              twelve (12) months.
-            </p>
-            <div className='mb-6 overflow-x-auto'>
-              <table className='w-full border border-border'>
-                <thead>
-                  <tr className='bg-muted'>
-                    <th className='border border-border p-2 text-left'>
-                      Category of Personal Information Collected by Freshman
-                    </th>
-                    <th className='border border-border p-2 text-left'>
-                      Categories of Third Parties Personal Information is
-                      Disclosed to for a Business Purpose
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className='border border-border p-2'>Identifiers</td>
-                    <td className='border border-border p-2'>
-                      Service providers, Other users or third parties you share
-                      with, Advertising partners
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className='border border-border p-2'>
-                      Personal information categories listed in Cal. Civ. Code §
-                      1798.80(e)
-                    </td>
-                    <td className='border border-border p-2'>
-                      Service providers, Other users or third parties you share
-                      with
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className='border border-border p-2'>
-                      Commercial information
-                    </td>
-                    <td className='border border-border p-2'>
-                      Service providers, Other users or third parties you share
-                      with
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className='border border-border p-2'>
-                      Internet or other electronic network activity
-                    </td>
-                    <td className='border border-border p-2'>
-                      Service providers, Other users or third parties you share
-                      with, Advertising partners
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className='border border-border p-2'>
-                      Geolocation data
-                    </td>
-                    <td className='border border-border p-2'>
-                      Service providers, Other users or third parties you share
-                      with, Advertising partners
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className='border border-border p-2'>
-                      Inferences drawn from other personal information
-                    </td>
-                    <td className='border border-border p-2'>
-                      Service providers, Other users or third parties you share
-                      with, Advertising partners
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <h2 className='mt-8 mb-4 text-2xl font-semibold text-foreground'>
-              11. Supplemental Notice for Nevada Residents
-            </h2>
-            <p className='mb-6 text-foreground'>
-              If you are a resident of Nevada, you have the right to opt-out of
-              the sale of certain personal information. You can exercise this
-              right by contacting us at team@joinfreshman.com with the subject
-              line &ldquo;Nevada Do Not Sell Request.&rdquo;
-            </p>
-
-            <h2 className='mt-8 mb-4 text-2xl font-semibold text-foreground'>
-              12. Supplemental Notice for Virginia Residents
-            </h2>
-            <p className='mb-6 text-foreground'>
-              Under the Virginia Consumer Data Protection Act, you may request
-              us to exercise your right to access, correct, or delete your
-              personal data, or to opt out of the processing of personal data
-              for targeted advertising or profiling.
-            </p>
-
-            <h2 className='mt-8 mb-4 text-2xl font-semibold text-foreground'>
-              13. Children&apos;s Information
-            </h2>
-            <p className='mb-6 text-foreground'>
-              The Services are not directed to children under 16, and we do not
-              knowingly collect personal information from children. If you learn
-              that your child has provided us with personal information without
-              your consent, please contact us at team@joinfreshman.com.
-            </p>
-
-            <h2 className='mt-8 mb-4 text-2xl font-semibold text-foreground'>
-              14. Third-Party Websites/Applications
-            </h2>
-            <p className='mb-6 text-foreground'>
-              The Services may contain links to other websites/applications. We
-              encourage our users to read the privacy policies of each website
-              and application with which they interact.
-            </p>
-
-            <h2 className='mt-8 mb-4 text-2xl font-semibold text-foreground'>
-              15. Supervisory Authority
-            </h2>
-            <p className='mb-6 text-foreground'>
-              If you reside in the European Economic Area, Switzerland, or the
-              United Kingdom, you have the right to lodge a complaint with a
-              supervisory authority. The full list of authorities is available
-              at:{' '}
-              <a
-                href='https://digital-strategy.ec.europa.eu/en/library/list-personal-data-protection-competent-authorities'
-                className='text-primary hover:underline'
-              >
-                EU Data Protection Authorities
-              </a>
-              .
-            </p>
-
-            <h2 className='mt-8 mb-4 text-2xl font-semibold text-foreground'>
-              16. Contact Us
-            </h2>
-            <p className='mb-6 text-foreground'>
-              People Who Code LLC is the controller of your personal
-              information. If you have any questions about our privacy practices
-              or this Privacy Notice, or to exercise your rights, please contact
-              us at:
-            </p>
-            <p className='mb-6 text-foreground'>
-              People Who Code LLC
-              <br />
-              447 Broadway, 10th Floor
-              <br />
-              New York, NY 10013, United States
-              <br />
-              Email:{' '}
-              <a
-                href='mailto:team@joinfreshman.com'
-                className='text-primary hover:underline'
-              >
-                team@joinfreshman.com
-              </a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </>
+      <h2>15. Contact us</h2>
+      <p>If you have questions about this Privacy Policy or your information, contact us at:</p>
+      <p>
+        People Who Code LLC
+        <br />
+        447 Broadway, 10th Floor
+        <br />
+        New York, NY 10013, United States
+        <br />
+        Email: <a href='mailto:team@joinfreshman.com'>team@joinfreshman.com</a>
+      </p>
+    </LegalPage>
   );
 };
 

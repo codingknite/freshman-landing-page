@@ -12,10 +12,11 @@ type Plan = {
   name: string;
   tagline: string;
   price: Record<Billing, string>;
+  was?: Partial<Record<Billing, string>>;
   billed: Record<Billing, string>;
   cta: string;
   featured?: boolean;
-  features: { label: string; included: boolean }[];
+  features: string[];
 };
 
 const plans: Plan[] = [
@@ -26,47 +27,46 @@ const plans: Plan[] = [
     billed: { monthly: 'Free forever', quarterly: 'Free forever' },
     cta: 'Start free',
     features: [
-      { label: 'Text tutoring, 30 min a day', included: true },
-      { label: 'Voice tutoring, 10-minute trial', included: true },
-      { label: 'A study plan for 1 subject', included: true },
-      { label: 'A quick test, full test and mock exam every day', included: true },
-      { label: 'Mind maps and study guides', included: true },
-      { label: 'Streaks and calendar', included: true },
-      { label: 'Daily revision and nightly quiz', included: false },
-      { label: 'Deep tests and deep-dive study guides', included: false },
-      { label: 'PDF export', included: false },
+      '10-min trial of the voice tutor that quizzes you',
+      'Your daily revision for 1 subject',
+      'Text tutor: 30 min a day',
+      '1 quick test a day, 1 mock exam a week',
+      '3 mind maps and 2 study guides a week',
+      'Study streaks and calendar',
     ],
   },
   {
     name: 'Pro',
     tagline: 'Stay on top of every subject, all term',
     price: { monthly: '$12', quarterly: '$9' },
+    was: { quarterly: '$12' },
     billed: { monthly: 'Billed monthly', quarterly: '$27 billed every 3 months' },
     cta: 'Get Pro',
     featured: true,
     features: [
-      { label: 'Unlimited text tutoring', included: true },
-      { label: 'Daily revision and nightly quiz', included: true },
-      { label: 'Voice tutoring, 60 min a month', included: true },
-      { label: 'Up to 12 subjects', included: true },
-      { label: 'Deep tests and deep-dive study guides', included: true },
-      { label: 'PDF export', included: true },
-      { label: 'Unlimited tests, mind maps and study guides', included: false },
+      '60 min/month of the voice tutor that quizzes you',
+      'Daily revision and quiz across all your subjects',
+      'Unlimited text tutoring',
+      'Up to 30 quick tests a day, 100 full tests and 60 mock exams a month',
+      'Deep tests and deep-dive study guides',
+      'Up to 60 mind maps and 60 study guides a month, PDF export',
+      'Your full results history',
     ],
   },
   {
     name: 'Max',
     tagline: 'For exam season, when every mark counts',
     price: { monthly: '$25', quarterly: '$20' },
+    was: { quarterly: '$25' },
     billed: { monthly: 'Billed monthly', quarterly: '$60 billed every 3 months' },
     cta: 'Get Max',
     features: [
-      { label: 'Everything in Pro', included: true },
-      { label: 'Voice tutoring, 200 min a month', included: true },
-      { label: 'Unlimited tests and mock exams', included: true },
-      { label: 'Unlimited mind maps and study guides', included: true },
-      { label: 'Up to 40 subjects', included: true },
-      { label: 'The highest daily limits on every tool', included: true },
+      'Everything in Pro',
+      '200 min/month of voice tutoring',
+      'Exam mode: an intensive plan for your final 14 days',
+      'Highest limits: up to 12 mock exams and 20 full tests a day',
+      'Up to 40 subjects',
+      'Priority generation at peak times',
     ],
   },
 ];
@@ -81,7 +81,7 @@ const groups: Group[] = [
       { label: 'Subjects', cells: ['1', '12', '40'] },
       { label: 'Material uploads', cells: ['5 a month', '120 a month', '400 a month'] },
       { label: 'New topics', cells: ['2 a week', '80 a month', '200 a month'] },
-      { label: 'Daily revision and nightly quiz', cells: [false, true, true] },
+      { label: 'Daily revision and nightly quiz', cells: [true, true, true] },
       { label: 'Streaks and calendar', cells: [true, true, true] },
     ],
   },
@@ -97,28 +97,16 @@ const groups: Group[] = [
     rows: [
       {
         label: 'Quick tests',
-        cells: [
-          '1 a day',
-          { value: 'Unlimited', note: 'up to 30 a day' },
-          { value: 'Unlimited', note: 'up to 60 a day' },
-        ],
+        cells: ['1 a day', '30 a day', '60 a day'],
       },
       {
         label: 'Full tests',
-        cells: [
-          '1 a day',
-          { value: '100 a month', note: 'up to 12 a day' },
-          { value: 'Unlimited', note: 'up to 20 a day' },
-        ],
+        cells: ['1 a day', { value: '100 a month', note: 'up to 12 a day' }, '20 a day'],
       },
       { label: 'Deep tests', cells: [false, true, true] },
       {
         label: 'Mock exams',
-        cells: [
-          '1 a day',
-          { value: '60 a month', note: 'up to 8 a day' },
-          { value: 'Unlimited', note: 'up to 12 a day' },
-        ],
+        cells: ['1 a week', { value: '60 a month', note: 'up to 8 a day' }, '12 a day'],
       },
     ],
   },
@@ -127,26 +115,18 @@ const groups: Group[] = [
     rows: [
       {
         label: 'Mind maps',
-        cells: [
-          '3 a week',
-          { value: '60 a month', note: 'up to 10 a day' },
-          { value: 'Unlimited', note: 'up to 20 a day' },
-        ],
+        cells: ['3 a week', { value: '60 a month', note: 'up to 10 a day' }, '20 a day'],
       },
       {
         label: 'Mind map quizzes',
-        cells: [
-          '3 a day',
-          { value: 'Unlimited', note: 'up to 40 a day' },
-          { value: 'Unlimited', note: 'up to 100 a day' },
-        ],
+        cells: ['3 a day', '40 a day', '100 a day'],
       },
       {
         label: 'Study guides',
         cells: [
           { value: '2 a week', note: 'standard only' },
           { value: '60 a month', note: 'up to 10 a day' },
-          { value: 'Unlimited', note: 'up to 20 a day' },
+          '20 a day',
         ],
       },
       { label: 'Deep-dive study guides', cells: [false, true, true] },
@@ -243,7 +223,15 @@ export function PricingPlans({ locale }: { locale: string }) {
                 <span className='text-4xl font-semibold tracking-tight text-swirl-950'>
                   {plan.price[billing]}
                 </span>
-                {plan.name !== 'Free' && <span className='text-sm text-swirl-800'>/ month</span>}
+                {plan.name !== 'Free' && (
+                  <span className='text-sm font-medium text-swirl-700'>/ month</span>
+                )}
+                {plan.was?.[billing] && (
+                  <del className='ml-1 text-sm text-swirl-600'>
+                    <span className='sr-only'>Was {plan.was[billing]}</span>
+                    <span aria-hidden='true'>{plan.was[billing]}</span>
+                  </del>
+                )}
               </p>
               <p className='mt-1.5 text-sm text-swirl-800'>{plan.billed[billing]}</p>
             </div>
@@ -263,19 +251,9 @@ export function PricingPlans({ locale }: { locale: string }) {
             </p>
             <ul className='mt-7 space-y-3.5 border-t border-swirl-100 pt-7'>
               {plan.features.map((feature) => (
-                <li
-                  key={feature.label}
-                  className={cn(
-                    'flex items-start gap-3 text-sm',
-                    feature.included ? 'text-swirl-950' : 'text-swirl-400',
-                  )}
-                >
-                  {feature.included ? (
-                    <Check className='mt-0.5 size-4 shrink-0 text-emerald-600' strokeWidth={2.5} />
-                  ) : (
-                    <X className='mt-0.5 size-4 shrink-0 text-swirl-300' strokeWidth={2} />
-                  )}
-                  {feature.label}
+                <li key={feature} className='flex items-start gap-3 text-sm text-swirl-950'>
+                  <Check className='mt-0.5 size-4 shrink-0 text-emerald-600' strokeWidth={2.5} />
+                  {feature}
                 </li>
               ))}
             </ul>
@@ -349,7 +327,6 @@ export function PricingTable() {
         </div>
       )}
       <p className='mt-6 text-center text-xs text-swirl-700'>
-        &ldquo;Unlimited&rdquo; features have a daily fair-use limit, shown under each one.
         Prices and plans may change.
       </p>
     </div>

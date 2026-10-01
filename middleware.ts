@@ -19,7 +19,13 @@ export function middleware(request: NextRequest) {
   const firstSegment = segments[0] ?? '';
 
   if (isSupportedLocale(firstSegment)) {
-    return NextResponse.next();
+    const requestHeaders = new Headers(request.headers);
+    requestHeaders.set('x-locale', firstSegment);
+    const response = NextResponse.next({
+      request: { headers: requestHeaders },
+    });
+    response.headers.set('x-locale', firstSegment);
+    return response;
   }
 
   const url = request.nextUrl.clone();
@@ -30,4 +36,3 @@ export function middleware(request: NextRequest) {
 export const config = {
   matcher: ['/((?!_next/static|_next/image|favicon.ico).*)'],
 };
-

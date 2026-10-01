@@ -5,12 +5,12 @@ import { Minus, Plus } from 'lucide-react';
 import type { Faq as FaqItem } from '@/lib/site';
 
 export function Faq({
-  title = 'Questions, answered.',
-  subtitle = 'The important things to know before you start.',
+  title,
+  subtitle,
   items,
 }: {
-  title?: string;
-  subtitle?: string;
+  title: string;
+  subtitle: string;
   items: FaqItem[];
 }) {
   return (
@@ -22,11 +22,7 @@ export function Faq({
           </h2>
           <p className='mt-4 text-lg font-medium text-swirl-900'>{subtitle}</p>
         </div>
-        <Accordion.Root
-          type='single'
-          collapsible
-          className='border-t border-swirl-200'
-        >
+        <Accordion.Root type='single' collapsible className='border-t border-swirl-200'>
           {items.map((item) => (
             <Accordion.Item
               key={item.question}

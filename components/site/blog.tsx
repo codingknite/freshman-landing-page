@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { formatPostDate, type PostMeta } from '@/lib/blog';
+import type { PostMeta } from '@/lib/blog';
 import { cn } from '@/lib/utils';
 
 export function PostCover({
@@ -31,7 +31,6 @@ export function PostCover({
           className='object-cover transition-transform duration-500 group-hover:scale-[1.03]'
         />
       ) : (
-        // No cover yet: a warm placeholder so the grid never shows a hole.
         <div className='absolute inset-0 flex items-end bg-gradient-to-br from-swirl-100 via-swirl-200 to-swirl-400 p-6'>
           <span className='line-clamp-3 font-display text-2xl leading-tight text-swirl-950/80'>
             {post.title}
@@ -42,7 +41,17 @@ export function PostCover({
   );
 }
 
-export function PostCard({ post, locale }: { post: PostMeta; locale: string }) {
+export function PostCard({
+  post,
+  locale,
+  date,
+  readLabel,
+}: {
+  post: PostMeta;
+  locale: string;
+  date: string;
+  readLabel: string;
+}) {
   return (
     <Link href={`/${locale}/blog/${post.slug}`} className='group block'>
       <PostCover
@@ -56,7 +65,7 @@ export function PostCard({ post, locale }: { post: PostMeta; locale: string }) {
         {post.description}
       </p>
       <p className='mt-3 text-xs font-medium text-swirl-700'>
-        {formatPostDate(post.date)} · {post.readingMinutes} min read
+        {date} · {readLabel}
       </p>
     </Link>
   );

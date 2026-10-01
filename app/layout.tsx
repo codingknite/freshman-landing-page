@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
+import { headers } from 'next/headers';
 import { Geist_Mono } from 'next/font/google';
 import localFont from 'next/font/local';
 import './globals.css';
 import Script from 'next/script';
+import { defaultLocale, isSupportedLocale } from '@/lib/i18n';
 
 // Recoleta: display headings. Satoshi: everything else.
 const recoleta = localFont({
@@ -110,13 +112,17 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const headerLocale = (await headers()).get('x-locale');
+  const locale =
+    headerLocale && isSupportedLocale(headerLocale) ? headerLocale : defaultLocale;
+
   return (
-    <html lang='en'>
+    <html lang={locale}>
       <body
         className={`${satoshi.variable} ${recoleta.variable} ${geistMono.variable} font-sans antialiased`}
       >

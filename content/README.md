@@ -1,8 +1,13 @@
 # Blog content
 
-Posts live in `content/blog/`, one Markdown file per post. The file name is the URL:
-`content/blog/active-recall-study-method.md` is served at `/en/blog/active-recall-study-method`.
-Use lowercase letters, numbers and dashes only.
+Posts live in `content/blog/{locale}/`, one Markdown file per post, per language.
+The file name is the URL slug and stays the same across languages:
+`content/blog/en/active-recall-vs-rereading.md` is served at
+`/en/blog/active-recall-vs-rereading`, and
+`content/blog/es/active-recall-vs-rereading.md` at `/es/blog/active-recall-vs-rereading`.
+
+Supported locales: `en`, `es`, `fr`, `de`. If a locale file is missing, the English
+post is used as a fallback. Use lowercase letters, numbers and dashes only in the slug.
 
 ## Frontmatter
 

@@ -6,7 +6,7 @@ import { Testimonials } from '@/components/site/testimonials';
 import { Faq } from '@/components/site/faq';
 import { SectionHeading } from '@/components/site/ui';
 import { pricingFaqs, SITE_URL } from '@/lib/site';
-import type { Locale } from '@/lib/i18n';
+import { getDictionary, type Locale } from '@/lib/i18n';
 
 const title = 'Pricing';
 const description =
@@ -28,6 +28,7 @@ export async function generateMetadata({
 
 export default async function PricingPage({ params }: { params: Promise<{ locale: Locale }> }) {
   const { locale } = await params;
+  const messages = getDictionary(locale);
 
   return (
     <div className='bg-swirl-50'>
@@ -49,6 +50,8 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
         <Testimonials
           title='Students say it pays for itself in the first week.'
           subtitle='Less time stuck, less time cramming, better results.'
+          items={messages.site.testimonials.items}
+          starsAria={messages.site.nav.starsAria}
         />
         <Faq title='Pricing questions, answered.' subtitle='Everything about plans and billing.' items={pricingFaqs} />
       </main>

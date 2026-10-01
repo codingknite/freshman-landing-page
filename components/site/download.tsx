@@ -4,7 +4,12 @@ import { useSyncExternalStore } from 'react';
 import Image from 'next/image';
 import { Monitor, Smartphone } from 'lucide-react';
 import { APP_STORE_URL } from '@/lib/site';
-import type { DesktopRelease } from '@/lib/desktop-release';
+import {
+  DESKTOP_RELEASES_PAGE,
+  type DesktopRelease,
+} from '@/lib/desktop-release';
+import { trackDesktopDownload, type DesktopPlatform } from '@/lib/analytics';
+import { useI18n } from '@/components/i18n-provider';
 import { cn } from '@/lib/utils';
 
 function AppleLogo() {
@@ -15,11 +20,18 @@ function AppleLogo() {
   );
 }
 
+function WindowsLogo() {
+  return (
+    <svg viewBox='0 0 24 24' aria-hidden className='size-4 fill-current'>
+      <path d='M3 5.3 11.2 4.1v7.4H3zm8.8 8.2v7.5L3 19.7v-6.2zm1.1-9.4L21 3v8.5h-8.1zm8.1 9.6V21l-8.1-1.2v-6.1z' />
+    </svg>
+  );
+}
+
 type Platform = 'mac' | 'ios' | 'windows' | 'android' | 'other';
 
 function detectPlatform(): Platform {
   const ua = navigator.userAgent;
-  // iPadOS reports itself as a Mac; touch support gives it away.
   if (
     /iPhone|iPad|iPod/.test(ua) ||
     (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1)
@@ -34,14 +46,31 @@ function detectPlatform(): Platform {
 
 const subscribeNoop = () => () => {};
 
+/** onClick for a desktop installer link: records which build, from where. */
+function useDownloadTracker(
+  release: DesktopRelease,
+  placement: 'hero' | 'platforms',
+) {
+  const { locale } = useI18n();
+  return (platform: DesktopPlatform, url: string) => () =>
+    trackDesktopDownload({
+      platform,
+      placement,
+      version: release.version,
+      locale,
+      direct: url !== DESKTOP_RELEASES_PAGE,
+    });
+}
+
 const baseButton =
   'inline-flex h-12 items-center justify-center gap-2 rounded-full px-6 text-[15px] font-medium transition-colors';
-const darkButton = `${baseButton} bg-cinder-950 text-white hover:bg-cinder-930`;
+const darkButton = `${baseButton} bg-swirl-980 text-white hover:bg-cinder-970`;
 const lightButton = `${baseButton} border border-swirl-200 bg-white text-cinder-950 hover:bg-swirl-100`;
 const disabledButton = `${baseButton} cursor-not-allowed border border-dashed border-swirl-300 text-swirl-700`;
 
 export function DownloadHero({ release }: { release: DesktopRelease }) {
-  // The server renders the Mac button; the browser swaps in its own platform.
+  const { t } = useI18n();
+  const tracked = useDownloadTracker(release, 'hero');
   const platform = useSyncExternalStore(
     subscribeNoop,
     detectPlatform,
@@ -54,11 +83,10 @@ export function DownloadHero({ release }: { release: DesktopRelease }) {
     <section className='px-4 pt-32 sm:px-6 md:pt-40'>
       <div className='mx-auto max-w-4xl text-center'>
         <h1 className='text-balance font-display text-5xl font-medium leading-[1.04] tracking-tight text-swirl-950 sm:text-6xl'>
-          Download Freshman wherever you study.
+          {t('site.download.heroTitle')}
         </h1>
         <p className='mx-auto mt-6 max-w-2xl text-balance font-medium text-lg leading-relaxed text-swirl-900 sm:text-xl'>
-          Plan on your laptop, revise on your phone. Your subjects, notes and
-          progress stay in sync on every device.
+          {t('site.download.heroSubtitle')}
         </p>
         <div className='mt-9 flex flex-col items-center gap-3'>
           {onMobile ? (
@@ -68,36 +96,53 @@ export function DownloadHero({ release }: { release: DesktopRelease }) {
               rel='noopener noreferrer'
               className={darkButton}
             >
-              <AppleLogo /> Download on the App Store
+              <AppleLogo /> {t('site.download.appStoreCta')}
+            </a>
+          ) : platform === 'windows' ? (
+            <a
+              href={release.windowsUrl}
+              onClick={tracked('windows', release.windowsUrl)}
+              className={darkButton}
+            >
+              <WindowsLogo /> {t('site.download.windowsCta')}
             </a>
           ) : (
-            <a href={release.appleSiliconUrl} className={darkButton}>
-              <AppleLogo /> Download for Mac (Apple Silicon)
+            <a
+              href={release.appleSiliconUrl}
+              onClick={tracked('mac_apple_silicon', release.appleSiliconUrl)}
+              className={darkButton}
+            >
+              <AppleLogo /> {t('site.download.macCta')}
             </a>
           )}
-          <p className='text-[14px] font-medium text-swirl-700'>
-            {platform === 'windows' && 'Freshman for Windows is coming soon. '}
-            {platform === 'android' && 'Freshman for Android is coming soon. '}
-            Free · Set up in 2 minutes
-            {!onMobile && (
+          <p className='text-[14.5px] font-medium text-swirl-800'>
+            {platform === 'android' && `${t('site.download.androidSoon')} `}
+            {t('site.download.freeSetup')}
+            {!onMobile && platform !== 'windows' && (
               <>
                 {' · '}
                 <a
                   href={release.intelUrl}
+                  onClick={tracked('mac_intel', release.intelUrl)}
                   className='underline underline-offset-2 hover:text-swirl-950'
                 >
-                  Intel Mac
+                  {t('site.download.intelMac')}
                 </a>
               </>
             )}
             {release.version && ` · v${release.version}`}
           </p>
+          {platform === 'windows' && (
+            <p className='max-w-md text-balance text-[13px] font-medium text-swirl-600'>
+              {t('site.download.windowsSmartScreen')}
+            </p>
+          )}
         </div>
       </div>
       <div className='mx-auto mt-16 max-w-6xl'>
         <Image
           src='/v2/download-main.png'
-          alt='Freshman on a Mac and an iPhone, showing the same study plan'
+          alt={t('site.download.heroImageAlt')}
           width={2514}
           height={1574}
           priority
@@ -159,41 +204,56 @@ function PlatformRow({
 }
 
 export function DownloadPlatforms({ release }: { release: DesktopRelease }) {
+  const { t } = useI18n();
+  const tracked = useDownloadTracker(release, 'platforms');
+
   return (
     <section className='px-4 py-24 sm:px-6 md:py-32'>
       <div className='mx-auto max-w-5xl space-y-28'>
         <PlatformRow
-          eyebrow='Desktop'
+          eyebrow={t('site.download.desktopEyebrow')}
           icon={<Monitor className='size-3.5' />}
-          title='Your study HQ on desktop.'
-          body='The big screen is where the deep work happens. Upload your notes, build your plan, sit full mock exams and talk things through with your tutor, all without a dozen open tabs.'
+          title={t('site.download.desktopTitle')}
+          body={t('site.download.desktopBody')}
           image='/v2/d1.png'
-          imageAlt='The Freshman desktop app showing a 9-week study plan'
+          imageAlt={t('site.download.desktopImageAlt')}
         >
-          <a href={release.appleSiliconUrl} className={darkButton}>
-            <AppleLogo /> macOS
+          <a
+            href={release.appleSiliconUrl}
+            onClick={tracked('mac_apple_silicon', release.appleSiliconUrl)}
+            className={darkButton}
+          >
+            <AppleLogo /> {t('site.download.macos')}
           </a>
-          <span className={disabledButton} aria-disabled='true'>
-            Windows · coming soon
-          </span>
-          <p className='w-full text-sm font-medium text-swirl-700 mt-2'>
-            Apple Silicon by default ·{' '}
+          <a
+            href={release.windowsUrl}
+            onClick={tracked('windows', release.windowsUrl)}
+            className={lightButton}
+          >
+            <WindowsLogo /> {t('site.download.windows')}
+          </a>
+          <p className='mt-2 w-full text-sm font-medium text-swirl-700'>
+            {t('site.download.appleSiliconDefault')} ·{' '}
             <a
               href={release.intelUrl}
-              className='underline font-semibold underline-offset-2 hover:text-swirl-950'
+              onClick={tracked('mac_intel', release.intelUrl)}
+              className='font-semibold underline underline-offset-2 hover:text-swirl-950'
             >
-              Download for Intel Macs
+              {t('site.download.intelDownload')}
             </a>
+          </p>
+          <p className='w-full text-sm font-medium text-swirl-700'>
+            {t('site.download.windowsSmartScreen')}
           </p>
         </PlatformRow>
 
         <PlatformRow
-          eyebrow='Mobile'
+          eyebrow={t('site.download.mobileEyebrow')}
           icon={<Smartphone className='size-3.5' />}
-          title='Five minutes a day, right in your pocket.'
-          body='Your daily revision, nightly quiz and streak go wherever you go. Turn the bus ride or the lunch queue into study time, and pick up exactly where you left off on your laptop.'
+          title={t('site.download.mobileTitle')}
+          body={t('site.download.mobileBody')}
           image='/v2/d2.png'
-          imageAlt='The Freshman iPhone app showing concepts to review'
+          imageAlt={t('site.download.mobileImageAlt')}
           reverse
         >
           <a
@@ -202,10 +262,10 @@ export function DownloadPlatforms({ release }: { release: DesktopRelease }) {
             rel='noopener noreferrer'
             className={lightButton}
           >
-            <AppleLogo /> App Store
+            <AppleLogo /> {t('site.download.appStore')}
           </a>
           <span className={disabledButton} aria-disabled='true'>
-            Google Play · coming soon
+            {t('site.download.playComingSoon')}
           </span>
         </PlatformRow>
       </div>

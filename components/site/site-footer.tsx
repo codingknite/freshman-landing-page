@@ -5,22 +5,22 @@ import Image from 'next/image';
 import { useI18n } from '@/components/i18n-provider';
 
 export function SiteFooter() {
-  const { locale } = useI18n();
+  const { locale, t } = useI18n();
 
   const columns = [
     {
-      title: 'Explore',
+      title: t('site.footer.explore'),
       links: [
-        { name: 'Blog', href: `/${locale}/blog` },
-        { name: 'Pricing', href: `/${locale}/pricing` },
-        { name: 'Download', href: `/${locale}/download` },
+        { name: t('site.nav.blog'), href: `/${locale}/blog` },
+        { name: t('site.nav.pricing'), href: `/${locale}/pricing` },
+        { name: t('site.nav.download'), href: `/${locale}/download` },
       ],
     },
     {
-      title: 'Legal',
+      title: t('site.footer.legal'),
       links: [
-        { name: 'Terms & Conditions', href: `/${locale}/terms` },
-        { name: 'Privacy Policy', href: `/${locale}/privacy` },
+        { name: t('site.footer.terms'), href: `/${locale}/terms` },
+        { name: t('site.footer.privacy'), href: `/${locale}/privacy` },
       ],
     },
   ];
@@ -32,19 +32,20 @@ export function SiteFooter() {
           <div>
             <Link
               href={`/${locale}`}
-              aria-label='Freshman home'
+              aria-label={t('site.nav.homeAria')}
               className='inline-block'
             >
               <Image
-                src='/freshman-text.png'
-                alt='Freshman'
-                width={1226}
-                height={123}
-                className='h-3 w-auto'
+                src='/freshman-footer.svg'
+                alt={t('site.nav.logoAlt')}
+                width={800}
+                height={352}
+                unoptimized
+                className='h-16 w-auto'
               />
             </Link>
             <p className='mt-6 max-w-sm font-display text-3xl leading-tight text-swirl-950'>
-              Plan it, learn it, remember it. All in one place.
+              {t('site.footer.tagline')}
             </p>
           </div>
 
@@ -70,7 +71,7 @@ export function SiteFooter() {
         </div>
 
         <div className='mt-16 border-t border-swirl-200 pt-6 text-xs font-medium text-swirl-800'>
-          © {new Date().getFullYear()} Freshman. All rights reserved.
+          {t('site.footer.copyright', { year: new Date().getFullYear() })}
         </div>
       </div>
     </footer>
