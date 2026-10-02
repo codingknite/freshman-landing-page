@@ -1,13 +1,32 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-satoshi);
   --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-recoleta);
+  --color-swirl-50: #f8f6f4;
+  --color-swirl-100: #f0eae4;
+  --color-swirl-200: #dfd3c9;
+  --color-swirl-300: #cab6a7;
+  --color-swirl-400: #b59582;
+  --color-swirl-500: #a57d6a;
+  --color-swirl-600: #986d5e;
+  --color-swirl-700: #7f594f;
+  --color-swirl-800: #684a44;
+  --color-swirl-900: #553e39;
+  --color-swirl-950: #2d201d;
+  --color-swirl-960: #241916;
+  --color-swirl-970: #1c1311;
+  --color-swirl-980: #120d0b;
+  --color-cinder-930: #16192c;
+  --color-cinder-940: #101220;
+  --color-cinder-950: #0a0b14;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);

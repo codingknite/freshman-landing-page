@@ -1,7 +1,13 @@
 'use client';
 
 import React, { createContext, useContext, useMemo } from 'react';
-import { defaultLocale, getDictionary, type Locale, type Messages } from '@/lib/i18n';
+import {
+  defaultLocale,
+  getDictionary,
+  translate,
+  type Locale,
+  type Messages,
+} from '@/lib/i18n';
 
 type I18nContextValue = {
   locale: Locale;
@@ -32,20 +38,8 @@ export function useI18n() {
       messages: getDictionary(defaultLocale),
     } satisfies I18nContextValue);
 
-  const t = (path: string): string => {
-    const value = path.split('.').reduce<unknown>((acc, key) => {
-      if (acc && typeof acc === 'object' && key in acc) {
-        return (acc as Record<string, unknown>)[key];
-      }
-      return undefined;
-    }, effectiveContext.messages);
-
-    if (typeof value === 'string') {
-      return value;
-    }
-
-    return path;
-  };
+  const t = (path: string, vars?: Record<string, string | number>): string =>
+    translate(effectiveContext.messages, path, vars);
 
   return {
     locale: effectiveContext.locale,
@@ -53,4 +47,3 @@ export function useI18n() {
     t,
   };
 }
-
