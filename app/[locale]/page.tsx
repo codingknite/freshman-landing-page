@@ -39,10 +39,10 @@ export async function generateMetadata({
       url: `${SITE_URL}${localePath(locale)}`,
       siteName: 'Freshman',
       locale: ogLocales[locale],
-      images: [{ url: '/v2/hero.png', width: 1536, height: 1024, alt: title }],
+      images: [{ url: '/og-image.png', width: 1200, height: 630, alt: title }],
       type: 'website',
     },
-    twitter: { card: 'summary_large_image', title, description, images: ['/v2/hero.png'] },
+    twitter: { card: 'summary_large_image', title, description, images: ['/og-image.png'] },
     alternates: {
       canonical: `${SITE_URL}${localePath(locale)}`,
       languages: localeLanguageAlternates(),
