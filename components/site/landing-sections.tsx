@@ -47,7 +47,13 @@ const featureImages = [
   '/v2/feat6.png',
 ];
 
-export function Features({ locale, copy }: { locale: string; copy: Site['features'] }) {
+export function Features({
+  locale,
+  copy,
+}: {
+  locale: string;
+  copy: Site['features'];
+}) {
   return (
     <section className='bg-swirl-50 px-4 py-24 sm:px-6 md:py-32'>
       <SectionHeading title={copy.title} subtitle={copy.subtitle} />
@@ -102,7 +108,13 @@ function GooglePlayMark({ className }: { className?: string }) {
   );
 }
 
-export function MobileApp({ locale, copy }: { locale: string; copy: Site['mobileApp'] }) {
+export function MobileApp({
+  locale,
+  copy,
+}: {
+  locale: string;
+  copy: Site['mobileApp'];
+}) {
   return (
     <section className='bg-swirl-100/60 px-4 py-24 sm:px-6 md:py-28'>
       <div className='mx-auto grid max-w-6xl items-center gap-14 md:grid-cols-2'>
@@ -122,7 +134,10 @@ export function MobileApp({ locale, copy }: { locale: string; copy: Site['mobile
                 key={item}
                 className='flex items-start gap-3 text-[16px] font-medium text-swirl-950'
               >
-                <Check className='mt-0.5 size-4 shrink-0 text-swirl-600' strokeWidth={2.5} />
+                <Check
+                  className='mt-0.5 size-4 shrink-0 text-swirl-600'
+                  strokeWidth={2.5}
+                />
                 {item}
               </li>
             ))}
@@ -155,15 +170,21 @@ export function MobileApp({ locale, copy }: { locale: string; copy: Site['mobile
             </div>
           </div>
           <div className='mt-5 flex flex-wrap items-center gap-x-4 gap-y-3'>
-            <CtaLink href={`/${locale}/android`} variant='light' className='h-11 gap-2 px-5'>
+            <CtaLink
+              href={`/${locale}/android`}
+              variant='light'
+              className='h-11 gap-2 px-5'
+            >
               {copy.androidWaitlistCta}
               <ArrowRight className='size-4' />
             </CtaLink>
-            <span className='text-sm font-medium text-swirl-800'>{copy.availableOn}</span>
+            <span className='text-sm font-medium text-swirl-800'>
+              {copy.availableOn}
+            </span>
           </div>
         </div>
         <Image
-          src='/v2/d2.png'
+          src='/v2/d2.webp'
           alt={copy.imageAlt}
           width={1296}
           height={1755}
@@ -212,7 +233,13 @@ function MarkIcon({
   return <X className='size-4 text-red-500' strokeWidth={2} aria-label={no} />;
 }
 
-export function Comparison({ locale, copy }: { locale: string; copy: Site['comparison'] }) {
+export function Comparison({
+  locale,
+  copy,
+}: {
+  locale: string;
+  copy: Site['comparison'];
+}) {
   const lastRow = copy.rows.length + 2;
 
   return (
@@ -264,14 +291,22 @@ export function Comparison({ locale, copy }: { locale: string; copy: Site['compa
                     className='z-20 flex items-center justify-center'
                     style={{ gridColumn: col + 2, gridRow }}
                   >
-                    <MarkIcon value={mark} onDark={col === 0} yes={copy.yes} no={copy.no} />
+                    <MarkIcon
+                      value={mark}
+                      onDark={col === 0}
+                      yes={copy.yes}
+                      no={copy.no}
+                    />
                   </div>
                 ))}
               </div>
             );
           })}
 
-          <div className='z-20 hidden p-2 sm:block' style={{ gridColumn: 2, gridRow: lastRow }}>
+          <div
+            className='z-20 hidden p-2 sm:block'
+            style={{ gridColumn: 2, gridRow: lastRow }}
+          >
             <Link
               href={`/${locale}/download`}
               className='flex h-11 items-center justify-center rounded-full bg-white text-sm font-medium text-cinder-950 transition-colors hover:bg-swirl-100'
@@ -291,7 +326,13 @@ export function Comparison({ locale, copy }: { locale: string; copy: Site['compa
   );
 }
 
-export function FinalCta({ locale, copy }: { locale: string; copy: Site['cta'] }) {
+export function FinalCta({
+  locale,
+  copy,
+}: {
+  locale: string;
+  copy: Site['cta'];
+}) {
   return (
     <section className='bg-swirl-50 px-4 pb-28 pt-8 sm:px-6'>
       <div className='relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] bg-cinder-950 px-6 py-20 text-center'>
@@ -310,7 +351,11 @@ export function FinalCta({ locale, copy }: { locale: string; copy: Site['cta'] }
           <p className='mx-auto mt-5 max-w-lg text-balance text-[17px] font-medium text-white/80'>
             {copy.subtitle}
           </p>
-          <CtaLink href={`/${locale}/download`} variant='light' className='mt-9'>
+          <CtaLink
+            href={`/${locale}/download`}
+            variant='light'
+            className='mt-9'
+          >
             {copy.button}
           </CtaLink>
         </div>

@@ -252,7 +252,7 @@ export function DownloadPlatforms({ release }: { release: DesktopRelease }) {
           icon={<Smartphone className='size-3.5' />}
           title={t('site.download.mobileTitle')}
           body={t('site.download.mobileBody')}
-          image='/v2/d2.png'
+          image='/v2/d2.webp'
           imageAlt={t('site.download.mobileImageAlt')}
           reverse
         >
