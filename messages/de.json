@@ -13,7 +13,9 @@
       "downloadDescription": "Lade Freshman für Mac, Windows und iPhone herunter. Dein Lernplan, deine Notizen und dein Fortschritt bleiben auf jedem Gerät synchron.",
       "downloadOgAlt": "Freshman auf Mac, Windows und iPhone",
       "blogTitle": "Blog",
-      "blogDescription": "Lerntipps, Prüfungsstrategien und Wiederholungsguides vom Freshman-Team. Schneller lernen, mehr behalten, weniger Stress."
+      "blogDescription": "Lerntipps, Prüfungsstrategien und Wiederholungsguides vom Freshman-Team. Schneller lernen, mehr behalten, weniger Stress.",
+      "androidTitle": "Freshman für Android",
+      "androidDescription": "Freshman kommt auf Android. Trag dich in die Warteliste ein und erhalte frühen Zugang, sobald die App bei Google Play erscheint."
     },
     "nav": {
       "blog": "Blog",
@@ -98,7 +100,24 @@
       ],
       "appStoreAlt": "Im App Store laden",
       "availableOn": "Verfügbar auf iPhone",
-      "imageAlt": "Die Freshman-iPhone-App mit farbcodierten Konzepten zum Wiederholen"
+      "imageAlt": "Die Freshman-iPhone-App mit farbcodierten Konzepten zum Wiederholen",
+      "googlePlay": "Google Play",
+      "googlePlayComingSoon": "Demnächst",
+      "googlePlayAria": "Google Play: demnächst verfügbar",
+      "androidWaitlistCta": "Auf die Android-Warteliste"
+    },
+    "androidWaitlist": {
+      "badge": "Freshman für Android",
+      "title": "Freshman kommt auf Android.",
+      "emailPlaceholder": "Deine E-Mail-Adresse",
+      "emailLabel": "E-Mail-Adresse",
+      "cta": "Frühen Zugang sichern",
+      "submitting": "Wird eingetragen…",
+      "success": "Du stehst auf der Liste. Wir melden uns, sobald Freshman bei Google Play erscheint.",
+      "invalidEmail": "Gib eine gültige E-Mail-Adresse ein.",
+      "error": "Etwas ist schiefgelaufen. Bitte versuch es noch einmal.",
+      "iphoneNote": "Auf dem iPhone?",
+      "iphoneLink": "Im App Store laden"
     },
     "comparison": {
       "title": "Eine App statt fünf.",

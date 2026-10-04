@@ -13,7 +13,9 @@
       "downloadDescription": "Descarga Freshman para Mac, Windows e iPhone. Tu plan de estudio, tus apuntes y tu progreso se sincronizan en todos tus dispositivos.",
       "downloadOgAlt": "Freshman en Mac, Windows e iPhone",
       "blogTitle": "Blog",
-      "blogDescription": "Consejos de estudio, estrategias de examen y guías de repaso del equipo de Freshman. Aprende más rápido, recuerda más, estrésate menos."
+      "blogDescription": "Consejos de estudio, estrategias de examen y guías de repaso del equipo de Freshman. Aprende más rápido, recuerda más, estrésate menos.",
+      "androidTitle": "Freshman para Android",
+      "androidDescription": "Freshman llega a Android. Únete a la lista de espera y obtén acceso anticipado cuando esté en Google Play."
     },
     "nav": {
       "blog": "Blog",
@@ -98,7 +100,24 @@
       ],
       "appStoreAlt": "Descargar en el App Store",
       "availableOn": "Disponible en iPhone",
-      "imageAlt": "La app de Freshman para iPhone con conceptos de colores para repasar"
+      "imageAlt": "La app de Freshman para iPhone con conceptos de colores para repasar",
+      "googlePlay": "Google Play",
+      "googlePlayComingSoon": "Próximamente",
+      "googlePlayAria": "Google Play: próximamente",
+      "androidWaitlistCta": "Únete a la lista de espera de Android"
+    },
+    "androidWaitlist": {
+      "badge": "Freshman para Android",
+      "title": "Freshman llega a Android.",
+      "emailPlaceholder": "Tu correo electrónico",
+      "emailLabel": "Correo electrónico",
+      "cta": "Obtener acceso anticipado",
+      "submitting": "Uniéndote…",
+      "success": "Ya estás en la lista. Te escribiremos cuando Freshman llegue a Google Play.",
+      "invalidEmail": "Introduce un correo electrónico válido.",
+      "error": "Algo salió mal. Inténtalo de nuevo.",
+      "iphoneNote": "¿Tienes iPhone?",
+      "iphoneLink": "Descárgalo en la App Store"
     },
     "comparison": {
       "title": "Una app en vez de cinco.",

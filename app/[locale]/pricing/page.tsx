@@ -2,11 +2,12 @@ import { Metadata } from 'next';
 import { SiteHeader } from '@/components/site/site-header';
 import { SiteFooter } from '@/components/site/site-footer';
 import { PricingPlans, PricingTable } from '@/components/site/pricing';
-import { Testimonials } from '@/components/site/testimonials';
+// import { Testimonials } from '@/components/site/testimonials';
 import { Faq } from '@/components/site/faq';
 import { SectionHeading } from '@/components/site/ui';
 import { pricingFaqs, SITE_URL } from '@/lib/site';
-import { getDictionary, type Locale } from '@/lib/i18n';
+// getDictionary is used by the hidden testimonials block; restore it with that.
+import { /* getDictionary, */ type Locale } from '@/lib/i18n';
 
 const title = 'Pricing';
 const description =
@@ -28,7 +29,8 @@ export async function generateMetadata({
 
 export default async function PricingPage({ params }: { params: Promise<{ locale: Locale }> }) {
   const { locale } = await params;
-  const messages = getDictionary(locale);
+  // Restore with the testimonials block below.
+  // const messages = getDictionary(locale);
 
   return (
     <div className='bg-swirl-50'>
@@ -47,12 +49,15 @@ export default async function PricingPage({ params }: { params: Promise<{ locale
         <section className='px-4 py-16 sm:px-6'>
           <PricingTable />
         </section>
+        {/* Hidden until we have enough genuine testimonials; restore this
+            block (and the import above) to bring the section back.
         <Testimonials
           title='Students say it pays for itself in the first week.'
           subtitle='Less time stuck, less time cramming, better results.'
           items={messages.site.testimonials.items}
           starsAria={messages.site.nav.starsAria}
         />
+        */}
         <Faq title='Pricing questions, answered.' subtitle='Everything about plans and billing.' items={pricingFaqs} />
       </main>
       <SiteFooter />

@@ -5,7 +5,7 @@ import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
 import { Star } from 'lucide-react';
 import { useI18n } from '@/components/i18n-provider';
-import { RATING } from '@/lib/site';
+import { APP_STORE_URL, RATING } from '@/lib/site';
 import { CtaLink } from './ui';
 
 export function Hero() {
@@ -21,13 +21,19 @@ export function Hero() {
   return (
     <section className='relative overflow-hidden bg-swirl-50'>
       <div className='relative z-10 mx-auto max-w-4xl px-4 pt-32 text-center sm:px-6 md:pt-36'>
-        <div className='inline-flex items-center gap-2.5 rounded-full border border-swirl-200 bg-white/80 py-1.5 pl-1.5 pr-3.5 shadow-sm'>
+        {/* The rating is the App Store's, so it links to the listing. */}
+        <a
+          href={APP_STORE_URL}
+          target='_blank'
+          rel='noopener noreferrer'
+          className='inline-flex items-center gap-2.5 rounded-full border border-swirl-200 bg-white/80 py-1.5 pl-1.5 pr-3.5 shadow-sm transition-colors hover:border-swirl-300 hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-swirl-600'
+        >
           <div className='flex -space-x-2'></div>
           <span className='text-sm text-swirl-950'>
             {t('site.hero.rating', { score: RATING.score, count: RATING.count })}
           </span>
           <Star className='size-3.5 fill-amber-400 text-amber-400' />
-        </div>
+        </a>
 
         <h1 className='mt-7 text-balance font-display text-5xl font-medium leading-[1.02] tracking-tight text-swirl-950 sm:text-6xl md:text-7xl'>
           {t('site.hero.title')}

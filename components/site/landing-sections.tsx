@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Check, X } from 'lucide-react';
+import { ArrowRight, Check, X } from 'lucide-react';
 import { APP_STORE_URL } from '@/lib/site';
 import type { Messages } from '@/lib/i18n';
 import { CtaLink, SectionHeading } from './ui';
@@ -83,7 +83,26 @@ export function Features({ locale, copy }: { locale: string; copy: Site['feature
   );
 }
 
-export function MobileApp({ copy }: { copy: Site['mobileApp'] }) {
+/** Google Play's mark as a line drawing: the store is not live yet, so no colour. */
+function GooglePlayMark({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      stroke='currentColor'
+      strokeWidth={1.6}
+      strokeLinejoin='round'
+      strokeLinecap='round'
+      aria-hidden='true'
+      className={className}
+    >
+      <path d='M5.6 2.9 19.3 11a1.2 1.2 0 0 1 0 2L5.6 21.1A1.1 1.1 0 0 1 4 20.2V3.8a1.1 1.1 0 0 1 1.6-.9Z' />
+      <path d='M4.4 3.2 13.2 12l-8.8 8.8M13.2 12l3-3.1M13.2 12l3 3.1' />
+    </svg>
+  );
+}
+
+export function MobileApp({ locale, copy }: { locale: string; copy: Site['mobileApp'] }) {
   return (
     <section className='bg-swirl-100/60 px-4 py-24 sm:px-6 md:py-28'>
       <div className='mx-auto grid max-w-6xl items-center gap-14 md:grid-cols-2'>
@@ -108,7 +127,7 @@ export function MobileApp({ copy }: { copy: Site['mobileApp'] }) {
               </li>
             ))}
           </ul>
-          <div className='mt-9 flex items-center gap-4'>
+          <div className='mt-9 flex flex-wrap items-center gap-3'>
             <a href={APP_STORE_URL} target='_blank' rel='noopener noreferrer'>
               <Image
                 src='/apple.svg'
@@ -118,6 +137,28 @@ export function MobileApp({ copy }: { copy: Site['mobileApp'] }) {
                 className='h-11 w-auto'
               />
             </a>
+            {/* Not a link yet: the dashed outline says it is on its way. */}
+            <div
+              role='img'
+              aria-label={copy.googlePlayAria}
+              className='inline-flex h-11 items-center gap-2.5 rounded-[10px] border-[1.5px] border-dashed border-swirl-300 bg-white/40 pl-3 pr-4 text-swirl-800'
+            >
+              <GooglePlayMark className='size-[22px] shrink-0' />
+              <span className='flex flex-col items-start'>
+                <span className='text-[10px] font-semibold uppercase leading-none tracking-[0.12em] text-swirl-600'>
+                  {copy.googlePlayComingSoon}
+                </span>
+                <span className='mt-1 text-[15px] font-semibold leading-none text-swirl-950'>
+                  {copy.googlePlay}
+                </span>
+              </span>
+            </div>
+          </div>
+          <div className='mt-5 flex flex-wrap items-center gap-x-4 gap-y-3'>
+            <CtaLink href={`/${locale}/android`} variant='light' className='h-11 gap-2 px-5'>
+              {copy.androidWaitlistCta}
+              <ArrowRight className='size-4' />
+            </CtaLink>
             <span className='text-sm font-medium text-swirl-800'>{copy.availableOn}</span>
           </div>
         </div>

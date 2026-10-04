@@ -13,7 +13,9 @@
       "downloadDescription": "Download Freshman for Mac, Windows and iPhone. Your study plan, notes and progress stay in sync on every device.",
       "downloadOgAlt": "Freshman on Mac, Windows and iPhone",
       "blogTitle": "Blog",
-      "blogDescription": "Study tips, exam strategies and revision guides from the Freshman team. Learn faster, remember more, stress less."
+      "blogDescription": "Study tips, exam strategies and revision guides from the Freshman team. Learn faster, remember more, stress less.",
+      "androidTitle": "Freshman for Android",
+      "androidDescription": "Freshman is coming to Android. Join the waitlist and get early access when it lands on Google Play."
     },
     "nav": {
       "blog": "Blog",
@@ -98,7 +100,24 @@
       ],
       "appStoreAlt": "Download on the App Store",
       "availableOn": "Available on iPhone",
-      "imageAlt": "The Freshman iPhone app showing colour-coded concepts to review"
+      "imageAlt": "The Freshman iPhone app showing colour-coded concepts to review",
+      "googlePlay": "Google Play",
+      "googlePlayComingSoon": "Coming soon",
+      "googlePlayAria": "Google Play: coming soon",
+      "androidWaitlistCta": "Join the Android waitlist"
+    },
+    "androidWaitlist": {
+      "badge": "Freshman for Android",
+      "title": "Freshman is coming to Android.",
+      "emailPlaceholder": "Your email address",
+      "emailLabel": "Email address",
+      "cta": "Get early access",
+      "submitting": "Joining…",
+      "success": "You're on the list. We'll email you when Freshman lands on Google Play.",
+      "invalidEmail": "Enter a valid email address.",
+      "error": "Something went wrong. Please try again.",
+      "iphoneNote": "On iPhone?",
+      "iphoneLink": "Get it on the App Store"
     },
     "comparison": {
       "title": "One app instead of five.",

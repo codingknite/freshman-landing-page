@@ -4,7 +4,7 @@ import { SITE_URL } from '@/lib/site';
 import { localePath, supportedLocales } from '@/lib/i18n';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticPaths = ['', 'pricing', 'download', 'blog', 'privacy', 'terms'];
+  const staticPaths = ['', 'pricing', 'download', 'android', 'blog', 'privacy', 'terms'];
   const pages: MetadataRoute.Sitemap = supportedLocales.flatMap((locale) =>
     staticPaths.map((path) => ({
       url: `${SITE_URL}${localePath(locale, path)}`,

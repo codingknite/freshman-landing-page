@@ -9,7 +9,7 @@ import {
   Highlight,
   MobileApp,
 } from '@/components/site/landing-sections';
-import { Testimonials } from '@/components/site/testimonials';
+// import { Testimonials } from '@/components/site/testimonials';
 import { Faq } from '@/components/site/faq';
 import { SITE_URL } from '@/lib/site';
 import {
@@ -90,14 +90,17 @@ export default async function Home({ params }: { params: Promise<{ locale: Local
         <Hero />
         <Highlight copy={site.highlight} />
         <Features locale={locale} copy={site.features} />
-        <MobileApp copy={site.mobileApp} />
+        <MobileApp locale={locale} copy={site.mobileApp} />
         <Comparison locale={locale} copy={site.comparison} />
+        {/* Hidden until we have enough genuine testimonials; restore this
+            block (and the import above) to bring the section back.
         <Testimonials
           title={site.testimonials.title}
           subtitle={site.testimonials.subtitle}
           items={site.testimonials.items}
           starsAria={site.nav.starsAria}
         />
+        */}
         <Faq title={site.faq.title} subtitle={site.faq.subtitle} items={site.faq.items} />
         <FinalCta locale={locale} copy={site.cta} />
       </main>

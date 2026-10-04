@@ -13,6 +13,7 @@ import type { Config, Dict, OverridedMixpanel } from 'mixpanel-browser';
 
 export const Events = {
   desktopDownloadClicked: 'web_desktop_download_clicked',
+  androidWaitlistJoined: 'web_android_waitlist_joined',
 } as const;
 
 export type DesktopPlatform = 'mac_apple_silicon' | 'mac_intel' | 'windows';
