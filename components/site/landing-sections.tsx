@@ -363,3 +363,72 @@ export function FinalCta({
     </section>
   );
 }
+
+/** Points students at the ambassador program; same peach band and art as /ambassadors. */
+export function AmbassadorCta({
+  locale,
+  copy,
+}: {
+  locale: string;
+  copy: Site['ambassadorCta'];
+}) {
+  return (
+    <section className='bg-swirl-50 px-4 py-12 sm:px-6 md:py-16'>
+      <div className='relative isolate mx-auto grid max-w-6xl items-center gap-10 overflow-hidden rounded-[2rem] bg-peach-100 px-6 py-14 sm:px-12 md:grid-cols-[1.25fr_.75fr] md:py-16'>
+        <Image
+          src='/ambassador/H0.png'
+          alt=''
+          fill
+          sizes='(min-width: 1152px) 1152px, 100vw'
+          className='-z-10 object-cover opacity-70'
+        />
+        <div>
+          <span className='inline-block -rotate-2 rounded-full bg-white px-3.5 py-1.5 text-[13px] font-bold uppercase tracking-[0.08em] text-cinder-950 shadow-[0_14px_28px_-14px_rgba(45,32,29,.45)]'>
+            {copy.eyebrow}
+          </span>
+          <h2 className='mt-6 max-w-xl text-balance font-display text-4xl font-medium leading-[1.08] tracking-tight text-cinder-950 sm:text-5xl'>
+            {copy.title}
+          </h2>
+          <p className='mt-5 max-w-lg text-[17px] font-medium leading-relaxed text-swirl-900'>
+            {copy.subtitle}
+          </p>
+          <CtaLink
+            href={`/${locale}/ambassadors`}
+            className='group mt-8 h-14 gap-2 px-8 text-[17px] hover:bg-swirl-900'
+          >
+            {copy.button}
+            <ArrowRight className='size-[18px] transition-transform group-hover:translate-x-[3px]' />
+          </CtaLink>
+          <p className='mt-4 text-sm font-medium text-swirl-700'>{copy.micro}</p>
+        </div>
+
+        <div aria-hidden className='relative mx-auto h-[260px] w-full max-w-[340px] md:h-[300px] md:scale-110'>
+          <Image
+            src='/ambassador/H1.png'
+            alt=''
+            width={140}
+            height={140}
+            className='absolute -left-2 top-0 w-[120px] md:w-[140px] -rotate-[8deg]'
+          />
+          <div className='absolute left-1/2 top-1/2 w-[220px] -translate-x-1/2 -translate-y-1/2 rotate-[5deg] rounded-[20px] border-[3px] border-white bg-white p-4 text-left shadow-[0_14px_28px_-14px_rgba(45,32,29,.45)]'>
+            <span className='text-[11px] font-bold uppercase tracking-[0.08em] text-swirl-700'>
+              {copy.codeLabel}
+            </span>
+            <p className='mt-1 font-display text-[34px] font-semibold leading-none tracking-tight text-cinder-950'>
+              FRESHY05
+            </p>
+            <div className='my-3 border-t-2 border-dashed border-swirl-200' />
+            <p className='text-sm font-semibold text-swirl-950'>{copy.codeOffer}</p>
+          </div>
+          <Image
+            src='/ambassador/H2.png'
+            alt=''
+            width={120}
+            height={120}
+            className='absolute -right-2 bottom-0 w-[100px] rotate-6 md:w-[120px]'
+          />
+        </div>
+      </div>
+    </section>
+  );
+}

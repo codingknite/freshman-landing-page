@@ -15,7 +15,10 @@
       "blogTitle": "Blog",
       "blogDescription": "Lerntipps, Prüfungsstrategien und Wiederholungsguides vom Freshman-Team. Schneller lernen, mehr behalten, weniger Stress.",
       "androidTitle": "Freshman für Android",
-      "androidDescription": "Freshman kommt auf Android. Trag dich in die Warteliste ein und erhalte frühen Zugang, sobald die App bei Google Play erscheint."
+      "androidDescription": "Freshman kommt auf Android. Trag dich in die Warteliste ein und erhalte frühen Zugang, sobald die App bei Google Play erscheint.",
+      "ambassadorsTitle": "Freshman Botschafter · 5 $ schenken, 25 % verdienen",
+      "ambassadorsDescription": "Teile Freshman mit Freunden, die Prüfungsstress haben. Sie bekommen 5 $ Rabatt. Du bekommst ein Jahr lang 25 % von dem, was sie zahlen.",
+      "ambassadorsOgAlt": "Freshman Botschafter: Schenk deinen Freunden 5 $, erhalte ein Jahr lang 25 % von dem, was sie zahlen"
     },
     "nav": {
       "blog": "Blog",
@@ -259,7 +262,8 @@
       "legal": "Rechtliches",
       "terms": "Nutzungsbedingungen",
       "privacy": "Datenschutz",
-      "copyright": "© {year} Freshman. Alle Rechte vorbehalten."
+      "copyright": "© {year} Freshman. Alle Rechte vorbehalten.",
+      "ambassadors": "Botschafter"
     },
     "download": {
       "heroTitle": "Lade Freshman herunter, wo immer du lernst.",
@@ -306,6 +310,266 @@
           "name": "Edwina Fay",
           "bio": "Edwina ist COO von Freshman, dem Lernbegleiter, der deine Wiederholung plant, erklärt, wo du festhängst, und dich abfragt, bis es sitzt."
         }
+      }
+    },
+    "ambassadorCta": {
+      "eyebrow": "Freshman Botschafter",
+      "title": "Schenk deinen Freunden 5 $. Erhalte ein Jahr lang 25 % von dem, was sie zahlen.",
+      "subtitle": "Du nutzt Freshman schon? Teile deinen persönlichen Code mit Freunden, die Prüfungsstress haben, und werde jeden Monat bezahlt, in dem sie weiter mit uns lernen.",
+      "button": "Botschafter werden",
+      "micro": "Dauert 1 Minute · Antwort innerhalb von 3 Tagen",
+      "codeLabel": "Dein Code",
+      "codeOffer": "5 $ Rabatt auf die erste Zahlung"
+    },
+    "ambassadors": {
+      "nav": {
+        "cta": "Botschafter werden"
+      },
+      "hero": {
+        "eyebrow": "Freshman Botschafter",
+        "titleLines": [
+          "Schenk deinen Freunden 5 $.",
+          "Erhalte ein Jahr lang 25 %",
+          "von dem, was sie zahlen."
+        ],
+        "lead": "Für alle, die Freshman schon nutzen. Teile deinen persönlichen Code mit Freunden, die Prüfungsstress haben, und werde jeden Monat bezahlt, in dem sie weiter mit uns lernen.",
+        "cta": "Botschafter werden",
+        "micro": "Dauert 1 Minute · Antwort innerhalb von 3 Tagen",
+        "codeLabel": "Dein Code",
+        "codeOffer": "5 $ Rabatt auf die erste Zahlung",
+        "earningsLabel": "Diesen Monat:",
+        "earningsValue": "{value} $"
+      },
+      "benefits": {
+        "title": "Gut für deine Freunde. Gut für dich.",
+        "items": [
+          {
+            "figure": "5 $",
+            "title": "Deine Freunde sparen 5 $",
+            "body": "Jeder Freund, der deinen Code nutzt, bekommt 5 $ Rabatt auf seine erste Zahlung."
+          },
+          {
+            "figure": "25 %",
+            "title": "Du verdienst ein Jahr lang 25 %",
+            "body": "Du bekommst 25 % von allem, was sie in ihren ersten 12 Monaten zahlen, nicht nur einmal."
+          },
+          {
+            "figure": "1 Monat",
+            "title": "Ein Gratismonat Max",
+            "body": "Sobald dein erster Freund zahlt, bekommst du einen Monat Max, unseren besten Plan, geschenkt."
+          }
+        ]
+      },
+      "steps": {
+        "title": "Drei Schritte. Keine Quoten.",
+        "items": [
+          {
+            "title": "In einer Minute bewerben",
+            "body": "Nenn uns deinen Namen, deine E-Mail und deine Schule. Wir antworten innerhalb von 3 Tagen."
+          },
+          {
+            "title": "Code erhalten",
+            "body": "Du bekommst deinen persönlichen Code und Zugang zu deinem Botschafter-Dashboard."
+          },
+          {
+            "title": "Teilen",
+            "body": "Schick ihn an Mitstudierende, poste ihn in deiner Lerngruppe, pack ihn in deine Bio. Deine Freunde geben deinen Code ein, wenn sie auf der Freshman-Website oder in der Desktop-App ein Abo abschließen."
+          }
+        ],
+        "mockFields": [
+          "Dein Name",
+          "du@uni.de",
+          "Deine Schule"
+        ],
+        "mockReply": "Antwort innerhalb von 3 Tagen",
+        "mockCopy": "Kopieren",
+        "mockStats": "Freunde 0 · Verdient 0 $",
+        "mockShare": [
+          "Klassenchat",
+          "Lerngruppe",
+          "Link in Bio"
+        ],
+        "cta": "Botschafter werden"
+      },
+      "deal": {
+        "title": "Der Deal, in klaren Zahlen.",
+        "what": "Was",
+        "details": "Details",
+        "rows": [
+          {
+            "label": "Deine Freunde bekommen",
+            "value": "5 $ Rabatt auf ihre erste Zahlung"
+          },
+          {
+            "label": "Du bekommst",
+            "value": "25 % von dem, was deine Freunde zahlen"
+          },
+          {
+            "label": "Wie lange",
+            "value": "Ihre ersten 12 Monate, solange sie weiter zahlen"
+          },
+          {
+            "label": "Willkommensbonus",
+            "value": "1 Gratismonat Max, sobald dein erster Freund zahlt"
+          },
+          {
+            "label": "Auszahlung",
+            "value": "Monatlich per PayPal oder Wise, sobald du 50 $ verdient hast"
+          },
+          {
+            "label": "Wo Codes gelten",
+            "value": "Beim Bezahlen auf der Freshman-Website und in der Desktop-App (Mac und Windows)"
+          }
+        ],
+        "exampleLabel": "Beispiel",
+        "example": "5 Freunde abonnieren Pro und bleiben ein Jahr. Du verdienst rund 174 $, plus deinen Gratismonat Max.",
+        "lines": [
+          {
+            "label": "Monat 1: 7 $ × 25 % × 5 Freunde",
+            "value": "8,75 $"
+          },
+          {
+            "label": "Monate 2–12: 3 $ × 11 × 5 Freunde",
+            "value": "165 $"
+          }
+        ],
+        "totalLabel": "Gesamt",
+        "total": "173,75 $"
+      },
+      "dashboard": {
+        "title": "Sieh jede Anmeldung und jeden Dollar.",
+        "lead": "Melde dich mit deiner E-Mail in deinem Botschafter-Dashboard an, ohne Passwort. Du siehst, wer deinen Code genutzt hat, wer zahlt und was du diesen Monat verdient hast.",
+        "panelTitle": "Dein Dashboard",
+        "stats": [
+          {
+            "label": "Freunde mit deinem Code",
+            "value": "8"
+          },
+          {
+            "label": "Zahlen gerade",
+            "value": "5"
+          },
+          {
+            "label": "Diesen Monat verdient",
+            "value": "12 $"
+          }
+        ],
+        "friends": [
+          {
+            "name": "Amina",
+            "plan": "Pro",
+            "course": "Biologie",
+            "country": "Kenia",
+            "isFree": false
+          },
+          {
+            "name": "Leo",
+            "plan": "Max",
+            "course": "Jura",
+            "country": "Brasilien",
+            "isFree": false
+          },
+          {
+            "name": "Sara",
+            "plan": "Free",
+            "course": "Medizin",
+            "country": "Ägypten",
+            "isFree": true
+          }
+        ],
+        "caption": "Beispieldaten",
+        "srSummary": "Ein Beispiel-Dashboard für Botschafter: Freunde, die den Code genutzt haben, zahlende Freunde, Verdienst diesen Monat und eine Liste der Freunde mit Plan, Studiengang und Land."
+      },
+      "proof": {
+        "stats": [
+          {
+            "value": "1.000+",
+            "label": "Studierende nutzen Freshman"
+          },
+          {
+            "value": "106",
+            "label": "Länder"
+          },
+          {
+            "value": "",
+            "label": "Probeprüfungen, Lernpläne und ein Live-KI-Tutor, erstellt aus deinem eigenen Lehrplan"
+          }
+        ]
+      },
+      "faq": {
+        "title": "Deine Fragen, beantwortet.",
+        "items": [
+          {
+            "question": "Muss ich zahlender Nutzer sein?",
+            "answer": "Nein. Jedes Freshman-Konto zählt, auch der kostenlose Plan. Du solltest die App nur schon genutzt haben, damit du weißt, was du empfiehlst."
+          },
+          {
+            "question": "Brauche ich viele Follower?",
+            "answer": "Nein. Die meisten Botschafter teilen ihren Code mit Mitstudierenden und Lerngruppen. Das reicht."
+          },
+          {
+            "question": "Wo können meine Freunde den Code nutzen?",
+            "answer": "Beim Bezahlen auf der Freshman-Website oder in der Desktop-App für Mac und Windows. Nach dem Abschluss des Abos können sie sich auf jedem Gerät anmelden, auch auf dem Handy."
+          },
+          {
+            "question": "Wie werden die 25 % berechnet?",
+            "answer": "Auf das, was deine Freunde tatsächlich zahlen. Zahlt ein Freund für seinen ersten Monat Pro 7 $ (nach den 5 $ Rabatt), bekommst du 1,75 $. Ab dem zweiten Monat sind es 3 $ pro Monat. Erstattete Zahlungen zählen nicht."
+          },
+          {
+            "question": "Wann und wie werde ich bezahlt?",
+            "answer": "Monatlich per PayPal oder Wise, sobald dein Guthaben 50 $ erreicht. Kleinere Beträge werden in den nächsten Monat übertragen."
+          },
+          {
+            "question": "Kann ich meinen eigenen Code nutzen?",
+            "answer": "Nein. Dein Code ist nur für deine Freunde."
+          },
+          {
+            "question": "Gibt es ein Limit?",
+            "answer": "Kein Limit, weder bei der Zahl der Freunde, die du werben kannst, noch bei dem, was du verdienen kannst."
+          },
+          {
+            "question": "Was passiert, wenn ein Freund kündigt?",
+            "answer": "Was du schon verdient hast, behältst du. Dein Anteil endet, wenn seine Zahlungen enden."
+          },
+          {
+            "question": "Ich mache Content auf TikTok oder Instagram. Gibt es etwas für mich?",
+            "answer": "Ja. Schau dir das {link} an, das für Aufrufe bezahlt.",
+            "link": "Freshman Creator-Programm"
+          }
+        ],
+        "more": "Noch Fragen?",
+        "contact": "Schreib uns"
+      },
+      "apply": {
+        "title": "Botschafter werden",
+        "leadBefore": "Nutze die E-Mail deines Freshman-Kontos. Noch keins?",
+        "downloadLink": "Lade Freshman",
+        "leadAfter": "zuerst herunter, es ist kostenlos.",
+        "nameLabel": "Name",
+        "namePlaceholder": "Dein Name",
+        "emailLabel": "E-Mail",
+        "emailPlaceholder": "Die E-Mail deines Freshman-Kontos",
+        "schoolLabel": "Schule",
+        "schoolPlaceholder": "Deine Uni oder Schule",
+        "cta": "Bewerbung senden",
+        "submitting": "Wird gesendet…",
+        "termsBefore": "Mit deiner Bewerbung akzeptierst du die",
+        "termsLink": "Botschafter-Bedingungen",
+        "success": "Danke, {name}! Wir schicken deinen Code innerhalb von 3 Tagen an {email}.",
+        "nameError": "Bitte gib deinen Namen ein.",
+        "emailError": "Bitte gib eine gültige E-Mail-Adresse ein.",
+        "schoolError": "Bitte gib deine Schule ein.",
+        "error": "Etwas ist schiefgelaufen. Bitte versuch es noch einmal."
+      },
+      "final": {
+        "title": "Deine Freunde lernen sowieso. Hilf ihnen, es besser zu machen.",
+        "cta": "Botschafter werden",
+        "micro": "Dauert 1 Minute · Antwort innerhalb von 3 Tagen"
+      },
+      "footer": {
+        "terms": "Botschafter-Bedingungen",
+        "privacy": "Datenschutz",
+        "contact": "Kontakt"
       }
     }
   },

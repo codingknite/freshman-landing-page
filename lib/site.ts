@@ -1,6 +1,13 @@
 export const SITE_URL = 'https://joinfreshman.com';
 export const APP_STORE_URL = 'https://apps.apple.com/app/id6755386478';
 
+// Ambassador page links still to confirm (see docs/ambassadors/landing-page-design-spec.md §9).
+// Until the Ambassador terms page exists, the link points at the general Terms.
+export const AMBASSADOR_TERMS_PATH = 'terms';
+export const CONTACT_EMAIL = 'team@joinfreshman.com';
+// Set when the Creator Program page is live; until then the FAQ names it without a link.
+export const CREATOR_PROGRAM_URL: string | null = null;
+
 export const RATING = { score: '4.5', count: '1,000+' };
 
 export type Faq = { question: string; answer: string };

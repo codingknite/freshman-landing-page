@@ -14,6 +14,7 @@ export function SiteFooter() {
         { name: t('site.nav.blog'), href: `/${locale}/blog` },
         { name: t('site.nav.pricing'), href: `/${locale}/pricing` },
         { name: t('site.nav.download'), href: `/${locale}/download` },
+        { name: t('site.footer.ambassadors'), href: `/${locale}/ambassadors` },
       ],
     },
     {

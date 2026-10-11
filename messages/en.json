@@ -15,7 +15,10 @@
       "blogTitle": "Blog",
       "blogDescription": "Study tips, exam strategies and revision guides from the Freshman team. Learn faster, remember more, stress less.",
       "androidTitle": "Freshman for Android",
-      "androidDescription": "Freshman is coming to Android. Join the waitlist and get early access when it lands on Google Play."
+      "androidDescription": "Freshman is coming to Android. Join the waitlist and get early access when it lands on Google Play.",
+      "ambassadorsTitle": "Freshman Ambassadors · Give $5, earn 25%",
+      "ambassadorsDescription": "Share Freshman with friends who stress about exams. They get $5 off. You get 25% of what they pay for a year.",
+      "ambassadorsOgAlt": "Freshman Ambassadors: give your friends $5 off, get 25% of what they pay for a year"
     },
     "nav": {
       "blog": "Blog",
@@ -259,7 +262,8 @@
       "legal": "Legal",
       "terms": "Terms & Conditions",
       "privacy": "Privacy Policy",
-      "copyright": "© {year} Freshman. All rights reserved."
+      "copyright": "© {year} Freshman. All rights reserved.",
+      "ambassadors": "Ambassadors"
     },
     "download": {
       "heroTitle": "Download Freshman wherever you study.",
@@ -307,6 +311,267 @@
           "bio": "Edwina is the COO of Freshman, the study companion that plans your revision, explains what you are stuck on and tests you until it sticks."
         }
       }
+    },
+    "ambassadors": {
+      "nav": {
+        "cta": "Become an ambassador"
+      },
+      "hero": {
+        "eyebrow": "Freshman Ambassadors",
+        "titleLines": [
+          "Give your friends $5 off.",
+          "Get 25% of what",
+          "they pay for a year."
+        ],
+        "lead": "For students who already use Freshman. Share your personal code with friends who stress about exams, and get paid every month they keep studying with us.",
+        "cta": "Become an ambassador",
+        "micro": "Takes 1 minute · We reply within 3 days",
+        "codeLabel": "Your code",
+        "code": "FRESHY05",
+        "codeOffer": "$5 off your first payment",
+        "earningsLabel": "This month:",
+        "earningsValue": "${value}"
+      },
+      "benefits": {
+        "title": "Good for your friends. Good for you.",
+        "items": [
+          {
+            "figure": "$5",
+            "title": "Your friends save $5",
+            "body": "Every friend who uses your code gets $5 off their first payment."
+          },
+          {
+            "figure": "25%",
+            "title": "You earn 25% for a year",
+            "body": "You get 25% of everything they pay for their first 12 months, not just once."
+          },
+          {
+            "figure": "1 month",
+            "title": "A free month of Max",
+            "body": "When your first friend pays, you get a month of Max, our top plan, on us."
+          }
+        ]
+      },
+      "steps": {
+        "title": "Three steps. No quotas.",
+        "items": [
+          {
+            "title": "Apply in a minute",
+            "body": "Tell us your name, email and school. We reply within 3 days."
+          },
+          {
+            "title": "Get your code",
+            "body": "You'll receive your personal code and access to your ambassador dashboard."
+          },
+          {
+            "title": "Share it",
+            "body": "Send it to classmates, post it in your study group, put it in your bio. Friends enter your code when they subscribe on the Freshman website or desktop app."
+          }
+        ],
+        "mockFields": [
+          "Your name",
+          "you@school.edu",
+          "Your school"
+        ],
+        "mockReply": "We reply within 3 days",
+        "mockCopy": "Copy",
+        "mockStats": "Friends 0 · Earned $0",
+        "mockShare": [
+          "Class group chat",
+          "Study group",
+          "Link in bio"
+        ],
+        "cta": "Become an ambassador"
+      },
+      "deal": {
+        "title": "The deal, in plain numbers.",
+        "what": "What",
+        "details": "Details",
+        "rows": [
+          {
+            "label": "Your friends get",
+            "value": "$5 off their first payment"
+          },
+          {
+            "label": "You get",
+            "value": "25% of what your friends pay"
+          },
+          {
+            "label": "For how long",
+            "value": "Their first 12 months, for as long as they keep paying"
+          },
+          {
+            "label": "Welcome bonus",
+            "value": "1 free month of Max when your first friend pays"
+          },
+          {
+            "label": "Payout",
+            "value": "Monthly, via PayPal or Wise, once you've earned $50"
+          },
+          {
+            "label": "Where codes work",
+            "value": "At checkout on the Freshman website and desktop app (Mac and Windows)"
+          }
+        ],
+        "exampleLabel": "Example",
+        "example": "5 friends subscribe to Pro and stay for a year. You earn about $174, plus your free month of Max.",
+        "lines": [
+          {
+            "label": "Month 1: $7 × 25% × 5 friends",
+            "value": "$8.75"
+          },
+          {
+            "label": "Months 2–12: $3 × 11 × 5 friends",
+            "value": "$165"
+          }
+        ],
+        "totalLabel": "Total",
+        "total": "$173.75"
+      },
+      "dashboard": {
+        "title": "See every sign-up and every dollar.",
+        "lead": "Log in to your ambassador dashboard with your email, no password needed. You'll see who used your code, who's paying, and what you've earned this month.",
+        "panelTitle": "Your dashboard",
+        "stats": [
+          {
+            "label": "Friends who used your code",
+            "value": "8"
+          },
+          {
+            "label": "Paying now",
+            "value": "5"
+          },
+          {
+            "label": "Earned this month",
+            "value": "$12"
+          }
+        ],
+        "friends": [
+          {
+            "name": "Amina",
+            "plan": "Pro",
+            "course": "Biology",
+            "country": "Kenya",
+            "isFree": false
+          },
+          {
+            "name": "Leo",
+            "plan": "Max",
+            "course": "Law",
+            "country": "Brazil",
+            "isFree": false
+          },
+          {
+            "name": "Sara",
+            "plan": "Free",
+            "course": "Medicine",
+            "country": "Egypt",
+            "isFree": true
+          }
+        ],
+        "caption": "Example data",
+        "srSummary": "An example ambassador dashboard showing friends who used the code, friends paying now, earnings this month, and a list of friends with their plan, course and country."
+      },
+      "proof": {
+        "stats": [
+          {
+            "value": "1,000+",
+            "label": "students use Freshman"
+          },
+          {
+            "value": "106",
+            "label": "countries"
+          },
+          {
+            "value": "",
+            "label": "Mock exams, study plans and a live AI tutor built from your own syllabus"
+          }
+        ]
+      },
+      "faq": {
+        "title": "Questions, answered.",
+        "items": [
+          {
+            "question": "Do I need to be a paying user?",
+            "answer": "No. Any Freshman account works, including the free plan. You just need to have used the app, so you know what you're recommending."
+          },
+          {
+            "question": "Do I need a lot of followers?",
+            "answer": "No. Most ambassadors share with classmates and study groups. That's enough."
+          },
+          {
+            "question": "Where can my friends use the code?",
+            "answer": "At checkout on the Freshman website or the desktop app for Mac and Windows. Once they've subscribed, they can log in on any device, including their phone."
+          },
+          {
+            "question": "How is the 25% calculated?",
+            "answer": "On what your friends actually pay. If a friend pays $7 for their first month of Pro (after the $5 off), you get $1.75. From month two, it's $3 a month. Refunded payments don't count."
+          },
+          {
+            "question": "When and how do I get paid?",
+            "answer": "Monthly, via PayPal or Wise, once your balance reaches $50. Smaller balances roll over to the next month."
+          },
+          {
+            "question": "Can I use my own code?",
+            "answer": "No. Your code is for friends only."
+          },
+          {
+            "question": "Is there a limit?",
+            "answer": "No limit on how many friends you can refer or how much you can earn."
+          },
+          {
+            "question": "What happens if a friend cancels?",
+            "answer": "You keep what you've already earned. Your share stops when their payments stop."
+          },
+          {
+            "question": "I make content on TikTok or Instagram. Is there something for me?",
+            "answer": "Yes. Check out the {link}, which pays for views.",
+            "link": "Freshman Creator Program"
+          }
+        ],
+        "more": "Have other questions?",
+        "contact": "Contact us"
+      },
+      "apply": {
+        "title": "Become an ambassador",
+        "leadBefore": "Use the email of your Freshman account. Don't have one yet?",
+        "downloadLink": "Download Freshman",
+        "leadAfter": "first, it's free.",
+        "nameLabel": "Name",
+        "namePlaceholder": "Your name",
+        "emailLabel": "Email",
+        "emailPlaceholder": "The email you use for Freshman",
+        "schoolLabel": "School",
+        "schoolPlaceholder": "Your university or school",
+        "cta": "Send my application",
+        "submitting": "Sending…",
+        "termsBefore": "By applying, you agree to the",
+        "termsLink": "Ambassador terms",
+        "success": "Thanks, {name}! We'll send your code to {email} within 3 days.",
+        "nameError": "Please enter your name.",
+        "emailError": "Please enter a valid email.",
+        "schoolError": "Please enter your school.",
+        "error": "Something went wrong. Please try again."
+      },
+      "final": {
+        "title": "Your friends are studying anyway. Help them do it better.",
+        "cta": "Become an ambassador",
+        "micro": "Takes 1 minute · We reply within 3 days"
+      },
+      "footer": {
+        "terms": "Ambassador terms",
+        "privacy": "Privacy",
+        "contact": "Contact"
+      }
+    },
+    "ambassadorCta": {
+      "eyebrow": "Freshman Ambassadors",
+      "title": "Give your friends $5 off. Get 25% of what they pay for a year.",
+      "subtitle": "Already using Freshman? Share your personal code with friends who stress about exams, and get paid every month they keep studying with us.",
+      "button": "Become an ambassador",
+      "micro": "Takes 1 minute · We reply within 3 days",
+      "codeLabel": "Your code",
+      "codeOffer": "$5 off your first payment"
     }
   },
   "share": {

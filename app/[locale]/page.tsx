@@ -3,6 +3,7 @@ import { SiteHeader } from '@/components/site/site-header';
 import { SiteFooter } from '@/components/site/site-footer';
 import { Hero } from '@/components/site/hero';
 import {
+  AmbassadorCta,
   Comparison,
   Features,
   FinalCta,
@@ -101,6 +102,7 @@ export default async function Home({ params }: { params: Promise<{ locale: Local
           starsAria={site.nav.starsAria}
         />
         */}
+        <AmbassadorCta locale={locale} copy={site.ambassadorCta} />
         <Faq title={site.faq.title} subtitle={site.faq.subtitle} items={site.faq.items} />
         <FinalCta locale={locale} copy={site.cta} />
       </main>
