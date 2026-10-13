@@ -426,7 +426,33 @@
           }
         ],
         "totalLabel": "Total",
-        "total": "$173.75"
+        "total": "$173.75",
+        "calculator": {
+          "open": "Calculate your earnings",
+          "label": "Your estimate",
+          "intro": "Add the friends you think will subscribe, and how long they stay.",
+          "friendsLabel": "Friends on each plan",
+          "plans": {
+            "proMonthly": "Pro, monthly",
+            "proQuarterly": "Pro, every 3 months",
+            "maxMonthly": "Max, monthly",
+            "maxQuarterly": "Max, every 3 months"
+          },
+          "perMonth": "{price} a month",
+          "perQuarter": "{price} every 3 months",
+          "countLabel": "Friends on {plan}",
+          "add": "Add a friend on {plan}",
+          "remove": "Remove a friend on {plan}",
+          "stayLabel": "How long they stay",
+          "oneMonth": "1 month",
+          "months": "{count} months",
+          "line": "{count} × {plan}",
+          "totalLabel": "You earn",
+          "bonus": "Plus a free month of Max when your first friend pays.",
+          "note": "Counts each friend's first 12 months. Paid monthly once you've earned $50.",
+          "back": "Back to the example",
+          "money": "${amount}"
+        }
       },
       "dashboard": {
         "title": "See every sign-up and every dollar.",

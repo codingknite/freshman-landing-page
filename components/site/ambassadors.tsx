@@ -7,12 +7,14 @@ import { useEffect, useRef, useState } from 'react';
 import { motion, useInView, useReducedMotion } from 'motion/react';
 import {
   ArrowRight,
+  Calculator,
   Check,
   CheckCircle2,
   ChevronDown,
   Copy,
   TrendingUp,
 } from 'lucide-react';
+import { AmbassadorCalculator } from '@/components/site/ambassador-calculator';
 import { useI18n } from '@/components/i18n-provider';
 import { Events, track } from '@/lib/analytics';
 import {
@@ -603,6 +605,8 @@ function Steps() {
 function Deal() {
   const { messages } = useI18n();
   const copy = messages.site.ambassadors.deal;
+  // The example card turns into a calculator, and back.
+  const [calculating, setCalculating] = useState(false);
 
   return (
     <section className='px-4 pb-[72px] sm:px-6 md:pb-28'>
@@ -661,6 +665,10 @@ function Deal() {
                 size={120}
                 className='absolute -right-3 -top-12 w-[110px] rotate-6 sm:w-[120px]'
               />
+              {calculating ? (
+                <AmbassadorCalculator onBack={() => setCalculating(false)} />
+              ) : (
+                <>
               <p className='text-xs font-bold uppercase tracking-[0.08em] text-swirl-700'>
                 {copy.exampleLabel}
               </p>
@@ -688,6 +696,16 @@ function Deal() {
                   </dd>
                 </div>
               </dl>
+              <button
+                type='button'
+                onClick={() => setCalculating(true)}
+                className='group mt-6 inline-flex h-11 items-center gap-2 rounded-full bg-cinder-950 px-5 text-[15px] font-semibold text-white transition-colors hover:bg-swirl-900'
+              >
+                <Calculator className='size-4' />
+                {copy.calculator.open}
+              </button>
+                </>
+              )}
             </div>
           </Reveal>
         </div>

@@ -434,7 +434,33 @@
           }
         ],
         "totalLabel": "Gesamt",
-        "total": "173,75 $"
+        "total": "173,75 $",
+        "calculator": {
+          "open": "Berechne deinen Verdienst",
+          "label": "Deine Schätzung",
+          "intro": "Füge die Freunde hinzu, die wohl ein Abo abschließen, und wie lange sie bleiben.",
+          "friendsLabel": "Freunde pro Plan",
+          "plans": {
+            "proMonthly": "Pro, monatlich",
+            "proQuarterly": "Pro, alle 3 Monate",
+            "maxMonthly": "Max, monatlich",
+            "maxQuarterly": "Max, alle 3 Monate"
+          },
+          "perMonth": "{price} pro Monat",
+          "perQuarter": "{price} alle 3 Monate",
+          "countLabel": "Freunde mit {plan}",
+          "add": "Einen Freund mit {plan} hinzufügen",
+          "remove": "Einen Freund mit {plan} entfernen",
+          "stayLabel": "Wie lange sie bleiben",
+          "oneMonth": "1 Monat",
+          "months": "{count} Monate",
+          "line": "{count} × {plan}",
+          "totalLabel": "Du verdienst",
+          "bonus": "Plus ein Gratismonat Max, sobald dein erster Freund zahlt.",
+          "note": "Zählt die ersten 12 Monate jedes Freundes. Monatlich ausgezahlt, sobald du 50 $ verdient hast.",
+          "back": "Zurück zum Beispiel",
+          "money": "{amount} $"
+        }
       },
       "dashboard": {
         "title": "Sieh jede Anmeldung und jeden Dollar.",

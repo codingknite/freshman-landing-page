@@ -435,7 +435,33 @@
           }
         ],
         "totalLabel": "Total",
-        "total": "$173,75"
+        "total": "$173,75",
+        "calculator": {
+          "open": "Calcula tus ganancias",
+          "label": "Tu estimación",
+          "intro": "Añade los amigos que crees que se suscribirán y cuánto tiempo se quedan.",
+          "friendsLabel": "Amigos por plan",
+          "plans": {
+            "proMonthly": "Pro, mensual",
+            "proQuarterly": "Pro, cada 3 meses",
+            "maxMonthly": "Max, mensual",
+            "maxQuarterly": "Max, cada 3 meses"
+          },
+          "perMonth": "{price} al mes",
+          "perQuarter": "{price} cada 3 meses",
+          "countLabel": "Amigos en {plan}",
+          "add": "Añadir un amigo en {plan}",
+          "remove": "Quitar un amigo en {plan}",
+          "stayLabel": "Cuánto tiempo se quedan",
+          "oneMonth": "1 mes",
+          "months": "{count} meses",
+          "line": "{count} × {plan}",
+          "totalLabel": "Ganas",
+          "bonus": "Más un mes de Max gratis cuando pague tu primer amigo.",
+          "note": "Cuenta los primeros 12 meses de cada amigo. Se paga cada mes cuando hayas ganado $50.",
+          "back": "Volver al ejemplo",
+          "money": "${amount}"
+        }
       },
       "dashboard": {
         "title": "Ve cada registro y cada dólar.",

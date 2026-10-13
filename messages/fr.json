@@ -434,7 +434,33 @@
           }
         ],
         "totalLabel": "Total",
-        "total": "173,75 $"
+        "total": "173,75 $",
+        "calculator": {
+          "open": "Calcule tes gains",
+          "label": "Ton estimation",
+          "intro": "Ajoute les amis qui pourraient s'abonner, et combien de temps ils restent.",
+          "friendsLabel": "Amis par abonnement",
+          "plans": {
+            "proMonthly": "Pro, mensuel",
+            "proQuarterly": "Pro, tous les 3 mois",
+            "maxMonthly": "Max, mensuel",
+            "maxQuarterly": "Max, tous les 3 mois"
+          },
+          "perMonth": "{price} par mois",
+          "perQuarter": "{price} tous les 3 mois",
+          "countLabel": "Amis sur {plan}",
+          "add": "Ajouter un ami sur {plan}",
+          "remove": "Retirer un ami sur {plan}",
+          "stayLabel": "Combien de temps ils restent",
+          "oneMonth": "1 mois",
+          "months": "{count} mois",
+          "line": "{count} × {plan}",
+          "totalLabel": "Tu gagnes",
+          "bonus": "Plus un mois de Max offert quand ton premier ami paie.",
+          "note": "Compte les 12 premiers mois de chaque ami. Payé chaque mois dès que tu as gagné 50 $.",
+          "back": "Revenir à l'exemple",
+          "money": "{amount} $"
+        }
       },
       "dashboard": {
         "title": "Vois chaque inscription et chaque dollar.",
