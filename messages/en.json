@@ -1,24 +1,24 @@
 {
   "meta": {
-    "termsTitle": "Freshman Terms of Use",
-    "termsDescription": "Terms of Use for Freshman, a study app by People Who Code LLC",
-    "privacyTitle": "Freshman Privacy Policy",
-    "privacyDescription": "Privacy Policy for Freshman, a study app by People Who Code LLC"
+    "termsTitle": "Terms of Use",
+    "termsDescription": "Terms of Use for Freshman AI, a study app by People Who Code LLC",
+    "privacyTitle": "Privacy Policy",
+    "privacyDescription": "Privacy Policy for Freshman AI, a study app by People Who Code LLC"
   },
   "site": {
     "meta": {
-      "homeTitle": "Freshman: Walk into every exam ready",
-      "homeDescription": "Freshman builds your study plan, explains anything you are stuck on, and tests you until it sticks. Free on Mac and iPhone.",
+      "homeTitle": "Freshman AI: Walk into every exam ready",
+      "homeDescription": "Freshman AI builds your study plan, explains anything you are stuck on, and tests you until it sticks. Free on Mac and iPhone.",
       "downloadTitle": "Download",
-      "downloadDescription": "Download Freshman for Mac, Windows and iPhone. Your study plan, notes and progress stay in sync on every device.",
-      "downloadOgAlt": "Freshman on Mac, Windows and iPhone",
+      "downloadDescription": "Download Freshman AI for Mac, Windows and iPhone. Your study plan, notes and progress stay in sync on every device.",
+      "downloadOgAlt": "Freshman AI on Mac, Windows and iPhone",
       "blogTitle": "Blog",
-      "blogDescription": "Study tips, exam strategies and revision guides from the Freshman team. Learn faster, remember more, stress less.",
-      "androidTitle": "Freshman for Android",
-      "androidDescription": "Freshman is coming to Android. Join the waitlist and get early access when it lands on Google Play.",
-      "ambassadorsTitle": "Freshman Ambassadors · Give $5, earn 25%",
-      "ambassadorsDescription": "Share Freshman with friends who stress about exams. They get $5 off. You get 25% of what they pay for a year.",
-      "ambassadorsOgAlt": "Freshman Ambassadors: give your friends $5 off, get 25% of what they pay for a year"
+      "blogDescription": "Study tips, exam strategies and revision guides from the Freshman AI team. Learn faster, remember more, stress less.",
+      "androidTitle": "Freshman AI for Android",
+      "androidDescription": "Freshman AI is coming to Android. Join the waitlist and get early access when it lands on Google Play.",
+      "ambassadorsTitle": "Freshman AI Ambassadors · Give $5, earn 25%",
+      "ambassadorsDescription": "Share Freshman AI with friends who stress about exams. They get $5 off. You get 25% of what they pay for a year.",
+      "ambassadorsOgAlt": "Freshman AI Ambassadors: give your friends $5 off, get 25% of what they pay for a year"
     },
     "nav": {
       "blog": "Blog",

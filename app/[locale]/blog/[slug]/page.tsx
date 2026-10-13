@@ -34,6 +34,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
     title: post.title,
     description: post.description,
     openGraph: {
+      siteName: 'Freshman AI',
       type: 'article',
       title: post.title,
       description: post.description,

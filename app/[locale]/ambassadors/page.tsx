@@ -24,6 +24,7 @@ export async function generateMetadata({
     title: { absolute: title },
     description,
     openGraph: {
+      siteName: 'Freshman AI',
       title,
       description,
       url: `${SITE_URL}${localePath(locale, 'ambassadors')}`,

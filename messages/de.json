@@ -1,24 +1,24 @@
 {
   "meta": {
-    "termsTitle": "Freshman Nutzungsbedingungen",
-    "termsDescription": "Nutzungsbedingungen für Freshman, eine Lern-App von People Who Code LLC",
-    "privacyTitle": "Freshman Datenschutzrichtlinie",
-    "privacyDescription": "Datenschutzrichtlinie für Freshman, eine Lern-App von People Who Code LLC"
+    "termsTitle": "Nutzungsbedingungen",
+    "termsDescription": "Nutzungsbedingungen für Freshman AI, eine Lern-App von People Who Code LLC",
+    "privacyTitle": "Datenschutzrichtlinie",
+    "privacyDescription": "Datenschutzrichtlinie für Freshman AI, eine Lern-App von People Who Code LLC"
   },
   "site": {
     "meta": {
-      "homeTitle": "Freshman: Geh in jede Prüfung vorbereitet",
-      "homeDescription": "Freshman baut deinen Lernplan, erklärt dir, woran du hängst, und testet dich, bis es sitzt. Kostenlos auf Mac und iPhone.",
+      "homeTitle": "Freshman AI: Geh in jede Prüfung vorbereitet",
+      "homeDescription": "Freshman AI baut deinen Lernplan, erklärt dir, woran du hängst, und testet dich, bis es sitzt. Kostenlos auf Mac und iPhone.",
       "downloadTitle": "Download",
-      "downloadDescription": "Lade Freshman für Mac, Windows und iPhone herunter. Dein Lernplan, deine Notizen und dein Fortschritt bleiben auf jedem Gerät synchron.",
-      "downloadOgAlt": "Freshman auf Mac, Windows und iPhone",
+      "downloadDescription": "Lade Freshman AI für Mac, Windows und iPhone herunter. Dein Lernplan, deine Notizen und dein Fortschritt bleiben auf jedem Gerät synchron.",
+      "downloadOgAlt": "Freshman AI auf Mac, Windows und iPhone",
       "blogTitle": "Blog",
-      "blogDescription": "Lerntipps, Prüfungsstrategien und Wiederholungsguides vom Freshman-Team. Schneller lernen, mehr behalten, weniger Stress.",
-      "androidTitle": "Freshman für Android",
-      "androidDescription": "Freshman kommt auf Android. Trag dich in die Warteliste ein und erhalte frühen Zugang, sobald die App bei Google Play erscheint.",
-      "ambassadorsTitle": "Freshman Botschafter · 5 $ schenken, 25 % verdienen",
-      "ambassadorsDescription": "Teile Freshman mit Freunden, die Prüfungsstress haben. Sie bekommen 5 $ Rabatt. Du bekommst ein Jahr lang 25 % von dem, was sie zahlen.",
-      "ambassadorsOgAlt": "Freshman Botschafter: Schenk deinen Freunden 5 $, erhalte ein Jahr lang 25 % von dem, was sie zahlen"
+      "blogDescription": "Lerntipps, Prüfungsstrategien und Wiederholungsguides vom Freshman AI-Team. Schneller lernen, mehr behalten, weniger Stress.",
+      "androidTitle": "Freshman AI für Android",
+      "androidDescription": "Freshman AI kommt auf Android. Trag dich in die Warteliste ein und erhalte frühen Zugang, sobald die App bei Google Play erscheint.",
+      "ambassadorsTitle": "Freshman AI Botschafter · 5 $ schenken, 25 % verdienen",
+      "ambassadorsDescription": "Teile Freshman AI mit Freunden, die Prüfungsstress haben. Sie bekommen 5 $ Rabatt. Du bekommst ein Jahr lang 25 % von dem, was sie zahlen.",
+      "ambassadorsOgAlt": "Freshman AI Botschafter: Schenk deinen Freunden 5 $, erhalte ein Jahr lang 25 % von dem, was sie zahlen"
     },
     "nav": {
       "blog": "Blog",

@@ -5,10 +5,21 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { motion, useInView, useReducedMotion } from 'motion/react';
-import { ArrowRight, Check, CheckCircle2, ChevronDown, Copy, TrendingUp } from 'lucide-react';
+import {
+  ArrowRight,
+  Check,
+  CheckCircle2,
+  ChevronDown,
+  Copy,
+  TrendingUp,
+} from 'lucide-react';
 import { useI18n } from '@/components/i18n-provider';
 import { Events, track } from '@/lib/analytics';
-import { AMBASSADOR_TERMS_PATH, CONTACT_EMAIL, CREATOR_PROGRAM_URL } from '@/lib/site';
+import {
+  AMBASSADOR_TERMS_PATH,
+  CONTACT_EMAIL,
+  CREATOR_PROGRAM_URL,
+} from '@/lib/site';
 import { cn } from '@/lib/utils';
 
 /**
@@ -21,7 +32,8 @@ const ART = '/ambassador';
 const APPLY_ID = 'apply';
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-const cardShadow = 'shadow-[0_1px_0_rgba(10,11,20,.04),0_24px_48px_-28px_rgba(45,32,29,.35)]';
+const cardShadow =
+  'shadow-[0_1px_0_rgba(10,11,20,.04),0_24px_48px_-28px_rgba(45,32,29,.35)]';
 const stickerShadow = 'shadow-[0_14px_28px_-14px_rgba(45,32,29,.45)]';
 
 function scrollToApply(event: React.MouseEvent<HTMLAnchorElement>) {
@@ -29,17 +41,26 @@ function scrollToApply(event: React.MouseEvent<HTMLAnchorElement>) {
   if (!target) return;
   event.preventDefault();
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  target.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+  target.scrollIntoView({
+    behavior: reduce ? 'auto' : 'smooth',
+    block: 'start',
+  });
   history.replaceState(null, '', `#${APPLY_ID}`);
 }
 
-function ApplyButton({ label, className }: { label: string; className?: string }) {
+function ApplyButton({
+  label,
+  className,
+}: {
+  label: string;
+  className?: string;
+}) {
   return (
     <a
       href={`#${APPLY_ID}`}
       onClick={scrollToApply}
       className={cn(
-        'group inline-flex h-14 items-center justify-center gap-2 rounded-full bg-cinder-950 px-8 text-[17px] font-bold text-white transition-[background-color,transform] hover:bg-swirl-900 active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cinder-950',
+        'group inline-flex h-14 items-center justify-center gap-2 rounded-full bg-cinder-950 px-8 text-[16px] font-bold text-white transition-[background-color,transform] hover:bg-swirl-900 active:scale-[0.98] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cinder-950',
         className,
       )}
     >
@@ -114,7 +135,13 @@ function Art({
 }
 
 /** Brush-stroke texture (H0) for the peach bands. */
-function Stripes({ mirrored, className }: { mirrored?: boolean; className?: string }) {
+function Stripes({
+  mirrored,
+  className,
+}: {
+  mirrored?: boolean;
+  className?: string;
+}) {
   return (
     <Image
       src={`${ART}/H0.png`}
@@ -122,7 +149,11 @@ function Stripes({ mirrored, className }: { mirrored?: boolean; className?: stri
       aria-hidden
       fill
       sizes='100vw'
-      className={cn('pointer-events-none -z-10 object-cover opacity-70', mirrored && '-scale-x-100', className)}
+      className={cn(
+        'pointer-events-none -z-10 object-cover opacity-70',
+        mirrored && '-scale-x-100',
+        className,
+      )}
     />
   );
 }
@@ -152,7 +183,9 @@ function CodeSticker({ className }: { className?: string }) {
         {t('site.ambassadors.hero.code')}
       </p>
       <div className='my-3 border-t-2 border-dashed border-swirl-200' />
-      <p className='text-sm font-semibold text-swirl-950'>{t('site.ambassadors.hero.codeOffer')}</p>
+      <p className='text-sm font-semibold text-swirl-950'>
+        {t('site.ambassadors.hero.codeOffer')}
+      </p>
     </div>
   );
 }
@@ -183,9 +216,15 @@ function EarningsSticker({ className }: { className?: string }) {
     <div
       ref={ref}
       aria-hidden
-      className={cn('w-[180px] rounded-[20px] border-[3px] border-white bg-cinder-950 p-4 text-left', stickerShadow, className)}
+      className={cn(
+        'w-[180px] rounded-[20px] border-[3px] border-white bg-cinder-950 p-4 text-left',
+        stickerShadow,
+        className,
+      )}
     >
-      <span className='text-[13px] font-medium text-white/60'>{t('site.ambassadors.hero.earningsLabel')}</span>
+      <span className='text-[13px] font-medium text-white/60'>
+        {t('site.ambassadors.hero.earningsLabel')}
+      </span>
       <div className='mt-1 flex items-end justify-between'>
         <span className='font-display text-[32px] font-semibold leading-none text-butter-400'>
           {t('site.ambassadors.hero.earningsValue', { value })}
@@ -198,12 +237,35 @@ function EarningsSticker({ className }: { className?: string }) {
   );
 }
 
-function Avatar({ src, ring, className, float }: { src: string; ring: string; className?: string; float?: string }) {
+function Avatar({
+  src,
+  ring,
+  className,
+  float,
+}: {
+  src: string;
+  ring: string;
+  className?: string;
+  float?: string;
+}) {
   return (
     <div aria-hidden className={cn('pointer-events-none absolute', className)}>
       <div className='animate-float' style={{ animationDelay: float }}>
-        <div className={cn('overflow-hidden rounded-full border-4 border-white', ring, stickerShadow)}>
-          <Image src={`${ART}/${src}.png`} alt='' width={72} height={72} sizes='72px' className='size-full object-cover' />
+        <div
+          className={cn(
+            'overflow-hidden rounded-full border-4 border-white',
+            ring,
+            stickerShadow,
+          )}
+        >
+          <Image
+            src={`${ART}/${src}.png`}
+            alt=''
+            width={72}
+            height={72}
+            sizes='72px'
+            className='size-full object-cover'
+          />
         </div>
       </div>
     </div>
@@ -220,13 +282,17 @@ function Hero() {
       <Stripes />
 
       <header className='relative z-20 mx-auto flex h-[72px] w-full max-w-6xl items-center justify-between px-4 sm:px-6'>
-        <Link href={`/${locale}`} aria-label={t('site.nav.homeAria')} className='w-fit'>
+        <Link
+          href={`/${locale}`}
+          aria-label={t('site.nav.homeAria')}
+          className='w-fit'
+        >
           <Image
             src='/freshman-text.png'
             alt={t('site.nav.logoAlt')}
             width={1226}
             height={123}
-            className='h-[14px] w-auto'
+            className='h-[12px] w-auto'
             priority
           />
         </Link>
@@ -242,13 +308,49 @@ function Hero() {
       <div className='relative mx-auto max-w-6xl px-4 pb-[88px] pt-10 sm:px-6 md:pb-[120px] md:pt-16'>
         {/* Desktop decoration around the headline. */}
         <div className='absolute inset-0 hidden lg:block'>
-          <Art src='H1' size={150} priority float='0s' className='absolute left-0 top-[18%] w-[150px] -rotate-[8deg]' />
-          <Art src='H2' size={130} float='1.4s' className='absolute bottom-[4%] right-[12%] w-[130px] rotate-6' />
-          <Art src='H3' size={110} float='2.2s' className='absolute right-16 top-0 w-[110px] rotate-[10deg]' />
-          <Avatar src='A1' ring='bg-peach-300' float='0.6s' className='left-[16%] top-[6%] size-[72px]' />
-          <Avatar src='A2' ring='bg-butter-400/60' float='1.8s' className='right-[27%] top-[-2%] size-16' />
-          <Avatar src='A3' ring='bg-[#E4E2F7]' float='2.6s' className='right-[3%] top-[22%] size-[72px] max-xl:hidden' />
-          <Avatar src='A4' ring='bg-[#D9EAD9]' float='1.1s' className='bottom-[12%] left-[8%] size-16 max-xl:hidden' />
+          <Art
+            src='H1'
+            size={150}
+            priority
+            float='0s'
+            className='absolute left-0 top-[18%] w-[150px] -rotate-[8deg]'
+          />
+          <Art
+            src='H2'
+            size={130}
+            float='1.4s'
+            className='absolute bottom-[4%] right-[12%] w-[130px] rotate-6'
+          />
+          <Art
+            src='H3'
+            size={110}
+            float='2.2s'
+            className='absolute right-16 top-0 w-[110px] rotate-[10deg]'
+          />
+          <Avatar
+            src='A1'
+            ring='bg-peach-300'
+            float='0.6s'
+            className='left-[16%] top-[6%] size-[72px]'
+          />
+          <Avatar
+            src='A2'
+            ring='bg-butter-400/60'
+            float='1.8s'
+            className='right-[27%] top-[-2%] size-16'
+          />
+          <Avatar
+            src='A3'
+            ring='bg-[#E4E2F7]'
+            float='2.6s'
+            className='right-[3%] top-[22%] size-[72px] max-xl:hidden'
+          />
+          <Avatar
+            src='A4'
+            ring='bg-[#D9EAD9]'
+            float='1.1s'
+            className='bottom-[12%] left-[8%] size-16 max-xl:hidden'
+          />
           <div className='absolute right-0 top-[60%] rotate-6'>
             <div className='animate-float' style={{ animationDelay: '0.9s' }}>
               <CodeSticker />
@@ -293,12 +395,22 @@ function Hero() {
           </p>
 
           <ApplyButton label={copy.cta} className='mt-9' />
-          <p className='mt-4 text-sm font-medium text-swirl-700'>{copy.micro}</p>
+          <p className='mt-4 text-sm font-medium text-swirl-700'>
+            {copy.micro}
+          </p>
 
           {/* Phones and tablets: the two stickers sit under the button. */}
           <div className='relative mt-10 h-[260px] w-full max-w-[360px] lg:hidden'>
-            <Art src='H1' size={72} className='absolute -left-10 -top-6 w-[72px] -rotate-[8deg] sm:-left-24' />
-            <Art src='H2' size={72} className='absolute -right-8 bottom-0 w-[72px] rotate-6 sm:-right-24' />
+            <Art
+              src='H1'
+              size={72}
+              className='absolute -left-10 -top-6 w-[72px] -rotate-[8deg] sm:-left-24'
+            />
+            <Art
+              src='H2'
+              size={72}
+              className='absolute -right-8 bottom-0 w-[72px] rotate-6 sm:-right-24'
+            />
             <div className='absolute left-[4%] top-2 rotate-[4deg]'>
               <CodeSticker />
             </div>
@@ -334,10 +446,16 @@ function Benefits() {
                 className={cn(
                   'relative flex h-full flex-col rounded-[28px] p-7 pt-[92px]',
                   cardShadow,
-                  i === 1 ? 'border-2 border-peach-300 bg-peach-50' : 'bg-white',
+                  i === 1
+                    ? 'border-2 border-peach-300 bg-peach-50'
+                    : 'bg-white',
                 )}
               >
-                <Art src={art[i]} size={120} className='absolute -top-10 left-5 w-[120px]' />
+                <Art
+                  src={art[i]}
+                  size={120}
+                  className='absolute -top-10 left-5 w-[120px]'
+                />
                 <p
                   aria-hidden
                   className='font-display text-[44px] font-semibold leading-none tracking-[-0.03em] text-cinder-950 sm:text-[56px]'
@@ -347,7 +465,9 @@ function Benefits() {
                 <h3 className='mt-5 text-[18px] font-bold tracking-[-0.01em] text-cinder-950 sm:text-xl'>
                   {item.title}
                 </h3>
-                <p className='mt-2 text-base leading-[1.6] text-swirl-900'>{item.body}</p>
+                <p className='mt-2 text-base leading-[1.6] text-swirl-900'>
+                  {item.body}
+                </p>
               </div>
             </Reveal>
           ))}
@@ -396,7 +516,9 @@ function Steps() {
           {copy.mockCopy}
         </span>
       </div>
-      <p className='px-1 text-xs font-medium text-swirl-700 max-[479px]:hidden'>{copy.mockStats}</p>
+      <p className='px-1 text-xs font-medium text-swirl-700 max-[479px]:hidden'>
+        {copy.mockStats}
+      </p>
     </div>,
     <div key='share' aria-hidden className='flex flex-wrap gap-2'>
       {copy.mockShare.map((chip, i) => (
@@ -426,13 +548,25 @@ function Steps() {
         <ol className='mt-12 grid gap-4 md:mt-16 md:grid-cols-3 md:gap-6'>
           {copy.items.map((item, i) => (
             <Reveal key={item.title} delay={i * 0.08} className='h-full'>
-              <li className={cn('relative flex h-full flex-col rounded-[24px] p-6', tints[i], cardShadow)}>
-                <Art src={stickers[i]} size={56} className='absolute -right-3 -top-5 w-14 rotate-6' />
+              <li
+                className={cn(
+                  'relative flex h-full flex-col rounded-[24px] p-6',
+                  tints[i],
+                  cardShadow,
+                )}
+              >
+                <Art
+                  src={stickers[i]}
+                  size={56}
+                  className='absolute -right-3 -top-5 w-14 rotate-6'
+                />
                 <h3 className='border-b border-swirl-200 pb-3.5 pr-10 text-[17px] font-bold text-cinder-950'>
                   {i + 1}. {item.title}
                 </h3>
                 <div className='mt-5'>{mocks[i]}</div>
-                <p className='mt-5 text-[15px] leading-[1.6] text-swirl-900'>{item.body}</p>
+                <p className='mt-5 text-[15px] leading-[1.6] text-swirl-900'>
+                  {item.body}
+                </p>
                 {i === 0 ? (
                   <div
                     aria-hidden
@@ -440,13 +574,20 @@ function Steps() {
                   >
                     {copy.mockReply}
                     <div className='mt-2 flex gap-1.5'>
-                      <span className='rounded-full bg-white px-2 py-0.5 text-xs'>👍 12</span>
-                      <span className='rounded-full bg-white px-2 py-0.5 text-xs'>🎉 8</span>
+                      <span className='rounded-full bg-white px-2 py-0.5 text-xs'>
+                        👍 12
+                      </span>
+                      <span className='rounded-full bg-white px-2 py-0.5 text-xs'>
+                        🎉 8
+                      </span>
                     </div>
                   </div>
                 ) : null}
                 {i === 2 ? (
-                  <ApplyButton label={copy.cta} className='mt-auto h-11 self-start px-5 text-[15px]' />
+                  <ApplyButton
+                    label={copy.cta}
+                    className='mt-auto h-11 self-start px-5 text-[15px]'
+                  />
                 ) : null}
               </li>
             </Reveal>
@@ -473,7 +614,12 @@ function Deal() {
         </Reveal>
         <div className='mt-10 grid items-start gap-6 md:mt-12 lg:grid-cols-[1.2fr_.8fr]'>
           <Reveal>
-            <div className={cn('rounded-[28px] bg-white px-5 py-2 sm:px-7', cardShadow)}>
+            <div
+              className={cn(
+                'rounded-[28px] bg-white px-5 py-2 sm:px-7',
+                cardShadow,
+              )}
+            >
               <table className='w-full border-collapse text-left'>
                 <thead className='sr-only'>
                   <tr>
@@ -504,10 +650,23 @@ function Deal() {
           </Reveal>
 
           <Reveal delay={0.08}>
-            <div className={cn('relative rounded-[28px] bg-butter-50 p-7', cardShadow)}>
-              <Art src='D1' size={120} className='absolute -right-3 -top-12 w-[110px] rotate-6 sm:w-[120px]' />
-              <p className='text-xs font-bold uppercase tracking-[0.08em] text-swirl-700'>{copy.exampleLabel}</p>
-              <p className='mt-3 pr-16 text-[17px] font-semibold leading-[1.5] text-cinder-950'>{copy.example}</p>
+            <div
+              className={cn(
+                'relative rounded-[28px] bg-butter-50 p-7',
+                cardShadow,
+              )}
+            >
+              <Art
+                src='D1'
+                size={120}
+                className='absolute -right-3 -top-12 w-[110px] rotate-6 sm:w-[120px]'
+              />
+              <p className='text-xs font-bold uppercase tracking-[0.08em] text-swirl-700'>
+                {copy.exampleLabel}
+              </p>
+              <p className='mt-3 pr-16 text-[17px] font-semibold leading-[1.5] text-cinder-950'>
+                {copy.example}
+              </p>
               <dl className='mt-5 text-[15px] tabular-nums'>
                 {copy.lines.map((line) => (
                   <div
@@ -515,12 +674,18 @@ function Deal() {
                     className='flex items-baseline justify-between gap-4 border-b border-dashed border-swirl-300 py-2.5'
                   >
                     <dt className='text-swirl-900'>{line.label}</dt>
-                    <dd className='shrink-0 font-bold text-cinder-950'>{line.value}</dd>
+                    <dd className='shrink-0 font-bold text-cinder-950'>
+                      {line.value}
+                    </dd>
                   </div>
                 ))}
                 <div className='flex items-baseline justify-between gap-4 pt-4'>
-                  <dt className='text-lg font-semibold text-cinder-950'>{copy.totalLabel}</dt>
-                  <dd className='font-display text-[32px] font-semibold leading-none text-cinder-950'>{copy.total}</dd>
+                  <dt className='text-lg font-semibold text-cinder-950'>
+                    {copy.totalLabel}
+                  </dt>
+                  <dd className='font-display text-[32px] font-semibold leading-none text-cinder-950'>
+                    {copy.total}
+                  </dd>
                 </div>
               </dl>
             </div>
@@ -539,7 +704,9 @@ function Dashboard() {
   const code = messages.site.ambassadors.hero.code;
   const points = [8, 14, 12, 22, 26, 34, 44];
   const max = 48;
-  const path = points.map((p, i) => `${(i / (points.length - 1)) * 300},${80 - (p / max) * 80}`).join(' L');
+  const path = points
+    .map((p, i) => `${(i / (points.length - 1)) * 300},${80 - (p / max) * 80}`)
+    .join(' L');
 
   return (
     <section className='px-4 pb-[72px] sm:px-6 md:pb-28'>
@@ -555,11 +722,23 @@ function Dashboard() {
 
         <Reveal delay={0.08}>
           <div className='relative pt-8 lg:pt-0'>
-            <Art src='D2' size={140} className='absolute -left-4 -top-6 z-10 w-[104px] -rotate-6 sm:w-[140px] lg:-left-12 lg:-top-16' />
+            <Art
+              src='D2'
+              size={140}
+              className='absolute -left-4 -top-6 z-10 w-[104px] -rotate-6 sm:w-[140px] lg:-left-12 lg:-top-16'
+            />
             <p className='sr-only'>{copy.srSummary}</p>
-            <div aria-hidden className={cn('rounded-[28px] bg-white p-5 sm:p-6 lg:-rotate-[1.5deg]', cardShadow)}>
+            <div
+              aria-hidden
+              className={cn(
+                'rounded-[28px] bg-white p-5 sm:p-6 lg:-rotate-[1.5deg]',
+                cardShadow,
+              )}
+            >
               <div className='flex items-center justify-between pl-16 sm:pl-24 lg:pl-20'>
-                <span className='font-display text-xl font-semibold text-cinder-950'>{copy.panelTitle}</span>
+                <span className='font-display text-xl font-semibold text-cinder-950'>
+                  {copy.panelTitle}
+                </span>
                 <span className='rounded-full bg-peach-50 px-3 py-1 text-xs font-bold tracking-wide text-cinder-950 ring-1 ring-peach-300'>
                   {code}
                 </span>
@@ -572,10 +751,17 @@ function Dashboard() {
                       key={stat.label}
                       className={cn(
                         'rounded-2xl p-3 sm:p-3.5',
-                        last ? 'bg-cinder-950 text-white' : 'bg-swirl-50 ring-1 ring-swirl-200',
+                        last
+                          ? 'bg-cinder-950 text-white'
+                          : 'bg-swirl-50 ring-1 ring-swirl-200',
                       )}
                     >
-                      <span className={cn('block text-[11px] leading-tight sm:text-xs', last ? 'text-white/60' : 'text-swirl-700')}>
+                      <span
+                        className={cn(
+                          'block text-[11px] leading-tight sm:text-xs',
+                          last ? 'text-white/60' : 'text-swirl-700',
+                        )}
+                      >
                         {stat.label}
                       </span>
                       <span
@@ -590,8 +776,15 @@ function Dashboard() {
                   );
                 })}
               </div>
-              <svg viewBox='0 0 300 84' className='mt-5 h-20 w-full' preserveAspectRatio='none'>
-                <path d={`M${path} L300,84 L0,84 Z`} className='fill-peach-100' />
+              <svg
+                viewBox='0 0 300 84'
+                className='mt-5 h-20 w-full'
+                preserveAspectRatio='none'
+              >
+                <path
+                  d={`M${path} L300,84 L0,84 Z`}
+                  className='fill-peach-100'
+                />
                 <path
                   d={`M${path}`}
                   className='fill-none stroke-peach-500'
@@ -607,11 +800,15 @@ function Dashboard() {
                     key={friend.name}
                     className='grid grid-cols-[1fr_auto_1fr_auto] items-center gap-3 border-t border-swirl-200 px-1 py-2.5'
                   >
-                    <span className='font-semibold text-cinder-950'>{friend.name}</span>
+                    <span className='font-semibold text-cinder-950'>
+                      {friend.name}
+                    </span>
                     <span
                       className={cn(
                         'rounded-full px-2 py-0.5 text-[11px] font-bold',
-                        friend.isFree ? 'bg-swirl-100 text-swirl-800' : 'bg-peach-50 text-cinder-950',
+                        friend.isFree
+                          ? 'bg-swirl-100 text-swirl-800'
+                          : 'bg-peach-50 text-cinder-950',
                       )}
                     >
                       {friend.plan}
@@ -622,7 +819,10 @@ function Dashboard() {
                 ))}
               </ul>
             </div>
-            <p aria-hidden className='mt-3 text-right text-[13px] text-swirl-700'>
+            <p
+              aria-hidden
+              className='mt-3 text-right text-[13px] text-swirl-700'
+            >
               {copy.caption}
             </p>
           </div>
@@ -644,16 +844,26 @@ function Proof() {
         {stats.map((stat) => (
           <p
             key={stat.label}
-            className={cn('inline-flex items-baseline gap-2 rounded-full bg-white px-5 py-3 text-center', stickerShadow)}
+            className={cn(
+              'inline-flex items-baseline gap-2 rounded-full bg-white px-5 py-3 text-center',
+              stickerShadow,
+            )}
           >
             {stat.value ? (
-              <span className='font-display text-[22px] font-semibold leading-none text-cinder-950'>{stat.value}</span>
+              <span className='font-display text-[22px] font-semibold leading-none text-cinder-950'>
+                {stat.value}
+              </span>
             ) : null}
-            <span className='text-[15px] font-medium text-swirl-800'>{stat.label}</span>
+            <span className='text-[15px] font-medium text-swirl-800'>
+              {stat.label}
+            </span>
           </p>
         ))}
       </Reveal>
-      <div aria-hidden className='relative mt-4 h-[300px] w-full overflow-hidden sm:h-[440px] lg:h-[600px]'>
+      <div
+        aria-hidden
+        className='relative mt-4 h-[300px] w-full overflow-hidden sm:h-[440px] lg:h-[600px]'
+      >
         <Image
           src={`${ART}/C1.png`}
           alt=''
@@ -680,12 +890,20 @@ function FaqSheet() {
             {copy.title}
           </h2>
         </Reveal>
-        <Accordion.Root type='single' collapsible className='mt-12 border-b border-swirl-200'>
+        <Accordion.Root
+          type='single'
+          collapsible
+          className='mt-12 border-b border-swirl-200'
+        >
           {copy.items.map((item) => {
             const link = 'link' in item ? item.link : null;
             const [before, after] = item.answer.split('{link}');
             return (
-              <Accordion.Item key={item.question} value={item.question} className='group border-t border-swirl-200'>
+              <Accordion.Item
+                key={item.question}
+                value={item.question}
+                className='group border-t border-swirl-200'
+              >
                 <Accordion.Header>
                   <Accordion.Trigger className='flex w-full items-center justify-between gap-6 py-[22px] text-left text-[17px] font-semibold text-cinder-950 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cinder-950'>
                     {item.question}
@@ -740,23 +958,46 @@ type Field = 'name' | 'email' | 'school';
 
 function ApplyForm() {
   const { locale, t } = useI18n();
-  const [values, setValues] = useState<Record<Field, string>>({ name: '', email: '', school: '' });
+  const [values, setValues] = useState<Record<Field, string>>({
+    name: '',
+    email: '',
+    school: '',
+  });
   const [website, setWebsite] = useState('');
   const [errors, setErrors] = useState<Partial<Record<Field, string>>>({});
   const [formError, setFormError] = useState<string | null>(null);
   const [status, setStatus] = useState<Status>('idle');
 
-  const fields: { id: Field; type: string; autoComplete: string; inputMode?: 'email'; maxLength: number }[] = [
+  const fields: {
+    id: Field;
+    type: string;
+    autoComplete: string;
+    inputMode?: 'email';
+    maxLength: number;
+  }[] = [
     { id: 'name', type: 'text', autoComplete: 'name', maxLength: 120 },
-    { id: 'email', type: 'email', autoComplete: 'email', inputMode: 'email', maxLength: 320 },
-    { id: 'school', type: 'text', autoComplete: 'organization', maxLength: 200 },
+    {
+      id: 'email',
+      type: 'email',
+      autoComplete: 'email',
+      inputMode: 'email',
+      maxLength: 320,
+    },
+    {
+      id: 'school',
+      type: 'text',
+      autoComplete: 'organization',
+      maxLength: 200,
+    },
   ];
 
   function validate(next: Record<Field, string>) {
     const found: Partial<Record<Field, string>> = {};
     if (!next.name.trim()) found.name = t('site.ambassadors.apply.nameError');
-    if (!EMAIL.test(next.email.trim())) found.email = t('site.ambassadors.apply.emailError');
-    if (!next.school.trim()) found.school = t('site.ambassadors.apply.schoolError');
+    if (!EMAIL.test(next.email.trim()))
+      found.email = t('site.ambassadors.apply.emailError');
+    if (!next.school.trim())
+      found.school = t('site.ambassadors.apply.schoolError');
     return found;
   }
 
@@ -782,7 +1023,10 @@ function ApplyForm() {
         }),
       });
       if (!response.ok) throw new Error(String(response.status));
-      track(Events.ambassadorApplied, { locale, page: window.location.pathname });
+      track(Events.ambassadorApplied, {
+        locale,
+        page: window.location.pathname,
+      });
       setStatus('sent');
     } catch {
       setFormError(t('site.ambassadors.apply.error'));
@@ -795,14 +1039,20 @@ function ApplyForm() {
 
   return (
     <div className='relative mx-auto mt-6 w-full max-w-lg pt-[150px]'>
-      <div className='pointer-events-none absolute left-1/2 top-0 z-10 h-[180px] w-[180px] -translate-x-1/2' aria-hidden>
+      <div
+        className='pointer-events-none absolute left-1/2 top-0 z-10 h-[180px] w-[180px] -translate-x-1/2'
+        aria-hidden
+      >
         <Image
           src={`${ART}/F1.png`}
           alt=''
           width={180}
           height={180}
           sizes='180px'
-          className={cn('absolute inset-0 transition-opacity duration-300', sent ? 'opacity-0' : 'opacity-100')}
+          className={cn(
+            'absolute inset-0 transition-opacity duration-300',
+            sent ? 'opacity-0' : 'opacity-100',
+          )}
         />
         <Image
           src={`${ART}/F2.png`}
@@ -810,7 +1060,10 @@ function ApplyForm() {
           width={180}
           height={180}
           sizes='180px'
-          className={cn('absolute inset-0 transition-opacity duration-300', sent ? 'opacity-100' : 'opacity-0')}
+          className={cn(
+            'absolute inset-0 transition-opacity duration-300',
+            sent ? 'opacity-100' : 'opacity-0',
+          )}
         />
       </div>
 
@@ -820,7 +1073,10 @@ function ApplyForm() {
           className='relative flex items-start gap-3 rounded-2xl border border-white/10 bg-white/[0.06] px-5 py-4 text-left text-[15px] font-medium leading-relaxed text-white/90 backdrop-blur-sm'
         >
           <CheckCircle2 className='mt-0.5 size-5 shrink-0 text-peach-500' />
-          {t('site.ambassadors.apply.success', { name: firstName, email: values.email.trim() })}
+          {t('site.ambassadors.apply.success', {
+            name: firstName,
+            email: values.email.trim(),
+          })}
         </p>
       ) : (
         <form onSubmit={handleSubmit} noValidate className='relative'>
@@ -830,7 +1086,10 @@ function ApplyForm() {
               const id = `ambassador-${field.id}`;
               return (
                 <div key={field.id}>
-                  <label htmlFor={id} className='mb-1.5 block pl-5 text-[13px] font-semibold text-white/70'>
+                  <label
+                    htmlFor={id}
+                    className='mb-1.5 block pl-5 text-[13px] font-semibold text-white/70'
+                  >
                     {t(`site.ambassadors.apply.${field.id}Label`)}
                   </label>
                   <input
@@ -843,17 +1102,30 @@ function ApplyForm() {
                     required
                     value={values[field.id]}
                     onChange={(event) => {
-                      const next = { ...values, [field.id]: event.target.value };
+                      const next = {
+                        ...values,
+                        [field.id]: event.target.value,
+                      };
                       setValues(next);
-                      if (error) setErrors((prev) => ({ ...prev, [field.id]: validate(next)[field.id] }));
+                      if (error)
+                        setErrors((prev) => ({
+                          ...prev,
+                          [field.id]: validate(next)[field.id],
+                        }));
                     }}
-                    placeholder={t(`site.ambassadors.apply.${field.id}Placeholder`)}
+                    placeholder={t(
+                      `site.ambassadors.apply.${field.id}Placeholder`,
+                    )}
                     aria-invalid={error ? true : undefined}
                     aria-describedby={error ? `${id}-error` : undefined}
                     className='h-12 w-full rounded-full bg-white/95 px-5 text-[15px] font-medium text-swirl-950 placeholder:text-swirl-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-peach-500'
                   />
                   {error ? (
-                    <p id={`${id}-error`} role='alert' className='mt-1.5 pl-5 text-[13px] font-medium text-[#f6b9a0]'>
+                    <p
+                      id={`${id}-error`}
+                      role='alert'
+                      className='mt-1.5 pl-5 text-[13px] font-medium text-[#f6b9a0]'
+                    >
                       {error}
                     </p>
                   ) : null}
@@ -862,7 +1134,10 @@ function ApplyForm() {
             })}
 
             {/* Honeypot: people never see it, bots fill it in. */}
-            <div aria-hidden className='absolute -left-[9999px] h-px w-px overflow-hidden'>
+            <div
+              aria-hidden
+              className='absolute -left-[9999px] h-px w-px overflow-hidden'
+            >
               <label htmlFor='ambassador-website'>Website</label>
               <input
                 id='ambassador-website'
@@ -880,12 +1155,19 @@ function ApplyForm() {
               disabled={status === 'submitting'}
               className='mt-1 inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-peach-500 px-6 text-[15px] font-semibold text-[#1c110d] transition-colors hover:bg-peach-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white disabled:opacity-70'
             >
-              {status === 'submitting' ? t('site.ambassadors.apply.submitting') : t('site.ambassadors.apply.cta')}
-              {status === 'submitting' ? null : <ArrowRight className='size-4' />}
+              {status === 'submitting'
+                ? t('site.ambassadors.apply.submitting')
+                : t('site.ambassadors.apply.cta')}
+              {status === 'submitting' ? null : (
+                <ArrowRight className='size-4' />
+              )}
             </button>
           </div>
           {formError ? (
-            <p role='alert' className='mt-3 text-center text-sm font-medium text-[#f6b9a0]'>
+            <p
+              role='alert'
+              className='mt-3 text-center text-sm font-medium text-[#f6b9a0]'
+            >
               {formError}
             </p>
           ) : null}
@@ -950,15 +1232,23 @@ function FinalCta() {
           <h2 className='mx-auto mt-6 max-w-[18ch] text-balance font-display text-[32px] font-semibold leading-[1.08] tracking-[-0.02em] text-cinder-950 sm:text-5xl'>
             {t('site.ambassadors.final.title')}
           </h2>
-          <ApplyButton label={t('site.ambassadors.final.cta')} className='mt-9' />
-          <p className='mt-4 text-sm font-medium text-swirl-700'>{t('site.ambassadors.final.micro')}</p>
+          <ApplyButton
+            label={t('site.ambassadors.final.cta')}
+            className='mt-9'
+          />
+          <p className='mt-4 text-sm font-medium text-swirl-700'>
+            {t('site.ambassadors.final.micro')}
+          </p>
         </div>
       </Reveal>
       <nav
         aria-label={t('site.ambassadors.footer.terms')}
         className='mx-auto mt-8 flex max-w-6xl flex-wrap justify-center gap-x-6 gap-y-2 text-sm font-medium text-swirl-700'
       >
-        <Link href={`/${locale}/${AMBASSADOR_TERMS_PATH}`} className='hover:text-cinder-950'>
+        <Link
+          href={`/${locale}/${AMBASSADOR_TERMS_PATH}`}
+          className='hover:text-cinder-950'
+        >
           {t('site.ambassadors.footer.terms')}
         </Link>
         <Link href={`/${locale}/privacy`} className='hover:text-cinder-950'>

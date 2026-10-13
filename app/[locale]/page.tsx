@@ -12,7 +12,7 @@ import {
 } from '@/components/site/landing-sections';
 // import { Testimonials } from '@/components/site/testimonials';
 import { Faq } from '@/components/site/faq';
-import { SITE_URL } from '@/lib/site';
+import { APP_STORE_URL, SITE_URL } from '@/lib/site';
 import {
   getDictionary,
   localeLanguageAlternates,
@@ -38,7 +38,7 @@ export async function generateMetadata({
       title,
       description,
       url: `${SITE_URL}${localePath(locale)}`,
-      siteName: 'Freshman',
+      siteName: 'Freshman AI',
       locale: ogLocales[locale],
       images: [{ url: '/og-image.png', width: 1200, height: 630, alt: title }],
       type: 'website',
@@ -56,10 +56,32 @@ export default async function Home({ params }: { params: Promise<{ locale: Local
   const messages = getDictionary(locale);
   const { site } = messages;
 
+  // The site's name for Google: shown above the result and used for sitelinks.
+  // "Freshman" alone is kept as an alternate so either search finds us.
+  const websiteStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Freshman AI',
+    alternateName: ['Freshman', 'joinfreshman.com'],
+    url: `${SITE_URL}/`,
+  };
+
+  const organizationStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Freshman AI',
+    alternateName: 'Freshman',
+    url: SITE_URL,
+    logo: `${SITE_URL}/icon.png`,
+    sameAs: [APP_STORE_URL],
+  };
+
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
-    name: 'Freshman',
+    name: 'Freshman AI',
+    alternateName: 'Freshman',
+    url: SITE_URL,
     applicationCategory: 'EducationalApplication',
     operatingSystem: 'macOS, iOS',
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
@@ -78,6 +100,14 @@ export default async function Home({ params }: { params: Promise<{ locale: Local
 
   return (
     <div className='bg-swirl-50'>
+      <script
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteStructuredData) }}
+      />
+      <script
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationStructuredData) }}
+      />
       <script
         type='application/ld+json'
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

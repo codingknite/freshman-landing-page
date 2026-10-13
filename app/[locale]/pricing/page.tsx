@@ -22,7 +22,7 @@ export async function generateMetadata({
   return {
     title,
     description,
-    openGraph: { title: `${title} | Freshman`, description, url: `${SITE_URL}/${locale}/pricing` },
+    openGraph: { siteName: 'Freshman AI', title: `${title} | Freshman AI`, description, url: `${SITE_URL}/${locale}/pricing` },
     alternates: { canonical: `${SITE_URL}/${locale}/pricing` },
   };
 }

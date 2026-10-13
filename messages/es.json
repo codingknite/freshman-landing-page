@@ -1,24 +1,24 @@
 {
   "meta": {
-    "termsTitle": "Términos de uso de Freshman",
-    "termsDescription": "Términos de uso de Freshman, una app de estudio de People Who Code LLC",
-    "privacyTitle": "Política de privacidad de Freshman",
-    "privacyDescription": "Política de privacidad de Freshman, una app de estudio de People Who Code LLC"
+    "termsTitle": "Términos de uso",
+    "termsDescription": "Términos de uso de Freshman AI, una app de estudio de People Who Code LLC",
+    "privacyTitle": "Política de privacidad",
+    "privacyDescription": "Política de privacidad de Freshman AI, una app de estudio de People Who Code LLC"
   },
   "site": {
     "meta": {
-      "homeTitle": "Freshman: Llega a cada examen preparado",
-      "homeDescription": "Freshman construye tu plan de estudio, te explica lo que no entiendes y te pone a prueba hasta que se te queda. Gratis en Mac e iPhone.",
+      "homeTitle": "Freshman AI: Llega a cada examen preparado",
+      "homeDescription": "Freshman AI construye tu plan de estudio, te explica lo que no entiendes y te pone a prueba hasta que se te queda. Gratis en Mac e iPhone.",
       "downloadTitle": "Descargar",
-      "downloadDescription": "Descarga Freshman para Mac, Windows e iPhone. Tu plan de estudio, tus apuntes y tu progreso se sincronizan en todos tus dispositivos.",
-      "downloadOgAlt": "Freshman en Mac, Windows e iPhone",
+      "downloadDescription": "Descarga Freshman AI para Mac, Windows e iPhone. Tu plan de estudio, tus apuntes y tu progreso se sincronizan en todos tus dispositivos.",
+      "downloadOgAlt": "Freshman AI en Mac, Windows e iPhone",
       "blogTitle": "Blog",
-      "blogDescription": "Consejos de estudio, estrategias de examen y guías de repaso del equipo de Freshman. Aprende más rápido, recuerda más, estrésate menos.",
-      "androidTitle": "Freshman para Android",
-      "androidDescription": "Freshman llega a Android. Únete a la lista de espera y obtén acceso anticipado cuando esté en Google Play.",
-      "ambassadorsTitle": "Embajadores de Freshman · Regala $5, gana el 25%",
-      "ambassadorsDescription": "Comparte Freshman con amigos que se estresan con los exámenes. Ellos tienen $5 de descuento. Tú ganas el 25% de lo que paguen durante un año.",
-      "ambassadorsOgAlt": "Embajadores de Freshman: dale a tus amigos $5 de descuento y gana el 25% de lo que paguen durante un año"
+      "blogDescription": "Consejos de estudio, estrategias de examen y guías de repaso del equipo de Freshman AI. Aprende más rápido, recuerda más, estrésate menos.",
+      "androidTitle": "Freshman AI para Android",
+      "androidDescription": "Freshman AI llega a Android. Únete a la lista de espera y obtén acceso anticipado cuando esté en Google Play.",
+      "ambassadorsTitle": "Embajadores de Freshman AI · Regala $5, gana el 25%",
+      "ambassadorsDescription": "Comparte Freshman AI con amigos que se estresan con los exámenes. Ellos tienen $5 de descuento. Tú ganas el 25% de lo que paguen durante un año.",
+      "ambassadorsOgAlt": "Embajadores de Freshman AI: dale a tus amigos $5 de descuento y gana el 25% de lo que paguen durante un año"
     },
     "nav": {
       "blog": "Blog",

@@ -21,10 +21,12 @@ export async function generateMetadata({
   const description = messages.site.meta.androidDescription;
 
   return {
-    title,
+    // The title already names Freshman AI; the template would add it again.
+    title: { absolute: title },
     description,
     openGraph: {
-      title: `${title} | Freshman`,
+      siteName: 'Freshman AI',
+      title,
       description,
       url: `${SITE_URL}${localePath(locale, 'android')}`,
       locale: ogLocales[locale],

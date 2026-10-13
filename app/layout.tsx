@@ -42,13 +42,18 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://joinfreshman.com'),
+  // "Freshman AI" everywhere search engines read the name, so a search for
+  // it finds the site (not only the App Store listing).
+  applicationName: 'Freshman AI',
   title: {
-    default: 'Freshman: Walk into every exam ready',
-    template: '%s | Freshman',
+    default: 'Freshman AI: Walk into every exam ready',
+    template: '%s | Freshman AI',
   },
   description:
-    'Freshman plans your revision, explains anything you are stuck on, and tests you until it sticks. Free on Mac and iPhone.',
+    'Freshman AI plans your revision, explains anything you are stuck on, and tests you until it sticks. Free on Mac and iPhone.',
   keywords: [
+    'Freshman AI',
+    'Freshman app',
     'active recall',
     'study app',
     'AI study tool',
@@ -62,7 +67,7 @@ export const metadata: Metadata = {
     'exam preparation',
     'student app',
   ],
-  authors: [{ name: 'Freshman' }],
+  authors: [{ name: 'Freshman AI' }],
   creator: 'People Who Code LLC',
   publisher: 'People Who Code LLC',
   formatDetection: {
@@ -74,24 +79,24 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://joinfreshman.com',
-    siteName: 'Freshman',
-    title: 'Freshman: Walk into every exam ready',
+    siteName: 'Freshman AI',
+    title: 'Freshman AI: Walk into every exam ready',
     description:
-      'Freshman plans your revision, explains anything you are stuck on, and tests you until it sticks.',
+      'Freshman AI plans your revision, explains anything you are stuck on, and tests you until it sticks.',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Freshman: Walk into every exam ready',
+        alt: 'Freshman AI: Walk into every exam ready',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Freshman: Walk into every exam ready',
+    title: 'Freshman AI: Walk into every exam ready',
     description:
-      'Freshman plans your revision, explains anything you are stuck on, and tests you until it sticks.',
+      'Freshman AI plans your revision, explains anything you are stuck on, and tests you until it sticks.',
     images: ['/og-image.png'],
   },
   robots: {
