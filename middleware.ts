@@ -1,5 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { defaultLocale, isSupportedLocale } from '@/lib/i18n';
+import {
+  AMBASSADOR_ACCESS_COOKIE,
+  AMBASSADOR_DASHBOARD_PATH,
+  AMBASSADOR_LOGIN_PATH,
+  AMBASSADOR_REFRESH_COOKIE,
+} from '@/lib/ambassador-cookies';
 
 const PUBLIC_FILE = /\.(.*)$/;
 
@@ -12,6 +18,19 @@ export function middleware(request: NextRequest) {
     pathname.startsWith('/favicon.ico') ||
     PUBLIC_FILE.test(pathname)
   ) {
+    return NextResponse.next();
+  }
+
+  // The ambassador dashboard lives outside the language routes
+  // (joinfreshman.com/ambassador-dashboard). Signed-out visitors go to its
+  // sign-in; this only checks a cookie exists, the API decides the rest.
+  if (pathname === AMBASSADOR_DASHBOARD_PATH || pathname.startsWith(`${AMBASSADOR_DASHBOARD_PATH}/`)) {
+    const signedIn =
+      Boolean(request.cookies.get(AMBASSADOR_ACCESS_COOKIE)?.value) ||
+      Boolean(request.cookies.get(AMBASSADOR_REFRESH_COOKIE)?.value);
+    const onLogin = pathname === AMBASSADOR_LOGIN_PATH;
+    if (!signedIn && !onLogin) return NextResponse.redirect(new URL(AMBASSADOR_LOGIN_PATH, request.url));
+    if (signedIn && onLogin) return NextResponse.redirect(new URL(AMBASSADOR_DASHBOARD_PATH, request.url));
     return NextResponse.next();
   }
 
