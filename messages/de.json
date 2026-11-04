@@ -47,7 +47,7 @@
     },
     "highlight": {
       "title": "Dein ganzes Lernleben, an einem Ort.",
-      "subtitle": "Füge deine Fächer und Prüfungstermine hinzu. Freshman sagt dir, was du jeden Tag lernen sollst, hilft, wenn du hängst, und zeigt dir genau, wie bereit du bist.",
+      "subtitle": "Füge deine Kurse und Prüfungstermine hinzu. Freshman sagt dir, was du jeden Tag lernen sollst, hilft, wenn du hängst, und zeigt dir genau, wie bereit du bist.",
       "imageAlt": "Die Freshman-Desktop-App mit der heutigen Wiederholung, Schwachstellen, einem Lernkalender und einer Serie",
       "bullets": [
         "Wisse jeden Tag, was du heute lernen sollst",
@@ -67,7 +67,7 @@
         },
         {
           "title": "Ein Lernplan, der für dich denkt",
-          "body": "Sag Freshman deine Prüfungstermine. Es teilt jedes Fach in tägliche Einheiten, damit du rechtzeitig fertig wirst, ohne zu büffeln.",
+          "body": "Sag Freshman deine Prüfungstermine. Es teilt jeden Kurs in tägliche Einheiten, damit du rechtzeitig fertig wirst, ohne zu büffeln.",
           "alt": "Ein 9-Wochen-Lernplan, aufgeteilt in nummerierte Themen"
         },
         {
@@ -86,9 +86,9 @@
           "alt": "Eine Mindmap, die Themen der Informatik verbindet"
         },
         {
-          "title": "Alle deine Fächer, ein Ort",
-          "body": "Füge jedes Fach hinzu und lade deine Notizen, Folien und Altklausuren hoch. Freshman unterrichtet mit deinem Material, nicht mit irgendeinem Internetkram.",
-          "alt": "Der Fachwechsler mit einem Fach hinzufügen-Button"
+          "title": "Alle deine Kurse, ein Ort",
+          "body": "Füge jeden Kurs hinzu und lade deine Notizen, Folien und Altklausuren hoch. Freshman unterrichtet mit deinem Material, nicht mit irgendeinem Internetkram.",
+          "alt": "Der Kurswechsler mit einem Kurs hinzufügen-Button"
         }
       ]
     },
@@ -136,7 +136,7 @@
         "Unterrichtet mit deinen eigenen Notizen und Altklausuren",
         "Sprich es mit einem Sprach-Tutor durch",
         "Mindmaps und Lernleitfäden",
-        "Zeigt, wie bereit du bist, Fach für Fach",
+        "Zeigt, wie bereit du bist, Kurs für Kurs",
         "Serien und Erinnerungen, die dich dabei halten",
         "Nur zum Lernen gebaut"
       ],
@@ -219,7 +219,7 @@
       "items": [
         {
           "question": "Was macht Freshman eigentlich?",
-          "answer": "Freshman ist dein Lernbegleiter. Füge deine Fächer und Prüfungstermine hinzu, und es plant, was du jeden Tag lernen sollst, erklärt dir, woran du hängst, testet dich mit Quizzes und Probeprüfungen und zeigt dir, wie bereit du bist."
+          "answer": "Freshman ist dein Lernbegleiter. Füge deine Kurse und Prüfungstermine hinzu, und es plant, was du jeden Tag lernen sollst, erklärt dir, woran du hängst, testet dich mit Quizzes und Probeprüfungen und zeigt dir, wie bereit du bist."
         },
         {
           "question": "Worin unterscheidet sich Freshman von ChatGPT?",
@@ -234,8 +234,8 @@
           "answer": "Ja. Lade deine Notizen, Folien, PDFs oder Altklausuren hoch, und Freshman unterrichtet und testet dich damit, damit du lernst, was dein Lehrer wirklich behandelt."
         },
         {
-          "question": "Für welche Fächer funktioniert es?",
-          "answer": "Jedes Fach, das du hinzufügst, von Biologie über Geschichte bis Mathe. Schüler nutzen es für Schulprüfungen, IB, A-Levels, AP und Unikurse."
+          "question": "Für welche Kurse funktioniert es?",
+          "answer": "Jeden Kurs, den du hinzufügst, von Biologie über Geschichte bis Mathe. Schüler nutzen es für Schulprüfungen, IB, A-Levels, AP und Unikurse."
         },
         {
           "question": "Ich bin im Rückstand. Ist es zu spät anzufangen?",
@@ -247,7 +247,19 @@
         },
         {
           "question": "Was kostet Freshman?",
-          "answer": "Du kannst für immer kostenlos starten. Pro beginnt bei 9 $ im Monat und Max bei 20 $ im Monat, wenn du mehr Fächer, Tests und Tutorzeit willst."
+          "answer": "Du kannst für immer kostenlos starten. Pro beginnt bei 9 $ im Monat und Max bei 20 $ im Monat, wenn du deinen vollständigen Lernplan, mehr Kurse, Tests und Tutorzeit willst. Die kostenlose Version umfasst 2 Lernthemen."
+        },
+        {
+          "question": "Gibt mir Freshman die Antworten?",
+          "answer": "Nein. Es bringt dir bei, was du dafür brauchst, und sagt dir, ob deine Antwort stimmt. So bist du bereit, wenn dieselbe Idee in einem Test auftaucht."
+        },
+        {
+          "question": "Was, wenn ich bei meinen Hausaufgaben gar nicht weiterkomme?",
+          "answer": "Dein Tutor geht Schritt für Schritt eine ähnliche Aufgabe mit dir durch, dann versuchst du deine."
+        },
+        {
+          "question": "Ist Freshman bei Hausaufgaben Schummeln?",
+          "answer": "Du machst deine eigene Arbeit. Freshman hilft dir, sie zu verstehen, wie ein Tutor neben dir. Prüfe im Zweifel die Regeln deiner Schule."
         }
       ]
     },
@@ -267,7 +279,7 @@
     },
     "download": {
       "heroTitle": "Lade Freshman herunter, wo immer du lernst.",
-      "heroSubtitle": "Plane am Laptop, wiederhole am Handy. Deine Fächer, Notizen und dein Fortschritt bleiben auf jedem Gerät synchron.",
+      "heroSubtitle": "Plane am Laptop, wiederhole am Handy. Deine Kurse, Notizen und dein Fortschritt bleiben auf jedem Gerät synchron.",
       "appStoreCta": "Im App Store laden",
       "macCta": "Für Mac herunterladen (Apple Silicon)",
       "windowsCta": "Für Windows herunterladen",
@@ -308,9 +320,33 @@
         },
         "edwina": {
           "name": "Edwina Fay",
-          "bio": "Edwina ist COO von Freshman, dem Lernbegleiter, der deine Wiederholung plant, erklärt, wo du festhängst, und dich abfragt, bis es sitzt."
+          "bio": "Edwina ist Head of Growth bei Freshman, dem Lernbegleiter, der deine Wiederholung plant, erklärt, wo du festhängst, und dich abfragt, bis es sitzt."
         }
       }
+    },
+    "homework": {
+      "eyebrow": "Hausaufgaben",
+      "title": "Versteh deine Hausaufgaben so gut, dass du sie selbst machen kannst",
+      "subtitle": "Füge deine heutigen Hausaufgaben hinzu und Freshman geht sie mit dir durch, Frage für Frage. Du machst die Arbeit, und du weißt, wie du es geschafft hast.",
+      "steps": [
+        {
+          "title": "Hinzufügen.",
+          "body": "Mach ein Foto oder lade die Datei hoch."
+        },
+        {
+          "title": "Durcharbeiten.",
+          "body": "Dein Tutor erklärt, was dir fehlt, und geht ein ähnliches Beispiel mit dir durch."
+        },
+        {
+          "title": "Selbst machen.",
+          "body": "Prüfe deine Antworten und mach weiter, mit dem Wissen, dass du auch die nächste schaffst."
+        }
+      ],
+      "button": "Kostenlos bei deinen nächsten Hausaufgaben testen",
+      "micro": "Deine ersten 7 Hausaufgaben-Sitzungen sind kostenlos.",
+      "exampleQuestion": "Löse nach x auf: 2x + 6 = 14",
+      "exampleStudent": "Sag mir einfach die Antwort",
+      "exampleTutor": "Die gebe ich dir nicht, aber du bist nah dran. Was würdest du zuerst mit der 6 machen?"
     },
     "ambassadorCta": {
       "eyebrow": "Freshman Botschafter",

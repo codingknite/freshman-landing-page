@@ -5,7 +5,6 @@ date: 2026-10-01
 author: edwina
 cover: /blog-covers/active-recall-rereading-cover.png
 coverAlt: 'Active recall vs. re-reading'
-featured: true
 takeaways:
   - Re-reading builds recognition. Exams test retrieval, which is a different skill.
   - Active recall strengthens memory every time you pull an answer out of your head.

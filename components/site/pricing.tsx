@@ -27,30 +27,34 @@ const plans: Plan[] = [
     billed: { monthly: 'Free forever', quarterly: 'Free forever' },
     cta: 'Start free',
     features: [
+      '2 study topics, with concepts and review questions',
       '10-min trial of the voice tutor that quizzes you',
-      'Your daily revision for 1 subject',
+      'Your daily revision for 1 course',
       'Text tutor: 30 min a day',
       '1 quick test a day, 1 mock exam a week',
-      '3 mind maps and 2 study guides a week',
+      '3 mind maps, 3 flashcard decks and 2 study guides a week',
       'Study streaks and calendar',
+      '7 homework sessions for high school students',
     ],
   },
   {
     name: 'Pro',
-    tagline: 'Stay on top of every subject, all term',
+    tagline: 'Stay on top of every course, all term',
     price: { monthly: '$12', quarterly: '$9' },
     was: { quarterly: '$12' },
     billed: { monthly: 'Billed monthly', quarterly: '$27 billed every 3 months' },
     cta: 'Get Pro',
     featured: true,
     features: [
+      'Your full study plan: prepare up to 40 topics a month',
       '60 min/month of the voice tutor that quizzes you',
-      'Daily revision and quiz across all your subjects',
+      'Daily revision and quiz across all your courses',
       'Unlimited text tutoring',
       'Up to 30 quick tests a day, 100 full tests and 60 mock exams a month',
       'Deep tests and deep-dive study guides',
-      'Up to 60 mind maps and 60 study guides a month, PDF export',
+      'Up to 60 mind maps, 60 flashcard decks and 60 study guides a month, PDF export',
       'Your full results history',
+      'Homework help for high school students: up to 10 sessions a day',
     ],
   },
   {
@@ -62,11 +66,13 @@ const plans: Plan[] = [
     cta: 'Get Max',
     features: [
       'Everything in Pro',
+      'Prepare up to 100 topics a month',
       '200 min/month of voice tutoring',
       'Exam mode: an intensive plan for your final 14 days',
       'Highest limits: up to 12 mock exams and 20 full tests a day',
-      'Up to 40 subjects',
+      'Up to 40 courses',
       'Priority generation at peak times',
+      'Up to 20 homework sessions a day for high school students',
     ],
   },
 ];
@@ -78,9 +84,10 @@ const groups: Group[] = [
   {
     title: 'Study plan',
     rows: [
-      { label: 'Subjects', cells: ['1', '12', '40'] },
+      { label: 'Courses', cells: ['1', '12', '40'] },
       { label: 'Material uploads', cells: ['5 a month', '120 a month', '400 a month'] },
-      { label: 'New topics', cells: ['2 a week', '80 a month', '200 a month'] },
+      { label: 'See your full study plan', cells: ['First 2 topics', true, true] },
+      { label: 'Topics you can prepare', cells: ['2 in total', '40 a month', '100 a month'] },
       { label: 'Daily revision and nightly quiz', cells: [true, true, true] },
       { label: 'Streaks and calendar', cells: [true, true, true] },
     ],
@@ -90,6 +97,7 @@ const groups: Group[] = [
     rows: [
       { label: 'Text tutoring', cells: ['30 min a day', 'Unlimited', 'Unlimited'] },
       { label: 'Voice tutoring', cells: ['10-minute trial', '60 min a month', '200 min a month'] },
+      { label: 'Homework sessions (high school)', cells: ['7 in total', '10 a day', '20 a day'] },
     ],
   },
   {
@@ -111,10 +119,14 @@ const groups: Group[] = [
     ],
   },
   {
-    title: 'Mind maps and study guides',
+    title: 'Mind maps, flashcards and study guides',
     rows: [
       {
         label: 'Mind maps',
+        cells: ['3 a week', { value: '60 a month', note: 'up to 10 a day' }, '20 a day'],
+      },
+      {
+        label: 'Flashcard decks',
         cells: ['3 a week', { value: '60 a month', note: 'up to 10 a day' }, '20 a day'],
       },
       {

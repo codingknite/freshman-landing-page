@@ -47,7 +47,7 @@
     },
     "highlight": {
       "title": "Toute ta vie d'études, au même endroit.",
-      "subtitle": "Ajoute tes matières et tes dates d'examen. Freshman te dit quoi réviser chaque jour, t'aide quand tu bloques, et te montre exactement à quel point tu es prêt.",
+      "subtitle": "Ajoute tes cours et tes dates d'examen. Freshman te dit quoi réviser chaque jour, t'aide quand tu bloques, et te montre exactement à quel point tu es prêt.",
       "imageAlt": "L'app bureau Freshman avec la révision du jour, les points faibles, un calendrier de révision et une série",
       "bullets": [
         "Savoir quoi réviser aujourd'hui, chaque jour",
@@ -67,7 +67,7 @@
         },
         {
           "title": "Un plan de révision qui pense pour toi",
-          "body": "Donne à Freshman tes dates d'examen. Il découpe chaque matière en séances quotidiennes, pour que tu finisses à temps sans bachoter.",
+          "body": "Donne à Freshman tes dates d'examen. Il découpe chaque cours en séances quotidiennes, pour que tu finisses à temps sans bachoter.",
           "alt": "Un plan de révision de 9 semaines découpé en thèmes numérotés"
         },
         {
@@ -86,9 +86,9 @@
           "alt": "Une mind map qui relie des thèmes d'informatique"
         },
         {
-          "title": "Toutes tes matières, un seul endroit",
-          "body": "Ajoute chaque matière et importe tes notes, slides et annales. Freshman enseigne à partir de ton matériel, pas de trucs au hasard sur internet.",
-          "alt": "Le sélecteur de matières avec un bouton Ajouter une matière"
+          "title": "Tous tes cours, un seul endroit",
+          "body": "Ajoute chaque cours et importe tes notes, slides et annales. Freshman enseigne à partir de ton matériel, pas de trucs au hasard sur internet.",
+          "alt": "Le sélecteur de cours avec un bouton Ajouter un cours"
         }
       ]
     },
@@ -136,7 +136,7 @@
         "Enseigne à partir de tes propres notes et annales",
         "En parle avec un tuteur vocal",
         "Mind maps et fiches de révision",
-        "Montre à quel point tu es prêt, matière par matière",
+        "Montre à quel point tu es prêt, cours par cours",
         "Séries et rappels qui te font tenir",
         "Conçue uniquement pour étudier"
       ],
@@ -219,7 +219,7 @@
       "items": [
         {
           "question": "Qu'est-ce que Freshman fait vraiment?",
-          "answer": "Freshman est ton compagnon de révision. Ajoute tes matières et tes dates d'examen, et il planifie quoi réviser chaque jour, t'explique ce que tu ne comprends pas, te teste avec des quiz et des examens blancs, et te montre à quel point tu es prêt."
+          "answer": "Freshman est ton compagnon de révision. Ajoute tes cours et tes dates d'examen, et il planifie quoi réviser chaque jour, t'explique ce que tu ne comprends pas, te teste avec des quiz et des examens blancs, et te montre à quel point tu es prêt."
         },
         {
           "question": "En quoi Freshman est différent de ChatGPT?",
@@ -234,8 +234,8 @@
           "answer": "Oui. Importe tes notes, slides, PDFs ou annales, et Freshman t'enseigne et te teste à partir de ça, pour que tu révises ce que ton prof couvre vraiment."
         },
         {
-          "question": "Pour quelles matières ça marche?",
-          "answer": "Toutes les matières que tu ajoutes, de la SVT à l'histoire en passant par les maths. Les étudiants l'utilisent pour les examens du lycée, l'IB, les A-Levels, l'AP et les cours à l'université."
+          "question": "Pour quels cours ça marche?",
+          "answer": "Tous les cours que tu ajoutes, de la SVT à l'histoire en passant par les maths. Les étudiants l'utilisent pour les examens du lycée, l'IB, les A-Levels, l'AP et les cours à l'université."
         },
         {
           "question": "Je suis en retard. C'est trop tard pour commencer?",
@@ -247,7 +247,19 @@
         },
         {
           "question": "Combien coûte Freshman?",
-          "answer": "Tu peux commencer gratuitement, pour toujours. Pro commence à 9 $ par mois et Max à 20 $ par mois quand tu veux plus de matières, de tests et de temps avec le tuteur."
+          "answer": "Tu peux commencer gratuitement, pour toujours. Pro commence à 9 $ par mois et Max à 20 $ par mois quand tu veux ton plan d’étude complet, plus de cours, de tests et de temps avec le tuteur. L’offre gratuite inclut 2 thèmes d’étude."
+        },
+        {
+          "question": "Freshman me donne-t-il les réponses ?",
+          "answer": "Non. Il t'apprend ce qu'il te faut pour y arriver et te dit si ta réponse est juste. Ainsi, tu es prêt quand la même idée revient à un contrôle."
+        },
+        {
+          "question": "Et si je suis complètement bloqué sur mes devoirs ?",
+          "answer": "Ton tuteur fait un problème similaire avec toi, étape par étape, puis tu retournes essayer le tien."
+        },
+        {
+          "question": "Utiliser Freshman pour les devoirs, est-ce de la triche ?",
+          "answer": "Tu fais ton propre travail. Freshman t'aide à le comprendre, comme un tuteur assis à côté de toi. Vérifie le règlement de ton école en cas de doute."
         }
       ]
     },
@@ -267,7 +279,7 @@
     },
     "download": {
       "heroTitle": "Télécharge Freshman là où tu étudies.",
-      "heroSubtitle": "Planifie sur ton ordi, révise sur ton téléphone. Tes matières, tes notes et tes progrès restent synchronisés sur tous tes appareils.",
+      "heroSubtitle": "Planifie sur ton ordi, révise sur ton téléphone. Tes cours, tes notes et tes progrès restent synchronisés sur tous tes appareils.",
       "appStoreCta": "Télécharger sur l'App Store",
       "macCta": "Télécharger pour Mac (Apple Silicon)",
       "windowsCta": "Télécharger pour Windows",
@@ -308,9 +320,33 @@
         },
         "edwina": {
           "name": "Edwina Fay",
-          "bio": "Edwina est la COO de Freshman, le compagnon d’étude qui planifie tes révisions, t’explique ce qui te bloque et te teste jusqu’à ce que ça rentre."
+          "bio": "Edwina est Head of Growth chez Freshman, le compagnon d’étude qui planifie tes révisions, t’explique ce qui te bloque et te teste jusqu’à ce que ça rentre."
         }
       }
+    },
+    "homework": {
+      "eyebrow": "Devoirs",
+      "title": "Comprends tes devoirs assez bien pour les faire toi-même",
+      "subtitle": "Ajoute tes devoirs de ce soir et Freshman les travaille avec toi, une question à la fois. C'est toi qui fais le travail, et tu sauras comment tu as fait.",
+      "steps": [
+        {
+          "title": "Ajoute-les.",
+          "body": "Prends une photo ou importe le fichier."
+        },
+        {
+          "title": "Travaille-les.",
+          "body": "Ton tuteur t'explique ce qui te manque et te guide sur un exemple similaire."
+        },
+        {
+          "title": "Fais-les toi-même.",
+          "body": "Vérifie tes réponses, puis termine en sachant que tu peux faire la suivante aussi."
+        }
+      ],
+      "button": "Essaie gratuitement sur tes prochains devoirs",
+      "micro": "Tes 7 premières séances de devoirs sont gratuites.",
+      "exampleQuestion": "Résous : 2x + 6 = 14",
+      "exampleStudent": "Donne-moi juste la réponse",
+      "exampleTutor": "Je ne vais pas te la donner, mais tu y es presque. Que ferais-tu du 6 en premier ?"
     },
     "ambassadorCta": {
       "eyebrow": "Ambassadeurs Freshman",
