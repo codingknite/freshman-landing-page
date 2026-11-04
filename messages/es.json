@@ -47,7 +47,7 @@
     },
     "highlight": {
       "title": "Toda tu vida de estudio, en un solo sitio.",
-      "subtitle": "Añade tus asignaturas y las fechas de examen. Freshman te dice qué estudiar cada día, te ayuda cuando te atascas y te muestra exactamente lo preparado que estás.",
+      "subtitle": "Añade tus cursos y las fechas de examen. Freshman te dice qué estudiar cada día, te ayuda cuando te atascas y te muestra exactamente lo preparado que estás.",
       "imageAlt": "La app de escritorio de Freshman con el repaso de hoy, los puntos débiles, un calendario de estudio y una racha",
       "bullets": [
         "Sabe qué estudiar hoy, cada día",
@@ -67,7 +67,7 @@
         },
         {
           "title": "Un plan de estudio que piensa por ti",
-          "body": "Dile a Freshman tus fechas de examen. Divide cada asignatura en sesiones diarias, para que termines a tiempo sin empollar a última hora.",
+          "body": "Dile a Freshman tus fechas de examen. Divide cada curso en sesiones diarias, para que termines a tiempo sin empollar a última hora.",
           "alt": "Un plan de estudio de 9 semanas dividido en temas numerados"
         },
         {
@@ -86,9 +86,9 @@
           "alt": "Un mapa mental que conecta temas de informática"
         },
         {
-          "title": "Todas tus asignaturas, un solo sitio",
-          "body": "Añade cada asignatura y sube tus apuntes, diapositivas y exámenes anteriores. Freshman enseña con tu material, no con cosas random de internet.",
-          "alt": "El selector de asignaturas con un botón Añadir asignatura"
+          "title": "Todos tus cursos, un solo sitio",
+          "body": "Añade cada curso y sube tus apuntes, diapositivas y exámenes anteriores. Freshman enseña con tu material, no con cosas random de internet.",
+          "alt": "El selector de cursos con un botón Añadir curso"
         }
       ]
     },
@@ -136,7 +136,7 @@
         "Enseña con tus propios apuntes y exámenes anteriores",
         "Habla del tema con un tutor de voz",
         "Mapas mentales y guías de estudio",
-        "Te muestra lo preparado que estás, asignatura por asignatura",
+        "Te muestra lo preparado que estás, curso por curso",
         "Rachas y recordatorios que te mantienen en marcha",
         "Hecha solo para estudiar"
       ],
@@ -219,7 +219,7 @@
       "items": [
         {
           "question": "¿Qué hace Freshman de verdad?",
-          "answer": "Freshman es tu compañero de estudio. Añade tus asignaturas y las fechas de examen, y planifica qué estudiar cada día, te explica lo que no entiendes, te pone a prueba con quizzes y simulacros, y te muestra lo preparado que estás."
+          "answer": "Freshman es tu compañero de estudio. Añade tus cursos y las fechas de examen, y planifica qué estudiar cada día, te explica lo que no entiendes, te pone a prueba con quizzes y simulacros, y te muestra lo preparado que estás."
         },
         {
           "question": "¿En qué se diferencia Freshman de ChatGPT?",
@@ -234,8 +234,8 @@
           "answer": "Sí. Sube tus apuntes, diapositivas, PDFs o exámenes anteriores, y Freshman te enseña y te evalúa con ellos, para que estudies lo que tu profesor realmente cubre."
         },
         {
-          "question": "¿Para qué asignaturas sirve?",
-          "answer": "Cualquier asignatura que añadas, de Biología a Historia o Mates. Los estudiantes lo usan para exámenes de instituto, IB, A-Levels, AP y asignaturas de universidad."
+          "question": "¿Para qué cursos sirve?",
+          "answer": "Cualquier curso que añadas, de Biología a Historia o Mates. Los estudiantes lo usan para exámenes de instituto, IB, A-Levels, AP y cursos de universidad."
         },
         {
           "question": "Voy atrasado. ¿Es demasiado tarde para empezar?",
@@ -247,7 +247,19 @@
         },
         {
           "question": "¿Cuánto cuesta Freshman?",
-          "answer": "Puedes empezar gratis, para siempre. Pro empieza en 9 $ al mes y Max en 20 $ al mes cuando quieras más asignaturas, tests y tiempo de tutoría."
+          "answer": "Puedes empezar gratis, para siempre. Pro empieza en 9 $ al mes y Max en 20 $ al mes cuando quieras tu plan de estudio completo, más cursos, tests y tiempo de tutoría. El plan gratuito incluye 2 temas de estudio."
+        },
+        {
+          "question": "¿Freshman me da las respuestas?",
+          "answer": "No. Te enseña lo que necesitas para llegar y te dice si tu respuesta es correcta. Así estás listo cuando la misma idea aparezca en un examen."
+        },
+        {
+          "question": "¿Y si me quedo totalmente atascado con la tarea?",
+          "answer": "Tu tutor resuelve contigo un problema parecido, paso a paso, y luego vuelves a intentar el tuyo."
+        },
+        {
+          "question": "¿Usar Freshman para la tarea es hacer trampa?",
+          "answer": "Haces tu propio trabajo. Freshman te ayuda a entenderlo, como un tutor sentado a tu lado. Consulta las normas de tu escuela si tienes dudas."
         }
       ]
     },
@@ -267,7 +279,7 @@
     },
     "download": {
       "heroTitle": "Descarga Freshman donde estudies.",
-      "heroSubtitle": "Planifica en el portátil, repasa en el teléfono. Tus asignaturas, apuntes y progreso se sincronizan en todos tus dispositivos.",
+      "heroSubtitle": "Planifica en el portátil, repasa en el teléfono. Tus cursos, apuntes y progreso se sincronizan en todos tus dispositivos.",
       "appStoreCta": "Descargar en el App Store",
       "macCta": "Descargar para Mac (Apple Silicon)",
       "windowsCta": "Descargar para Windows",
@@ -308,9 +320,33 @@
         },
         "edwina": {
           "name": "Edwina Fay",
-          "bio": "Edwina es la COO de Freshman, el compañero de estudio que planifica tu repaso, te explica lo que no entiendes y te pone a prueba hasta que lo dominas."
+          "bio": "Edwina es Head of Growth en Freshman, el compañero de estudio que planifica tu repaso, te explica lo que no entiendes y te pone a prueba hasta que lo dominas."
         }
       }
+    },
+    "homework": {
+      "eyebrow": "Tareas",
+      "title": "Entiende tu tarea lo suficiente para hacerla tú mismo",
+      "subtitle": "Añade la tarea de esta noche y Freshman la trabaja contigo, una pregunta cada vez. Tú haces el trabajo, y sabrás cómo lo hiciste.",
+      "steps": [
+        {
+          "title": "Añádela.",
+          "body": "Haz una foto o sube el archivo."
+        },
+        {
+          "title": "Trabájala.",
+          "body": "Tu tutor te explica lo que te falta y te guía con un ejemplo parecido."
+        },
+        {
+          "title": "Hazla tú mismo.",
+          "body": "Comprueba tus respuestas y termina sabiendo que también puedes con la siguiente."
+        }
+      ],
+      "button": "Pruébalo gratis en tu próxima tarea",
+      "micro": "Tus primeras 7 sesiones de tareas son gratis.",
+      "exampleQuestion": "Resuelve x: 2x + 6 = 14",
+      "exampleStudent": "Solo dime la respuesta",
+      "exampleTutor": "No te la voy a dar, pero estás cerca. ¿Qué harías primero con el 6?"
     },
     "ambassadorCta": {
       "eyebrow": "Embajadores de Freshman",

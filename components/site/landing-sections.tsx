@@ -364,6 +364,77 @@ export function FinalCta({
   );
 }
 
+/** Homework, for high school students. The tutor's line is the promise: it won't give the answer. */
+export function Homework({
+  locale,
+  copy,
+}: {
+  locale: string;
+  copy: Site['homework'];
+}) {
+  return (
+    <section id='homework' className='bg-swirl-50 px-4 py-24 sm:px-6 md:py-32'>
+      <div className='mx-auto grid max-w-6xl items-center gap-14 md:grid-cols-2'>
+        <div>
+          <span className='inline-block -rotate-2 rounded-full bg-white px-3.5 py-1.5 text-[13px] font-bold uppercase tracking-[0.08em] text-cinder-950 shadow-[0_14px_28px_-14px_rgba(45,32,29,.45)]'>
+            {copy.eyebrow}
+          </span>
+          <h2 className='mt-6 text-balance font-display text-4xl font-medium leading-[1.08] tracking-tight text-cinder-950 sm:text-5xl'>
+            {copy.title}
+          </h2>
+          <p className='mt-5 max-w-lg text-[17px] font-medium leading-relaxed text-swirl-900'>
+            {copy.subtitle}
+          </p>
+          <ol className='mt-8 space-y-4'>
+            {copy.steps.map((step, index) => (
+              <li key={step.title} className='flex gap-4'>
+                <span className='flex size-8 shrink-0 items-center justify-center rounded-full bg-cinder-950 text-sm font-bold text-white'>
+                  {index + 1}
+                </span>
+                <p className='text-[16px] leading-relaxed text-swirl-900'>
+                  <span className='font-semibold text-cinder-950'>{step.title}</span>{' '}
+                  {step.body}
+                </p>
+              </li>
+            ))}
+          </ol>
+          <CtaLink
+            href={`/${locale}/download`}
+            className='group mt-9 h-14 gap-2 px-8 text-[17px] hover:bg-swirl-900'
+          >
+            {copy.button}
+            <ArrowRight className='size-[18px] transition-transform group-hover:translate-x-[3px]' />
+          </CtaLink>
+          <p className='mt-4 text-sm font-medium text-swirl-700'>{copy.micro}</p>
+        </div>
+
+        {/* The art leaves its lower third empty, and the chat sits there. */}
+        <div className='overflow-hidden rounded-[2rem] bg-[#f6d6c5] pb-8'>
+          <Image
+            src='/homework/lp-homework.png'
+            alt=''
+            width={1448}
+            height={1086}
+            sizes='(min-width: 768px) 560px, 100vw'
+            className='h-auto w-full [mask-image:linear-gradient(black_85%,transparent)]'
+          />
+          <div className='relative mx-auto -mt-[14%] max-w-sm space-y-3 px-6 sm:px-0'>
+            <div className='rotate-1 rounded-[20px] border-[3px] border-white bg-white p-4 font-medium text-cinder-950 shadow-[0_14px_28px_-14px_rgba(45,32,29,.45)]'>
+              {copy.exampleQuestion}
+            </div>
+            <p className='ml-auto w-fit max-w-[85%] rounded-2xl rounded-br-md bg-cinder-950 px-4 py-2.5 text-[15px] text-white'>
+              {copy.exampleStudent}
+            </p>
+            <p className='w-fit max-w-[90%] rounded-2xl rounded-bl-md bg-white px-4 py-2.5 text-[15px] text-cinder-950 shadow-[0_14px_28px_-14px_rgba(45,32,29,.45)]'>
+              {copy.exampleTutor}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /** Points students at the ambassador program; same peach band and art as /ambassadors. */
 export function AmbassadorCta({
   locale,

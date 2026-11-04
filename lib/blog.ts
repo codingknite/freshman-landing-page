@@ -37,7 +37,7 @@ export const authors: Record<string, Author> = {
   edwina: {
     key: 'edwina',
     name: 'Edwina Fay',
-    bio: 'Edwina is the COO of Freshman, the study companion that plans your revision, explains what you are stuck on and tests you until it sticks.',
+    bio: 'Edwina is the Head of Growth at Freshman, the study companion that plans your revision, explains what you are stuck on and tests you until it sticks.',
     avatar: '/edwina.webp',
     person: true,
   },

@@ -47,7 +47,7 @@
     },
     "highlight": {
       "title": "Your whole study life, in one place.",
-      "subtitle": "Add your subjects and exam dates. Freshman tells you what to study each day, helps when you're stuck, and shows you exactly how ready you are.",
+      "subtitle": "Add your courses and exam dates. Freshman tells you what to study each day, helps when you're stuck, and shows you exactly how ready you are.",
       "imageAlt": "The Freshman desktop app showing today's revision, weak spots, a study calendar and a streak",
       "bullets": [
         "Know what to study today, every day",
@@ -67,7 +67,7 @@
         },
         {
           "title": "A study plan that thinks for you",
-          "body": "Tell Freshman your exam dates. It splits every subject into daily sessions, so you finish on time without cramming.",
+          "body": "Tell Freshman your exam dates. It splits every course into daily sessions, so you finish on time without cramming.",
           "alt": "A 9-week study plan broken into numbered topics"
         },
         {
@@ -86,9 +86,9 @@
           "alt": "A mind map connecting topics in computer science"
         },
         {
-          "title": "All your subjects, one place",
-          "body": "Add every subject and upload your notes, slides and past papers. Freshman teaches from your material, not random internet stuff.",
-          "alt": "The subject switcher with an Add Subject button"
+          "title": "All your courses, one place",
+          "body": "Add every course and upload your notes, slides and past papers. Freshman teaches from your material, not random internet stuff.",
+          "alt": "The course switcher with an Add Course button"
         }
       ]
     },
@@ -136,7 +136,7 @@
         "Teaches from your own notes and past papers",
         "Talk it through with a voice tutor",
         "Mind maps and study guides",
-        "Shows how ready you are, subject by subject",
+        "Shows how ready you are, course by course",
         "Streaks and reminders that keep you going",
         "Built only for studying"
       ],
@@ -219,7 +219,7 @@
       "items": [
         {
           "question": "What does Freshman actually do?",
-          "answer": "Freshman is your study companion. Add your subjects and exam dates, and it plans what to study each day, explains anything you are stuck on, tests you with quizzes and mock exams, and shows you how ready you are."
+          "answer": "Freshman is your study companion. Add your courses and exam dates, and it plans what to study each day, explains anything you are stuck on, tests you with quizzes and mock exams, and shows you how ready you are."
         },
         {
           "question": "How is Freshman different from ChatGPT?",
@@ -234,8 +234,8 @@
           "answer": "Yes. Upload your notes, slides, PDFs or past papers, and Freshman teaches and tests you from them, so you study what your teacher actually covers."
         },
         {
-          "question": "Which subjects does it work for?",
-          "answer": "Any subject you add, from Biology to History to Maths. Students use it for school exams, IB, A-Levels, AP and university courses."
+          "question": "Which courses does it work for?",
+          "answer": "Any course you add, from Biology to History to Maths. Students use it for school exams, IB, A-Levels, AP and university courses."
         },
         {
           "question": "I'm behind. Is it too late to start?",
@@ -247,7 +247,19 @@
         },
         {
           "question": "How much does Freshman cost?",
-          "answer": "You can start free, forever. Pro starts at $9 a month and Max at $20 a month when you want more subjects, tests and tutoring time."
+          "answer": "You can start free, forever. Pro starts at $9 a month and Max at $20 a month when you want your full study plan, more courses, tests and tutoring time. The free plan includes 2 study topics."
+        },
+        {
+          "question": "Does Freshman give me the answers?",
+          "answer": "No. It teaches you what you need to get there, and tells you whether your answer is right. That way you're ready when the same idea shows up on a test."
+        },
+        {
+          "question": "What if I'm completely stuck on my homework?",
+          "answer": "Your tutor works through a similar problem with you, step by step, then you go back and try yours."
+        },
+        {
+          "question": "Is using Freshman for homework cheating?",
+          "answer": "You do your own work. Freshman helps you understand it, like a tutor sitting next to you. Check your school's rules if you're unsure."
         }
       ]
     },
@@ -267,7 +279,7 @@
     },
     "download": {
       "heroTitle": "Download Freshman wherever you study.",
-      "heroSubtitle": "Plan on your laptop, revise on your phone. Your subjects, notes and progress stay in sync on every device.",
+      "heroSubtitle": "Plan on your laptop, revise on your phone. Your courses, notes and progress stay in sync on every device.",
       "appStoreCta": "Download on the App Store",
       "macCta": "Download for Mac (Apple Silicon)",
       "windowsCta": "Download for Windows",
@@ -308,7 +320,7 @@
         },
         "edwina": {
           "name": "Edwina Fay",
-          "bio": "Edwina is the COO of Freshman, the study companion that plans your revision, explains what you are stuck on and tests you until it sticks."
+          "bio": "Edwina is the Head of Growth at Freshman, the study companion that plans your revision, explains what you are stuck on and tests you until it sticks."
         }
       }
     },
@@ -589,6 +601,30 @@
         "privacy": "Privacy",
         "contact": "Contact"
       }
+    },
+    "homework": {
+      "eyebrow": "Homework",
+      "title": "Understand your homework well enough to do it yourself",
+      "subtitle": "Add tonight's homework and Freshman works through it with you, one question at a time. You'll do the work, and you'll know how you did it.",
+      "steps": [
+        {
+          "title": "Add it.",
+          "body": "Take a photo or upload the file."
+        },
+        {
+          "title": "Work through it.",
+          "body": "Your tutor explains what you're missing and walks you through a similar example."
+        },
+        {
+          "title": "Do it yourself.",
+          "body": "Check your answers, then finish knowing you can do the next one too."
+        }
+      ],
+      "button": "Try it free on your next homework",
+      "micro": "Your first 7 homework sessions are free.",
+      "exampleQuestion": "Solve for x: 2x + 6 = 14",
+      "exampleStudent": "Just tell me the answer",
+      "exampleTutor": "I won't hand it over, but you're close. What would you do with the 6 first?"
     },
     "ambassadorCta": {
       "eyebrow": "Freshman Ambassadors",

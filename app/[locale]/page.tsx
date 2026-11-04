@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { CampaignOpenTracker } from '@/components/site/campaign-open-tracker';
 import { SiteHeader } from '@/components/site/site-header';
 import { SiteFooter } from '@/components/site/site-footer';
 import { Hero } from '@/components/site/hero';
@@ -8,6 +9,7 @@ import {
   Features,
   FinalCta,
   Highlight,
+  Homework,
   MobileApp,
 } from '@/components/site/landing-sections';
 // import { Testimonials } from '@/components/site/testimonials';
@@ -116,11 +118,13 @@ export default async function Home({ params }: { params: Promise<{ locale: Local
         type='application/ld+json'
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
       />
+      <CampaignOpenTracker />
       <SiteHeader />
       <main>
         <Hero />
         <Highlight copy={site.highlight} />
         <Features locale={locale} copy={site.features} />
+        <Homework locale={locale} copy={site.homework} />
         <MobileApp locale={locale} copy={site.mobileApp} />
         <Comparison locale={locale} copy={site.comparison} />
         {/* Hidden until we have enough genuine testimonials; restore this
