@@ -15,6 +15,12 @@ export const Events = {
   desktopDownloadClicked: 'web_desktop_download_clicked',
   androidWaitlistJoined: 'web_android_waitlist_joined',
   ambassadorApplied: 'web_ambassador_applied',
+  // The invite-only supporters round page (spec: page_view, calculator_used,
+  // pledge_started, pledge_submitted). Mixpanel, like the rest of the site.
+  supportersPageViewed: 'web_supporters_page_view',
+  supportersCalculatorUsed: 'web_supporters_calculator_used',
+  supportersPledgeStarted: 'web_supporters_pledge_started',
+  supportersPledgeSubmitted: 'web_supporters_pledge_submitted',
 } as const;
 
 export type DesktopPlatform = 'mac_apple_silicon' | 'mac_intel' | 'windows';
