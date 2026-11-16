@@ -4,7 +4,6 @@ description: 'Your notes are a record of information, not a test of it. A step-b
 date: 2026-10-30
 cover: /blog-covers/notes-to-practice-cover.png
 coverAlt: 'Turning lecture notes into practice questions'
-featured: true
 author: edwina
 takeaways:
   - Notes record information. Practice questions test it, and retrieval is what makes it stick.

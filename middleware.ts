@@ -8,6 +8,7 @@ import {
 } from '@/lib/ambassador-cookies';
 
 const PUBLIC_FILE = /\.(.*)$/;
+const SUPPORTERS_PATH = '/supporters';
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -19,6 +20,17 @@ export function middleware(request: NextRequest) {
     PUBLIC_FILE.test(pathname)
   ) {
     return NextResponse.next();
+  }
+
+  // The supporters round: a private, invite-only page outside the language
+  // routes (joinfreshman.com/supporters?code=...). Never indexed, never in the
+  // sitemap or nav; the page itself checks the invite code with the API.
+  if (pathname === SUPPORTERS_PATH || pathname.startsWith(`${SUPPORTERS_PATH}/`)) {
+    const response = NextResponse.next();
+    response.headers.set('X-Robots-Tag', 'noindex, nofollow, noarchive');
+    // The invite code is in the URL: never hand it to another site.
+    response.headers.set('Referrer-Policy', 'no-referrer');
+    return response;
   }
 
   // The ambassador dashboard lives outside the language routes
@@ -36,6 +48,14 @@ export function middleware(request: NextRequest) {
 
   const segments = pathname.split('/').filter(Boolean);
   const firstSegment = segments[0] ?? '';
+
+  // /en/supporters?code=... (a language prefix added by hand or by habit):
+  // the page has no language routes, so send it to /supporters with the code.
+  if (isSupportedLocale(firstSegment) && segments[1] === SUPPORTERS_PATH.slice(1)) {
+    const url = request.nextUrl.clone();
+    url.pathname = `/${segments.slice(1).join('/')}`;
+    return NextResponse.redirect(url);
+  }
 
   if (isSupportedLocale(firstSegment)) {
     const requestHeaders = new Headers(request.headers);
