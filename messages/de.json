@@ -247,7 +247,7 @@
         },
         {
           "question": "Was kostet Freshman?",
-          "answer": "Du kannst für immer kostenlos starten. Pro beginnt bei 9 $ im Monat und Max bei 20 $ im Monat, wenn du deinen vollständigen Lernplan, mehr Kurse, Tests und Tutorzeit willst. Die kostenlose Version umfasst 2 Lernthemen."
+          "answer": "Du kannst für immer kostenlos starten. Pro kostet 16 $ im Monat oder 13,33 $ im Monat bei Zahlung alle 3 Monate, wenn du deinen vollständigen Lernplan, mehr Kurse, Tests und Tutorzeit willst. Die kostenlose Version umfasst 2 Lernthemen."
         },
         {
           "question": "Gibt mir Freshman die Antworten?",
@@ -391,8 +391,8 @@
           },
           {
             "figure": "1 Monat",
-            "title": "Ein Gratismonat Max",
-            "body": "Sobald dein erster Freund zahlt, bekommst du einen Monat Max, unseren besten Plan, geschenkt."
+            "title": "Ein Gratismonat Pro",
+            "body": "Sobald dein erster Freund zahlt, bekommst du einen Monat Pro geschenkt."
           }
         ]
       },
@@ -446,7 +446,7 @@
           },
           {
             "label": "Willkommensbonus",
-            "value": "1 Gratismonat Max, sobald dein erster Freund zahlt"
+            "value": "1 Gratismonat Pro, sobald dein erster Freund zahlt"
           },
           {
             "label": "Auszahlung",
@@ -458,19 +458,19 @@
           }
         ],
         "exampleLabel": "Beispiel",
-        "example": "5 Freunde abonnieren Pro und bleiben ein Jahr. Du verdienst rund 174 $, plus deinen Gratismonat Max.",
+        "example": "5 Freunde abonnieren Pro und bleiben ein Jahr. Du verdienst rund 234 $, plus deinen Gratismonat Pro.",
         "lines": [
           {
-            "label": "Monat 1: 7 $ × 25 % × 5 Freunde",
-            "value": "8,75 $"
+            "label": "Monat 1: 11 $ × 25 % × 5 Freunde",
+            "value": "13,75 $"
           },
           {
-            "label": "Monate 2–12: 3 $ × 11 × 5 Freunde",
-            "value": "165 $"
+            "label": "Monate 2–12: 4 $ × 11 × 5 Freunde",
+            "value": "220 $"
           }
         ],
         "totalLabel": "Gesamt",
-        "total": "173,75 $",
+        "total": "233,75 $",
         "calculator": {
           "open": "Berechne deinen Verdienst",
           "label": "Deine Schätzung",
@@ -478,9 +478,7 @@
           "friendsLabel": "Freunde pro Plan",
           "plans": {
             "proMonthly": "Pro, monatlich",
-            "proQuarterly": "Pro, alle 3 Monate",
-            "maxMonthly": "Max, monatlich",
-            "maxQuarterly": "Max, alle 3 Monate"
+            "proQuarterly": "Pro, alle 3 Monate"
           },
           "perMonth": "{price} pro Monat",
           "perQuarter": "{price} alle 3 Monate",
@@ -492,7 +490,7 @@
           "months": "{count} Monate",
           "line": "{count} × {plan}",
           "totalLabel": "Du verdienst",
-          "bonus": "Plus ein Gratismonat Max, sobald dein erster Freund zahlt.",
+          "bonus": "Plus ein Gratismonat Pro, sobald dein erster Freund zahlt.",
           "note": "Zählt die ersten 12 Monate jedes Freundes. Monatlich ausgezahlt, sobald du 50 $ verdient hast.",
           "back": "Zurück zum Beispiel",
           "money": "{amount} $"
@@ -526,7 +524,7 @@
           },
           {
             "name": "Leo",
-            "plan": "Max",
+            "plan": "Pro",
             "course": "Jura",
             "country": "Brasilien",
             "isFree": false
@@ -575,7 +573,7 @@
           },
           {
             "question": "Wie werden die 25 % berechnet?",
-            "answer": "Auf das, was deine Freunde tatsächlich zahlen. Zahlt ein Freund für seinen ersten Monat Pro 7 $ (nach den 5 $ Rabatt), bekommst du 1,75 $. Ab dem zweiten Monat sind es 3 $ pro Monat. Erstattete Zahlungen zählen nicht."
+            "answer": "Auf das, was deine Freunde tatsächlich zahlen. Zahlt ein Freund für seinen ersten Monat Pro 11 $ (nach den 5 $ Rabatt), bekommst du 2,75 $. Ab dem zweiten Monat sind es 4 $ pro Monat. Erstattete Zahlungen zählen nicht."
           },
           {
             "question": "Wann und wie werde ich bezahlt?",

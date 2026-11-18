@@ -27,9 +27,9 @@ export const pricingFaqs: Faq[] = [
       'Yes, forever. No card needed. You get daily tutoring, a study plan and daily tests at no cost.',
   },
   {
-    question: "What's the difference between Pro and Max?",
+    question: 'How much does Pro cost?',
     answer:
-      'Pro covers most students through a normal term. Max is for exam season or a heavy subject load: more voice tutoring, unlimited tests and mock exams, and up to 40 subjects.',
+      'Pro is the one paid plan: $16 a month, or $39.99 every 3 months on the website and desktop app. On iPhone and Android it is $5.99 a week, $15.99 a month or $39.99 every 3 months.',
   },
   {
     question: 'Can I cancel anytime?',

@@ -68,7 +68,7 @@ const TermsOfUse = () => {
       <h2>4. Plans, payments and cancellation</h2>
       <h3>Plans</h3>
       <p>
-        Freshman offers a Free plan and paid plans, currently called Pro and Max (“Subscriptions”).
+        Freshman offers a Free plan and a paid plan, currently called Pro (“Subscriptions”).
         Paid plans unlock more subjects, uploads, tutoring time, tests and other features. The
         current features, limits and prices for each plan are shown on our pricing page and in the
         app at the time of purchase, and may vary by country and platform.

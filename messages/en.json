@@ -247,7 +247,7 @@
         },
         {
           "question": "How much does Freshman cost?",
-          "answer": "You can start free, forever. Pro starts at $9 a month and Max at $20 a month when you want your full study plan, more courses, tests and tutoring time. The free plan includes 2 study topics."
+          "answer": "You can start free, forever. Pro is $16 a month, or $13.33 a month when billed every 3 months, when you want your full study plan, more courses, tests and tutoring time. The free plan includes 2 study topics."
         },
         {
           "question": "Does Freshman give me the answers?",
@@ -359,8 +359,8 @@
           },
           {
             "figure": "1 month",
-            "title": "A free month of Max",
-            "body": "When your first friend pays, you get a month of Max, our top plan, on us."
+            "title": "A free month of Pro",
+            "body": "When your first friend pays, you get a month of Pro on us."
           }
         ]
       },
@@ -414,7 +414,7 @@
           },
           {
             "label": "Welcome bonus",
-            "value": "1 free month of Max when your first friend pays"
+            "value": "1 free month of Pro when your first friend pays"
           },
           {
             "label": "Payout",
@@ -426,19 +426,19 @@
           }
         ],
         "exampleLabel": "Example",
-        "example": "5 friends subscribe to Pro and stay for a year. You earn about $174, plus your free month of Max.",
+        "example": "5 friends subscribe to Pro and stay for a year. You earn about $234, plus your free month of Pro.",
         "lines": [
           {
-            "label": "Month 1: $7 × 25% × 5 friends",
-            "value": "$8.75"
+            "label": "Month 1: $11 × 25% × 5 friends",
+            "value": "$13.75"
           },
           {
-            "label": "Months 2–12: $3 × 11 × 5 friends",
-            "value": "$165"
+            "label": "Months 2–12: $4 × 11 × 5 friends",
+            "value": "$220"
           }
         ],
         "totalLabel": "Total",
-        "total": "$173.75",
+        "total": "$233.75",
         "calculator": {
           "open": "Calculate your earnings",
           "label": "Your estimate",
@@ -446,9 +446,7 @@
           "friendsLabel": "Friends on each plan",
           "plans": {
             "proMonthly": "Pro, monthly",
-            "proQuarterly": "Pro, every 3 months",
-            "maxMonthly": "Max, monthly",
-            "maxQuarterly": "Max, every 3 months"
+            "proQuarterly": "Pro, every 3 months"
           },
           "perMonth": "{price} a month",
           "perQuarter": "{price} every 3 months",
@@ -460,7 +458,7 @@
           "months": "{count} months",
           "line": "{count} × {plan}",
           "totalLabel": "You earn",
-          "bonus": "Plus a free month of Max when your first friend pays.",
+          "bonus": "Plus a free month of Pro when your first friend pays.",
           "note": "Counts each friend's first 12 months. Paid monthly once you've earned $50.",
           "back": "Back to the example",
           "money": "${amount}"
@@ -494,7 +492,7 @@
           },
           {
             "name": "Leo",
-            "plan": "Max",
+            "plan": "Pro",
             "course": "Law",
             "country": "Brazil",
             "isFree": false
@@ -543,7 +541,7 @@
           },
           {
             "question": "How is the 25% calculated?",
-            "answer": "On what your friends actually pay. If a friend pays $7 for their first month of Pro (after the $5 off), you get $1.75. From month two, it's $3 a month. Refunded payments don't count."
+            "answer": "On what your friends actually pay. If a friend pays $11 for their first month of Pro (after the $5 off), you get $2.75. From month two, it's $4 a month. Refunded payments don't count."
           },
           {
             "question": "When and how do I get paid?",

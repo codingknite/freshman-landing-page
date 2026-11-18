@@ -22,11 +22,10 @@ const FRIEND_DISCOUNT = 500;
 const WINDOW_MONTHS = 12;
 const MAX_FRIENDS = 500;
 
+/** Pro, the one paid plan, at its desktop (Stripe) prices — where codes work. */
 export const CALCULATOR_PLANS = [
-  { id: 'proMonthly', price: 1200, months: 1 },
-  { id: 'proQuarterly', price: 2700, months: 3 },
-  { id: 'maxMonthly', price: 2500, months: 1 },
-  { id: 'maxQuarterly', price: 6000, months: 3 },
+  { id: 'proMonthly', price: 1600, months: 1 },
+  { id: 'proQuarterly', price: 3999, months: 3 },
 ] as const;
 
 export type CalculatorPlanId = (typeof CALCULATOR_PLANS)[number]['id'];
@@ -46,7 +45,7 @@ export function AmbassadorCalculator({ onBack }: { onBack: () => void }) {
   const copy = messages.site.ambassadors.deal.calculator;
   const sliderId = useId();
   // Opens on the worked example: 5 friends on Pro, monthly, for a year.
-  const [counts, setCounts] = useState<Counts>({ proMonthly: 5, proQuarterly: 0, maxMonthly: 0, maxQuarterly: 0 });
+  const [counts, setCounts] = useState<Counts>({ proMonthly: 5, proQuarterly: 0 });
   const [stay, setStay] = useState(WINDOW_MONTHS);
 
   const money = (cents: number) => {

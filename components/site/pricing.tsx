@@ -19,6 +19,9 @@ type Plan = {
   features: string[];
 };
 
+// One paid plan since 2026-11. Pro's prices are the desktop app's (Stripe);
+// the stores charge $5.99 a week, $15.99 a month or $39.99 every 3 months.
+// Limits mirror the quota matrix (api-v2 src/quotas/features.ts).
 const plans: Plan[] = [
   {
     name: 'Free',
@@ -28,122 +31,83 @@ const plans: Plan[] = [
     cta: 'Start free',
     features: [
       '2 study topics, with concepts and review questions',
-      '10-min trial of the voice tutor that quizzes you',
+      '5-min trial of the voice tutor that quizzes you',
       'Your daily revision for 1 course',
-      'Text tutor: 30 min a day',
-      '1 quick test a day, 1 mock exam a week',
-      '3 mind maps, 3 flashcard decks and 2 study guides a week',
+      'Text tutor: 15 min a day',
+      '1 quick test a day, 1 full test a week, 1 mock exam',
+      '1 mind map, 2 flashcard decks and 1 study guide a week',
       'Study streaks and calendar',
-      '7 homework sessions for high school students',
+      '3 homework sessions for high school students',
     ],
   },
   {
     name: 'Pro',
     tagline: 'Stay on top of every course, all term',
-    price: { monthly: '$12', quarterly: '$9' },
-    was: { quarterly: '$12' },
-    billed: { monthly: 'Billed monthly', quarterly: '$27 billed every 3 months' },
+    price: { monthly: '$16', quarterly: '$13.33' },
+    was: { quarterly: '$16' },
+    billed: { monthly: 'Billed monthly', quarterly: '$39.99 billed every 3 months' },
     cta: 'Get Pro',
     featured: true,
     features: [
-      'Your full study plan: prepare up to 40 topics a month',
-      '60 min/month of the voice tutor that quizzes you',
+      'Your full study plan: prepare up to 60 topics a month',
+      '100 min/month of the voice tutor that quizzes you',
       'Daily revision and quiz across all your courses',
       'Unlimited text tutoring',
-      'Up to 30 quick tests a day, 100 full tests and 60 mock exams a month',
+      'Up to 40 quick tests, 15 full tests and 10 mock exams a day',
       'Deep tests and deep-dive study guides',
-      'Up to 60 mind maps, 60 flashcard decks and 60 study guides a month, PDF export',
+      'Up to 15 mind maps, 15 flashcard decks and 15 study guides a day, PDF export',
+      'Up to 20 courses',
       'Your full results history',
-      'Homework help for high school students: up to 10 sessions a day',
-    ],
-  },
-  {
-    name: 'Max',
-    tagline: 'For exam season, when every mark counts',
-    price: { monthly: '$25', quarterly: '$20' },
-    was: { quarterly: '$25' },
-    billed: { monthly: 'Billed monthly', quarterly: '$60 billed every 3 months' },
-    cta: 'Get Max',
-    features: [
-      'Everything in Pro',
-      'Prepare up to 100 topics a month',
-      '200 min/month of voice tutoring',
-      'Exam mode: an intensive plan for your final 14 days',
-      'Highest limits: up to 12 mock exams and 20 full tests a day',
-      'Up to 40 courses',
-      'Priority generation at peak times',
-      'Up to 20 homework sessions a day for high school students',
+      'Homework help for high school students: up to 15 sessions a day',
     ],
   },
 ];
 
 type Cell = string | boolean | { value: string; note: string };
-type Group = { title: string; rows: { label: string; cells: [Cell, Cell, Cell] }[] };
+type Group = { title: string; rows: { label: string; cells: [Cell, Cell] }[] };
 
 const groups: Group[] = [
   {
     title: 'Study plan',
     rows: [
-      { label: 'Courses', cells: ['1', '12', '40'] },
-      { label: 'Material uploads', cells: ['5 a month', '120 a month', '400 a month'] },
-      { label: 'See your full study plan', cells: ['First 2 topics', true, true] },
-      { label: 'Topics you can prepare', cells: ['2 in total', '40 a month', '100 a month'] },
-      { label: 'Daily revision and nightly quiz', cells: [true, true, true] },
-      { label: 'Streaks and calendar', cells: [true, true, true] },
+      { label: 'Courses', cells: ['1', '20'] },
+      { label: 'Material uploads', cells: ['3 a month', '200 a month'] },
+      { label: 'See your full study plan', cells: ['First 2 topics', true] },
+      { label: 'Topics you can prepare', cells: ['2 in total', '60 a month'] },
+      { label: 'Daily revision and nightly quiz', cells: [true, true] },
+      { label: 'Streaks and calendar', cells: [true, true] },
     ],
   },
   {
     title: 'Tutor',
     rows: [
-      { label: 'Text tutoring', cells: ['30 min a day', 'Unlimited', 'Unlimited'] },
-      { label: 'Voice tutoring', cells: ['10-minute trial', '60 min a month', '200 min a month'] },
-      { label: 'Homework sessions (high school)', cells: ['7 in total', '10 a day', '20 a day'] },
+      { label: 'Text tutoring', cells: ['15 min a day', 'Unlimited'] },
+      { label: 'Voice tutoring', cells: ['5-minute trial', '100 min a month'] },
+      { label: 'Homework sessions (high school)', cells: ['3 in total', '15 a day'] },
     ],
   },
   {
     title: 'Tests',
     rows: [
-      {
-        label: 'Quick tests',
-        cells: ['1 a day', '30 a day', '60 a day'],
-      },
-      {
-        label: 'Full tests',
-        cells: ['1 a day', { value: '100 a month', note: 'up to 12 a day' }, '20 a day'],
-      },
-      { label: 'Deep tests', cells: [false, true, true] },
-      {
-        label: 'Mock exams',
-        cells: ['1 a week', { value: '60 a month', note: 'up to 8 a day' }, '12 a day'],
-      },
+      { label: 'Quick tests', cells: ['1 a day', '40 a day'] },
+      { label: 'Full tests', cells: ['1 a week', '15 a day'] },
+      { label: 'Deep tests', cells: [false, true] },
+      { label: 'Mock exams', cells: ['1 in total', '10 a day'] },
     ],
   },
   {
     title: 'Mind maps, flashcards and study guides',
     rows: [
-      {
-        label: 'Mind maps',
-        cells: ['3 a week', { value: '60 a month', note: 'up to 10 a day' }, '20 a day'],
-      },
-      {
-        label: 'Flashcard decks',
-        cells: ['3 a week', { value: '60 a month', note: 'up to 10 a day' }, '20 a day'],
-      },
-      {
-        label: 'Mind map quizzes',
-        cells: ['3 a day', '40 a day', '100 a day'],
-      },
+      { label: 'Mind maps', cells: ['1 a week', '15 a day'] },
+      { label: 'Flashcard decks', cells: ['2 a week', '15 a day'] },
+      { label: 'Mind map quizzes', cells: ['2 a day', '60 a day'] },
       {
         label: 'Study guides',
-        cells: [
-          { value: '2 a week', note: 'standard only' },
-          { value: '60 a month', note: 'up to 10 a day' },
-          '20 a day',
-        ],
+        cells: [{ value: '1 a week', note: 'standard only' }, '15 a day'],
       },
-      { label: 'Deep-dive study guides', cells: [false, true, true] },
-      { label: 'Marked practice answers', cells: ['30 a month', '600 a month', '2,000 a month'] },
-      { label: 'PDF export', cells: [false, true, true] },
+      { label: 'Deep-dive study guides', cells: [false, true] },
+      { label: 'Marked practice answers', cells: ['15 a month', '1,000 a month'] },
+      { label: 'PDF export', cells: [false, true] },
     ],
   },
 ];
@@ -203,12 +167,12 @@ export function PricingPlans({ locale }: { locale: string }) {
             Every 3 months
           </span>
           <span className='rounded-full bg-swirl-950 px-2.5 py-1 text-xs font-medium text-white'>
-            Save up to 25%
+            Save 17%
           </span>
         </div>
       </div>
 
-      <div className='mx-auto mt-12 grid max-w-6xl gap-5 lg:grid-cols-3'>
+      <div className='mx-auto mt-12 grid max-w-4xl gap-5 md:grid-cols-2'>
         {plans.map((plan) => (
           <div
             key={plan.name}
@@ -274,7 +238,7 @@ export function PricingPlans({ locale }: { locale: string }) {
       </div>
 
       <p className='mx-auto mt-10 max-w-xl text-balance text-center text-lg text-swirl-900'>
-        A private tutor costs $40 to $80 an hour. Freshman Pro costs less than a pizza a
+        A private tutor costs $40 to $80 an hour. Freshman Pro costs less than one hour a
         month, and it&apos;s there at 2am.
       </p>
     </div>
@@ -285,9 +249,9 @@ export function PricingTable() {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className='mx-auto max-w-6xl'>
+    <div className='mx-auto max-w-4xl'>
       <h2 className='text-center font-display text-4xl font-medium tracking-tight text-swirl-950 sm:text-5xl'>
-        Compare every plan
+        Compare Free and Pro
       </h2>
       <div className='relative mt-12'>
         <div
@@ -297,13 +261,12 @@ export function PricingTable() {
             !expanded && 'max-h-[720px] overflow-y-hidden',
           )}
         >
-          <table className='w-full min-w-[640px] border-collapse text-sm'>
+          <table className='w-full min-w-[520px] border-collapse text-sm'>
             <thead>
               <tr className='border-b border-swirl-200'>
-                <th className='w-[40%] px-6 py-5 text-left font-semibold text-swirl-950'>Feature</th>
+                <th className='w-[46%] px-6 py-5 text-left font-semibold text-swirl-950'>Feature</th>
                 <th className='px-4 py-5 font-semibold text-swirl-950'>Free</th>
                 <th className='bg-swirl-100/70 px-4 py-5 font-semibold text-swirl-950'>Pro</th>
-                <th className='px-4 py-5 font-semibold text-swirl-950'>Max</th>
               </tr>
             </thead>
             <tbody>
@@ -350,7 +313,7 @@ function GroupRows({ group }: { group: Group }) {
     <>
       <tr className='border-b border-swirl-200 bg-swirl-50'>
         <td
-          colSpan={4}
+          colSpan={3}
           className='px-6 py-3 text-xs font-semibold uppercase tracking-[0.12em] text-swirl-800'
         >
           {group.title}
