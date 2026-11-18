@@ -247,7 +247,7 @@
         },
         {
           "question": "¿Cuánto cuesta Freshman?",
-          "answer": "Puedes empezar gratis, para siempre. Pro empieza en 9 $ al mes y Max en 20 $ al mes cuando quieras tu plan de estudio completo, más cursos, tests y tiempo de tutoría. El plan gratuito incluye 2 temas de estudio."
+          "answer": "Puedes empezar gratis, para siempre. Pro cuesta 16 $ al mes, o 13,33 $ al mes si pagas cada 3 meses, cuando quieras tu plan de estudio completo, más cursos, tests y tiempo de tutoría. El plan gratuito incluye 2 temas de estudio."
         },
         {
           "question": "¿Freshman me da las respuestas?",
@@ -392,8 +392,8 @@
           },
           {
             "figure": "1 mes",
-            "title": "Un mes de Max gratis",
-            "body": "Cuando tu primer amigo pague, te regalamos un mes de Max, nuestro mejor plan."
+            "title": "Un mes de Pro gratis",
+            "body": "Cuando tu primer amigo pague, te regalamos un mes de Pro."
           }
         ]
       },
@@ -447,7 +447,7 @@
           },
           {
             "label": "Bono de bienvenida",
-            "value": "1 mes de Max gratis cuando pague tu primer amigo"
+            "value": "1 mes de Pro gratis cuando pague tu primer amigo"
           },
           {
             "label": "Pago",
@@ -459,19 +459,19 @@
           }
         ],
         "exampleLabel": "Ejemplo",
-        "example": "5 amigos se suscriben a Pro y se quedan un año. Ganas unos $174, más tu mes de Max gratis.",
+        "example": "5 amigos se suscriben a Pro y se quedan un año. Ganas unos $234, más tu mes de Pro gratis.",
         "lines": [
           {
-            "label": "Mes 1: $7 × 25% × 5 amigos",
-            "value": "$8,75"
+            "label": "Mes 1: $11 × 25% × 5 amigos",
+            "value": "$13,75"
           },
           {
-            "label": "Meses 2–12: $3 × 11 × 5 amigos",
-            "value": "$165"
+            "label": "Meses 2–12: $4 × 11 × 5 amigos",
+            "value": "$220"
           }
         ],
         "totalLabel": "Total",
-        "total": "$173,75",
+        "total": "$233,75",
         "calculator": {
           "open": "Calcula tus ganancias",
           "label": "Tu estimación",
@@ -479,9 +479,7 @@
           "friendsLabel": "Amigos por plan",
           "plans": {
             "proMonthly": "Pro, mensual",
-            "proQuarterly": "Pro, cada 3 meses",
-            "maxMonthly": "Max, mensual",
-            "maxQuarterly": "Max, cada 3 meses"
+            "proQuarterly": "Pro, cada 3 meses"
           },
           "perMonth": "{price} al mes",
           "perQuarter": "{price} cada 3 meses",
@@ -493,7 +491,7 @@
           "months": "{count} meses",
           "line": "{count} × {plan}",
           "totalLabel": "Ganas",
-          "bonus": "Más un mes de Max gratis cuando pague tu primer amigo.",
+          "bonus": "Más un mes de Pro gratis cuando pague tu primer amigo.",
           "note": "Cuenta los primeros 12 meses de cada amigo. Se paga cada mes cuando hayas ganado $50.",
           "back": "Volver al ejemplo",
           "money": "${amount}"
@@ -527,7 +525,7 @@
           },
           {
             "name": "Leo",
-            "plan": "Max",
+            "plan": "Pro",
             "course": "Derecho",
             "country": "Brasil",
             "isFree": false
@@ -576,7 +574,7 @@
           },
           {
             "question": "¿Cómo se calcula el 25%?",
-            "answer": "Sobre lo que tus amigos pagan de verdad. Si un amigo paga $7 por su primer mes de Pro (tras los $5 de descuento), recibes $1,75. Desde el segundo mes, son $3 al mes. Los pagos reembolsados no cuentan."
+            "answer": "Sobre lo que tus amigos pagan de verdad. Si un amigo paga $11 por su primer mes de Pro (tras los $5 de descuento), recibes $2,75. Desde el segundo mes, son $4 al mes. Los pagos reembolsados no cuentan."
           },
           {
             "question": "¿Cuándo y cómo cobro?",

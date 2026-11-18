@@ -247,7 +247,7 @@
         },
         {
           "question": "Combien coûte Freshman?",
-          "answer": "Tu peux commencer gratuitement, pour toujours. Pro commence à 9 $ par mois et Max à 20 $ par mois quand tu veux ton plan d’étude complet, plus de cours, de tests et de temps avec le tuteur. L’offre gratuite inclut 2 thèmes d’étude."
+          "answer": "Tu peux commencer gratuitement, pour toujours. Pro coûte 16 $ par mois, ou 13,33 $ par mois en payant tous les 3 mois, quand tu veux ton plan d’étude complet, plus de cours, de tests et de temps avec le tuteur. L’offre gratuite inclut 2 thèmes d’étude."
         },
         {
           "question": "Freshman me donne-t-il les réponses ?",
@@ -391,8 +391,8 @@
           },
           {
             "figure": "1 mois",
-            "title": "Un mois de Max offert",
-            "body": "Quand ton premier ami paie, on t'offre un mois de Max, notre meilleur abonnement."
+            "title": "Un mois de Pro offert",
+            "body": "Quand ton premier ami paie, on t'offre un mois de Pro."
           }
         ]
       },
@@ -446,7 +446,7 @@
           },
           {
             "label": "Bonus de bienvenue",
-            "value": "1 mois de Max offert quand ton premier ami paie"
+            "value": "1 mois de Pro offert quand ton premier ami paie"
           },
           {
             "label": "Paiement",
@@ -458,19 +458,19 @@
           }
         ],
         "exampleLabel": "Exemple",
-        "example": "5 amis s'abonnent à Pro et restent un an. Tu gagnes environ 174 $, plus ton mois de Max offert.",
+        "example": "5 amis s'abonnent à Pro et restent un an. Tu gagnes environ 234 $, plus ton mois de Pro offert.",
         "lines": [
           {
-            "label": "Mois 1 : 7 $ × 25 % × 5 amis",
-            "value": "8,75 $"
+            "label": "Mois 1 : 11 $ × 25 % × 5 amis",
+            "value": "13,75 $"
           },
           {
-            "label": "Mois 2 à 12 : 3 $ × 11 × 5 amis",
-            "value": "165 $"
+            "label": "Mois 2 à 12 : 4 $ × 11 × 5 amis",
+            "value": "220 $"
           }
         ],
         "totalLabel": "Total",
-        "total": "173,75 $",
+        "total": "233,75 $",
         "calculator": {
           "open": "Calcule tes gains",
           "label": "Ton estimation",
@@ -478,9 +478,7 @@
           "friendsLabel": "Amis par abonnement",
           "plans": {
             "proMonthly": "Pro, mensuel",
-            "proQuarterly": "Pro, tous les 3 mois",
-            "maxMonthly": "Max, mensuel",
-            "maxQuarterly": "Max, tous les 3 mois"
+            "proQuarterly": "Pro, tous les 3 mois"
           },
           "perMonth": "{price} par mois",
           "perQuarter": "{price} tous les 3 mois",
@@ -492,7 +490,7 @@
           "months": "{count} mois",
           "line": "{count} × {plan}",
           "totalLabel": "Tu gagnes",
-          "bonus": "Plus un mois de Max offert quand ton premier ami paie.",
+          "bonus": "Plus un mois de Pro offert quand ton premier ami paie.",
           "note": "Compte les 12 premiers mois de chaque ami. Payé chaque mois dès que tu as gagné 50 $.",
           "back": "Revenir à l'exemple",
           "money": "{amount} $"
@@ -526,7 +524,7 @@
           },
           {
             "name": "Leo",
-            "plan": "Max",
+            "plan": "Pro",
             "course": "Droit",
             "country": "Brésil",
             "isFree": false
@@ -575,7 +573,7 @@
           },
           {
             "question": "Comment les 25 % sont-ils calculés ?",
-            "answer": "Sur ce que tes amis paient réellement. Si un ami paie 7 $ pour son premier mois de Pro (après les 5 $ de réduction), tu touches 1,75 $. À partir du deuxième mois, c'est 3 $ par mois. Les paiements remboursés ne comptent pas."
+            "answer": "Sur ce que tes amis paient réellement. Si un ami paie 11 $ pour son premier mois de Pro (après les 5 $ de réduction), tu touches 2,75 $. À partir du deuxième mois, c'est 4 $ par mois. Les paiements remboursés ne comptent pas."
           },
           {
             "question": "Quand et comment suis-je payé ?",

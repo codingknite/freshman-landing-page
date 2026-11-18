@@ -11,7 +11,7 @@ import { /* getDictionary, */ type Locale } from '@/lib/i18n';
 
 const title = 'Pricing';
 const description =
-  'Start free, forever. Upgrade to Pro or Max for more subjects, tests and tutoring time. Cancel anytime.';
+  'Start free, forever. Upgrade to Pro for more subjects, tests and tutoring time. Cancel anytime.';
 
 export async function generateMetadata({
   params,
