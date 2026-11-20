@@ -7,6 +7,7 @@ import { ArrowRight, Mail, Minus, Plus } from 'lucide-react';
 import { Events, track } from '@/lib/analytics';
 import {
   daysLeft,
+  formatDeadline,
   formatCount,
   formatDollars,
   formatPercent,
@@ -111,9 +112,9 @@ function ProgressCard({ data }: { data: PublicRound }) {
           </span>{' '}
           raised of {formatDollars(data.round.targetCents)}
         </p>
-        {days !== null ? (
+        {data.round.endsAt ? (
           <p className='shrink-0 rounded-full bg-white/10 px-3 py-1 text-[13px] font-semibold text-peach-300'>
-            {days === 1 ? '1 day left' : `${days} days left`}
+            Closes {formatDeadline(data.round.endsAt)}
           </p>
         ) : null}
       </div>
@@ -121,7 +122,10 @@ function ProgressCard({ data }: { data: PublicRound }) {
         <ProgressBar data={data} />
       </div>
       <div className='mt-3 flex flex-wrap items-center justify-between gap-x-4 gap-y-1 text-[14px] font-medium text-white/70'>
-        <span>{people === 1 ? '1 person has joined' : `${formatCount(people)} people have joined`}</span>
+        <span>
+          {people === 1 ? '1 person has joined' : `${formatCount(people)} people have joined`}
+          {days !== null && days > 0 ? ` · ${days === 1 ? '1 day left' : `${days} days left`}` : ''}
+        </span>
         {data.totals.pendingCents > 0 ? (
           <span className='flex items-center gap-1.5'>
             <span className='inline-block size-2.5 rounded-full bg-peach-300/60' aria-hidden />+{' '}
@@ -310,7 +314,7 @@ function Team() {
   );
 }
 
-function questions(min: string, max: string): Array<{ q: string; a: React.ReactNode }> {
+function questions(min: string, max: string, deadline: string | null): Array<{ q: string; a: React.ReactNode }> {
   return [
     {
       q: 'What exactly am I buying?',
@@ -318,6 +322,14 @@ function questions(min: string, max: string): Array<{ q: string; a: React.ReactN
     },
     { q: 'Do I need to know about tech or investing?', a: 'No. If you can pay for something online, you can join.' },
     { q: 'What is the smallest amount?', a: `${min}. The largest is ${max} per person.` },
+    ...(deadline
+      ? [
+          {
+            q: 'When does the round close?',
+            a: `On ${deadline}. Pledges made by then go ahead as normal, even if the agreement and payment follow a few days later.`,
+          },
+        ]
+      : []),
     { q: 'Can I get my money back later?', a: 'Not once the round is closed. Your money goes to work right away.' },
     {
       q: 'When could I make money?',
@@ -444,7 +456,11 @@ export function SupportersRound({ code, initial }: { code: string; initial: Publ
   const perDollar = sharesFor(1, round.centsPerShare);
   const sharePrice = `$${(round.centsPerShare / 100).toFixed(2)}`;
   const roundPercent = formatPercent(round.sharesOffered, round.companyShares);
-  const faq = questions(formatDollars(round.minCents), formatDollars(round.maxCents));
+  const faq = questions(
+    formatDollars(round.minCents),
+    formatDollars(round.maxCents),
+    round.endsAt ? formatDeadline(round.endsAt) : null,
+  );
 
   return (
     <>

@@ -77,6 +77,16 @@ export function formatPercent(shares: number, companyShares: number): string {
   return `${new Intl.NumberFormat('en-US', { maximumFractionDigits: 3 }).format(percent)}%`;
 }
 
+/**
+ * "December 7": the round's last day, in Kampala time so the server and the
+ * browser render the same date (the deadline is 23:59 on that day, EAT).
+ */
+export function formatDeadline(endsAt: string): string {
+  return new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric', timeZone: 'Africa/Kampala' }).format(
+    new Date(endsAt),
+  );
+}
+
 export function daysLeft(endsAt: string | null, now = Date.now()): number | null {
   if (!endsAt) return null;
   return Math.max(0, Math.ceil((new Date(endsAt).getTime() - now) / DAY_MS));
